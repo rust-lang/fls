@@ -1119,7 +1119,7 @@ Impl Trait Types
        $$impl$$ UseCaptures? TraitBound
 
    UseCaptures ::=
-        $$<$$ UseCapturesGenericArgs? $$>$$
+       $$<$$ UseCapturesGenericArgs? $$>$$
 
    UseCapturesGenericArgs ::=
        UseCapturesGenericArg ($$,$$ UseCapturesGenericArg)* $$,$$?
