@@ -664,7 +664,7 @@ has an extended :t:`drop scope` is extended to the :t:`drop scope` of the
 .. rubric:: Examples
 
 :dp:`fls_29y59x8bmw75`
-See :p:`fls_u2mzjgiwbkz0` for the declaration of ``PrintOnDrop``.
+See :ref:`fls_u2mzjgiwbkz0` for the declaration of ``PrintOnDrop``.
 
 :dp:`fls_subo2w7ln43q`
 The drop scope of the temporary created for expression ``AtomicI32::new(42)`` is
@@ -719,7 +719,7 @@ When multiple :t:`[drop scope]s` are left at once, the :t:`[value]s` are
 .. rubric:: Examples
 
 :dp:`fls_oe8l81y0wnao`
-See :p:`fls_u2mzjgiwbkz0` for the declaration of ``PrintOnDrop``.
+See :ref:`fls_u2mzjgiwbkz0` for the declaration of ``PrintOnDrop``.
 
 :dp:`fls_4sgca9wcl8h0`
 The drop order of the following variables is ``b``, ``c``, ``a``. Dropping
