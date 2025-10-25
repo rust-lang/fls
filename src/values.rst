@@ -95,6 +95,9 @@ The :t:`type specification` of a :t:`constant` shall have ``'static``
 The :t:`type` of a :t:`constant` shall implement the :std:`core::marker::Sized`
 :t:`trait`.
 
+:dp:`fls_ooOYxhVh8hZo`
+The type of a :t:`constant` cannot be a :t:`mutable reference type`.
+
 :dp:`fls_ndmfqxjpvsqy`
 A :t:`constant initializer` is a :t:`construct` that provides the :t:`value` of
 its related :t:`constant`.

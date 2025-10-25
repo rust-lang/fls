@@ -312,9 +312,11 @@ A :t:`constant context` is a :t:`construct` that requires a
 * :dp:`fls_ucFupTeCyylb`
   The :t:`block expression` of a :t:`const block expression`.
 
-:dp:`fls_ox6sgl9n43g2`
-It is a static error to create a :t:`mutable reference` in a
-:t:`constant context`.
+* :dp:`fls_zyuxqty09SDO`
+  All forms of :t:`[borrow]s` except those of expressions that are subject to
+  :t:`drop scope extension` to the end of the program
+  and which are either :t:`[mutable borrow]s`
+  or borrows of expressions that result in values with :t:`interior mutability`.
 
 :dp:`fls_od0h3v40kjp6`
 An invocation of the :std:`core::ptr::addr_of` :t:`macro` expands to a
