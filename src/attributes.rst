@@ -1,5 +1,6 @@
 .. SPDX-License-Identifier: MIT OR Apache-2.0
    SPDX-FileCopyrightText: The Ferrocene Developers
+   SPDX-FileCopyrightText: The Rust Project Contributors
 
 .. default-domain:: spec
 
@@ -1543,7 +1544,7 @@ Attribute ``repr``
      | $$usize$$
 
    AlignmentDecrease ::=
-       $$packed$$
+       $$packed$$ $$($$ DecimalLiteral $$)$$?
 
    AlignmentIncrease ::=
        $$align$$ $$($$ DecimalLiteral $$)$$
@@ -2373,4 +2374,3 @@ the exhaustiveness of :t:`[match arm]s`.
    struct struct_with_future_fields {
        field: u32
    }
-
