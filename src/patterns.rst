@@ -41,6 +41,9 @@ Patterns
 A :t:`pattern` is a :t:`construct` that matches a :t:`value` which satisfies all
 the criteria of the :t:`pattern`.
 
+:dp:`fls_VQMmveZUfNTn`
+An :t:`or-pattern` is a :t:`pattern` that matches on one of two or more :t:`[pattern-without-alternation]s` and or-s them using character 0x7C (vertical line).
+
 :dp:`fls_mp6i4blzexnu`
 A :t:`pattern-without-alternation` is a :t:`pattern` that cannot be alternated.
 
@@ -65,18 +68,24 @@ of a :t:`pattern-without-range`, except for when the :t:`pattern` is ``&mut``
 :s:`Identifier`. Such a :t:`pattern` is interpreted as a :t:`reference pattern`
 with :t:`keyword` ``mut`` containing an :t:`identifier pattern`.
 
+:dp:`fls_72JHo343O7jp`
+An or-pattern shall not appear in the :t:`pattern-without-alternation` of a
+:t:`closure parameter`, a :t:`function parameter`, or a :t:`let binding`.
+
 :dp:`fls_8luyomzppck`
-Any two :t:`[pattern-without-alternation]s` that are or-ed using character 0x7C
-(vertical line) are subject to the following restrictions:
+Any two :t:`[subpattern]s` of an :t:`or-pattern` are subject to the following
+restrictions:
 
 * :dp:`fls_rpvdfmy3n05a`
   The :t:`[type]s` of the two :t:`[pattern-without-alternation]s` shall be
   :t:`unifiable`.
 
+* :dp:`fls_YDVgFaTQwcL8`
+  The set of :t:`[binding]s` introduced by the two :t:`[pattern-without-alternation]s` shall be the same.
+
 * :dp:`fls_kv533rntni1x`
-  The :t:`[binding]s` of the two :t:`[pattern-without-alternation]s` shall
-  be the same, shall have :t:`[unifiable type]s`, and shall have the same
-  :t:`[binding mode]s`.
+  Any two :t:`[binding]s` with the same name in the two :t:`[pattern-without-alternation]s` shall have
+  :t:`[unifiable type]s` and shall have the same :t:`[binding mode]s`.
 
 .. _fls_uh76pw6ykd57:
 
@@ -1293,62 +1302,95 @@ Pattern Matching
 .. rubric:: Legality Rules
 
 :dp:`fls_tlwr4u7bjhh5`
-:t:`Pattern matching` that involves a :t:`pattern` and a context :t:`value`
-proceeds as follows:
+:t:`Pattern matching` that involves a :t:`pattern` and a context :t:`value` proceeds as follows:
 
-#. :dp:`fls_67ajub7d2b4c`
-   For each :t:`pattern-without-alternation` of the :t:`pattern`:
+#. :dp:`fls_tZJgZDWVChJV`
+   If the :t:`pattern` consists of an :t:`or-pattern`, then perform :t:`or-pattern matching`.
 
-   #. :dp:`fls_62626ws222op`
-      If the :t:`pattern-without-alternation` is an :t:`identifier pattern`,
-      then perform :t:`identifier pattern matching`.
+#. :dp:`fls_6gPnwXNiNx7i`
+   Otherwise, perform :t:`pattern-without-alternation matching` on the single :t:`pattern-without-alternation`.
 
-   #. :dp:`fls_q0z46h1gnzez`
-      If the :t:`pattern-without-alternation` is a :t:`literal pattern`, then
-      perform :t:`literal pattern matching`.
-
-   #. :dp:`fls_1r0vm6rg13o9`
-      If the :t:`pattern-without-alternation` is a :t:`parenthesized pattern`,
-      then perform :t:`parenthesized pattern matching`.
-
-   #. :dp:`fls_am5h8r887bz5`
-      If the :t:`pattern-without-alternation` is a :t:`path pattern`, then
-      perform :t:`path pattern matching`.
-
-   #. :dp:`fls_eppmiloh7bgg`
-      If the :t:`pattern-without-alternation` is a :t:`range pattern`, then
-      perform :t:`range pattern matching`.
-
-   #. :dp:`fls_gwc08xayno7q`
-      If the :t:`pattern-without-alternation` is a :t:`reference pattern`, then
-      perform :t:`reference pattern matching`.
-
-   #. :dp:`fls_19iygu12s315`
-      If the :t:`pattern-without-alternation` is a :t:`slice pattern`, then
-      perform :t:`slice pattern matching`.
-
-   #. :dp:`fls_r307spfk6cs9`
-      If the :t:`pattern-without-alternation` is a :t:`record struct pattern`,
-      then perform :t:`record struct pattern matching`.
-
-   #. :dp:`fls_qhdofvbso3gl`
-      If the :t:`pattern-without-alternation` is a :t:`tuple struct pattern`,
-      then perform :t:`tuple struct pattern matching`.
-
-   #. :dp:`fls_drb114dtvlpt`
-      If the :t:`pattern-without-alternation` is a :t:`tuple pattern`, then
-      perform :t:`tuple pattern matching`.
-
-   #. :dp:`fls_uxysntb3u03j`
-      If the :t:`pattern-without-alternation` is an :t:`underscore pattern`,
-      then perform :t:`underscore pattern matching`.
-
-   #. :dp:`fls_wh201rmh6u6d`
-      Otherwise :t:`pattern matching` fails.
+#. :dp:`fls_wh201rmh6u6d`
+   Otherwise :t:`pattern matching` fails.
 
 :dp:`fls_vstdqifqipbh`
 Only the :t:`[binding]s` of a matched :t:`pattern-without-alternation` are
 introduced into a :t:`binding scope`.
+
+
+.. _fls_VsBXBj4AqCj1:
+
+Or-pattern Matching
+~~~~~~~~~~~~~~~~~~~
+
+.. rubric:: Legality Rules
+
+:dp:`fls_L6RWHeZYRarm`
+:dt:`Or-pattern matching` of an :t:`or-pattern` against a :t:`value` proceeds as follows:
+
+#. :dp:`fls_EQSJHpB6PwUi`
+   Perform :t:`pattern-without-alternation matching` with each :t:`pattern-without-alternation` and the :t:`value`.
+
+#. :dp:`fls_x8vS9EzkIA3k`
+   If matching succeeds, then :t:`or-pattern matching` succeeds.
+
+#. :dp:`fls_t5u8w8DUIhf5`
+   Otherwise :t:`or-pattern matching` fails.
+
+
+:dp:`fls_UzO6gTNd55d1`
+The :t:`[binding]s` introduced are those of a successful :t:`pattern-without-alternation`.
+
+.. _fls_UvfF8JDpX9Ps:
+
+Pattern-without-alternation Matching
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rubric:: Legality Rules
+
+:dp:`fls_ERSSAOpYwghf`
+:dt:`Pattern-without-alternation matching` of a :t:`pattern-without-alternation`
+against a :t:`value` proceeds based on its kind:
+
+#. :dp:`fls_62626ws222op`
+   If the :t:`pattern-without-alternation` is an :t:`identifier pattern`, then perform :t:`identifier pattern matching`.
+
+#. :dp:`fls_q0z46h1gnzez`
+   If the :t:`pattern-without-alternation` is a :t:`literal pattern`, then perform :t:`literal pattern matching`.
+
+#. :dp:`fls_1r0vm6rg13o9`
+   If the :t:`pattern-without-alternation` is a :t:`parenthesized pattern`, then perform :t:`parenthesized pattern matching`.
+
+#. :dp:`fls_am5h8r887bz5`
+   If the :t:`pattern-without-alternation` is a :t:`path pattern`, then perform :t:`path pattern matching`.
+
+#. :dp:`fls_eppmiloh7bgg`
+   If the :t:`pattern-without-alternation` is a :t:`range pattern`, then perform :t:`range pattern matching`.
+
+#. :dp:`fls_gwc08xayno7q`
+   If the :t:`pattern-without-alternation` is a :t:`reference pattern`, then perform :t:`reference pattern matching`.
+
+#. :dp:`fls_19iygu12s315`
+   If the :t:`pattern-without-alternation` is a :t:`slice pattern`, then perform :t:`slice pattern matching`.
+
+#. :dp:`fls_r307spfk6cs9`
+   If the :t:`pattern-without-alternation` is a :t:`record struct pattern`, then perform :t:`record struct pattern matching`.
+
+#. :dp:`fls_qhdofvbso3gl`
+   If the :t:`pattern-without-alternation` is a :t:`tuple struct pattern`, then perform :t:`tuple struct pattern matching`.
+
+#. :dp:`fls_drb114dtvlpt`
+   If the :t:`pattern-without-alternation` is a :t:`tuple pattern`, then perform :t:`tuple pattern matching`.
+
+#. :dp:`fls_uxysntb3u03j`
+   If the :t:`pattern-without-alternation` is an :t:`underscore pattern`, then perform :t:`underscore pattern matching`.
+
+#. :dp:`fls_VOfEVPdtTvPN`
+   Otherwise :t:`Pattern-without-alternation matching` fails.
+
+
+:dp:`fls_P8yB2b5enpw7`
+The :t:`[binding]s` introduced are those of a successful :t:`pattern-without-alternation`.
 
 .. _fls_vnai6ag4qrdb:
 
