@@ -46,43 +46,126 @@ Generic Parameters
 
 .. rubric:: Legality Rules
 
-:dp:`fls_sye3d17l9bf5`
-A :t:`generic parameter` is a placeholder for a :t:`constant`, a :t:`lifetime`,
-or a :t:`type`, whose :t:`constant`, :t:`lifetime`, or :t:`type` is supplied
-statically by a :t:`generic argument`.
+.. glossary-entry:: generic parameter
+   :glossary-dp: fls_s2syghgn74e2
+   
+   :glossary:
+     :dp:`fls_61e6br8jy1v2`
+     A :dt:`generic parameter` is a placeholder for a :t:`constant`, a
+     :t:`lifetime`, or a :t:`type` whose :t:`value` is supplied statically by a
+     :t:`generic argument`.
+     
+     :dp:`fls_jvxpoob39632`
+     See :s:`GenericParameterList`.
+   :chapter:
+     :dp:`fls_sye3d17l9bf5`
+     A :t:`generic parameter` is a placeholder for a :t:`constant`, a :t:`lifetime`,
+     or a :t:`type`, whose :t:`constant`, :t:`lifetime`, or :t:`type` is supplied
+     statically by a :t:`generic argument`.
 
 :dp:`fls_dalqke3rznrb`
 All :s:`[LifetimeParameter]s` in a :s:`GenericParameterList` shall precede all
 :s:`[ConstantParameter]s` and :s:`[TypeParameter]s`.
 
-:dp:`fls_pi6eukz7kc99`
-A :t:`generic enum` is an :t:`enum` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic enum
+   :glossary-dp: fls_3tj3i83eoi36
+   
+   :glossary:
+     :dp:`fls_pnu8w26uexaq`
+     A :dt:`generic enum` is an :t:`enum` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_pi6eukz7kc99`
+     A :t:`generic enum` is an :t:`enum` with :t:`[generic parameter]s`.
 
-:dp:`fls_ixmgqupxvf73`
-A :t:`generic function` is a :t:`function` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic function
+   :glossary-dp: fls_votx8gvy5utg
+   
+   :glossary:
+     :dp:`fls_rfkbc967d48h`
+     A :dt:`generic function` is a :t:`function` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_ixmgqupxvf73`
+     A :t:`generic function` is a :t:`function` with :t:`[generic parameter]s`.
 
-:dp:`fls_z311nxou9yi3`
-A :t:`generic implementation` is an :t:`implementation` with
-:t:`[generic parameter]s`.
+.. glossary-entry:: generic implementation
+   :glossary-dp: fls_1xjbrp376niw
+   
+   :glossary:
+     :dp:`fls_jic937ujpnar`
+     A :dt:`generic implementation` is an :t:`implementation` with
+     :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_z311nxou9yi3`
+     A :t:`generic implementation` is an :t:`implementation` with
+     :t:`[generic parameter]s`.
 
-:dp:`fls_wmcp0n36jlbr`
-A :t:`generic struct` is a :t:`struct` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic struct
+   :glossary-dp: fls_cgtu4v2vxvh
+   
+   :glossary:
+     :dp:`fls_mcb2mlklith8`
+     A :dt:`generic struct` is a :t:`struct` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_wmcp0n36jlbr`
+     A :t:`generic struct` is a :t:`struct` with :t:`[generic parameter]s`.
 
-:dp:`fls_h42kg56vsefx`
-A :t:`generic trait` is a :t:`trait` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic trait
+   :glossary-dp: fls_hppo1v3ia4wu
+   
+   :glossary:
+     :dp:`fls_h515f11akr91`
+     A :dt:`generic trait` is a :t:`trait` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_h42kg56vsefx`
+     A :t:`generic trait` is a :t:`trait` with :t:`[generic parameter]s`.
 
-:dp:`fls_372h3oevejih`
-A :t:`generic type alias` is a :t:`type alias` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic type alias
+   :glossary-dp: fls_18ow0q8at1pi
+   
+   :glossary:
+     :dp:`fls_zgxsqq4vu7e3`
+     A :dt:`generic type alias` is a :t:`type alias` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_372h3oevejih`
+     A :t:`generic type alias` is a :t:`type alias` with :t:`[generic parameter]s`.
 
-:dp:`fls_u8mqct93yimd`
-A :t:`generic union` is a :t:`union` with :t:`[generic parameter]s`.
+.. glossary-entry:: generic union
+   :glossary-dp: fls_xn9mla1vm6iv
+   
+   :glossary:
+     :dp:`fls_93rxr0yjx1e7`
+     A :dt:`generic union` is a :t:`union` with :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_u8mqct93yimd`
+     A :t:`generic union` is a :t:`union` with :t:`[generic parameter]s`.
 
-:dp:`fls_vpcqgec83ybt`
-A :t:`constant parameter` is a :t:`generic parameter` for a :t:`constant`.
+.. glossary-entry:: constant parameter
+   :glossary-dp: fls_pj0f0p4avbyw
+   
+   :glossary:
+     :dp:`fls_z7e491m3dx4u`
+     A :dt:`constant parameter` is a :t:`generic parameter` for a :t:`constant`.
+     
+     :dp:`fls_9093wziwxk1g`
+     See :s:`ConstantParameter`.
+   :chapter:
+     :dp:`fls_vpcqgec83ybt`
+     A :t:`constant parameter` is a :t:`generic parameter` for a :t:`constant`.
 
-:dp:`fls_3SjMBlc0b7qo`
-A :t:`constant parameter initializer` is a :t:`construct` that provides the
-default :t:`value` of its related :t:`constant parameter`.
+.. glossary-entry:: constant parameter initializer
+   :glossary-dp: fls_sIvXMhYaZVjD
+   
+   :glossary:
+     :dp:`fls_OXD2YaOkfjcI`
+     A :dt:`constant parameter initializer` is a :t:`construct` that provides the
+     default `:t:`value` of its related :t:`constant parameter`.
+     
+     :dp:`fls_CMsyUCxGm8Xs`
+     See :s:`ConstantParameterInitializer`.
+   :chapter:
+     :dp:`fls_3SjMBlc0b7qo`
+     A :t:`constant parameter initializer` is a :t:`construct` that provides the
+     default :t:`value` of its related :t:`constant parameter`.
 
 :dp:`fls_p4yb8EAXlRU0`
 A :t:`constant parameter initializer` shall be a :t:`constant expression`.
@@ -91,19 +174,50 @@ A :t:`constant parameter initializer` shall be a :t:`constant expression`.
 It is a static error to use a :t:`generic parameter` in the
 :t:`discriminant initializer` of an :t:`enum variant`.
 
-:dp:`fls_s0nrjwqg2wox`
-A :t:`lifetime parameter` is a :t:`generic parameter` for a :t:`lifetime`.
+.. glossary-entry:: lifetime parameter
+   :glossary-dp: fls_md7ii59zobrc
+   
+   :glossary:
+     :dp:`fls_7g0iu68nrsd4`
+     A :dt:`lifetime parameter` is a :t:`generic parameter` for a :t:`lifetime`.
+     
+     :dp:`fls_z1wl2uiwip98`
+     See :s:`LifetimeParameter`.
+   :chapter:
+     :dp:`fls_s0nrjwqg2wox`
+     A :t:`lifetime parameter` is a :t:`generic parameter` for a :t:`lifetime`.
 
 :dp:`fls_2grtygcj8o3`
 A :t:`lifetime parameter` shall not be used within a :t:`constant context`,
 except for the ``'static`` :t:`lifetime`.
 
-:dp:`fls_95eooah0vcqx`
-A :t:`type parameter` is a :t:`generic parameter` for a :t:`type`.
+.. glossary-entry:: type parameter
+   :glossary-dp: fls_uv2damik654e
+   
+   :glossary:
+     :dp:`fls_5t6510wkb67x`
+     A :dt:`type parameter` is a :t:`generic parameter` for a :t:`type`.
+     
+     :dp:`fls_vquy0tsvd93x`
+     See :s:`TypeParameter`.
+   :chapter:
+     :dp:`fls_95eooah0vcqx`
+     A :t:`type parameter` is a :t:`generic parameter` for a :t:`type`.
 
-:dp:`fls_ahCqtkh0m5sR`
-A :t:`type parameter initializer` is a :t:`construct` that provides the
-default :t:`value` of its related :t:`type parameter`.
+.. glossary-entry:: type parameter initializer
+   :glossary-dp: fls_Fq2zTHYRpK2V
+   
+   :glossary:
+     :dp:`fls_Xpz47JLNsOXI`
+     A :dt:`type parameter initializer` is a :t:`construct` that provides the
+     default :t:`value` of its related :t:`type parameter`.
+     
+     :dp:`fls_6Ap26AcSadP8`
+     See :s:`TypeParameterInitializer`.
+   :chapter:
+     :dp:`fls_ahCqtkh0m5sR`
+     A :t:`type parameter initializer` is a :t:`construct` that provides the
+     default :t:`value` of its related :t:`type parameter`.
 
 :dp:`fls_3qZRBp9j26w3`
 The :t:`type` of the :t:`type parameter initializer` of a :t:`type parameter`
@@ -122,9 +236,17 @@ A :t:`generic struct` shall use all of its :t:`[type parameter]s` and
 A :t:`generic union` shall use all of its :t:`[type parameter]s` and
 :t:`[lifetime parameter]s` at least once in at least one of its :t:`[field]s`.
 
-:dp:`fls_hyi2jnp38v1n`
-A :t:`generic parameter` is said to constrain an :t:`implementation` if the
-:t:`generic parameter` appears at least once in one of the following:
+.. glossary-entry:: constrain
+   :glossary-dp: fls_x4niicvxxv9k
+   
+   :glossary:
+     :dp:`fls_fna0ch8ucyhv`
+     A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if
+     it makes the :t:`[implementation]'s` applicability more narrow.
+   :chapter:
+     :dp:`fls_hyi2jnp38v1n`
+     A :t:`generic parameter` is said to constrain an :t:`implementation` if the
+     :t:`generic parameter` appears at least once in one of the following:
 
 * :dp:`fls_sseo6u6pbcki`
   As a :t:`binding argument` in the :t:`[trait bound]s` of a :t:`type` that
@@ -274,31 +396,84 @@ Where Clauses
 
 .. rubric:: Legality Rules
 
-:dp:`fls_3nqb7p5ifvio`
-A :t:`where clause` is a :t:`construct` that specifies :t:`[bound]s` on
-:t:`[lifetime parameter]s` and :t:`[type]s` that have
-to hold for the :t:`construct` subject to the :t:`where clause` to be valid.
+.. glossary-entry:: where clause
+   :glossary-dp: fls_ew2gsg72rjxk
+   
+   :glossary:
+     :dp:`fls_prljyrhontzn`
+     A :dt:`where clause` is a :t:`construct` that specifies :t:`[bound]s` on
+     :t:`[lifetime parameter]s` and :t:`[type parameter]s`.
+     
+     :dp:`fls_k32hnug33eo9`
+     See :s:`WhereClause`.
+   :chapter:
+     :dp:`fls_3nqb7p5ifvio`
+     A :t:`where clause` is a :t:`construct` that specifies :t:`[bound]s` on
+     :t:`[lifetime parameter]s` and :t:`[type]s` that have
+     to hold for the :t:`construct` subject to the :t:`where clause` to be valid.
 
-:dp:`fls_fhy4rsmmbvyy`
-A :t:`where clause predicate` is either a :t:`lifetime bound predicate` or a
-:t:`type bound predicate`.
+.. glossary-entry:: where clause predicate
+   :glossary-dp: fls_myNeYCm4VI0R
+   
+   :glossary:
+     :dp:`fls_0LACQVmZpDQF`
+     A :dt:`where clause predicate` is either a :t:`lifetime bound predicate` or a
+     :t:`type bound predicate`.
+     
+     :dp:`fls_Jk7V1SOKE4Gm`
+     See :s:`WhereClausePredicate`.
+   :chapter:
+     :dp:`fls_fhy4rsmmbvyy`
+     A :t:`where clause predicate` is either a :t:`lifetime bound predicate` or a
+     :t:`type bound predicate`.
 
-:dp:`fls_V4PKFqtCsAv6`
-A :t:`lifetime bound predicate` is a :t:`construct` that specifies
-:t:`[lifetime bound]s` on a :t:`lifetime parameter`.
+.. glossary-entry:: lifetime bound predicate
+   :glossary-dp: fls_fV8sP0roRyBN
+   
+   :glossary:
+     :dp:`fls_AHftLKgSP9Xk`
+     A :dt:`lifetime bound predicate` is a :t:`construct` that specifies
+     :t:`[lifetime bound]s` on a :t:`lifetime parameter`.
+     
+     :dp:`fls_8WIod9Rm5IXa`
+     See :s:`LifetimeBoundPredicate`.
+   :chapter:
+     :dp:`fls_V4PKFqtCsAv6`
+     A :t:`lifetime bound predicate` is a :t:`construct` that specifies
+     :t:`[lifetime bound]s` on a :t:`lifetime parameter`.
 
-:dp:`fls_cslGPmVjujHD`
-A :t:`type bound predicate` is a :t:`construct` that specifies
-:t:`[lifetime bound]s` and :t:`[trait bound]s` on a :t:`type`.
+.. glossary-entry:: type bound predicate
+   :glossary-dp: fls_zDdXv5I4bW9H
+   
+   :glossary:
+     :dp:`fls_j6WKoybB4cep`
+     A :dt:`type bound predicate` is a :t:`construct` that specifies
+     :t:`[lifetime bound]s` and :t:`[trait bound]s` on a :t:`type`.
+     
+     :dp:`fls_oMlPNgoDjnoW`
+     See :s:`TypeBoundPredicate`.
+   :chapter:
+     :dp:`fls_cslGPmVjujHD`
+     A :t:`type bound predicate` is a :t:`construct` that specifies
+     :t:`[lifetime bound]s` and :t:`[trait bound]s` on a :t:`type`.
 
 :dp:`fls_ytk74dyxuy6d`
 A :t:`construct` is valid when all of its :t:`[where clause predicate]s` hold
 true for the supplied :t:`[generic argument]s`.
 
-:dp:`fls_1xgw1dq60quz`
-A :t:`trivial predicate` is a :t:`where clause predicate` that does not use
-the :t:`[generic parameter]s` or :t:`[higher-ranked trait bound]s` of the related
-:t:`construct`.
+.. glossary-entry:: trivial predicate
+   :glossary-dp: fls_soqkluvirlsd
+   
+   :glossary:
+     :dp:`fls_db5njwrjolhs`
+     A :dt:`trivial predicate` is a :t:`where clause predicate` that does not use
+     the :t:`[generic parameter]s` or :t:`[higher-ranked trait bound]s` of the related
+     :t:`construct`.
+   :chapter:
+     :dp:`fls_1xgw1dq60quz`
+     A :t:`trivial predicate` is a :t:`where clause predicate` that does not use
+     the :t:`[generic parameter]s` or :t:`[higher-ranked trait bound]s` of the related
+     :t:`construct`.
 
 :dp:`fls_47s8i7pzb9gg`
 It is a static error to create a :t:`trivial predicate` that does not hold.
@@ -349,9 +524,20 @@ Generic Arguments
 
 .. rubric:: Legality Rules
 
-:dp:`fls_3x6qd8vt5uus`
-A :t:`generic argument` supplies a static input for an
-:t:`associated trait type` or a :t:`generic parameter`.
+.. glossary-entry:: generic argument
+   :glossary-dp: fls_j1cyhud0h65t
+   
+   :glossary:
+     :dp:`fls_meimxi20p51a`
+     A :dt:`generic argument` supplies a static input for an
+     :t:`associated trait type` or a :t:`generic parameter`.
+     
+     :dp:`fls_8bvdmdgbu17l`
+     See :s:`GenericArgumentList`.
+   :chapter:
+     :dp:`fls_3x6qd8vt5uus`
+     A :t:`generic argument` supplies a static input for an
+     :t:`associated trait type` or a :t:`generic parameter`.
 
 :dp:`fls_ky39fb2vcom6`
 A :s:`BindingArgument` shall follow :s:`[ConstantArgument]s`,
@@ -363,13 +549,29 @@ A :s:`LifetimeArgument` shall precede :s:`[BindingArgument]s`,
 :s:`[ConstantArgument]s`, and :s:`[TypeArgument]s` in a
 :s:`GenericArgumentList`.
 
-:dp:`fls_9pda3ja0ihks`
-A :t:`binding argument` is a :t:`generic argument` that supplies the :t:`type`
-of an :t:`associated trait type`.
+.. glossary-entry:: binding argument
+   :glossary-dp: fls_glblhx8vzd3z
+   
+   :glossary:
+     :dp:`fls_9lzcasl4tw7k`
+     A :dt:`binding argument` is a :t:`generic argument` that supplies the :t:`type`
+     of an :t:`associated trait type`.
+   :chapter:
+     :dp:`fls_9pda3ja0ihks`
+     A :t:`binding argument` is a :t:`generic argument` that supplies the :t:`type`
+     of an :t:`associated trait type`.
 
-:dp:`fls_mcUMWsYcxzmZ`
-A :t:`binding bound argument` is a :t:`generic argument` that further imposes
-:t:`[bound]s` on an :t:`associated trait type`.
+.. glossary-entry:: binding bound argument
+   :glossary-dp: fls_t2cit5QOte8U
+   
+   :glossary:
+     :dp:`fls_D3i3n4RIReCA`
+     A :dt:`binding bound argument` is a :t:`generic argument` that further imposes
+     :t:`[bound]s` on an :t:`associated trait type`.
+   :chapter:
+     :dp:`fls_mcUMWsYcxzmZ`
+     A :t:`binding bound argument` is a :t:`generic argument` that further imposes
+     :t:`[bound]s` on an :t:`associated trait type`.
 
 :dp:`fls_dxMfAI4EZVS5`
 A :t:`binding bound argument` shall only be used within the confines of a
@@ -377,22 +579,55 @@ A :t:`binding bound argument` shall only be used within the confines of a
 :t:`[bound]s`, :t:`associated type`'s :t:`[bound]s` or :t:`trait`'s
 :t:`[supertrait]s`.
 
-:dp:`fls_i3z9ueoe99zd`
-A :t:`constant argument` is a :t:`generic argument` that supplies the
-:t:`value` of a :t:`constant parameter`.
+.. glossary-entry:: constant argument
+   :glossary-dp: fls_n7z4cl1fsk6l
+   
+   :glossary:
+     :dp:`fls_sz10vgh260xo`
+     A :dt:`constant argument` is a :t:`generic argument` that supplies the
+     :t:`value` of a :t:`constant parameter`.
+     
+     :dp:`fls_dz9x6gf3yzc6`
+     See :s:`ConstantArgument`.
+   :chapter:
+     :dp:`fls_i3z9ueoe99zd`
+     A :t:`constant argument` is a :t:`generic argument` that supplies the
+     :t:`value` of a :t:`constant parameter`.
 
 :dp:`fls_al4dhmqodvwc`
 A :t:`constant argument` may only appear as a single segment
 :t:`path expression`, optionally encapsulated in a :t:`block expression`, within
 an :t:`array repetition constructor` or a :t:`type`.
 
-:dp:`fls_10k9gdxlpuls`
-A :t:`lifetime argument` is a :t:`generic argument` that supplies the
-:t:`lifetime` of a :t:`lifetime parameter`.
+.. glossary-entry:: lifetime argument
+   :glossary-dp: fls_d0s6bk7ljqrb
+   
+   :glossary:
+     :dp:`fls_oaf87yjb3xjs`
+     A :dt:`lifetime argument` is a :t:`generic argument` that supplies the
+     :t:`value` of a :t:`lifetime parameter`.
+     
+     :dp:`fls_la8lbv14zj28`
+     See :s:`LifetimeArgument`.
+   :chapter:
+     :dp:`fls_10k9gdxlpuls`
+     A :t:`lifetime argument` is a :t:`generic argument` that supplies the
+     :t:`lifetime` of a :t:`lifetime parameter`.
 
-:dp:`fls_d4vdvpihoeb1`
-A :t:`type argument` is a :t:`generic argument` that supplies the :t:`type` of
-a :t:`type parameter`.
+.. glossary-entry:: type argument
+   :glossary-dp: fls_89ollsdjx3uy
+   
+   :glossary:
+     :dp:`fls_152lk7hrtd11`
+     A :dt:`type argument` is a :t:`generic argument` that supplies the :t:`value`
+     of a :t:`type parameter`.
+     
+     :dp:`fls_91tqk65qiygf`
+     See :s:`TypeArgument`.
+   :chapter:
+     :dp:`fls_d4vdvpihoeb1`
+     A :t:`type argument` is a :t:`generic argument` that supplies the :t:`type` of
+     a :t:`type parameter`.
 
 :dp:`fls_ukarc98ceesz`
 :t:`[Generic argument]s` are subject to :t:`generic conformance`.
@@ -426,9 +661,17 @@ Generic Conformance
 
 .. rubric:: Legality Rules
 
-:dp:`fls_CBWyxBJeYeb2`
-:t:`Generic conformance` measures the compatibility between a set of
-:t:`[generic parameter]s` and a set of :t:`[generic argument]s`.
+.. glossary-entry:: generic conformance
+   :glossary-dp: fls_3uFg0NK5fYQ6
+   
+   :glossary:
+     :dp:`fls_PfvELNsNySLT`
+     :dt:`Generic conformance` measures the compatibility between a set of
+     :t:`[generic parameter]s` and a set of :t:`[generic argument]s`.
+   :chapter:
+     :dp:`fls_CBWyxBJeYeb2`
+     :t:`Generic conformance` measures the compatibility between a set of
+     :t:`[generic parameter]s` and a set of :t:`[generic argument]s`.
 
 :dp:`fls_ltch5eivxgaa`
 A :t:`binding argument` is conformant with an :t:`associated type` when the

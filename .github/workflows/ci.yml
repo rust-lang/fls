@@ -26,6 +26,9 @@ jobs:
       - name: Build documentation and check links
         run: ./make.py --check-links
 
+      - name: Verify generated glossary matches static
+        run: ./generate-glossary.py && diff -u build/generated.glossary.rst src/glossary.rst.inc
+
       - name: Verify licensing metadata
         run: uvx reuse lint
 

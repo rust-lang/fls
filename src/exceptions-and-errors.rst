@@ -42,9 +42,17 @@ Panic
 
 .. rubric:: Legality Rules
 
-:dp:`fls_a554v4n0khye`
-A :t:`panic` is an abnormal program state caused by invoking :t:`macro`
-:std:`core::panic`.
+.. glossary-entry:: panic
+   :glossary-dp: fls_wzpivxkhpln
+   
+   :glossary:
+     :dp:`fls_t3kpbnmohtp6`
+     A :dt:`panic` is an abnormal program state caused by invoking :t:`macro`
+     :std:`core::panic`.
+   :chapter:
+     :dp:`fls_a554v4n0khye`
+     A :t:`panic` is an abnormal program state caused by invoking :t:`macro`
+     :std:`core::panic`.
 
 .. rubric:: Dynamic Semantics
 
@@ -71,8 +79,15 @@ Abort
 
 .. rubric:: Legality Rules
 
-:dp:`fls_9a1izu3omkbn`
-:t:`Abort` is the immediate termination of a program.
+.. glossary-entry:: abort
+   :glossary-dp: fls_ymnz0mt7i4m8
+   
+   :glossary:
+     :dp:`fls_u4o7tda3ilv0`
+     :dt:`Abort` is the immediate termination of a program.
+   :chapter:
+     :dp:`fls_9a1izu3omkbn`
+     :t:`Abort` is the immediate termination of a program.
 
 .. rubric:: Dynamic Semantics
 
@@ -84,4 +99,3 @@ Abort
 
 #. :dp:`fls_7bnrbjb0pq5n`
    The program terminates.
-

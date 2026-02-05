@@ -14,12 +14,20 @@ without :t:`[data race]s`, whose rules are presented in this chapter.
 
 .. rubric:: Legality Rules
 
-:dp:`fls_tx4b8r6i93n4`
-A :t:`data race` is a scenario where two or more threads access a shared memory
-location concurrently without any synchronization, where one of the accesses is
-a modification.
-
-.. rubric:: Undefined Behavior
+.. glossary-entry:: data race
+   :glossary-dp: fls_9meaofgcpvx6
+   
+   :glossary:
+     :dp:`fls_v2s1b57e3r7n`
+     A :dt:`data race` is a scenario where two or more threads access a shared
+     memory location concurrently.
+   :chapter:
+     :dp:`fls_tx4b8r6i93n4`
+     A :t:`data race` is a scenario where two or more threads access a shared memory
+     location concurrently without any synchronization, where one of the accesses is
+     a modification.
+     
+     .. rubric:: Undefined Behavior
 
 :dp:`fls_isypweqewe78`
 It is undefined behavior if two or more threads engage in a :t:`data race`.
@@ -36,9 +44,17 @@ The Rust programming language provides the :std:`core::marker::Send` and
 :std:`core::marker::Sync` :t:`[trait]s` for preventing data races at the
 :t:`type` level.
 
-:dp:`fls_2jujsujpjp3w`
-A :t:`send type` is a :t:`type` that implements the :std:`core::marker::Send`
-:t:`trait`.
+.. glossary-entry:: send type
+   :glossary-dp: fls_8spw41g0dbqw
+   
+   :glossary:
+     :dp:`fls_qfkng98dw6yy`
+     A :dt:`send type` is a :t:`type` that implements the :std:`core::marker::Send`
+     :t:`trait`.
+   :chapter:
+     :dp:`fls_2jujsujpjp3w`
+     A :t:`send type` is a :t:`type` that implements the :std:`core::marker::Send`
+     :t:`trait`.
 
 :dp:`fls_cax6fe4em23k`
 An :t:`abstract data type` automatically implements the
@@ -49,9 +65,17 @@ An :t:`abstract data type` automatically implements the
 A :t:`send type` shall have :t:`[value]s` that are safe to transfer across
 thread boundaries.
 
-:dp:`fls_dekskhk4g895`
-A :t:`sync type` is a :t:`type` that implements the :std:`core::marker::Sync`
-:t:`trait`.
+.. glossary-entry:: sync type
+   :glossary-dp: fls_r4eoz3ohvpdi
+   
+   :glossary:
+     :dp:`fls_rpc0c8qx3nbo`
+     A :dt:`sync type` is a :t:`type` that implements the :std:`core::marker::Sync`
+     :t:`trait`.
+   :chapter:
+     :dp:`fls_dekskhk4g895`
+     A :t:`sync type` is a :t:`type` that implements the :std:`core::marker::Sync`
+     :t:`trait`.
 
 :dp:`fls_y0iqr5ibnbfe`
 An :t:`abstract data type` automatically implements the
@@ -69,10 +93,25 @@ Atomics
 
 .. rubric:: Legality Rules
 
-:dp:`fls_3pjla9s93mhd`
-An :t:`atomic type` is a :t:`type` defined in :t:`module`
-:std:`core::sync::atomic`. :t:`[Atomic type]s` provide primitive shared-memory
-communication between threads.
+.. glossary-entry:: atomic
+   :glossary-dp: fls_yikjq8yn3nnh
+   
+   :glossary:
+     :dp:`fls_9xd3m2qvqzk`
+     See :t:`atomic type`.
+
+.. glossary-entry:: atomic type
+   :glossary-dp: fls_197vnaw2zbnc
+   
+   :glossary:
+     :dp:`fls_cycpv4fopgx2`
+     An :dt:`atomic type` is a :t:`type` defined in :t:`module`
+     :std:`core::sync::atomic`.
+   :chapter:
+     :dp:`fls_3pjla9s93mhd`
+     An :t:`atomic type` is a :t:`type` defined in :t:`module`
+     :std:`core::sync::atomic`. :t:`[Atomic type]s` provide primitive shared-memory
+     communication between threads.
 
 :dp:`fls_wn4ynaio8u47`
 :t:`[Atomic type]s` are related to :t:`[type]s` as follows:
@@ -130,10 +169,19 @@ Asynchronous Computation
 The Rust programming language provides asynchronous computation through
 :t:`module` :std:`core::task` and the :std:`core::future::Future` :t:`trait`.
 
-:dp:`fls_fte085hi1yqj`
-A :t:`future` represents a :t:`value` of a :t:`type` that implements the
-:std:`core::future::Future` :t:`trait` which may not have finished computing
-yet.
+.. glossary-entry:: future
+   :glossary-dp: fls_yxzpexco8ag3
+   
+   :glossary:
+     :dp:`fls_pvigospl4n3g`
+     A :dt:`future` represents a :t:`value` of a :t:`type` that implements the
+     :std:`core::future::Future` :t:`trait` which may not have finished computing
+     yet.
+   :chapter:
+     :dp:`fls_fte085hi1yqj`
+     A :t:`future` represents a :t:`value` of a :t:`type` that implements the
+     :std:`core::future::Future` :t:`trait` which may not have finished computing
+     yet.
 
 :dp:`fls_7muubin2wn1v`
 The computed :t:`value` of a :t:`future` is obtained by using an
@@ -142,4 +190,3 @@ The computed :t:`value` of a :t:`future` is obtained by using an
 :dp:`fls_ftzey2156ha`
 :std:`core::future::Future::poll` shall not be invoked on a :t:`future` that has
 already returned :std:`core::task::Poll::Ready`.
-

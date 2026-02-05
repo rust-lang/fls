@@ -54,6 +54,13 @@ It documents the current understanding for the purposes of
 compiler validation. As such, given any doubt, it prefers documenting behavior
 of :t:`rustc` over claiming correctness as a specification.
 
+.. glossary-entry:: rustc
+   :glossary-dp: fls_fki32ns69q4j
+   
+   :glossary:
+     :dp:`fls_zdgbeixirjfm`
+     :dt:`rustc` is a compiler that implements the FLS.
+
 :dp:`fls_dv1qish8svc`
 This document is made available for contribution and review,
 and can be a place of shared understanding. It
@@ -154,6 +161,14 @@ relevant to the topic:
 :dp:`fls_oxzjqxgejx9t`
 The syntax representation of a :t:`construct`.
 
+.. glossary-entry:: construct
+   :glossary-dp: fls_4305i29nt5d6
+   
+   :glossary:
+     :dp:`fls_10tvzeo8xex0`
+     A :dt:`construct` is a piece of program text that is an instance of a
+     :t:`syntactic category`.
+
 .. rubric:: Legality Rules
 
 :dp:`fls_gmx688d6ek1o`
@@ -251,6 +266,25 @@ both the effects of each construct and the composition rules for constructs.
 :dp:`fls_jsflt7691ye4`
 The context-free syntax of Rust is described using a simple variant of the
 Backus-Naur form. In particular:
+
+.. glossary-entry:: syntactic category
+   :glossary-dp: fls_44djv0wocacs
+   
+   :glossary:
+     :dp:`fls_f981e3m7kq50`
+     A :dt:`syntactic category` is a nonterminal in the Backus-Naur Form grammar
+     definition of the Rust programming language.
+
+.. glossary-entry:: escaped character
+   :glossary-dp: fls_9hw559b548m0
+   
+   :glossary:
+     :dp:`fls_7yvnbakmo7y5`
+     An :dt:`escaped character` is the textual representation for a character with
+     special meaning. An escaped character consists of character 0x5C (reverse
+     solidus), followed by the single character encoding of the special meaning
+     character. For example, ``\t`` is the escaped character for 0x09 (horizontal
+     tabulation).
 
 * :dp:`fls_98fm7z04lq9`
   A ``monospaced`` font is used to denote Rust syntax.

@@ -43,21 +43,62 @@ Attributes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_rnzxj1t0hehl`
-An :t:`attribute` is a general, free-form metadatum that is interpreted based on
-its :t:`name`, convention, language, and tool.
+.. glossary-entry:: attribute
+   :glossary-dp: fls_w1plocebd7kg
+   
+   :glossary:
+     :dp:`fls_o74rfpe6zo6a`
+     An :dt:`attribute` is a general, free-form metadatum that is interpreted based
+     on its name, convention, language, and tool.
+   :chapter:
+     :dp:`fls_rnzxj1t0hehl`
+     An :t:`attribute` is a general, free-form metadatum that is interpreted based on
+     its :t:`name`, convention, language, and tool.
 
-:dp:`fls_yd0ehw5csaur`
-An :t:`inner attribute` is an :t:`attribute` that applies to an enclosing
-:t:`item`.
+.. glossary-entry:: inner attribute
+   :glossary-dp: fls_joxepyv84ajz
+   
+   :glossary:
+     :dp:`fls_l7kxkav42l5d`
+     An :dt:`inner attribute` is an :t:`attribute` that applies to an enclosing
+     :t:`item`.
+     
+     :dp:`fls_umkk8xwktat1`
+     See :s:`InnerAttribute`.
+   :chapter:
+     :dp:`fls_yd0ehw5csaur`
+     An :t:`inner attribute` is an :t:`attribute` that applies to an enclosing
+     :t:`item`.
 
-:dp:`fls_8o6vmzbw1b1j`
-An :t:`outer attribute` is an :t:`attribute` that applies to a subsequent
-:t:`item`.
+.. glossary-entry:: outer attribute
+   :glossary-dp: fls_gllzixm9yt9w
+   
+   :glossary:
+     :dp:`fls_gffxnbilsqly`
+     An :dt:`outer attribute` is an :t:`attribute` that applies to a subsequent
+     :t:`item`.
+     
+     :dp:`fls_ty6ihy6x3kf`
+     See :s:`OuterAttribute`.
+   :chapter:
+     :dp:`fls_8o6vmzbw1b1j`
+     An :t:`outer attribute` is an :t:`attribute` that applies to a subsequent
+     :t:`item`.
 
-:dp:`fls_9TMRVlQwAdTB`
-An :t:`attribute content` is a :t:`construct` that provides the content of
-an :t:`attribute`.
+.. glossary-entry:: attribute content
+   :glossary-dp: fls_SsMRqkHLDAgG
+   
+   :glossary:
+     :dp:`fls_sn0GvVmM3o38`
+     An :dt:`attribute content` is a :t:`construct` that provides the content of
+     an :t:`attribute`.
+     
+     :dp:`fls_YwyrWC8fcmRm`
+     See :s:`AttributeContent`.
+   :chapter:
+     :dp:`fls_9TMRVlQwAdTB`
+     An :t:`attribute content` is a :t:`construct` that provides the content of
+     an :t:`attribute`.
 
 .. rubric:: Examples
 
@@ -77,13 +118,29 @@ Attribute Properties
 
 .. rubric:: Legality Rules
 
-:dp:`fls_p4potvq7x532`
-An :t:`active attribute` is an :t:`attribute` that is removed from the :t:`item`
-it decorates.
+.. glossary-entry:: active attribute
+   :glossary-dp: fls_5fu0ncvnjyna
+   
+   :glossary:
+     :dp:`fls_r8rzj8mtxtp1`
+     An :dt:`active attribute` is an :t:`attribute` that is removed from the
+     :t:`item` it decorates.
+   :chapter:
+     :dp:`fls_p4potvq7x532`
+     An :t:`active attribute` is an :t:`attribute` that is removed from the :t:`item`
+     it decorates.
 
-:dp:`fls_xk7lb2g02sy7`
-An :t:`inert attribute` is an :t:`attribute` that remains with the :t:`item`
-it decorates.
+.. glossary-entry:: inert attribute
+   :glossary-dp: fls_gccnknktzp7g
+   
+   :glossary:
+     :dp:`fls_o4e3tyjz7l1h`
+     An :dt:`inert attribute` is an :t:`attribute` that remains with the :t:`item`
+     it decorates.
+   :chapter:
+     :dp:`fls_xk7lb2g02sy7`
+     An :t:`inert attribute` is an :t:`attribute` that remains with the :t:`item`
+     it decorates.
 
 :dp:`fls_q8wl7pidx2za`
 The following :t:`[attribute]s` are :t:`[active attribute]s`:
@@ -165,8 +222,18 @@ Built-in Attributes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_92tqo8uas8kd`
-A :t:`built-in attribute` is a language-defined :t:`attribute`.
+.. glossary-entry:: built-in attribute
+   :glossary-dp: fls_82ev7wknxqmk
+   
+   :glossary:
+     :dp:`fls_a40rclur4orm`
+     A :dt:`built-in attribute` is a language-defined :t:`attribute`.
+     
+     :dp:`fls_ooq5g8zffyfb`
+     See :s:`InnerBuiltinAttribute`, :s:`OuterBuiltinAttribute`.
+   :chapter:
+     :dp:`fls_92tqo8uas8kd`
+     A :t:`built-in attribute` is a language-defined :t:`attribute`.
 
 :dp:`fls_bxucstrfcco8`
 The following :t:`[built-in attribute]s` are :dt:`[code generation attribute]s`:
@@ -879,6 +946,22 @@ It is a :t:`safety invariant` for the :t:`function body` to :t:`diverge <divergi
 Conditional Compilation Attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. glossary-entry:: conditional compilation
+   :glossary-dp: fls_lmacvq89lj2j
+   
+   :glossary:
+     :dp:`fls_xymops69eer3`
+     :dt:`Conditional compilation` is the process of compiling
+     :t:`conditionally-compiled source code`.
+
+.. glossary-entry:: conditionally-compiled source code
+   :glossary-dp: fls_bqq013n2cy4t
+   
+   :glossary:
+     :dp:`fls_hs4lnrdxpj2g`
+     :dt:`Conditionally-compiled source code` is source code that may or may not be
+     considered a part of a Rust program depending on certain conditions.
+
 .. _fls_fymvsy6ig99a:
 
 Attribute ``cfg``
@@ -925,30 +1008,74 @@ Attribute ``cfg``
 :dp:`fls_xrjp7xw9jutz`
 :t:`Attribute` :dc:`cfg` enables :t:`conditional compilation`.
 
-:dp:`fls_l96kyix5xsof`
-A :t:`configuration predicate` is a :t:`construct` that evaluates statically
-to either ``true`` or ``false``, and controls :t:`conditional compilation`.
+.. glossary-entry:: configuration predicate
+   :glossary-dp: fls_vRjPmHYEVVAf
+   
+   :glossary:
+     :dp:`fls_TyKIUQMxO9Si`
+     A :dt:`configuration predicate` is a :t:`construct` that evaluates statically
+     to either ``true`` or ``false``, and controls :t:`conditional compilation`.
+     
+     :dp:`fls_99ioki0M64fD`
+     See :s:`ConfigurationPredicate`.
+   :chapter:
+     :dp:`fls_l96kyix5xsof`
+     A :t:`configuration predicate` is a :t:`construct` that evaluates statically
+     to either ``true`` or ``false``, and controls :t:`conditional compilation`.
 
-:dp:`fls_y1MUhnKCxK6T`
-An :t:`all configuration predicate` is a :t:`configuration predicate` that
-models existential quantifier ALL.
+.. glossary-entry:: all configuration predicate
+   :glossary-dp: fls_jZKpckU1t2lR
+   
+   :glossary:
+     :dp:`fls_IyMZWiTnkYPv`
+     An :dt:`all configuration predicate` is a :t:`configuration predicate` that
+     models existential quantifier ALL.
+     
+     :dp:`fls_0fEw9Bx8xX8q`
+     See :s:`ConfigurationPredicateAll`.
+   :chapter:
+     :dp:`fls_y1MUhnKCxK6T`
+     An :t:`all configuration predicate` is a :t:`configuration predicate` that
+     models existential quantifier ALL.
 
 :dp:`fls_tncxxsyutppf`
 An :t:`all configuration predicate` evaluates statically to ``true`` when either
 all nested configuration predicates evaluate to ``true``, or there are no nested
 configuration predicates.
 
-:dp:`fls_Rp73YEE3aFdI`
-An :t:`any configuration predicate` is a :t:`configuration predicate` that
-models existential quantifier ANY.
+.. glossary-entry:: any configuration predicate
+   :glossary-dp: fls_jrzM6C5B6AMt
+   
+   :glossary:
+     :dp:`fls_0nWHML8eoozG`
+     An :dt:`any configuration predicate` is a :t:`configuration predicate` that
+     models existential quantifier ANY.
+     
+     :dp:`fls_xhhXonDldWQY`
+     See :s:`ConfigurationPredicateAny`.
+   :chapter:
+     :dp:`fls_Rp73YEE3aFdI`
+     An :t:`any configuration predicate` is a :t:`configuration predicate` that
+     models existential quantifier ANY.
 
 :dp:`fls_m0zxktz168e0`
 An :t:`any configuration predicate` evaluates statically to ``true`` when any
 nested configuration predicate evaluates to ``true``.
 
-:dp:`fls_XsxeOd32JI8x`
-A :t:`not configuration predicate` is a :t:`configuration predicate` that
-negates the Boolean :t:`value` of its nested :t:`configuration predicate`.
+.. glossary-entry:: not configuration predicate
+   :glossary-dp: fls_5u8ihVDp4mdb
+   
+   :glossary:
+     :dp:`fls_BVMlBterkFYq`
+     A :dt:`not configuration predicate` is a :t:`configuration predicate` that
+     negates the Boolean :t:`value` of its nested :t:`configuration predicate`.
+     
+     :dp:`fls_9j9AaNcv0VNA`
+     See :s:`ConfigurationPredicateNot`.
+   :chapter:
+     :dp:`fls_XsxeOd32JI8x`
+     A :t:`not configuration predicate` is a :t:`configuration predicate` that
+     negates the Boolean :t:`value` of its nested :t:`configuration predicate`.
 
 :dp:`fls_tvsadfy9uibu`
 A :t:`not configuration predicate` evaluates statically to ``true`` when its
@@ -1485,13 +1612,27 @@ or :t:`static`.
 :t:`Attribute` :c:`no_mangle` causes the related :t:`function` or :t:`static` to
 be publicly exported from the produced library or object file.
 
-:dp:`fls_VKuSiswPMll7`
-An :t:`exported function` is a :t:`function` subject to :t:`attribute`
-:c:`no_mangle`.
+.. glossary-entry:: exported function
+   :glossary-dp: fls_5oQllRM7Wjsg
+   
+   :glossary:
+     :dp:`fls_QotMF1iaEYod`
+     An :dt:`exported function` is an export of a :t:`function`.
+   :chapter:
+     :dp:`fls_VKuSiswPMll7`
+     An :t:`exported function` is a :t:`function` subject to :t:`attribute`
+     :c:`no_mangle`.
 
-:dp:`fls_I029Rvr5BX5P`
-An :t:`exported static` is a :t:`static` subject to :t:`attribute`
-:c:`no_mangle`.
+.. glossary-entry:: exported static
+   :glossary-dp: fls_zkq5ZkJwsyoD
+   
+   :glossary:
+     :dp:`fls_aolCSvb349ZU`
+     An :dt:`exported static` is an export of a :t:`static`.
+   :chapter:
+     :dp:`fls_I029Rvr5BX5P`
+     An :t:`exported static` is a :t:`static` subject to :t:`attribute`
+     :c:`no_mangle`.
 
 .. rubric:: Examples
 
@@ -1699,6 +1840,13 @@ Attribute ``type_length_limit``
 :t:`Attribute` :dc:`type_length_limit` sets the maximum number of
 :t:`[generic substitution]s` for :t:`[type parameter]s` when constructing a
 :t:`concrete type`.
+
+.. glossary-entry:: concrete type
+   :glossary-dp: fls_qyfn5u5cl5l1
+   
+   :glossary:
+     :dp:`fls_l0lr3ybgccjc`
+     A :dt:`concrete type` is a :t:`type` described by a :t:`type specification`.
 
 .. rubric:: Examples
 

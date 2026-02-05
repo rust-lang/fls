@@ -22,21 +22,55 @@ Entities
 
 .. rubric:: Legality Rules
 
-:dp:`fls_x7j6wcigqt7u`
-An :t:`entity` is a :t:`construct` that can be referred to within program text,
-usually via a :t:`field access expression` or a :t:`path`.
+.. glossary-entry:: entity
+   :glossary-dp: fls_1qu1t74ga8aa
+   
+   :glossary:
+     :dp:`fls_mdbck557k8sy`
+     An :dt:`entity` is a :t:`construct` that can be referred to within program
+     text, usually via a :t:`field access expression` or a :t:`path`.
+   :chapter:
+     :dp:`fls_x7j6wcigqt7u`
+     An :t:`entity` is a :t:`construct` that can be referred to within program text,
+     usually via a :t:`field access expression` or a :t:`path`.
 
-:dp:`fls_40d2g0hvq2il`
-A :t:`name` is an :t:`identifier` that refers to an :t:`entity`.
+.. glossary-entry:: name
+   :glossary-dp: fls_kad7fzn94x4d
+   
+   :glossary:
+     :dp:`fls_jjpzrs38vs3y`
+     A :dt:`name` is an :t:`identifier` that refers to an :t:`entity`.
+     
+     :dp:`fls_yrzevg5kd4bi`
+     See :s:`Name`.
+   :chapter:
+     :dp:`fls_40d2g0hvq2il`
+     A :t:`name` is an :t:`identifier` that refers to an :t:`entity`.
 
-:dp:`fls_lcca91wjwnpx`
-A :t:`declaration` is a :t:`construct` that introduces a :t:`name` for an
-:t:`entity`.
+.. glossary-entry:: declaration
+   :glossary-dp: fls_9qgy7x6w5ro5
+   
+   :glossary:
+     :dp:`fls_kct7ducpli6k`
+     A :dt:`declaration` is a :t:`construct` that introduces a :t:`name` for an
+     :t:`entity`.
+   :chapter:
+     :dp:`fls_lcca91wjwnpx`
+     A :t:`declaration` is a :t:`construct` that introduces a :t:`name` for an
+     :t:`entity`.
 
-:dp:`fls_94l2d7ti0hjw`
-An :t:`explicitly declared entity` is an :t:`entity` that has a
-:t:`declaration`. The following :t:`entities <entity>` are
-:t:`explicitly declared entities <explicitly declared entity>`:
+.. glossary-entry:: explicitly declared entity
+   :glossary-dp: fls_lqxcnZqvwcsH
+   
+   :glossary:
+     :dp:`fls_shpNJ0JCSCwa`
+     An :dt:`explicitly declared entity` is an :t:`entity` that has a
+     :t:`declaration`.
+   :chapter:
+     :dp:`fls_94l2d7ti0hjw`
+     An :t:`explicitly declared entity` is an :t:`entity` that has a
+     :t:`declaration`. The following :t:`entities <entity>` are
+     :t:`explicitly declared entities <explicitly declared entity>`:
 
 * :dp:`fls_kvdqmo8gmdxi`
   :t:`[Associated item]s`,
@@ -89,10 +123,18 @@ An :t:`explicitly declared entity` is an :t:`entity` that has a
 * :dp:`fls_v7w8ptbyxv9w`
   :t:`[Union type]s`.
 
-:dp:`fls_ig1l38gpy5gy`
-An :t:`implicitly declared entity` is an :t:`entity` that lacks an explicit
-:t:`declaration`. The following :t:`entities <entity>` are
-:t:`implicitly declared entities <implicitly declared entity>`:
+.. glossary-entry:: implicitly declared entity
+   :glossary-dp: fls_i3iB9xP8h8Ci
+   
+   :glossary:
+     :dp:`fls_VQs1jd4Nx3qR`
+     An :dt:`implicitly declared entity` is an :t:`entity` that lacks an explicit
+     :t:`declaration`.
+   :chapter:
+     :dp:`fls_ig1l38gpy5gy`
+     An :t:`implicitly declared entity` is an :t:`entity` that lacks an explicit
+     :t:`declaration`. The following :t:`entities <entity>` are
+     :t:`implicitly declared entities <implicitly declared entity>`:
 
 * :dp:`fls_ed0t6u7fo3fi`
   :t:`[Built-in attribute]s`.
@@ -133,36 +175,103 @@ Visibility
 
 .. rubric:: Legality Rules
 
-:dp:`fls_7kpepal8ghuj`
-:t:`Visibility` is a property of :t:`[field]s` and :t:`[item]s` that determines
-which :t:`[module]s` can refer to the :t:`name` of the :t:`field` or :t:`item`.
+.. glossary-entry:: visibility
+   :glossary-dp: fls_svx87y4p8fdx
+   
+   :glossary:
+     :dp:`fls_sadmsqhptlho`
+     :dt:`Visibility` is a property of :t:`[field]s` and :t:`[item]s` that determines
+     which :t:`[module]s` can refer to the :t:`name` of the :t:`field` or :t:`item`.
+   :chapter:
+     :dp:`fls_7kpepal8ghuj`
+     :t:`Visibility` is a property of :t:`[field]s` and :t:`[item]s` that determines
+     which :t:`[module]s` can refer to the :t:`name` of the :t:`field` or :t:`item`.
 
-:dp:`fls_qo0itr5il1kk`
-:t:`Public visibility` is a kind of :t:`visibility` that allows for a :t:`name`
-to be referred to from arbitrary :t:`module` ``M`` as long as the ancestor
-:t:`[module]s` of the related :t:`entity` can be referred to from ``M``.
+.. glossary-entry:: public visibility
+   :glossary-dp: fls_v2rjlovqsdyr
+   
+   :glossary:
+     :dp:`fls_6cfxqtl921ko`
+     :dt:`Public visibility` is a kind of :t:`visibility` that allows a :t:`name`
+     to be referred to from arbitrary :t:`module` ``M`` as long as the ancestor
+     :t:`[module]s` of the related :t:`entity` can be referred to from ``M``.
+   :chapter:
+     :dp:`fls_qo0itr5il1kk`
+     :t:`Public visibility` is a kind of :t:`visibility` that allows for a :t:`name`
+     to be referred to from arbitrary :t:`module` ``M`` as long as the ancestor
+     :t:`[module]s` of the related :t:`entity` can be referred to from ``M``.
 
-:dp:`fls_knjruq5wppv`
-:t:`Private visibility` is a kind of :t:`visibility` that allows a :t:`name`
-to be referred to only by the current :t:`module` of the :t:`entity`, and its
-descendant :t:`[module]s`.
+.. glossary-entry:: private visibility
+   :glossary-dp: fls_v1u1mevpj0kj
+   
+   :glossary:
+     :dp:`fls_duop22hyaweq`
+     :dt:`Private visibility` is a kind of :t:`visibility` that allows a :t:`name`
+     to be referred to only by the current :t:`module` of the :t:`entity`, and its
+     descendant :t:`[module]s`.
+   :chapter:
+     :dp:`fls_knjruq5wppv`
+     :t:`Private visibility` is a kind of :t:`visibility` that allows a :t:`name`
+     to be referred to only by the current :t:`module` of the :t:`entity`, and its
+     descendant :t:`[module]s`.
 
-:dp:`fls_t7i4n19qdgn4`
-A :t:`visibility modifier` sets the :t:`visibility` of a :t:`name`.
+.. glossary-entry:: visibility modifier
+   :glossary-dp: fls_xqjk8avt7t51
+   
+   :glossary:
+     :dp:`fls_ze7befho4jhs`
+     A :dt:`visibility modifier` sets the :t:`visibility` of the :t:`name` of an
+     :t:`item`.
+   :chapter:
+     :dp:`fls_t7i4n19qdgn4`
+     A :t:`visibility modifier` sets the :t:`visibility` of a :t:`name`.
 
-:dp:`fls_aa4f3rvir9lm`
-A :t:`crate public modifier` is a :t:`visibility modifier` that grants a
-:t:`name` :t:`public visibility` within the current :t:`crate` only.
+.. glossary-entry:: crate public modifier
+   :glossary-dp: fls_yf9yjzzhw0rn
+   
+   :glossary:
+     :dp:`fls_dj7fmrqhbhsv`
+     A :dt:`crate public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the current :t:`crate` only.
+     
+     :dp:`fls_wjfupeyeczp0`
+     See :s:`CratePublicModifier`.
+   :chapter:
+     :dp:`fls_aa4f3rvir9lm`
+     A :t:`crate public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the current :t:`crate` only.
 
-:dp:`fls_tnh7o3pb4e22`
-A :t:`self public modifier` is a :t:`visibility modifier` that grants a
-:t:`name` :t:`private visibility`. A :t:`self public modifier` is equivalent
-to a :t:`simple path public modifier` where the :t:`simple path` denotes
-:t:`keyword` ``self``.
+.. glossary-entry:: self public modifier
+   :glossary-dp: fls_jq213cesxhyp
+   
+   :glossary:
+     :dp:`fls_ln3bzqgctfym`
+     A :dt:`self public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`private visibility`.
+     
+     :dp:`fls_21cvbfjpckkt`
+     See :s:`SelfPublicModifier`.
+   :chapter:
+     :dp:`fls_tnh7o3pb4e22`
+     A :t:`self public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`private visibility`. A :t:`self public modifier` is equivalent
+     to a :t:`simple path public modifier` where the :t:`simple path` denotes
+     :t:`keyword` ``self``.
 
-:dp:`fls_yymgpyi67dty`
-A :t:`simple path public modifier` is a :t:`visibility modifier` that grants a
-:t:`name` :t:`public visibility` within the provided :t:`simple path` only.
+.. glossary-entry:: simple path public modifier
+   :glossary-dp: fls_sgy9q06yt6cl
+   
+   :glossary:
+     :dp:`fls_mby9r0jm6uyv`
+     A :dt:`simple path public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the provided :t:`simple path` only.
+     
+     :dp:`fls_mud4hw74kuh6`
+     See :s:`SimplePathPublicModifier`.
+   :chapter:
+     :dp:`fls_yymgpyi67dty`
+     A :t:`simple path public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the provided :t:`simple path` only.
 
 :dp:`fls_hc121mxknq03`
 The :t:`simple path` of a :t:`simple path public modifier` shall start
@@ -174,15 +283,37 @@ The :t:`simple path` of a :t:`simple path public modifier` shall resolve to
 an ancestor :t:`module` of the current :t:`module` or the current :t:`module`
 itself.
 
-:dp:`fls_np8aghofjqhm`
-A :t:`simple public modifier` is a :t:`visibility modifier` that grants a
-:t:`name` :t:`public visibility`.
+.. glossary-entry:: simple public modifier
+   :glossary-dp: fls_k5uqt5oj7wvl
+   
+   :glossary:
+     :dp:`fls_ce1ounn1g68`
+     A :dt:`simple public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility`.
+     
+     :dp:`fls_rd68vm2f2qy5`
+     See :s:`SelfPublicModifier`.
+   :chapter:
+     :dp:`fls_np8aghofjqhm`
+     A :t:`simple public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility`.
 
-:dp:`fls_quzvhzpr0124`
-A :t:`super public modifier` is a :t:`visibility modifier` that grants a
-:t:`name` :t:`public visibility` within the parent :t:`module` only. A
-:t:`super public modifier` is equivalent to a :t:`simple path public modifier`
-where the :t:`simple path` denotes :t:`keyword` ``super``.
+.. glossary-entry:: super public modifier
+   :glossary-dp: fls_12bluakt0jnj
+   
+   :glossary:
+     :dp:`fls_vry5mhs3a5wv`
+     A :dt:`super public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the parent :t:`module` only.
+     
+     :dp:`fls_4a1s9bcrk5oy`
+     See :s:`SuperPublicModifier`.
+   :chapter:
+     :dp:`fls_quzvhzpr0124`
+     A :t:`super public modifier` is a :t:`visibility modifier` that grants a
+     :t:`name` :t:`public visibility` within the parent :t:`module` only. A
+     :t:`super public modifier` is equivalent to a :t:`simple path public modifier`
+     where the :t:`simple path` denotes :t:`keyword` ``super``.
 
 :dp:`fls_utgjx6l5zwfl`
 An external :t:`item`, a :t:`field`, or an :t:`item` that appears without a
@@ -284,12 +415,30 @@ Paths
 
 .. rubric:: Legality Rules
 
-:dp:`fls_klcltwcwrw6i`
-A :t:`path` is a sequence of :t:`[path segment]s` logically separated by
-:t:`namespace qualifier` ``::`` that resolves to an :t:`entity`.
+.. glossary-entry:: path
+   :glossary-dp: fls_9zl72vtkgkuo
+   
+   :glossary:
+     :dp:`fls_u3jyud6mhy1f`
+     A :dt:`path` is a sequence of :t:`[path segment]s` logically separated by
+     :dt:`namespace qualifier` ``::`` that resolves to an :t:`entity`.
+   :chapter:
+     :dp:`fls_klcltwcwrw6i`
+     A :t:`path` is a sequence of :t:`[path segment]s` logically separated by
+     :t:`namespace qualifier` ``::`` that resolves to an :t:`entity`.
 
-:dp:`fls_y1z7kougmahd`
-A :t:`path segment` is an element of a :t:`path`.
+.. glossary-entry:: path segment
+   :glossary-dp: fls_xb54s9cs7h08
+   
+   :glossary:
+     :dp:`fls_gsumebjc2bsp`
+     A :dt:`path segment` is a constituent of a :t:`path`.
+     
+     :dp:`fls_m067uq7fo66i`
+     See :s:`PathSegment`, :s:`SimplePathSegment`, :s:`TypePathSegment`.
+   :chapter:
+     :dp:`fls_y1z7kougmahd`
+     A :t:`path segment` is an element of a :t:`path`.
 
 :dp:`fls_8q8nqfpSz7Ly`
 A :t:`path` is subject to :t:`path resolution`.
@@ -309,14 +458,33 @@ If a :t:`path segment` is expressed as :t:`keyword` ``super``, then the
 or the previous :t:`path segment` of the :t:`path` shall also be expressed as
 :t:`keyword` ``super``.
 
-:dp:`fls_7kb6ltajgiou`
-A :t:`global path` is a :t:`path` that starts with :t:`namespace qualifier`
-``::``.
+.. glossary-entry:: global path
+   :glossary-dp: fls_g6g8c58bilen
+   
+   :glossary:
+     :dp:`fls_msg8jw9momfw`
+     A :dt:`global path` is a :t:`path` that starts with :t:`namespace qualifier`
+     ``::``.
+   :chapter:
+     :dp:`fls_7kb6ltajgiou`
+     A :t:`global path` is a :t:`path` that starts with :t:`namespace qualifier`
+     ``::``.
 
-:dp:`fls_n77icl6idazp`
-A :t:`simple path` is a :t:`path` whose :t:`[path segment]s` consist of either
-:t:`[identifier]s` or certain :t:`[keyword]s` as defined in the syntax rules
-above.
+.. glossary-entry:: simple path
+   :glossary-dp: fls_o5kv9lrtz4fq
+   
+   :glossary:
+     :dp:`fls_db91duoug4eb`
+     A :dt:`simple path` is a :t:`path` whose :t:`[path segment]s` consist of either
+     :t:`[identifier]s` or certain :t:`[keyword]s`.
+     
+     :dp:`fls_cm7ysyfrdwom`
+     See :s:`SimplePath`.
+   :chapter:
+     :dp:`fls_n77icl6idazp`
+     A :t:`simple path` is a :t:`path` whose :t:`[path segment]s` consist of either
+     :t:`[identifier]s` or certain :t:`[keyword]s` as defined in the syntax rules
+     above.
 
 :dp:`fls_YnUsdSM4x9eq`
 A :dt:`path prefix` is a :t:`path` with its last :t:`path segment` and
@@ -338,37 +506,93 @@ be part of the :s:`UseImportContent` of a :t:`nesting import` as long as the
 :dp:`fls_kv5bpq8rf1j9`
 A :t:`simple path` is subject to :t:`simple path resolution`.
 
-:dp:`fls_chtj3hcfe3ap`
-A :t:`single segment path` is a :t:`path` consisting of exactly one
-:t:`path segment`.
+.. glossary-entry:: single segment path
+   :glossary-dp: fls_JS91BDzd03Qj
+   
+   :glossary:
+     :dp:`fls_Hun5BCZsqd6k`
+     A :dt:`single segment path` is a :t:`path` consisting of exactly one
+     :t:`path segment`.
+   :chapter:
+     :dp:`fls_chtj3hcfe3ap`
+     A :t:`single segment path` is a :t:`path` consisting of exactly one
+     :t:`path segment`.
 
-:dp:`fls_wm61yeclairz`
-A :t:`multi segment path` is a :t:`path` consisting of more than one
-:t:`path segment`.
+.. glossary-entry:: multi segment path
+   :glossary-dp: fls_iw2vYgmLhlsg
+   
+   :glossary:
+     :dp:`fls_T4Xd6W6EqPSb`
+     A :dt:`multi segment path` is a :t:`path` consisting of more than one
+     :t:`path segment`.
+   :chapter:
+     :dp:`fls_wm61yeclairz`
+     A :t:`multi segment path` is a :t:`path` consisting of more than one
+     :t:`path segment`.
 
-:dp:`fls_nRgjCLYZL3iX`
-An :t:`unqualified path expression` is a :t:`path expression`  without a :t:`qualified type`.
+.. glossary-entry:: unqualified path expression
+   :glossary-dp: fls_cDVmvrVhUBmr
+   
+   :glossary:
+     :dp:`fls_9xKgP8uVsOaR`
+     An :dt:`unqualified path expression` is a :t:`path expression`  without a :t:`qualified type`.
+   :chapter:
+     :dp:`fls_nRgjCLYZL3iX`
+     An :t:`unqualified path expression` is a :t:`path expression`  without a :t:`qualified type`.
 
 :dp:`fls_tvvycup09b51`
 A :t:`path expression` is subject to :t:`path expression resolution`.
 
-:dp:`fls_h2zikgmazoxx`
-A :t:`type path` is a :t:`path` that acts as a :t:`type specification`.
+.. glossary-entry:: type path
+   :glossary-dp: fls_QDCiXh7uSj9r
+   
+   :glossary:
+     :dp:`fls_UBR5czHrMTrx`
+     A :dt:`type path` is a :t:`path` that acts as a :t:`type specification`.
+     
+     :dp:`fls_7CbNAZYSZayW`
+     See :s:`TypePath`.
+   :chapter:
+     :dp:`fls_h2zikgmazoxx`
+     A :t:`type path` is a :t:`path` that acts as a :t:`type specification`.
 
 :dp:`fls_nj7s6xmzx55f`
 A :t:`type path` is subject to :t:`type path resolution`.
 
-:dp:`fls_e65q3iz50j6a`
-A :t:`qualifying trait` is a :t:`trait` that imposes a restriction on a
-:t:`qualified type`.
+.. glossary-entry:: qualifying trait
+   :glossary-dp: fls_B0m82A8jIerQ
+   
+   :glossary:
+     :dp:`fls_zKY1dWBMrqXZ`
+     A :dt:`qualifying trait` is a :t:`trait` that imposes a restriction on a
+     :t:`qualified type`.
+     
+     :dp:`fls_z6OeUWBnec90`
+     See :s:`QualifyingTrait`.
+   :chapter:
+     :dp:`fls_e65q3iz50j6a`
+     A :t:`qualifying trait` is a :t:`trait` that imposes a restriction on a
+     :t:`qualified type`.
 
 :dp:`fls_Ai1jN5a8h3Dz`
 A :t:`qualifying trait` shall resolve to a :t:`trait`.
 
-:dp:`fls_ybv0tdu7dnj5`
-A :t:`qualified type` is a :t:`type` that is restricted to a set of
-:t:`[implementation]s` that exhibit :t:`implementation conformance` to a
-:t:`qualifying trait`.
+.. glossary-entry:: qualified type
+   :glossary-dp: fls_Qv0UvhSfwBuM
+   
+   :glossary:
+     :dp:`fls_e7YyZXOFo6ei`
+     A :dt:`qualified type` is a :t:`type` that is restricted to a set of
+     :t:`[implementation]s` that exhibit :t:`implementation conformance` to a
+     :t:`qualifying trait`.
+     
+     :dp:`fls_a4heXjzO3jem`
+     See :s:`QualifiedType`.
+   :chapter:
+     :dp:`fls_ybv0tdu7dnj5`
+     A :t:`qualified type` is a :t:`type` that is restricted to a set of
+     :t:`[implementation]s` that exhibit :t:`implementation conformance` to a
+     :t:`qualifying trait`.
 
 :dp:`fls_qkYF2J7GVah8`
 A :t:`qualified type` shall resolve to a :t:`type`.
@@ -376,18 +600,49 @@ A :t:`qualified type` shall resolve to a :t:`type`.
 :dp:`fls_QjNQbQhUcRTT`
 A :t:`qualified type` shall implement its related :t:`qualifying trait`.
 
-:dp:`fls_7sm3206va03c`
-A :t:`qualified path expression` is a :t:`path expression` that resolves
-through a :t:`qualified type`.
+.. glossary-entry:: qualified path expression
+   :glossary-dp: fls_O6CFtnpN3UEE
+   
+   :glossary:
+     :dp:`fls_wKAS6FxqGmTf`
+     A :dt:`qualified path expression` is a :t:`path expression` that resolves
+     through a :t:`qualified type`.
+     
+     :dp:`fls_MXxJn64eJpC5`
+     See :s:`QualifiedPathExpression`.
+   :chapter:
+     :dp:`fls_7sm3206va03c`
+     A :t:`qualified path expression` is a :t:`path expression` that resolves
+     through a :t:`qualified type`.
 
-:dp:`fls_huynsyx13gsz`
-A :t:`qualified type path` is a :t:`type path` that resolves through a
-:t:`qualified type`.
+.. glossary-entry:: qualified type path
+   :glossary-dp: fls_koVlQq8aPdPv
+   
+   :glossary:
+     :dp:`fls_S0QT9ib38i8E`
+     A :dt:`qualified type path` is a :t:`type path` that resolves through a
+     :t:`qualified type`.
+     
+     :dp:`fls_RR8fFLD7Rxlt`
+     See :s:`QualifiedTypePath`.
+   :chapter:
+     :dp:`fls_huynsyx13gsz`
+     A :t:`qualified type path` is a :t:`type path` that resolves through a
+     :t:`qualified type`.
 
-:dp:`fls_RZvIsApi4WQm`
-An :t:`associated type projection` is a :t:`qualified type path` of the form
-``<type as trait>::associated_type``, where ``type`` is a :t:`type`, ``trait``
-is a :t:`qualifying trait`, and ``associated type`` is an :t:`associated type`.
+.. glossary-entry:: associated type projection
+   :glossary-dp: fls_zOe783MlE9i9
+   
+   :glossary:
+     :dp:`fls_4moFUY6epk0v`
+     An :dt:`associated type projection` is a :t:`qualified type path` of the form
+     ``<type as trait>::associated_type``, where ``type`` is a :t:`type`, ``trait``
+     is a :t:`qualifying trait`, and ``associated type`` is an :t:`associated type`.
+   :chapter:
+     :dp:`fls_RZvIsApi4WQm`
+     An :t:`associated type projection` is a :t:`qualified type path` of the form
+     ``<type as trait>::associated_type``, where ``type`` is a :t:`type`, ``trait``
+     is a :t:`qualifying trait`, and ``associated type`` is an :t:`associated type`.
 
 :dp:`fls_f1ciozzetj5a`
 A :dt:`qualified fn trait` is a :t:`construct` that refers to the
@@ -457,9 +712,23 @@ Scopes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_5x5xykocwyiy`
-A :t:`scope` is a region of program text where an :t:`entity` can be referred
-to. An :t:`entity` is :t:`in scope` when it can be referred to.
+.. glossary-entry:: scope
+   :glossary-dp: fls_fj8mdxi967px
+   
+   :glossary:
+     :dp:`fls_fachaj550cq1`
+     A :dt:`scope` is a region of program text where a :t:`name` can be referred to.
+   :chapter:
+     :dp:`fls_5x5xykocwyiy`
+     A :t:`scope` is a region of program text where an :t:`entity` can be referred
+     to. An :t:`entity` is :t:`in scope` when it can be referred to.
+
+.. glossary-entry:: in scope
+   :glossary-dp: fls_3lo8ygoyxxyf
+   
+   :glossary:
+     :dp:`fls_sy380geqvf2l`
+     A :t:`name` is :dt:`in scope` when it can be referred to.
 
 .. _fls_6ozthochxz1i:
 
@@ -468,8 +737,15 @@ Binding Scopes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ncg9etb3x7k0`
-A :t:`binding scope` is a :t:`scope` for :t:`[binding]s`.
+.. glossary-entry:: binding scope
+   :glossary-dp: fls_5ep4xSGZwtoL
+   
+   :glossary:
+     :dp:`fls_6qPYH5NJ8usI`
+     A :dt:`binding scope` is a :t:`scope` for :t:`[binding]s`.
+   :chapter:
+     :dp:`fls_ncg9etb3x7k0`
+     A :t:`binding scope` is a :t:`scope` for :t:`[binding]s`.
 
 :dp:`fls_u52mx4xw8zod`
 The :t:`binding` of a :t:`closure parameter` is :t:`in scope` within the
@@ -507,8 +783,15 @@ Generic Parameter Scope
 
 .. rubric:: Legality Rules
 
-:dp:`fls_amoh8r4gghyj`
-A :t:`generic parameter scope` is a :t:`scope` for :t:`[generic parameter]s`.
+.. glossary-entry:: generic parameter scope
+   :glossary-dp: fls_CzudKdaYbfBF
+   
+   :glossary:
+     :dp:`fls_e2tICijmLkj4`
+     A :dt:`generic parameter scope` is a :t:`scope` for :t:`[generic parameter]s`.
+   :chapter:
+     :dp:`fls_amoh8r4gghyj`
+     A :t:`generic parameter scope` is a :t:`scope` for :t:`[generic parameter]s`.
 
 :dp:`fls_6o38qhbna46z`
 A :t:`generic parameter` is :t:`in scope` of a :s:`GenericParameterList`.
@@ -560,8 +843,15 @@ Item Scope
 
 .. rubric:: Legality Rules
 
-:dp:`fls_p5o243hhe1y3`
-An :t:`item scope` is a :t:`scope` for :t:`[item]s`.
+.. glossary-entry:: item scope
+   :glossary-dp: fls_wojJZZ4gYGfl
+   
+   :glossary:
+     :dp:`fls_mW7IwWGSjrl2`
+     An :dt:`item scope` is a :t:`scope` for :t:`[item]s`.
+   :chapter:
+     :dp:`fls_p5o243hhe1y3`
+     An :t:`item scope` is a :t:`scope` for :t:`[item]s`.
 
 :dp:`fls_huvo0mp2i6fb`
 An :t:`item` declared within the :t:`block expression` of an
@@ -580,8 +870,15 @@ Label Scope
 
 .. rubric:: Legality Rules
 
-:dp:`fls_96kczd4zhpco`
-A :t:`label scope` is a :t:`scope` for :t:`[label]s`.
+.. glossary-entry:: label scope
+   :glossary-dp: fls_P0on44EAB3cn
+   
+   :glossary:
+     :dp:`fls_2H6HkQ102hVS`
+     A :dt:`label scope` is a :t:`scope` for :t:`[label]s`.
+   :chapter:
+     :dp:`fls_96kczd4zhpco`
+     A :t:`label scope` is a :t:`scope` for :t:`[label]s`.
 
 :dp:`fls_8sevg1sa82h4`
 A :t:`label` is :t:`in scope` within the :t:`block expression` of the related
@@ -591,6 +888,15 @@ A :t:`label` is :t:`in scope` within the :t:`block expression` of the related
 A :t:`label` is not :t:`in scope` within nested :t:`[async block]s`,
 :t:`[closure expression]s`, :t:`[constant context]s`, and :t:`[item]s`.
 
+.. glossary-entry:: Self
+   :glossary-dp: fls_9o2hcy6t7dac
+   
+   :glossary:
+     :dp:`fls_q6whqbfusswf`
+     :dc:`Self` is either an implicit :t:`type parameter` in :t:`[trait]s` or an
+     implicit :t:`type alias` in :t:`[implementation]s`. :c:`Self` refers to the
+     :t:`type` that implements a :t:`trait`.
+
 .. _fls_kgbi26212eof:
 
 Self Scope
@@ -598,8 +904,15 @@ Self Scope
 
 .. rubric:: Legality Rules
 
-:dp:`fls_kgt81m4f72ne`
-A :t:`Self scope` is a :t:`scope` for :c:`Self`.
+.. glossary-entry:: Self scope
+   :glossary-dp: fls_exMZlNMxQvP7
+   
+   :glossary:
+     :dp:`fls_pSvqWGRmFmH0`
+     A :dt:`Self scope` is a :t:`scope` for :c:`Self`.
+   :chapter:
+     :dp:`fls_kgt81m4f72ne`
+     A :t:`Self scope` is a :t:`scope` for :c:`Self`.
 
 :dp:`fls_kxdwq4b136tl`
 :c:`Self` of an :t:`enum type` is :t:`in scope` within the related
@@ -631,8 +944,15 @@ Textual Macro Scope
 
 .. rubric:: Legality Rules
 
-:dp:`fls_xkh8cqubhxad`
-A :t:`textual macro scope` is a :t:`scope` for :t:`[declarative macro]s`.
+.. glossary-entry:: textual macro scope
+   :glossary-dp: fls_AVZGZPd6WXXO
+   
+   :glossary:
+     :dp:`fls_xyeYk6vrmlWp`
+     A :dt:`textual macro scope` is a :t:`scope` for :t:`[declarative macro]s`.
+   :chapter:
+     :dp:`fls_xkh8cqubhxad`
+     A :t:`textual macro scope` is a :t:`scope` for :t:`[declarative macro]s`.
 
 :dp:`fls_iec3otx863yp`
 A :t:`declarative macro` is :t:`in scope` after the related :t:`macro`
@@ -652,11 +972,19 @@ Scope Hierarchy
 
 .. rubric:: Legality Rules
 
-:dp:`fls_4o7vfo6v39l7`
-The :t:`scope hierarchy` reflects the nesting of :t:`[scope]s` as introduced
-by :t:`[scoping construct]s`. An inner :t:`scope` introduced by a nested
-:t:`scoping construct` is the child of an outer :t:`scope` introduced by an
-enclosing :t:`scoping construct`.
+.. glossary-entry:: scope hierarchy
+   :glossary-dp: fls_xZUiNkBN5e00
+   
+   :glossary:
+     :dp:`fls_Spcc3L9X939d`
+     The :dt:`scope hierarchy` reflects the nesting of :t:`[scope]s` as introduced
+     by :t:`[scoping construct]s`.
+   :chapter:
+     :dp:`fls_4o7vfo6v39l7`
+     The :t:`scope hierarchy` reflects the nesting of :t:`[scope]s` as introduced
+     by :t:`[scoping construct]s`. An inner :t:`scope` introduced by a nested
+     :t:`scoping construct` is the child of an outer :t:`scope` introduced by an
+     enclosing :t:`scoping construct`.
 
 :dp:`fls_ns4eog3od4kw`
 A :dt:`scoping construct` is a :t:`construct` that introduces :t:`[scope]s`
@@ -800,10 +1128,19 @@ Namespaces
 
 .. rubric:: Legality Rules
 
-:dp:`fls_1d4jm61qnt4l`
-A :t:`namespace` is a logical grouping of :t:`[name]s` such that the occurrence
-of a :t:`name` in one :t:`namespace` does not conflict with an occurrence of
-the same :t:`name` in another :t:`namespace`.
+.. glossary-entry:: namespace
+   :glossary-dp: fls_GesmsWSVhv3f
+   
+   :glossary:
+     :dp:`fls_er8lcvnEqxa5`
+     A :dt:`namespace` is a logical grouping of :t:`[name]s` such that the
+     occurrence of a :t:`name` in one :t:`namespace` does not conflict with an
+     occurrence of the same :t:`name` in another :t:`namespace`.
+   :chapter:
+     :dp:`fls_1d4jm61qnt4l`
+     A :t:`namespace` is a logical grouping of :t:`[name]s` such that the occurrence
+     of a :t:`name` in one :t:`namespace` does not conflict with an occurrence of
+     the same :t:`name` in another :t:`namespace`.
 
 :dp:`fls_avsua7bho205`
 :t:`[Name]s` are segregated into one of five :t:`[namespace]s` based on the
@@ -932,12 +1269,34 @@ Preludes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_po4gw6t2ptwu`
-A :t:`prelude` is a collection of :t:`entities <entity>` that are automatically
-brought :t:`in scope` of every :t:`module` in a :t:`crate`. Such
-:t:`entities <entity>` are referred to as
-:t:`prelude entities <prelude entity>`. The :t:`name` of a :t:`prelude entity`
-is referred to as a :t:`prelude name`.
+.. glossary-entry:: prelude
+   :glossary-dp: fls_8Gn72FJBarfb
+   
+   :glossary:
+     :dp:`fls_D0PJioOZjKNN`
+     A :dt:`prelude` is a collection of :t:`entities <entity>` that are
+     automatically brought :t:`in scope` of every :t:`module` in a :t:`crate`.
+   :chapter:
+     :dp:`fls_po4gw6t2ptwu`
+     A :t:`prelude` is a collection of :t:`entities <entity>` that are automatically
+     brought :t:`in scope` of every :t:`module` in a :t:`crate`. Such
+     :t:`entities <entity>` are referred to as
+     :t:`prelude entities <prelude entity>`. The :t:`name` of a :t:`prelude entity`
+     is referred to as a :t:`prelude name`.
+
+.. glossary-entry:: prelude entity
+   :glossary-dp: fls_AWySDxPgypiw
+   
+   :glossary:
+     :dp:`fls_2lU7RUjzFlsz`
+     A :dt:`prelude entity` is an :t:`entity` declared in a :t:`prelude`.
+
+.. glossary-entry:: prelude name
+   :glossary-dp: fls_FYn5JqPOhiIs
+   
+   :glossary:
+     :dp:`fls_6Jk7fUAK122A`
+     A :dt:`prelude name` is a :t:`name` of a :t:`prelude entity`.
 
 :dp:`fls_n4102qskkmz2`
 The :dt:`core prelude` is a :t:`prelude` that brings :t:`in scope` of every
@@ -1012,14 +1371,37 @@ Use Imports
 
 .. rubric:: Legality Rules
 
-:dp:`fls_lyw4t098sxrj`
-A :t:`use import` brings :t:`entities <entity>` :t:`in scope` within the
-:t:`block expression` of an :t:`expression-with-block` or :t:`module` where the
-:t:`use import` resides.
+.. glossary-entry:: use import
+   :glossary-dp: fls_fow1bnvduafi
+   
+   :glossary:
+     :dp:`fls_uccv9zthh5vt`
+     A :dt:`use import` brings :t:`entities <entity>` :t:`in scope` within the
+     :t:`block expression` of an :t:`expression-with-block` or :t:`module` where the
+     :t:`use import` resides.
+     
+     :dp:`fls_ib5wf62j4uhr`
+     See :s:`UseImport`.
+   :chapter:
+     :dp:`fls_lyw4t098sxrj`
+     A :t:`use import` brings :t:`entities <entity>` :t:`in scope` within the
+     :t:`block expression` of an :t:`expression-with-block` or :t:`module` where the
+     :t:`use import` resides.
 
-:dp:`fls_sxo1jb25pl8a`
-A :t:`simple path prefix` is the leading :t:`simple path` of a :t:`glob import`
-or a :t:`nesting import`.
+.. glossary-entry:: simple path prefix
+   :glossary-dp: fls_23G6TAntJXqa
+   
+   :glossary:
+     :dp:`fls_ijc2yHQuIltY`
+     A :dt:`simple path prefix` is the leading :t:`simple path` of a
+     :t:`glob import` or a :t:`nesting import`.
+     
+     :dp:`fls_ImHceyHhK6OZ`
+     See :s:`SimplePathPrefix`.
+   :chapter:
+     :dp:`fls_sxo1jb25pl8a`
+     A :t:`simple path prefix` is the leading :t:`simple path` of a :t:`glob import`
+     or a :t:`nesting import`.
 
 :dp:`fls_WAA4WmohGu6T`
 An :dt:`import path prefix` is the fully constructed :t:`path` prefix of a
@@ -1048,15 +1430,47 @@ An :dt:`import path prefix` is the fully constructed :t:`path` prefix of a
    :t:`import path prefix`. Repeat this step with the :t:`nesting import` as
    the current :t:`use import`.
 
-:dp:`fls_2bkcn83smy2y`
-A :t:`simple import` is a :t:`use import` that brings all :t:`entities <entity>`
-it refers to into scope, optionally with a different
-:t:`name` than they are declared with by using a :t:`renaming`.
+.. glossary-entry:: renaming
+   :glossary-dp: fls_8ibsdx4dx6s7
+   
+   :glossary:
+     :dp:`fls_cp8u9kq44o8a`
+     A :dt:`renaming` provides an alternative :t:`name` for an existing name.
+     
+     :dp:`fls_8inznqig2ibr`
+     See :s:`Renaming`.
 
-:dp:`fls_v3a6y2ze44v2`
-A :t:`glob import` is a :t:`use import` that brings all :t:`entities <entity>`
-exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
-into :t:`scope`.
+.. glossary-entry:: simple import
+   :glossary-dp: fls_6mcm7xdcyn40
+   
+   :glossary:
+     :dp:`fls_jrlzpoauui9g`
+     A :dt:`simple import` is a :t:`use import` that binds a :t:`simple path` to a
+     local :t:`name` by using an optional :t:`renaming`.
+     
+     :dp:`fls_ta5t4h25unsw`
+     See :s:`SimpleImport`.
+   :chapter:
+     :dp:`fls_2bkcn83smy2y`
+     A :t:`simple import` is a :t:`use import` that brings all :t:`entities <entity>`
+     it refers to into scope, optionally with a different
+     :t:`name` than they are declared with by using a :t:`renaming`.
+
+.. glossary-entry:: glob import
+   :glossary-dp: fls_euukteybsbi
+   
+   :glossary:
+     :dp:`fls_90qsib7g8e9j`
+     A :dt:`glob import` is a :t:`use import` that brings all :t:`[name]s` with
+     :t:`public visibility` prefixed by its :t:`path` prefix into :t:`scope`.
+     
+     :dp:`fls_n4plc55cij0j`
+     See :s:`GlobImport`.
+   :chapter:
+     :dp:`fls_v3a6y2ze44v2`
+     A :t:`glob import` is a :t:`use import` that brings all :t:`entities <entity>`
+     exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
+     into :t:`scope`.
 
 :dp:`fls_JHU0ersYB6eL`
 An :t:`import path prefix` shall resolve to a :t:`module` or :t:`enum`.
@@ -1107,9 +1521,20 @@ A :t:`trait` imported by a :t:`simple import` subject to a
 :t:`renaming` with character underscore ``_`` is added into :t:`scope` without
 a :t:`name`.
 
-:dp:`fls_ldr7tsuqw34s`
-A :t:`nesting import` is a :t:`use import` that provides a common
-:t:`simple path prefix` for its nested :t:`[use import]s`.
+.. glossary-entry:: nesting import
+   :glossary-dp: fls_6rlvd0u4w6h2
+   
+   :glossary:
+     :dp:`fls_nhkqkdqo32xs`
+     A :dt:`nesting import` is a :t:`use import` that provides a common :t:`path`
+     prefix for its nested :t:`[use import]s`.
+     
+     :dp:`fls_z4d611glen13`
+     See :s:`NestingImport`.
+   :chapter:
+     :dp:`fls_ldr7tsuqw34s`
+     A :t:`nesting import` is a :t:`use import` that provides a common
+     :t:`simple path prefix` for its nested :t:`[use import]s`.
 
 :dp:`fls_iNUBX5fJAI1N`
 A :t:`glob import` outside of a :t:`nesting import` without a :t:`simple path
@@ -1173,11 +1598,20 @@ Shadowing
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ob0riinmitkl`
-:t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be
-:t:`shadowed` when another :t:`name` with the same characters is introduced
-in the same :t:`scope` within the same :t:`namespace`, effectively hiding it.
-A :t:`name` cannot be referred to by any means once it is :t:`shadowed`.
+.. glossary-entry:: shadowing
+   :glossary-dp: fls_HUklMSWzx8Mg
+   
+   :glossary:
+     :dp:`fls_li3NXOPEH9cL`
+     :dt:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be
+     :dt:`shadowed` when another :t:`name` with the same characters is introduced
+     in the same :t:`scope` within the same :t:`namespace`, effectively hiding it.
+   :chapter:
+     :dp:`fls_ob0riinmitkl`
+     :t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be
+     :t:`shadowed` when another :t:`name` with the same characters is introduced
+     in the same :t:`scope` within the same :t:`namespace`, effectively hiding it.
+     A :t:`name` cannot be referred to by any means once it is :t:`shadowed`.
 
 :dp:`fls_fslg89a70e3n`
 No :t:`name` shall be :t:`shadowed` except for
@@ -1218,22 +1652,52 @@ Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ho4kem1slcxg`
-:t:`Resolution` is the process of finding a unique interpretation for a
-:t:`field access expression`, a :t:`method call expression`, a :t:`call
-expression` or a :t:`path`.
+.. glossary-entry:: resolution
+   :glossary-dp: fls_O5iuGATZgyBu
+   
+   :glossary:
+     :dp:`fls_PQjEvLs5cE4y`
+     :dt:`Resolution` is the process of finding a unique interpretation for a
+     :t:`field access expression`, a :t:`method call expression`, or a :t:`path`.
+   :chapter:
+     :dp:`fls_ho4kem1slcxg`
+     :t:`Resolution` is the process of finding a unique interpretation for a
+     :t:`field access expression`, a :t:`method call expression`, a :t:`call
+     expression` or a :t:`path`.
 
-:dp:`fls_7le2vcdbtxbq`
-A :t:`construct` that is being resolved is said to be :t:`under resolution`.
+.. glossary-entry:: under resolution
+   :glossary-dp: fls_X6XjWwYeTnVR
+   
+   :glossary:
+     :dp:`fls_BppwXSVUWtEu`
+     A :t:`construct` that is being resolved is said to be :dt:`under resolution`.
+   :chapter:
+     :dp:`fls_7le2vcdbtxbq`
+     A :t:`construct` that is being resolved is said to be :t:`under resolution`.
 
-:dp:`fls_x3alg07yd7hx`
-A :t:`dereference type` is either a :t:`reference type` or a :t:`type` that
-implements the :std:`core::ops::Deref` :t:`trait`.
+.. glossary-entry:: dereference type
+   :glossary-dp: fls_xbN0GtcH8emc
+   
+   :glossary:
+     :dp:`fls_HfuUQ7IaoI5j`
+     A :dt:`dereference type` is either a :t:`reference type` or a :t:`type` that
+     implements the :std:`core::ops::Deref` :t:`trait`.
+   :chapter:
+     :dp:`fls_x3alg07yd7hx`
+     A :t:`dereference type` is either a :t:`reference type` or a :t:`type` that
+     implements the :std:`core::ops::Deref` :t:`trait`.
 
-:dp:`fls_4hulwazdu20i`
-A :t:`dereference type chain` is a sequence of :t:`[dereference type]s`. A
-:t:`dereference type chain` starts with an initial :t:`dereference type`. From
-then on, the :t:`dereference type chain` continues as follows:
+.. glossary-entry:: dereference type chain
+   :glossary-dp: fls_T380NdEsFxIp
+   
+   :glossary:
+     :dp:`fls_kIzoAEf069HE`
+     A :dt:`dereference type chain` is a sequence of :t:`[dereference type]s`.
+   :chapter:
+     :dp:`fls_4hulwazdu20i`
+     A :t:`dereference type chain` is a sequence of :t:`[dereference type]s`. A
+     :t:`dereference type chain` starts with an initial :t:`dereference type`. From
+     then on, the :t:`dereference type chain` continues as follows:
 
 * :dp:`fls_ptocwx5p25lj`
   If the previous :t:`dereference type` is a :t:`reference type`, then the
@@ -1251,9 +1715,17 @@ Field Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_1nxknwjdp0am`
-:t:`Field resolution` is a form of :t:`resolution` that applies to a
-:t:`field access expression`.
+.. glossary-entry:: field resolution
+   :glossary-dp: fls_BlZwxp6H62sS
+   
+   :glossary:
+     :dp:`fls_nL8UuclgxfGL`
+     :dt:`Field resolution` is a form of :t:`resolution` that applies to a
+     :t:`field access expression`.
+   :chapter:
+     :dp:`fls_1nxknwjdp0am`
+     :t:`Field resolution` is a form of :t:`resolution` that applies to a
+     :t:`field access expression`.
 
 :dp:`fls_j1bip4w30q8`
 A :dt:`candidate container type` is the :t:`type` of the :t:`container operand`
@@ -1299,6 +1771,17 @@ the characters of a :t:`named field selector`.
       resolves to that :t:`candidate indexed field` and :t:`field resolution`
       stops.
 
+.. glossary-entry:: named field selector
+   :glossary-dp: fls_cvxdoycoytc5
+   
+   :glossary:
+     :dp:`fls_cczpgxqdyh1e`
+     A :dt:`named field selector` is a :t:`field selector` where the selected
+     :t:`field` is indicated by an :t:`identifier`.
+     
+     :dp:`fls_hpw0n89ez5nw`
+     See :s:`NamedFieldSelector`.
+
 :dp:`fls_p6hgoqo0kcx`
 :t:`Field resolution` of a :t:`field access expression` with a
 :t:`named field selector` proceeds as follows:
@@ -1327,13 +1810,28 @@ Method Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_e5a5z5yht26l`
-:t:`Method resolution` is a kind of :t:`resolution` that applies to a
-:t:`method call expression`.
+.. glossary-entry:: method resolution
+   :glossary-dp: fls_05yFh5Ud0YkW
+   
+   :glossary:
+     :dp:`fls_LbW4z6OTuD1l`
+     :dt:`Method resolution` is a kind of :t:`resolution` that applies to a
+     :t:`method call expression`.
+   :chapter:
+     :dp:`fls_e5a5z5yht26l`
+     :t:`Method resolution` is a kind of :t:`resolution` that applies to a
+     :t:`method call expression`.
 
-:dp:`fls_mbdS0xiNlj92`
-A :dt:`receiver type` is the :t:`type` of the :t:`receiver operand`
-of a :t:`method call expression`.
+.. glossary-entry:: receiver type
+   :glossary-dp: fls_Kpkm0J40xq5J
+   
+   :glossary:
+     :dp:`fls_vgQmMlpFas5t`
+     A :dt:`receiver type` is the :t:`type` of a :t:`receiver operand`.
+   :chapter:
+     :dp:`fls_mbdS0xiNlj92`
+     A :dt:`receiver type` is the :t:`type` of the :t:`receiver operand`
+     of a :t:`method call expression`.
 
 :dp:`fls_z80ylmlu1f3q`
 A :dt:`candidate receiver type` is the :t:`type` of the :t:`receiver operand`
@@ -1456,9 +1954,17 @@ Call Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ZjJ7y9r6QQMW`
-:t:`Call resolution` is a form of :t:`resolution` that applies to a
-:t:`call expression`.
+.. glossary-entry:: call resolution
+   :glossary-dp: fls_zSh4enFjxeaN
+   
+   :glossary:
+     :dp:`fls_fS1ZjGGypvbn`
+     :dt:`Call resolution` is a kind of :t:`resolution` that applies to a
+     :t:`call expression`.
+   :chapter:
+     :dp:`fls_ZjJ7y9r6QQMW`
+     :t:`Call resolution` is a form of :t:`resolution` that applies to a
+     :t:`call expression`.
 
 :dp:`fls_zBSloU2Gjv7x`
 A :dt:`candidate callee type` is the :t:`type` of the :t:`call operand`
@@ -1489,12 +1995,19 @@ Path Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_8slvisr3jfja`
-:t:`Path resolution` is a form of :t:`resolution` that applies to a :t:`path`.
-
-:dp:`fls_nmev0tnzgw35`
-:t:`Path resolution` resolves a :t:`path` by resolving individual
-:t:`[path segment]s` in sequence, starting from the leftmost :t:`path segment`.
+.. glossary-entry:: path resolution
+   :glossary-dp: fls_J8kiBhcawvnj
+   
+   :glossary:
+     :dp:`fls_uy9Ai9vwTkjB`
+     :dt:`Path resolution` is a form of :t:`resolution` that applies to a :t:`path`.
+   :chapter:
+     :dp:`fls_8slvisr3jfja`
+     :t:`Path resolution` is a form of :t:`resolution` that applies to a :t:`path`.
+     
+     :dp:`fls_nmev0tnzgw35`
+     :t:`Path resolution` resolves a :t:`path` by resolving individual
+     :t:`[path segment]s` in sequence, starting from the leftmost :t:`path segment`.
 
 :dp:`fls_p23q1ob2qitz`
 A :t:`path segment` shall resolve to exactly one :t:`entity`.
@@ -1629,9 +2142,17 @@ Simple Path Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_uml24jw5jo7a`
-:t:`Simple path resolution` is a kind of :t:`path resolution` that applies to
-a :t:`simple path`.
+.. glossary-entry:: simple path resolution
+   :glossary-dp: fls_gT5rZ4qC3pHo
+   
+   :glossary:
+     :dp:`fls_CQlepoN6PmKq`
+     :dt:`Simple path resolution` is a kind of :t:`path resolution` that applies to
+     a :t:`simple path`.
+   :chapter:
+     :dp:`fls_uml24jw5jo7a`
+     :t:`Simple path resolution` is a kind of :t:`path resolution` that applies to
+     a :t:`simple path`.
 
 :dp:`fls_59wd7loxst43`
 The :t:`namespace context` of :t:`simple path resolution` is determined as
@@ -1678,9 +2199,17 @@ Path Expression Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_akjlqm3a2lb1`
-:t:`Path expression resolution` is a form of :t:`path resolution` that applies
-to a :t:`unqualified path expression`.
+.. glossary-entry:: path expression resolution
+   :glossary-dp: fls_EIFtIeLGZNy5
+   
+   :glossary:
+     :dp:`fls_WYcEVyc3SHuK`
+     :dt:`Path expression resolution` is a form of :t:`path resolution` that applies
+     to a :t:`path expression`.
+   :chapter:
+     :dp:`fls_akjlqm3a2lb1`
+     :t:`Path expression resolution` is a form of :t:`path resolution` that applies
+     to a :t:`unqualified path expression`.
 
 :dp:`fls_xyzdajtf4u2t`
 The :t:`namespace context` of :t:`path expression resolution` is the
@@ -1812,9 +2341,17 @@ Type Path Resolution
 
 .. rubric:: Legality Rules
 
-:dp:`fls_2zuncql8ir5k`
-:t:`Type path resolution` is a form of :t:`path resolution` that applies to
-a :t:`type path`.
+.. glossary-entry:: type path resolution
+   :glossary-dp: fls_wa3biT0rQ102
+   
+   :glossary:
+     :dp:`fls_Xv6JbfdIyvA3`
+     :dt:`Type path resolution` is a form of :t:`path resolution` that applies to
+     a :t:`type path`.
+   :chapter:
+     :dp:`fls_2zuncql8ir5k`
+     :t:`Type path resolution` is a form of :t:`path resolution` that applies to
+     a :t:`type path`.
 
 :dp:`fls_bv5cj918dqqe`
 The :t:`namespace context` of :t:`type path resolution` is the

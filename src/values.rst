@@ -10,9 +10,24 @@ Values
 
 .. rubric:: Legality Rules
 
-:dp:`fls_buyaqara7am4`
-A :t:`value` is either a :t:`literal` or the result of a computation, that may
-be stored in a memory location, and interpreted based on some :t:`type`.
+.. glossary-entry:: value
+   :glossary-dp: fls_tg866bc926ms
+   
+   :glossary:
+     :dp:`fls_h8jn338b51yu`
+     A :dt:`value` is either a :t:`literal` or the result of a computation, that may
+     be stored in a memory location, and interpreted based on some :t:`type`.
+   :chapter:
+     :dp:`fls_buyaqara7am4`
+     A :t:`value` is either a :t:`literal` or the result of a computation, that may
+     be stored in a memory location, and interpreted based on some :t:`type`.
+
+.. glossary-entry:: immutable
+   :glossary-dp: fls_xiocbknerufq
+   
+   :glossary:
+     :dp:`fls_sttdfynyqr5h`
+     A :t:`value` is :dt:`immutable` when it cannot be modified.
 
 :dp:`fls_CUJyMj0Sj8NS`
 An :dt:`allocated object` is a :t:`value` stored at some memory address.
@@ -25,22 +40,37 @@ the object is stored.
 An :t:`[allocated object]s` :dt:`memory size` is the number of bytes the object
 spans in memory from its :t:`base address`.
 
-:dp:`fls_rixdyyc525xp`
-Two :t:`[value]s` :t:`overlap` when
+.. glossary-entry:: overlap
+   :glossary-dp: fls_nhamq7xtz384
+   
+   :glossary:
+     :dp:`fls_itkz9y19923k`
+     Two :t:`[value]s` :dt:`overlap` when their memory locations overlap, or both
+     values are elements of the same :t:`array`.
+   :chapter:
+     :dp:`fls_rixdyyc525xp`
+     Two :t:`[value]s` :t:`overlap` when
+     
+     * :dp:`fls_m6ctqq70vcxr`
+       Both :t:`[value]s` are the same, or
+     
+     * :dp:`fls_s231d18x5eay`
+       One :t:`value` is of an :t:`abstract data type` and the other denotes a
+       :t:`field` of the same :t:`value`, or
+     
+     * :dp:`fls_dfr4yqo93fsn`
+       One :t:`value` denotes an :t:`array` and the other denotes an element of the
+       same :t:`value`, or
+     
+     * :dp:`fls_eoak5mdl6ma`
+       Both :t:`[value]s` are elements of the same :t:`array`.
 
-* :dp:`fls_m6ctqq70vcxr`
-  Both :t:`[value]s` are the same, or
-
-* :dp:`fls_s231d18x5eay`
-  One :t:`value` is of an :t:`abstract data type` and the other denotes a
-  :t:`field` of the same :t:`value`, or
-
-* :dp:`fls_dfr4yqo93fsn`
-  One :t:`value` denotes an :t:`array` and the other denotes an element of the
-  same :t:`value`, or
-
-* :dp:`fls_eoak5mdl6ma`
-  Both :t:`[value]s` are elements of the same :t:`array`.
+.. glossary-entry:: null
+   :glossary-dp: fls_gqw1bzwexxt0
+   
+   :glossary:
+     :dp:`fls_8sh17t37b2ml`
+     A :dc:`null` :t:`value` denotes the address ``0``.
 
 .. rubric:: Undefined Behavior
 
@@ -79,13 +109,32 @@ Constants
 
 .. rubric:: Legality Rules
 
-:dp:`fls_5o5iu4j8in4l`
-A :t:`constant` is an :t:`immutable` :t:`value expression` whose uses are substituted by
-the :t:`value`.
+.. glossary-entry:: constant
+   :glossary-dp: fls_yw57di94gwpf
+   
+   :glossary:
+     :dp:`fls_p8rjw2qok85b`
+     A :dt:`constant` is an immutable :t:`value` whose uses are substituted by the
+     :t:`value`.
+     
+     :dp:`fls_hlouedpdg1zd`
+     See :s:`ConstantDeclaration`.
+   :chapter:
+     :dp:`fls_5o5iu4j8in4l`
+     A :t:`constant` is an :t:`immutable` :t:`value expression` whose uses are substituted by
+     the :t:`value`.
 
-:dp:`fls_3mhj0kkupwuz`
-An :t:`unnamed constant` is a :t:`constant` declared with character 0x5F (low
-line).
+.. glossary-entry:: unnamed constant
+   :glossary-dp: fls_u78ng1tleh0w
+   
+   :glossary:
+     :dp:`fls_ufj01cxxsv1w`
+     An :dt:`unnamed constant` is a :t:`constant` declared with character 0x5F (low
+     line).
+   :chapter:
+     :dp:`fls_3mhj0kkupwuz`
+     An :t:`unnamed constant` is a :t:`constant` declared with character 0x5F (low
+     line).
 
 :dp:`fls_ka4y2yd100dx`
 The :t:`type specification` of a :t:`constant` shall have ``'static``
@@ -95,9 +144,20 @@ The :t:`type specification` of a :t:`constant` shall have ``'static``
 The :t:`type` of a :t:`constant` shall implement the :std:`core::marker::Sized`
 :t:`trait`.
 
-:dp:`fls_ndmfqxjpvsqy`
-A :t:`constant initializer` is a :t:`construct` that provides the :t:`value` of
-its related :t:`constant`.
+.. glossary-entry:: constant initializer
+   :glossary-dp: fls_mf022jo05ziu
+   
+   :glossary:
+     :dp:`fls_2ge48v1kmw8`
+     A :dt:`constant initializer` is a :t:`construct` that provides the :t:`value`
+     of its related :t:`constant`.
+     
+     :dp:`fls_h86eg26z19r2`
+     See :s:`ConstantInitializer`.
+   :chapter:
+     :dp:`fls_ndmfqxjpvsqy`
+     A :t:`constant initializer` is a :t:`construct` that provides the :t:`value` of
+     its related :t:`constant`.
 
 :dp:`fls_6rxwbbhf5tc5`
 A :t:`constant` shall have a :t:`constant initializer`, unless it is an
@@ -112,6 +172,14 @@ The value of a :t:`constant` is determined by evaluating its
 :t:`constant initializer`.
 
 .. rubric:: Dynamic Semantics
+
+.. glossary-entry:: elaboration
+   :glossary-dp: fls_2sja3okj27ne
+   
+   :glossary:
+     :dp:`fls_xoahzmwu1std`
+     :dt:`Elaboration` is the process by which a :t:`declaration` achieves its
+     runtime effects.
 
 :dp:`fls_xezt9hl069h4`
 The :t:`elaboration` of a :t:`constant` evaluates its :t:`constant initializer`.
@@ -143,9 +211,20 @@ Statics
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ibrmiwfypldh`
-A :t:`static` is a :t:`value` that is associated with a specific memory
-location.
+.. glossary-entry:: static
+   :glossary-dp: fls_tpazbmuq9hag
+   
+   :glossary:
+     :dp:`fls_srx4v1e20yxa`
+     A :dt:`static` is a :t:`value` that is associated with a specific memory
+     location.
+     
+     :dp:`fls_1b7gpk8e98pw`
+     See :s:`StaticDeclaration`.
+   :chapter:
+     :dp:`fls_ibrmiwfypldh`
+     A :t:`static` is a :t:`value` that is associated with a specific memory
+     location.
 
 :dp:`fls_mt94jvoot9dx`
 A :t:`static` defined within a :t:`generic function` exists once in the
@@ -162,23 +241,48 @@ The :t:`type` of a :t:`static` shall implement the :std:`core::marker::Sized`
 :dp:`fls_WRpcVF1fLEpr`
 A :t:`static` shall only be subject to an :s:`ItemSafety` if it is an :t:`external static` in an :t:`unsafe external block`.
 
-:dp:`fls_doi4z6u55bi7`
-A :t:`mutable static` is a :t:`static` with :t:`keyword` ``mut`` whose
-:t:`value` can be modified.
+.. glossary-entry:: mutable static
+   :glossary-dp: fls_omgyj7yxwgua
+   
+   :glossary:
+     :dp:`fls_3ss4bokujaby`
+     A :dt:`mutable static` is a :t:`static` whose :t:`value` can be modified.
+   :chapter:
+     :dp:`fls_doi4z6u55bi7`
+     A :t:`mutable static` is a :t:`static` with :t:`keyword` ``mut`` whose
+     :t:`value` can be modified.
 
 :dp:`fls_74hp208pto22`
 Access to a :t:`mutable static` shall require :t:`unsafe context`.
 
-:dp:`fls_jfde2vg6mtww`
-An :t:`immutable static` is a :t:`static` whose :t:`value` cannot be modified.
+.. glossary-entry:: immutable static
+   :glossary-dp: fls_my7jjwi0ncen
+   
+   :glossary:
+     :dp:`fls_eonlhz79ur3d`
+     An :dt:`immutable static` is a :t:`static` whose :t:`value` cannot be modified.
+   :chapter:
+     :dp:`fls_jfde2vg6mtww`
+     An :t:`immutable static` is a :t:`static` whose :t:`value` cannot be modified.
 
 :dp:`fls_k4tyqb1j6zjo`
 The type of an :t:`immutable static` shall implement the
 :std:`core::marker::Sync` :t:`trait`.
 
-:dp:`fls_t17h5h6a6v4c`
-A :t:`static initializer` is a :t:`construct` that provides the :t:`value` of
-its related :t:`static`.
+.. glossary-entry:: static initializer
+   :glossary-dp: fls_x331kxllyzim
+   
+   :glossary:
+     :dp:`fls_6jjbfni87tax`
+     A :dt:`static initializer` is a :t:`construct` that provides the :t:`value` of
+     its related :t:`static`.
+     
+     :dp:`fls_igbl5uv0dlhl`
+     See :s:`StaticInitializer`.
+   :chapter:
+     :dp:`fls_t17h5h6a6v4c`
+     A :t:`static initializer` is a :t:`construct` that provides the :t:`value` of
+     its related :t:`static`.
 
 :dp:`fls_yq0hpy4jx2qb`
 A :t:`static` shall have a :t:`static initializer`, unless it is an
@@ -226,9 +330,17 @@ Temporaries
 
 .. rubric:: Legality Rules
 
-:dp:`fls_awpw61yofckz`
-A :t:`temporary` is an anonymous :t:`variable` produced by some intermediate
-computation.
+.. glossary-entry:: temporary
+   :glossary-dp: fls_4omay4i65dwz
+   
+   :glossary:
+     :dp:`fls_fathkxu9kxvw`
+     A :dt:`temporary` is an anonymous :t:`variable` produced by some intermediate
+     computation.
+   :chapter:
+     :dp:`fls_awpw61yofckz`
+     A :t:`temporary` is an anonymous :t:`variable` produced by some intermediate
+     computation.
 
 .. _fls_gho955gmob73:
 
@@ -237,9 +349,39 @@ Variables
 
 .. rubric:: Legality Rules
 
-:dp:`fls_hl5tnd9yy252`
-A :t:`variable` is a placeholder for a :t:`value` that is allocated on the
-stack.
+.. glossary-entry:: variable
+   :glossary-dp: fls_donq6w1906lw
+   
+   :glossary:
+     :dp:`fls_9ab12k4vwsio`
+     A :dt:`variable` is a placeholder for a :t:`value` that is allocated on the
+     stack.
+   :chapter:
+     :dp:`fls_hl5tnd9yy252`
+     A :t:`variable` is a placeholder for a :t:`value` that is allocated on the
+     stack.
+
+.. glossary-entry:: local variable
+   :glossary-dp: fls_lkxiws55xhpq
+   
+   :glossary:
+     :dp:`fls_3inlcyi6444u`
+     For :dt:`local variable`, see :t:`variable`.
+
+.. glossary-entry:: immutable variable
+   :glossary-dp: fls_8xrhfwgep3nk
+   
+   :glossary:
+     :dp:`fls_sdg35i92taip`
+     An :dt:`immutable variable` is a :t:`variable` whose :t:`value` cannot be
+     modified.
+
+.. glossary-entry:: mutable variable
+   :glossary-dp: fls_n7h4xr40xwgb
+   
+   :glossary:
+     :dp:`fls_kjjv9jvdpf2o`
+     A :dt:`mutable variable` is a :t:`variable` whose :t:`value` can be modified.
 
 :dp:`fls_vgi0gh5zmoiu`
 The following :t:`[construct]s` are :t:`[variable]s`:
@@ -254,6 +396,14 @@ The following :t:`[construct]s` are :t:`[variable]s`:
 A :t:`variable` shall be used only after it has been initialized through all
 :t:`[reachable control flow path]s` up to the point of its usage.
 
+.. glossary-entry:: reachable control flow path
+   :glossary-dp: fls_sAe1HaaVSPvP
+   
+   :glossary:
+     :dp:`fls_IxrvzuBg8j3E`
+     A :dt:`reachable control flow path` is a control flow path that can be
+     taken by the execution of a program between two given points in the program.
+
 .. rubric:: Dynamic Semantics
 
 :dp:`fls_g8etd5lsgn9j`
@@ -266,9 +416,17 @@ Constant Promotion
 
 .. rubric:: Legality Rules
 
-:dp:`fls_udn9lyf3m0z6`
-:t:`Constant promotion` is the process of converting a :t:`value expression`
-into a :t:`constant`.
+.. glossary-entry:: constant promotion
+   :glossary-dp: fls_f95c9hrk7t2p
+   
+   :glossary:
+     :dp:`fls_ku2md8lnei12`
+     :dt:`Constant promotion` is the process of converting a :t:`value expression`
+     into a :t:`constant`.
+   :chapter:
+     :dp:`fls_udn9lyf3m0z6`
+     :t:`Constant promotion` is the process of converting a :t:`value expression`
+     into a :t:`constant`.
 
 :dp:`fls_yvkdcs4pmxjf`
 :t:`Constant promotion` is possible only when

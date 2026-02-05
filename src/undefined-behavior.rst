@@ -10,6 +10,13 @@
 List of undefined behavior
 ==========================
 
+.. glossary-entry:: undefined behavior
+   :glossary-dp: fls_WuLL4SvSKavZ
+   
+   :glossary:
+     :dp:`fls_WpwmltUMQGZa`
+     :dt:`Undefined behavior` is a situation that results in an unbounded error.
+
 :dp:`fls_f9mkI99mzPxY`
 The following sections of the FLS document undefined behavior:
 

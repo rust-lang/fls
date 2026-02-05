@@ -81,6 +81,32 @@ whenever you change a file by passing the ``--serve`` flag::
 
    ./make.py --serve
 
+For a full list of build flags, run::
+
+   ./make.py --help
+
+Glossary generation
+===================
+
+Glossary entries can be authored once and used to render both their chapter
+definitions and the glossary. The generated glossary output lives at
+``build/generated.glossary.rst``.
+
+Generate the glossary directly::
+
+   ./generate-glossary.py
+
+Build the docs using the generated glossary instead of the static file::
+
+   ./make.py --use-generated-glossary
+
+Overwrite the static glossary with the generated output::
+
+   ./make.py --overwrite-glossary-from-build
+
+For a detailed parity check between the baseline and generated HTML, see
+``tools/README.rst`` (``tools/verify-html-diff.py``).
+
 Checking links consistency
 ==========================
 
