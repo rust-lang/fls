@@ -164,112 +164,112 @@ long as their :t:`[operand]s` are also :t:`[constant expression]s` and do not
 involve :t:`[type]s` that require :t:`destruction`:
 
 * :dp:`fls_y6ore0iwx7e0`
-  :t:`[Arithmetic expression]s` of :t:`[scalar type]s`,
+  :t:`[Arithmetic expression]s` of :t:`[scalar type]s`
 
 * :dp:`fls_xguga84v3j8u`
-  :t:`[Array expression]s`,
+  :t:`[Array expression]s`
 
 * :dp:`fls_idxf02p7jogu`
-  :t:`[Assignment expression]s`,
+  :t:`[Assignment expression]s`
 
 * :dp:`fls_6z45ss502alt`
-  :t:`[Bit expression]s` of :t:`[scalar type]s`,
+  :t:`[Bit expression]s` of :t:`[scalar type]s`
 
 * :dp:`fls_wqs0792nud4e`
-  :t:`[Block expression]s`,
+  :t:`[Block expression]s`
 
 * :dp:`fls_490a1b74fut6`
-  :t:`[Call expression]s` where the callee is a :t:`constant function`,
+  :t:`[Call expression]s` where the callee is a :t:`constant function`
 
 * :dp:`fls_8nyu6phm1nji`
-  :t:`[Closure expression]s` that do not :t:`capture <capturing>`,
+  :t:`[Closure expression]s` that do not :t:`capture <capturing>`
 
 * :dp:`fls_8wux08bmpse`
-  :t:`[Comparison expression]s` of :t:`[scalar type]s`,
+  :t:`[Comparison expression]s` of :t:`[scalar type]s`
 
 * :dp:`fls_v1bnk7neb82a`
-  :t:`[Compound assignment expression]s`,
+  :t:`[Compound assignment expression]s`
 
 * :dp:`fls_6fq6bvxxvhsr`
-  :t:`[Constant parameter]s`,
+  :t:`[Constant parameter]s`
 
 * :dp:`fls_to4e7imq2c0w`
-  :t:`[Dereference expression]s`,
+  :t:`[Dereference expression]s`
 
 * :dp:`fls_krtbrpwf3mh0`
-  :t:`[Expression statement]s`,
+  :t:`[Expression statement]s`
 
 * :dp:`fls_3etom5uu8y4u`
   :t:`[Field access expression]s` that do not invoke the :std:`core::ops::Deref`
-  :t:`trait`,
+  :t:`trait`
 
 * :dp:`fls_qls0wj8bmupz`
-  :t:`[If expression]s`,
+  :t:`[If expression]s`
 
 * :dp:`fls_b5fraqx07wuo`
-  :t:`[If let expression]s`,
+  :t:`[If let expression]s`
 
 * :dp:`fls_rpapnm3afan8`
-  :t:`[Index expression]s`,
+  :t:`[Index expression]s`, where the :t:`indexable type` is an :t:`array` or a :t:`slice`, and the :t:`indexing operand` is a :c:`usize`
 
 * :dp:`fls_fc62yaqyjpl2`
-  :t:`[Infinite loop expression]s`,
+  :t:`[Infinite loop expression]s`
 
 * :dp:`fls_kwg8a351vc7`
-  :t:`[Lazy boolean expression]s` of :t:`[scalar type]s`,
+  :t:`[Lazy boolean expression]s` of :t:`[scalar type]s`
 
 * :dp:`fls_7mjv1xd45qr4`
-  :t:`[Let statement]s`,
+  :t:`[Let statement]s`
 
 * :dp:`fls_g7hoyfqy9mu1`
-  :t:`[Literal expression]s`,
+  :t:`[Literal expression]s`
 
 * :dp:`fls_br4g7qwfczig`
-  :t:`[Match expression]s`,
+  :t:`[Match expression]s`
 
 * :dp:`fls_w4lpq9bs8tsc`
   :t:`[Method call expression]s` where the callee is a :t:`constant function` or
-  do not invoke the :std:`core::ops::Deref` :t:`trait`,
+  do not invoke the :std:`core::ops::Deref` :t:`trait`
 
 * :dp:`fls_y1ezabo61nyk`
-  :t:`[Negation expression]s` of :t:`[scalar type]s`,
+  :t:`[Negation expression]s` of :t:`[scalar type]s`
 
 * :dp:`fls_6tb74n6lu0wf`
-  :t:`[Parenthesized expression]s`,
+  :t:`[Parenthesized expression]s`
 
 * :dp:`fls_axwrv7b3zt55`
   :t:`[Path expression]s` that resolve to :t:`[associated constant]s`,
   :t:`[constant]s`, :t:`[constant parameter]s`, :t:`[function]s`,
-  :t:`[static]s`, :t:`[tuple struct]s`, and  :t:`[unit struct]s`,
+  :t:`[static]s`, :t:`[tuple struct]s`, and  :t:`[unit struct]s`
 
 * :dp:`fls_3bucpdj828bq`
-  :t:`[Range expression]s`,
+  :t:`[Range expression]s`
 
 * :dp:`fls_fobs8ebt7dhc`
-  :t:`[Struct expression]s`,
+  :t:`[Struct expression]s`
 
 * :dp:`fls_dyo3o1h3keqr`
-  :t:`[Tuple expression]s`,
+  :t:`[Tuple expression]s`
 
 * :dp:`fls_e0a1e8ddph7`
   :t:`[Type cast expression]s` that are not :t:`[pointer-to-address cast]s`,
   :t:`[function-pointer-to-address cast]s`, and :t:`[unsized coercion]s` that
-  involve a :t:`trait object type`,
+  involve a :t:`trait object type`
 
 * :dp:`fls_zcuzhw7qkzkr`
-  :t:`[Unsafe block expression]s`,
+  :t:`[Unsafe block expression]s`
 
 * :dp:`fls_pbpzkfo1fgtz`
-  :t:`[While let loop expression]s`,
+  :t:`[While let loop expression]s`
 
 * :dp:`fls_qvofy4wkql0s`
-  :t:`[While loop expression]s`.
+  :t:`[While loop expression]s`
 
 * :dp:`fls_zyuxqty09SDO`
   All forms of :t:`[borrow]s` except those of expressions that are subject to
   :t:`drop scope extension` to the end of the program
   and which are either :t:`[mutable borrow]s`
-  or borrows of expressions that result in values with :t:`interior mutability`.
+  or borrows of expressions that result in values with :t:`interior mutability`
 
 :dp:`fls_3i7efddbsmn0`
 An :t:`expression` is not considered a :t:`constant expression` when it
