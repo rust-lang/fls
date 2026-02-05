@@ -210,7 +210,7 @@ involve :t:`[type]s` that require :t:`destruction`:
   :t:`[If let expression]s`,
 
 * :dp:`fls_rpapnm3afan8`
-  :t:`[Index expression]s`,
+  :t:`[Index expression]s`, where the :t:`indexable type` is an :t:`array` or a :t:`slice`, and the :t:`indexing operand` is a :c:`usize`,
 
 * :dp:`fls_fc62yaqyjpl2`
   :t:`[Infinite loop expression]s`,
