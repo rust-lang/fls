@@ -1,7 +1,14 @@
 # SPDX-License-Identifier: MIT OR Apache-2.0
 # SPDX-FileCopyrightText: The Ferrocene Developers
 
-from . import definitions, informational, syntax_directive, std_role, paragraph_ids
+from . import (
+    definitions,
+    glossary,
+    informational,
+    syntax_directive,
+    std_role,
+    paragraph_ids,
+)
 from . import items_with_rubric, sphinx_fixes
 from sphinx.domains import Domain
 
@@ -18,6 +25,8 @@ class SpecDomain(Domain):
         "informational-page": informational.build_directive("page"),
         "informational-section": informational.build_directive("section"),
         "items-with-rubric": items_with_rubric.ItemsWithRubricDirective,
+        "glossary-entry": glossary.GlossaryEntryDirective,
+        "glossary-include": glossary.GlossaryIncludeDirective,
     }
     object_types = definitions.get_object_types()
     indices = {}
@@ -38,6 +47,7 @@ class SpecDomain(Domain):
 def setup(app):
     app.add_domain(SpecDomain)
     definitions.setup(app)
+    glossary.setup(app)
     paragraph_ids.setup(app)
     informational.setup(app)
     items_with_rubric.setup(app)
@@ -61,5 +71,6 @@ def setup(app):
         # Version history:
         # - 0: initial implementation
         # - 1: changed how informational sections and pages are stored
-        "env_version": "1",
+        # - 2: added glossary-dp metadata to glossary entries
+        "env_version": "2",
     }

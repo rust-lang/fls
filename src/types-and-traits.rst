@@ -46,12 +46,47 @@ Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_4rhjpdu4zfqj`
-A :t:`type` defines a set of :t:`[value]s` and a set of operations that act on
-those :t:`[value]s`.
+.. glossary-entry:: type ascription
+   :glossary-dp: fls_1n50v16et5e6
+   
+   :glossary:
+     :dp:`fls_pm5jytclqn7y`
+     A :dt:`type ascription` specifies the :t:`type` of a :t:`construct`.
+     
+     :dp:`fls_c3xtiputfxea`
+     See :s:`TypeAscription`.
 
-:dp:`fls_0yaYKnFrJkhG`
-A :t:`local type` is a :t:`type` that is defined in the current :t:`crate`.
+.. glossary-entry:: type specification
+   :glossary-dp: fls_ukua6gbye6ot
+   
+   :glossary:
+     :dp:`fls_tdjhjg9zhnv5`
+     A :dt:`type specification` describes the structure of a :t:`type`.
+     
+     :dp:`fls_a3sqjp1l8po6`
+     See :s:`TypeSpecification`.
+
+.. glossary-entry:: type
+   :glossary-dp: fls_wzupssn435n
+   
+   :glossary:
+     :dp:`fls_nhlh7vvgsbwo`
+     A :dt:`type` defines a set of :t:`[value]s` and a set of operations that act on
+     those :t:`[value]s`.
+   :chapter:
+     :dp:`fls_4rhjpdu4zfqj`
+     A :t:`type` defines a set of :t:`[value]s` and a set of operations that act on
+     those :t:`[value]s`.
+
+.. glossary-entry:: local type
+   :glossary-dp: fls_cexgUIGUUKS4
+   
+   :glossary:
+     :dp:`fls_HvGPB3CsN4Ah`
+     A :dt:`local type` is a :t:`type` that is defined in the current :t:`crate`.
+   :chapter:
+     :dp:`fls_0yaYKnFrJkhG`
+     A :t:`local type` is a :t:`type` that is defined in the current :t:`crate`.
 
 .. _fls_963gsjp2jas2:
 
@@ -157,6 +192,22 @@ Type Classification
 Scalar Types
 ------------
 
+.. glossary-entry:: scalar type
+   :glossary-dp: fls_XeMNghZZOBqL
+   
+   :glossary:
+     :dp:`fls_GgBqFW2NywoA`
+     A :dt:`scalar type` is either a :c:`bool` :t:`type`, a :c:`char` :t:`type`, or
+     a :t:`numeric type`.
+
+.. glossary-entry:: textual type
+   :glossary-dp: fls_mdcbhy96hrau
+   
+   :glossary:
+     :dp:`fls_lv1pdtzf6f58`
+     A :dt:`textual type` is a :t:`type` class that includes type :c:`char` and type
+     :c:`str`.
+
 .. _fls_tiqp1gxf116z:
 
 Bool Type
@@ -164,9 +215,17 @@ Bool Type
 
 .. rubric:: Legality Rules
 
-:dp:`fls_h5994su1yft3`
-:c:`Bool` is a :t:`type` whose :t:`[value]s` denote the truth :t:`[value]s` of
-logic and Boolean algebra.
+.. glossary-entry:: bool
+   :glossary-dp: fls_n485t6wcgx07
+   
+   :glossary:
+     :dp:`fls_wtmaf5amvleh`
+     :dc:`bool` is a :t:`type` whose :t:`[value]s` denote the truth values of logic
+     and Boolean algebra.
+   :chapter:
+     :dp:`fls_h5994su1yft3`
+     :c:`Bool` is a :t:`type` whose :t:`[value]s` denote the truth :t:`[value]s` of
+     logic and Boolean algebra.
 
 :dp:`fls_v8atmrwz6wzk`
 :t:`Type` :c:`bool` appears in the :t:`language prelude` under the name
@@ -338,6 +397,14 @@ Operation ``a <= b`` is equivalent to ``a == b | a < b``.
 
 .. rubric:: Undefined Behavior
 
+.. glossary-entry:: validity invariant
+   :glossary-dp: fls_A5K8aOBsI3BG
+   
+   :glossary:
+     :dp:`fls_3ebC3l839ajF`
+     A :dt:`validity invariant` is an invariant that when violated results in
+     immediate :t:`undefined behavior`.
+
 :dp:`fls_2sd39mj05mb9`
 It is a :t:`validity invariant` for a :t:`value` of :t:`type` :c:`bool` to have
 a bit pattern of ``0x00`` and ``0x01``.
@@ -349,10 +416,17 @@ Char Type
 
 .. rubric:: Legality Rules
 
-:dp:`fls_vnwbs0exbwcn`
-:c:`Char` is a :t:`type` whose :t:`[value]s` are represented as a 32-bit
-unsigned word in the 0x000 - 0xD7FF or the 0xE000 - 0x10FFFF inclusive ranges
-of :t:`Unicode`.
+.. glossary-entry:: char
+   :glossary-dp: fls_xl2zlpw070dy
+   
+   :glossary:
+     :dp:`fls_vx0dss1yplw1`
+     :dc:`char` is a :t:`type` whose :t:`[value]s` denote :t:`Unicode` characters.
+   :chapter:
+     :dp:`fls_vnwbs0exbwcn`
+     :c:`Char` is a :t:`type` whose :t:`[value]s` are represented as a 32-bit
+     unsigned word in the 0x000 - 0xD7FF or the 0xE000 - 0x10FFFF inclusive ranges
+     of :t:`Unicode`.
 
 .. rubric:: Undefined Behavior
 
@@ -366,6 +440,13 @@ inside the 0x000 - 0xD7FF or the 0xE000 - 0x10FFFF inclusive ranges of
 Numeric Types
 ~~~~~~~~~~~~~
 
+.. glossary-entry:: numeric type
+   :glossary-dp: fls_rayjriyofmpa
+   
+   :glossary:
+     :dp:`fls_cpdsj94l57af`
+     A :dt:`numeric type` is a :t:`type` whose :t:`[value]s` denote numbers.
+
 .. _fls_b4xporvr64s:
 
 Floating Point Types
@@ -373,11 +454,42 @@ Floating Point Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_30yny2xb9b6b`
-:t:`Type` :c:`f32` is equivalent to the IEEE 754-2008 binary32 :t:`type`.
+.. glossary-entry:: floating-point type
+   :glossary-dp: fls_k32g8cd9friu
+   
+   :glossary:
+     :dp:`fls_1w5yjiffah1u`
+     A :dt:`floating-point type` is a :t:`numeric type` whose :t:`[value]s` denote
+     fractional numbers.
 
-:dp:`fls_yqflrq9s6p6n`
-:t:`Type` :c:`f64` is equivalent to the IEEE 754-2008 binary64 :t:`type`.
+.. glossary-entry:: floating-point value
+   :glossary-dp: fls_nE6SWuVH7X68
+   
+   :glossary:
+     :dp:`fls_rx8cvWPlvel5`
+     A :dt:`floating-point value` is a :t:`value` of a :t:`floating-point type`.
+
+.. glossary-entry:: f32
+   :glossary-dp: fls_4w6garmjhrd9
+   
+   :glossary:
+     :dp:`fls_4w5rqj7zdemu`
+     :dc:`f32` is a :t:`floating-point type` equivalent to the IEEE 754-2008
+     binary32 :t:`type`.
+   :chapter:
+     :dp:`fls_30yny2xb9b6b`
+     :t:`Type` :c:`f32` is equivalent to the IEEE 754-2008 binary32 :t:`type`.
+
+.. glossary-entry:: f64
+   :glossary-dp: fls_pj450h99yo28
+   
+   :glossary:
+     :dp:`fls_ly6p0i6lsibh`
+     :dc:`f64` is a :t:`floating-point type` equivalent to the IEEE 754-2008
+     binary64 :t:`type`.
+   :chapter:
+     :dp:`fls_yqflrq9s6p6n`
+     :t:`Type` :c:`f64` is equivalent to the IEEE 754-2008 binary64 :t:`type`.
 
 .. rubric:: Dynamic Semantics
 
@@ -390,6 +502,22 @@ Integer Types
 ^^^^^^^^^^^^^
 
 .. rubric:: Legality Rules
+
+.. glossary-entry:: integer type
+   :glossary-dp: fls_nu1cnk2b9qx5
+   
+   :glossary:
+     :dp:`fls_nhfqdhf26ym3`
+     An :dt:`integer type` is a :t:`numeric type` whose :t:`[value]s` denote whole
+     numbers.
+
+.. glossary-entry:: unsigned integer type
+   :glossary-dp: fls_4jc74lz245z3
+   
+   :glossary:
+     :dp:`fls_dxnf79qemlg6`
+     An :dt:`unsigned integer type` is an :t:`integer type` whose :t:`[value]s`
+     denote zero and positive whole numbers.
 
 :dp:`fls_cokwseo3nnr`
 :t:`[Unsigned integer type]s` define the following inclusive ranges over the
@@ -422,9 +550,65 @@ domain of whole numbers:
      - 0
      - 2\ :sup:`128` - 1
 
-:dp:`fls_75lntwhg20l`
-:t:`Type` :c:`usize` has the same number of bits as the platform's
-:t:`pointer type`, and is at least 16-bits wide.
+.. glossary-entry:: u8
+   :glossary-dp: fls_44uvj9l7q98z
+   
+   :glossary:
+     :dp:`fls_umf9zfeghy6`
+     :dc:`u8` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
+     2\ :sup:`8` - 1, all inclusive.
+
+.. glossary-entry:: u16
+   :glossary-dp: fls_eh24kdjdze5j
+   
+   :glossary:
+     :dp:`fls_8vi7bm2895y0`
+     :dc:`u16` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
+     2\ :sup:`16` - 1, all inclusive.
+
+.. glossary-entry:: u32
+   :glossary-dp: fls_jybcgdujzpqy
+   
+   :glossary:
+     :dp:`fls_pw90erui8vkk`
+     :dc:`u32` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
+     2\ :sup:`32` - 1, all inclusive.
+
+.. glossary-entry:: u64
+   :glossary-dp: fls_1z1e3chuejzz
+   
+   :glossary:
+     :dp:`fls_pbcmhznqft9m`
+     :dc:`u64` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
+     2\ :sup:`64` - 1, all inclusive.
+
+.. glossary-entry:: u128
+   :glossary-dp: fls_5hn9e3ce1smp
+   
+   :glossary:
+     :dp:`fls_8yv891ur2av5`
+     :dc:`u128` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
+     2\ :sup:`128` - 1, all inclusive.
+
+.. glossary-entry:: usize
+   :glossary-dp: fls_gvjm5mms9ahz
+   
+   :glossary:
+     :dp:`fls_r22k1l8799k6`
+     :dc:`usize` is an :t:`unsigned integer type` with the same number of bits as
+     the platform's :t:`pointer type`, and is at least 16-bits wide.
+   :chapter:
+     :dp:`fls_75lntwhg20l`
+     :t:`Type` :c:`usize` has the same number of bits as the platform's
+     :t:`pointer type`, and is at least 16-bits wide.
+
+.. glossary-entry:: signed integer type
+   :glossary-dp: fls_nmw95nc951iu
+   
+   :glossary:
+     :dp:`fls_vcronf7l2bhy`
+     A :dt:`signed integer type` is an :t:`integer type` whose :t:`[value]s` denote
+     negative whole numbers, zero, and positive whole numbers.
 
 :dp:`fls_p2shoji3xg5a`
 :t:`[Signed integer type]s` define the following inclusive ranges over the
@@ -457,14 +641,69 @@ domain of whole numbers:
      - \- (2\ :sup:`127`)
      - 2\ :sup:`127` - 1
 
-:dp:`fls_t9oyfmgqka6u`
-:t:`Type` :c:`isize` has the same number of bits as the platform's
-:t:`pointer type`, and is at least 16-bits wide.
+.. glossary-entry:: i8
+   :glossary-dp: fls_obiv2a6ywfhh
+   
+   :glossary:
+     :dp:`fls_1y9ulxnz8qba`
+     :dc:`i8` is a :t:`signed integer type` whose :t:`[value]s` range from - (2\
+     :sup:`7`) to 2\ :sup:`7` - 1, all inclusive.
+
+.. glossary-entry:: i16
+   :glossary-dp: fls_rvcjp656gzlm
+   
+   :glossary:
+     :dp:`fls_ci9jl55wxwdg`
+     :dc:`i16` is a :t:`signed integer type` whose :t:`[value]s` range from - (2\
+     :sup:`15`) to 2\ :sup:`15` - 1, all inclusive.
+
+.. glossary-entry:: i32
+   :glossary-dp: fls_l1h9g4ntf3c
+   
+   :glossary:
+     :dp:`fls_yh8wzhhso4xc`
+     :dc:`i32` is a :t:`signed integer type` whose :t:`[value]s` range from - (2\
+     :sup:`31`) to 2\ :sup:`31` - 1, all inclusive.
+
+.. glossary-entry:: i64
+   :glossary-dp: fls_tid10guzn9sq
+   
+   :glossary:
+     :dp:`fls_4bpatxp8yelv`
+     :dc:`i64` is a :t:`signed integer type` whose :t:`[value]s` range from - (2\
+     :sup:`63`) to 2\ :sup:`63` - 1, all inclusive.
+
+.. glossary-entry:: i128
+   :glossary-dp: fls_py2whbcrndmz
+   
+   :glossary:
+     :dp:`fls_p75kpbtonb8z`
+     :dc:`i128` is a :t:`signed integer type` whose :t:`[value]s` range from - (2\
+     :sup:`127`) to 2\ :sup:`127` - 1, all inclusive.
+
+.. glossary-entry:: isize
+   :glossary-dp: fls_vt44bvhm4duk
+   
+   :glossary:
+     :dp:`fls_6x617i9zcj7o`
+     :dc:`isize` is a :t:`signed integer type` with the same number of bits as the
+     platform's :t:`pointer type`, and is at least 16-bits wide.
+   :chapter:
+     :dp:`fls_t9oyfmgqka6u`
+     :t:`Type` :c:`isize` has the same number of bits as the platform's
+     :t:`pointer type`, and is at least 16-bits wide.
 
 .. _fls_fbchw64p6n2x:
 
 Sequence Types
 --------------
+
+.. glossary-entry:: sequence type
+   :glossary-dp: fls_rtgis2k7by2r
+   
+   :glossary:
+     :dp:`fls_lk1oslxh8h9p`
+     A :dt:`sequence type` represents a sequence of elements.
 
 .. _fls_uj0kpjwyld60:
 
@@ -483,9 +722,46 @@ Array Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_fx7b3qv3ghca`
-An :t:`array type` is a :t:`sequence type` that represents a fixed sequence
-of elements.
+.. glossary-entry:: array type
+   :glossary-dp: fls_15gzlmwuu4pk
+   
+   :glossary:
+     :dp:`fls_muddb5qxdc4k`
+     An :dt:`array type` is a :t:`sequence type` that represents a fixed sequence of
+     elements.
+     
+     :dp:`fls_wre34hexlv6s`
+     See :s:`ArrayTypeSpecification`.
+   :chapter:
+     :dp:`fls_fx7b3qv3ghca`
+     An :t:`array type` is a :t:`sequence type` that represents a fixed sequence
+     of elements.
+
+.. glossary-entry:: element type
+   :glossary-dp: fls_bxm4njfo2h58
+   
+   :glossary:
+     :dp:`fls_3bndijf8g9os`
+     An :dt:`element type` is the :t:`type` of the elements of an :t:`array type` or
+     a :t:`slice type`.
+     
+     :dp:`fls_pvyl887dn016`
+     See :s:`ElementType`.
+
+.. glossary-entry:: fixed sized type
+   :glossary-dp: fls_rljxa45tleq3
+   
+   :glossary:
+     :dp:`fls_eadiywl20jo4`
+     A :dt:`fixed sized type` is a :t:`type` that implements the
+     :std:`core::marker::Sized` :t:`trait`.
+
+.. glossary-entry:: zero-sized type
+   :glossary-dp: fls_a5lrxgucl3be
+   
+   :glossary:
+     :dp:`fls_rmd6pearrhr8`
+     A :dt:`zero-sized type` is a :t:`fixed sized type` with :t:`size` zero.
 
 :dp:`fls_pkts1p2dnxo`
 The :t:`element type` shall be a :t:`fixed sized type`.
@@ -511,6 +787,13 @@ An array type in the context of a let statement:
 Slice Types
 ~~~~~~~~~~~
 
+.. glossary-entry:: slice
+   :glossary-dp: fls_srkftses9sxn
+   
+   :glossary:
+     :dp:`fls_p1sv01ml2ark`
+     A :dt:`slice` is a :t:`value` of a :t:`slice type`.
+
 .. rubric:: Syntax
 
 .. syntax::
@@ -520,9 +803,20 @@ Slice Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ftvua2hlvr08`
-A :t:`slice type` is a :t:`sequence type` that provides a view into a sequence
-of elements.
+.. glossary-entry:: slice type
+   :glossary-dp: fls_x3kr88m5gvwv
+   
+   :glossary:
+     :dp:`fls_bvpszep1w90g`
+     A :dt:`slice type` is a :t:`sequence type` that provides a view into a sequence
+     of elements.
+     
+     :dp:`fls_y7gscwf29htg`
+     See :s:`SliceTypeSpecification`.
+   :chapter:
+     :dp:`fls_ftvua2hlvr08`
+     A :t:`slice type` is a :t:`sequence type` that provides a view into a sequence
+     of elements.
 
 :dp:`fls_acgtczhk8ci0`
 The :t:`element type` shall be a :t:`fixed sized type`.
@@ -547,9 +841,17 @@ Str Type
 
 .. rubric:: Legality Rules
 
-:dp:`fls_wlnoq1qoq2kr`
-:c:`Str` is a :t:`sequence type` that represents a :t:`slice` of 8-bit unsigned
-bytes.
+.. glossary-entry:: str
+   :glossary-dp: fls_1ricdj86o457
+   
+   :glossary:
+     :dp:`fls_6977zxb0resa`
+     :dc:`str` is a :t:`sequence type` that represents a :t:`slice` of 8-bit
+     unsigned bytes.
+   :chapter:
+     :dp:`fls_wlnoq1qoq2kr`
+     :c:`Str` is a :t:`sequence type` that represents a :t:`slice` of 8-bit unsigned
+     bytes.
 
 :dp:`fls_1xa6fas6laha`
 :t:`Type` :c:`str` is a :t:`dynamically sized type`.
@@ -557,6 +859,14 @@ bytes.
 :dp:`fls_yu7r2077n9m7`
 A :t:`value` of :t:`type` :c:`str` shall denote a valid UTF-8 sequence of
 characters.
+
+.. glossary-entry:: safety invariant
+   :glossary-dp: fls_Q4MRIo7cWv5K
+   
+   :glossary:
+     :dp:`fls_wRZfAmTmMGTX`
+     A :dt:`safety invariant` is an invariant that when violated may result in
+     :t:`undefined behavior`.
 
 .. rubric:: Undefined Behavior
 
@@ -584,9 +894,62 @@ Tuple Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_bn7wmf681ngt`
-A :t:`tuple type` is a :t:`sequence type` that represents a heterogeneous list
-of other :t:`[type]s`.
+.. glossary-entry:: tuple
+   :glossary-dp: fls_si70t19ox07e
+   
+   :glossary:
+     :dp:`fls_yhcfqz6p0059`
+     A :dt:`tuple` is a :t:`value` of a :t:`tuple type`.
+
+.. glossary-entry:: tuple type
+   :glossary-dp: fls_k4yz7i2pf9wp
+   
+   :glossary:
+     :dp:`fls_q0ulqfvnxwni`
+     A :dt:`tuple type` is a :t:`sequence type` that represents a heterogeneous list
+     of other :t:`[type]s`.
+     
+     :dp:`fls_rkugxsau1w78`
+     See :s:`TupleTypeSpecification`.
+   :chapter:
+     :dp:`fls_bn7wmf681ngt`
+     A :t:`tuple type` is a :t:`sequence type` that represents a heterogeneous list
+     of other :t:`[type]s`.
+
+.. glossary-entry:: tuple field
+   :glossary-dp: fls_bf1v4e1s5xj6
+   
+   :glossary:
+     :dp:`fls_8rq1gbzij5tk`
+     A :dt:`tuple field` is a :t:`field` of a :t:`tuple type`.
+
+.. glossary-entry:: arity
+   :glossary-dp: fls_9aice4qbiqxf
+   
+   :glossary:
+     :dp:`fls_dl2gkip00bua`
+     An :dt:`arity` is the number of :t:`[tuple field]s` in a :t:`tuple type`.
+
+.. glossary-entry:: unit type
+   :glossary-dp: fls_t32yfzmpid5a
+   
+   :glossary:
+     :dp:`fls_jtdtv3q2ls05`
+     The :dt:`unit type` is a :t:`tuple type` of zero :t:`arity`.
+
+.. glossary-entry:: unit tuple
+   :glossary-dp: fls_wmn9mcqae88q
+   
+   :glossary:
+     :dp:`fls_vo1jw6rmu4yy`
+     A :dt:`unit tuple` is a :t:`value` of the :t:`unit type`.
+
+.. glossary-entry:: unit value
+   :glossary-dp: fls_vxt0ifseehv9
+   
+   :glossary:
+     :dp:`fls_ycdv4nvsdyx`
+     The :dt:`unit value` is the :t:`value` of a :t:`unit type`.
 
 :dp:`fls_s9a36zsrfqew`
 If the :t:`type` of a :t:`tuple field` is a :t:`dynamically-sized type`, then
@@ -606,10 +969,24 @@ the :t:`tuple field` shall be the last :t:`tuple field` in the
 Abstract Data Types
 -------------------
 
+.. glossary-entry:: abstract data type
+   :glossary-dp: fls_g40une2uudez
+   
+   :glossary:
+     :dp:`fls_64drmro2fcfo`
+     An :dt:`abstract data type` is a collection of other :t:`[type]s`.
+
 .. _fls_szibmtfv117b:
 
 Enum Types
 ~~~~~~~~~~
+
+.. glossary-entry:: enum
+   :glossary-dp: fls_xnhj9fqlfs2p
+   
+   :glossary:
+     :dp:`fls_9o0ig19xh2f5`
+     An :dt:`enum` is an :t:`item` that declares an :t:`enum type`.
 
 .. rubric:: Syntax
 
@@ -634,23 +1011,122 @@ Enum Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_gbdd37seqoab`
-An :t:`enum type` is an :t:`abstract data type` that contains
-:t:`[enum variant]s`.
+.. glossary-entry:: enum type
+   :glossary-dp: fls_grlluqa4ucp3
+   
+   :glossary:
+     :dp:`fls_idwrgo87ub3i`
+     An :dt:`enum type` is an :t:`abstract data type` that contains
+     :t:`[enum variant]s`.
+     
+     :dp:`fls_o6ih6n1z1566`
+     See :s:`EnumDeclaration`.
+   :chapter:
+     :dp:`fls_gbdd37seqoab`
+     An :t:`enum type` is an :t:`abstract data type` that contains
+     :t:`[enum variant]s`.
 
-:dp:`fls_il9a1olqmu38`
-A :t:`zero-variant enum type` has no :t:`[value]s`.
+.. glossary-entry:: zero-variant enum type
+   :glossary-dp: fls_pix563lfbpm
+   
+   :glossary:
+     :dp:`fls_84gqz3vwi5mj`
+     A :dt:`zero-variant enum type` is an :t:`enum type` without any
+     :t:`[enum variant]s`.
+   :chapter:
+     :dp:`fls_il9a1olqmu38`
+     A :t:`zero-variant enum type` has no :t:`[value]s`.
 
-:dp:`fls_wQTFwl88VujQ`
-An :t:`enum variant` is a :t:`construct` that declares one of the
-possible variations of an :t:`enum`.
+.. glossary-entry:: enum variant
+   :glossary-dp: fls_klwlx5jixwud
+   
+   :glossary:
+     :dp:`fls_9jq4keg9y94u`
+     An :dt:`enum variant` is a :t:`construct` that declares one of the
+     possible variations of an :t:`enum`.
+     
+     :dp:`fls_tj2s55onen6b`
+     See :s:`EnumVariant`.
+   :chapter:
+     :dp:`fls_wQTFwl88VujQ`
+     An :t:`enum variant` is a :t:`construct` that declares one of the
+     possible variations of an :t:`enum`.
+
+.. glossary-entry:: record enum variant
+   :glossary-dp: fls_nG6ikjLsCW7m
+   
+   :glossary:
+     :dp:`fls_NWyvPQmOIjo2`
+     A :dt:`record enum variant` is an :t:`enum variant` with a
+     :s:`RecordStructFieldList`.
+
+.. glossary-entry:: tuple enum variant
+   :glossary-dp: fls_1XEHpJOK9DKB
+   
+   :glossary:
+     :dp:`fls_eduQhUYBEkVx`
+     A :dt:`tuple enum variant` is an :t:`enum variant` with a
+     :s:`TupleStructFieldList`.
+
+.. glossary-entry:: unit enum variant
+   :glossary-dp: fls_Rwtgq904NoaL
+   
+   :glossary:
+     :dp:`fls_y6fI5L3Tghie`
+     A :dt:`unit enum variant` is an :t:`enum variant` without a :t:`field list`.
+
+.. glossary-entry:: enum field
+   :glossary-dp: fls_zrRydWZgm03k
+   
+   :glossary:
+     :dp:`fls_J8udq05QGiEj`
+     An :dt:`enum field` is a :t:`field` of an :t:`enum variant`.
+
+.. glossary-entry:: enum value
+   :glossary-dp: fls_H6aUAUjNlx6z
+   
+   :glossary:
+     :dp:`fls_QdBTdVLB2xHk`
+     An :dt:`enum value` is a :t:`value` of an :t:`enum type`.
+
+.. glossary-entry:: enum variant value
+   :glossary-dp: fls_mKxBWCojhnWu
+   
+   :glossary:
+     :dp:`fls_VQRqNPFFWmDp`
+     An :dt:`enum variant value` is the :t:`enum value` of the corresponding
+     :t:`enum` of the :t:`enum variant`.
+
+.. glossary-entry:: tuple enum variant value
+   :glossary-dp: fls_sP7uHoLxGfRO
+   
+   :glossary:
+     :dp:`fls_ORURxipGqNrZ`
+     A :dt:`tuple enum variant value` is a :t:`value` of a :t:`tuple enum variant`.
 
 :dp:`fls_g5qle7xzaoif`
 The :t:`name` of an :t:`enum variant` shall be unique within the related
 :s:`EnumDeclaration`.
 
-:dp:`fls_t4yeovFm83Wo`
-A :t:`discriminant` is an opaque integer that identifies an :t:`enum variant`.
+.. glossary-entry:: discriminant
+   :glossary-dp: fls_7vg56eeo0zlg
+   
+   :glossary:
+     :dp:`fls_dfegy9y6awx`
+     A :dt:`discriminant` is an opaque integer that identifies an :t:`enum variant`.
+   :chapter:
+     :dp:`fls_t4yeovFm83Wo`
+     A :t:`discriminant` is an opaque integer that identifies an :t:`enum variant`.
+
+.. glossary-entry:: discriminant initializer
+   :glossary-dp: fls_xayj37ocbqjn
+   
+   :glossary:
+     :dp:`fls_o7hihgcqmnyc`
+     A :dt:`discriminant initializer` provides the :t:`value` of a :t:`discriminant`.
+     
+     :dp:`fls_g5obc23vigng`
+     See :s:`DiscriminantInitializer`.
 
 :dp:`fls_hp5frc752dam`
 A :t:`discriminant initializer` shall be specified only when all :t:`[enum
@@ -728,6 +1204,13 @@ It is a :t:`validity invariant` for a :t:`value` of an :t:`enum type` to have a
 Struct Types
 ~~~~~~~~~~~~
 
+.. glossary-entry:: struct
+   :glossary-dp: fls_yphnf56fa58r
+   
+   :glossary:
+     :dp:`fls_rufylj7qxs1w`
+     A :dt:`struct` is an :t:`item` that declares a :t:`struct type`.
+
 .. rubric:: Syntax
 
 .. syntax::
@@ -758,11 +1241,150 @@ Struct Types
    UnitStructDeclaration ::=
        $$struct$$ Name GenericParameterList? WhereClause? $$;$$
 
+.. glossary-entry:: record struct
+   :glossary-dp: fls_jdd6h8pdp30x
+   
+   :glossary:
+     :dp:`fls_qyd7kqnpjs2`
+     A :dt:`record struct` is a :t:`struct` with a :s:`RecordStructFieldList`.
+     
+     :dp:`fls_rqs5rdnhkwnx`
+     See :s:`RecordStructDeclaration`.
+
+.. glossary-entry:: record struct type
+   :glossary-dp: fls_uthd12hz3h4v
+   
+   :glossary:
+     :dp:`fls_mgrz3o51gbis`
+     A :dt:`record struct type` is the :t:`type` of a :t:`record struct`.
+
+.. glossary-entry:: record struct field
+   :glossary-dp: fls_hzkwzbk5wp54
+   
+   :glossary:
+     :dp:`fls_lb0t10evec6z`
+     A :dt:`record struct field` is a :t:`field` of a :t:`record struct type`.
+     
+     :dp:`fls_bjwmhxf3ae14`
+     See :s:`RecordStructField`.
+
+.. glossary-entry:: record struct value
+   :glossary-dp: fls_cPs5C1chWmce
+   
+   :glossary:
+     :dp:`fls_SMBIc0JMck1H`
+     A :dt:`record struct value` is a :t:`value` of a :t:`record struct type`.
+
+.. glossary-entry:: tuple struct
+   :glossary-dp: fls_245idp9hpqf6
+   
+   :glossary:
+     :dp:`fls_pdcpmapiq491`
+     A :dt:`tuple struct` is a :t:`struct` with a :s:`TupleStructFieldList`.
+     
+     :dp:`fls_1tj4p05m4wdf`
+     See :s:`TupleStructDeclaration`.
+
+.. glossary-entry:: tuple struct type
+   :glossary-dp: fls_qx8j2lvqigqk
+   
+   :glossary:
+     :dp:`fls_hhikx5ajx3bl`
+     A :dt:`tuple struct type` is the :t:`type` of a :t:`tuple struct`.
+
+.. glossary-entry:: tuple struct field
+   :glossary-dp: fls_xx4slbg8s63e
+   
+   :glossary:
+     :dp:`fls_ndeb1a2hm9d8`
+     A :dt:`tuple struct field` is a :t:`field` of a :t:`tuple struct type`.
+     
+     :dp:`fls_v4eq8xg608d5`
+     See :s:`TupleStructField`.
+
+.. glossary-entry:: tuple struct value
+   :glossary-dp: fls_x4ALCJKhVDZF
+   
+   :glossary:
+     :dp:`fls_xz1p4pss2Ocn`
+     A :dt:`tuple struct value` is a :t:`value` of a :t:`tuple struct type`.
+
+.. glossary-entry:: unit struct
+   :glossary-dp: fls_f3hmx9qya258
+   
+   :glossary:
+     :dp:`fls_9t7fu8fcak6k`
+     A :dt:`unit struct` is a :t:`struct` without a :t:`field list`.
+     
+     :dp:`fls_mSuiysAVczPx`
+     See :s:`UnitStructDeclaration`.
+
+.. glossary-entry:: unit struct constant
+   :glossary-dp: fls_jdvEnl8F7I8R
+   
+   :glossary:
+     :dp:`fls_lLGn4JqddeAg`:
+     A :dt:`unit struct constant` is a :t:`constant` implicitly created by a
+     :t:`unit struct`.
+
+.. glossary-entry:: unit struct type
+   :glossary-dp: fls_6j2wnOmBILJa
+   
+   :glossary:
+     :dp:`fls_oIzmvACNeQpE`
+     A :dt:`unit struct type` is the :t:`type` of a :t:`unit struct`.
+
+.. glossary-entry:: unit struct value
+   :glossary-dp: fls_CXp8fgPrBVUe
+   
+   :glossary:
+     :dp:`fls_Kr9nGIjx3N4R`
+     A :dt:`unit struct value` is a :t:`value` of a :t:`unit struct type`.
+
+.. glossary-entry:: struct field
+   :glossary-dp: fls_OT6dJ7CWkSTG
+   
+   :glossary:
+     :dp:`fls_8Z9YWMnrHXJS`
+     A :dt:`struct field` is a :t:`field` of a :t:`struct type`.
+
+.. glossary-entry:: struct value
+   :glossary-dp: fls_GOnQHAsYw1oi
+   
+   :glossary:
+     :dp:`fls_YmZfW9kWlbIX`
+     A :dt:`struct value` is a :t:`value` of a :t:`struct type`.
+
 .. rubric:: Legality Rules
 
-:dp:`fls_g1azfj548136`
-A :t:`struct type` is an :t:`abstract data type` that is a product of other
-:t:`[type]s`.
+.. glossary-entry:: field
+   :glossary-dp: fls_7gCAbHnGEIl6
+   
+   :glossary:
+     :dp:`fls_uAkrgfFTK2YV`
+     A :dt:`field` is an element of an :t:`abstract data type`.
+
+.. glossary-entry:: field list
+   :glossary-dp: fls_8qLL14WfXXNN
+   
+   :glossary:
+     :dp:`fls_xMZsrxMc9Cni`
+     A :dt:`field list` is a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
+
+.. glossary-entry:: struct type
+   :glossary-dp: fls_pzj88ust6qrq
+   
+   :glossary:
+     :dp:`fls_7v4dhh3nl8h9`
+     A :dt:`struct type` is an :t:`abstract data type` that is a product of other
+     :t:`[type]s`.
+     
+     :dp:`fls_dhlww4yrnb2v`
+     See :s:`StructDeclaration`.
+   :chapter:
+     :dp:`fls_g1azfj548136`
+     A :t:`struct type` is an :t:`abstract data type` that is a product of other
+     :t:`[type]s`.
 
 :dp:`fls_r885av95eivp`
 The :t:`name` of a :t:`record struct field` shall be unique within the
@@ -810,9 +1432,40 @@ Union Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_nskmnzq95yqm`
-A :t:`union type` is an :t:`abstract data type` that is a sum of other
-:t:`[type]s`.
+.. glossary-entry:: union
+   :glossary-dp: fls_8qljy9e1jjcb
+   
+   :glossary:
+     :dp:`fls_x3oibk39dvem`
+     A :dt:`union` is an :t:`item` that declares a :t:`union type`.
+
+.. glossary-entry:: union type
+   :glossary-dp: fls_nrgyga1rztb3
+   
+   :glossary:
+     :dp:`fls_af2sscrep7mc`
+     A :dt:`union type` is an :t:`abstract data type` similar to a :t:`C`-like union.
+     
+     :dp:`fls_fgvjogfz8ink`
+     See :s:`UnionDeclaration`.
+   :chapter:
+     :dp:`fls_nskmnzq95yqm`
+     A :t:`union type` is an :t:`abstract data type` that is a sum of other
+     :t:`[type]s`.
+
+.. glossary-entry:: union field
+   :glossary-dp: fls_71xvazpwi8p0
+   
+   :glossary:
+     :dp:`fls_6t2fbnlndz8y`
+     A :dt:`union field` is a :t:`field` of a :t:`union type`.
+
+.. glossary-entry:: union value
+   :glossary-dp: fls_2QRQMeA3OSVl
+   
+   :glossary:
+     :dp:`fls_9BPrxky3a4nE`
+     A :dt:`union value` is a :t:`value` of a :t:`union type`.
 
 :dp:`fls_I5fN5Fmo5CyK`
 A :t:`union` without any :t:`[union field]s` is rejected, but may still be consumed by
@@ -857,6 +1510,14 @@ The :t:`type` of a :t:`union field` shall be either:
 Function Types
 --------------
 
+.. glossary-entry:: function type
+   :glossary-dp: fls_yo2x1llt9ejy
+   
+   :glossary:
+     :dp:`fls_4e19116glgtv`
+     A :dt:`function type` is either a :t:`closure type` or a
+     :t:`function item type`.
+
 .. _fls_xd2oxlebhs14:
 
 Closure Types
@@ -864,9 +1525,17 @@ Closure Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_bsykgnbatpmi`
-A :t:`closure type` is a unique anonymous :t:`function type` that encapsulates
-all :t:`[capture target]s` of a :t:`closure expression`.
+.. glossary-entry:: closure type
+   :glossary-dp: fls_xjudl8ykbisi
+   
+   :glossary:
+     :dp:`fls_wp4kues3nbvn`
+     A :dt:`closure type` is a unique anonymous :t:`function type` that encapsulates
+     all :t:`[capture target]s` of a :t:`closure expression`.
+   :chapter:
+     :dp:`fls_bsykgnbatpmi`
+     A :t:`closure type` is a unique anonymous :t:`function type` that encapsulates
+     all :t:`[capture target]s` of a :t:`closure expression`.
 
 :dp:`fls_zfj4l8bigdg0`
 A :t:`closure type` implements the :std:`core::ops::FnOnce` :t:`trait`.
@@ -910,17 +1579,41 @@ Function Item Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_t24iojx7yc23`
-A :t:`function item type` is a unique anonymous :t:`function type` that
-identifies a :t:`function`.
+.. glossary-entry:: function item type
+   :glossary-dp: fls_ayuia853po0a
+   
+   :glossary:
+     :dp:`fls_rfvfo8x42dh8`
+     A :dt:`function item type` is a unique anonymous :t:`function type` that
+     identifies a :t:`function`.
+   :chapter:
+     :dp:`fls_t24iojx7yc23`
+     A :t:`function item type` is a unique anonymous :t:`function type` that
+     identifies a :t:`function`.
 
-:dp:`fls_sas3ahcshnrh`
-An :t:`external function item type` is a :t:`function item type` where the
-related :t:`function` is an :t:`external function`.
+.. glossary-entry:: external function item type
+   :glossary-dp: fls_ug2kags0o6is
+   
+   :glossary:
+     :dp:`fls_dwlovqly44dj`
+     An :dt:`external function item type` is a :t:`function item type` where the
+     related :t:`function` is an :t:`external function`.
+   :chapter:
+     :dp:`fls_sas3ahcshnrh`
+     An :t:`external function item type` is a :t:`function item type` where the
+     related :t:`function` is an :t:`external function`.
 
-:dp:`fls_liwnzwu1el1i`
-An :t:`unsafe function item type` is a :t:`function item type` where the related
-:t:`function` is an :t:`unsafe function`.
+.. glossary-entry:: unsafe function item type
+   :glossary-dp: fls_y1iruf62p856
+   
+   :glossary:
+     :dp:`fls_r91tuwi55nu7`
+     An :dt:`unsafe function item type` is a :t:`function item type` where the
+     related :t:`function` is an :t:`unsafe function`.
+   :chapter:
+     :dp:`fls_liwnzwu1el1i`
+     An :t:`unsafe function item type` is a :t:`function item type` where the related
+     :t:`function` is an :t:`unsafe function`.
 
 :dp:`fls_e9x4f7qxvvjv`
 A :t:`function item type` is coercible to a :t:`function pointer type`.
@@ -936,6 +1629,28 @@ the :std:`core::marker::Send` :t:`trait`, and the :std:`core::marker::Sync`
 
 Indirection Types
 -----------------
+
+.. glossary-entry:: indirection type
+   :glossary-dp: fls_k9kuxgte6vxn
+   
+   :glossary:
+     :dp:`fls_8so1phpdjyk8`
+     An :dt:`indirection type` is a :t:`type` whose :t:`[value]s` refer to memory
+     locations.
+
+.. glossary-entry:: pointer
+   :glossary-dp: fls_HnJEHyUiTpb1
+   
+   :glossary:
+     :dp:`fls_DRjhMWo9mjoF`
+     A :dt:`pointer` is a :t:`value` of a :t:`pointer type`.
+
+.. glossary-entry:: pointer type
+   :glossary-dp: fls_o5o1ssqqD7Jg
+   
+   :glossary:
+     :dp:`fls_F2dUxEa4nheL`
+     A :dt:`pointer type` is a :t:`type` whose values indicate memory locations.
 
 .. _fls_xztr1kebz8bo:
 
@@ -963,19 +1678,60 @@ Function Pointer Types
    FunctionPointerTypeParameter ::=
        OuterAttributeOrDoc* (IdentifierOrUnderscore $$:$$)? TypeSpecification
 
+.. glossary-entry:: function pointer type parameter
+   :glossary-dp: fls_v3V6K4S5UhIF
+   
+   :glossary:
+     :dp:`fls_nF1k90JJWq2K`
+     A :dt:`function pointer type parameter` is a :t:`function parameter` of a
+     :t:`function pointer type`.
+     
+     :dp:`fls_vvy6qogy0xnb`
+     See :s:`FunctionPointerTypeParameter`.
+
 .. rubric:: Legality Rules
 
-:dp:`fls_v2wrytr3t04h`
-A :t:`function pointer type` is an :t:`indirection type` that refers to a
-:t:`function`.
+.. glossary-entry:: function pointer type
+   :glossary-dp: fls_fqwzlg78k503
+   
+   :glossary:
+     :dp:`fls_lcawg25xhblx`
+     A :dt:`function pointer type` is an :t:`indirection type` that refers to a
+     :t:`function`.
+     
+     :dp:`fls_t50umpk5abjy`
+     See :s:`FunctionPointerTypeSpecification`.
+   :chapter:
+     :dp:`fls_v2wrytr3t04h`
+     A :t:`function pointer type` is an :t:`indirection type` that refers to a
+     :t:`function`.
 
-:dp:`fls_5dd7icjcl3nt`
-An :t:`unsafe function pointer type` is a function pointer type subject to
-:t:`keyword` ``unsafe``.
+.. glossary-entry:: unsafe function pointer type
+   :glossary-dp: fls_bokqlokua059
+   
+   :glossary:
+     :dp:`fls_tiluwa2v4l6d`
+     An :dt:`unsafe function pointer type` is a function pointer type subject to
+     :t:`keyword` ``unsafe``.
+   :chapter:
+     :dp:`fls_5dd7icjcl3nt`
+     An :t:`unsafe function pointer type` is a function pointer type subject to
+     :t:`keyword` ``unsafe``.
 
-:dp:`fls_B0SMXRqQMS1E`
-A :t:`variadic part` indicates the presence of :t:`C`-like optional
-parameters.
+.. glossary-entry:: variadic part
+   :glossary-dp: fls_RIe80XOF8VlA
+   
+   :glossary:
+     :dp:`fls_ePnTyLoqJ1i7`
+     A :dt:`variadic part` indicates the presence of :t:`C`-like optional
+     parameters.
+     
+     :dp:`fls_z9D86gBFbKB5`
+     See :s:`VariadicPart`.
+   :chapter:
+     :dp:`fls_B0SMXRqQMS1E`
+     A :t:`variadic part` indicates the presence of :t:`C`-like optional
+     parameters.
 
 :dp:`fls_hbn1l42xmr3h`
 A :t:`variadic part` can only be used in a :t:`variadic function`.
@@ -1015,16 +1771,50 @@ Raw Pointer Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_rpbhr0xukbx9`
-A :t:`raw pointer type` is an :t:`indirection type` without validity guarantees.
+.. glossary-entry:: raw pointer
+   :glossary-dp: fls_uv4dyt4gi32x
+   
+   :glossary:
+     :dp:`fls_rbdilcmt2cns`
+     A :dt:`raw pointer` is a pointer of a :t:`raw pointer type`.
 
-:dp:`fls_bYWfGDAQcWfA`
-A :t:`mutable raw pointer type` is a :t:`raw pointer type` subject to
-:t:`keyword` ``mut``.
+.. glossary-entry:: raw pointer type
+   :glossary-dp: fls_9los8hwh60z0
+   
+   :glossary:
+     :dp:`fls_wspawcoqxfbh`
+     A :dt:`raw pointer type` is an :t:`indirection type` without safety and
+     liveness guarantees.
+     
+     :dp:`fls_ctksliaxhzo9`
+     See :s:`RawPointerTypeSpecification`.
+   :chapter:
+     :dp:`fls_rpbhr0xukbx9`
+     A :t:`raw pointer type` is an :t:`indirection type` without validity guarantees.
 
-:dp:`fls_8uWfFAsZeRCs`
-An :t:`immutable raw pointer type` is a :t:`raw pointer type` subject to
-:t:`keyword` ``const``.
+.. glossary-entry:: mutable raw pointer type
+   :glossary-dp: fls_wOvlW47jKEWF
+   
+   :glossary:
+     :dp:`fls_86SFxSDRcC06`
+     A :dt:`mutable raw pointer type` is a :t:`raw pointer type` subject to
+     :t:`keyword` ``mut``.
+   :chapter:
+     :dp:`fls_bYWfGDAQcWfA`
+     A :t:`mutable raw pointer type` is a :t:`raw pointer type` subject to
+     :t:`keyword` ``mut``.
+
+.. glossary-entry:: immutable raw pointer type
+   :glossary-dp: fls_RghQKP3lsXEb
+   
+   :glossary:
+     :dp:`fls_2GzYItDXvMhB`
+     An :dt:`immutable raw pointer type` is a :t:`raw pointer type` subject to
+     :t:`keyword` ``const``.
+   :chapter:
+     :dp:`fls_8uWfFAsZeRCs`
+     An :t:`immutable raw pointer type` is a :t:`raw pointer type` subject to
+     :t:`keyword` ``const``.
 
 :dp:`fls_hrum767l6dte`
 Comparing two :t:`[value]s` of :t:`[raw pointer type]s` compares the addresses
@@ -1055,12 +1845,30 @@ Reference Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_twhq24s8kchh`
-A :t:`reference type` is an :t:`indirection type` with :t:`ownership`.
+.. glossary-entry:: reference type
+   :glossary-dp: fls_uw32xmrfgzcd
+   
+   :glossary:
+     :dp:`fls_l3knopsdlyf2`
+     A :dt:`reference type` is an :t:`indirection type` with :t:`ownership`.
+     
+     :dp:`fls_jzjatdpxqt9u`
+     See :s:`ReferenceTypeSpecification`.
+   :chapter:
+     :dp:`fls_twhq24s8kchh`
+     A :t:`reference type` is an :t:`indirection type` with :t:`ownership`.
 
-:dp:`fls_w4NbA7WhZfR2`
-A :t:`shared reference type` is a :t:`reference type` not subject to
-:t:`keyword` ``mut``.
+.. glossary-entry:: shared reference type
+   :glossary-dp: fls_antrblstppyf
+   
+   :glossary:
+     :dp:`fls_8z9wb3eu5yp1`
+     A :dt:`shared reference type` is a :t:`reference type` not subject to
+     :t:`keyword` ``mut``.
+   :chapter:
+     :dp:`fls_w4NbA7WhZfR2`
+     A :t:`shared reference type` is a :t:`reference type` not subject to
+     :t:`keyword` ``mut``.
 
 :dp:`fls_ie0avzljmxfm`
 A :t:`shared reference type` prevents the direct mutation of a referenced
@@ -1073,9 +1881,24 @@ A :t:`shared reference type` implements the :std:`core::marker::Copy`
 :dp:`fls_csdjfwczlzfd`
 Releasing a :t:`shared reference` has no effect on the :t:`value` it refers to.
 
-:dp:`fls_GUZuiST7ucib`
-A :t:`mutable reference type` is a :t:`reference type` subject to :t:`keyword`
-``mut``.
+.. glossary-entry:: shared reference
+   :glossary-dp: fls_18xazs7sp4
+   
+   :glossary:
+     :dp:`fls_cspa4c5mscnw`
+     A :dt:`shared reference` is a :t:`value` of a :t:`shared reference type`.
+
+.. glossary-entry:: mutable reference type
+   :glossary-dp: fls_8iq0wcczl465
+   
+   :glossary:
+     :dp:`fls_q06p9tclwaaw`
+     A :dt:`mutable reference type` is a :t:`reference type` subject to :t:`keyword`
+     ``mut``.
+   :chapter:
+     :dp:`fls_GUZuiST7ucib`
+     A :t:`mutable reference type` is a :t:`reference type` subject to :t:`keyword`
+     ``mut``.
 
 :dp:`fls_vaas9kns4zo6`
 A :t:`mutable reference type` allows the direct mutation of a referenced
@@ -1102,6 +1925,14 @@ not :c:`null`.
 
 Trait Types
 -----------
+
+.. glossary-entry:: trait type
+   :glossary-dp: fls_nfdfeFVZRC5F
+   
+   :glossary:
+     :dp:`fls_JQsQnQ0dTHlS`
+     A :dt:`trait type` is either an :t:`impl trait type` or a
+     :t:`trait object type`.
 
 .. _fls_3xqobbu7wfsf:
 
@@ -1130,17 +1961,44 @@ Impl Trait Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_a6zlvyxpgsew`
-An :t:`impl trait type` is a :t:`type` that implements a :t:`trait`, where the
-:t:`type` is known at compile time.
+.. glossary-entry:: impl trait type
+   :glossary-dp: fls_l20o3hutbfpf
+   
+   :glossary:
+     :dp:`fls_rdctgmnfncnd`
+     An :dt:`impl trait type` is a :t:`type` that implements a :t:`trait`, where the
+     :t:`type` is known at compile time.
+     
+     :dp:`fls_704soar15v8v`
+     See :s:`ImplTraitTypeSpecification`, :s:`ImplTraitTypeSpecificationOneBound`.
+   :chapter:
+     :dp:`fls_a6zlvyxpgsew`
+     An :t:`impl trait type` is a :t:`type` that implements a :t:`trait`, where the
+     :t:`type` is known at compile time.
 
 :dp:`fls_ieyqx5vzas2m`
 An :t:`impl trait type` shall appear only within a :t:`function parameter` or
 the :t:`return type` of a :t:`function`.
 
-:dp:`fls_3aKZB0ILIkZw`
-An :t:`anonymous return type` is an :t:`impl trait type` ascribed to a
-:t:`function` :t:`return type`.
+.. glossary-entry:: anonymous type parameter
+   :glossary-dp: fls_8oepaq6ang93
+   
+   :glossary:
+     :dp:`fls_brqaq0736o09`
+     An :dt:`anonymous type parameter` is an :t:`impl trait type` ascribed to a
+     :t:`function parameter`.
+
+.. glossary-entry:: anonymous return type
+   :glossary-dp: fls_dgxkklxcrrl0
+   
+   :glossary:
+     :dp:`fls_z6t6lbwwztuf`
+     An :dt:`anonymous return type` is an :t:`impl trait type` ascribed to a
+     :t:`function` return type.
+   :chapter:
+     :dp:`fls_3aKZB0ILIkZw`
+     An :t:`anonymous return type` is an :t:`impl trait type` ascribed to a
+     :t:`function` :t:`return type`.
 
 :dp:`fls_Xo1ODwOyX7Vm`
 An :t:`anonymous return type` behaves as if it contains all declared :t:`[type
@@ -1156,8 +2014,18 @@ of the :t:`return type`'s :t:`function` and its parent :t:`trait` or
 :dp:`fls_ECjhEI7eCwAj`
 An :t:`impl trait type` shall not contain :t:`[opt-out trait bound]s`.
 
-:dp:`fls_69hqMjvNno9u`
-An :t:`use capture` is a :t:`generic parameter` referenced within an :t:`anonymous return type`.
+.. glossary-entry:: use capture
+   :glossary-dp: fls_Z8qvOkP4Zfj5
+   
+   :glossary:
+     :dp:`fls_eZyPXG27Zwcg`
+     An :dt:`use capture` is a :t:`generic parameter` referenced via keyword $$use$$ within an :t:`anonymous return type`.
+     
+     :dp:`fls_Z8qvOkP4Zfj5`
+     See :s:`UseCaptures`.
+   :chapter:
+     :dp:`fls_69hqMjvNno9u`
+     An :t:`use capture` is a :t:`generic parameter` referenced within an :t:`anonymous return type`.
 
 :dp:`fls_KgH6c5cC4S0G`
 An :t:`anonymous return type` that does not specify a list of :t:`[use capture]s` implicitly :t:`[use capture]s` all :t:`[type parameter]s` and :t:`[constant parameter]s` that are in :t:`scope`.
@@ -1191,12 +2059,31 @@ Trait Object Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_sgrvona1nb6h`
-A :t:`trait object type` is a :t:`type` that implements a :t:`trait`, where the
-:t:`type` is not known at compile time.
+.. glossary-entry:: trait object type
+   :glossary-dp: fls_7qtbro7ipndr
+   
+   :glossary:
+     :dp:`fls_lo2fzzdwxy1l`
+     A :dt:`trait object type` is a :t:`type` that implements a :t:`trait`, where
+     the :t:`type` is not known at compile time.
+     
+     :dp:`fls_d632mc5c8qwt`
+     See :s:`TraitObjectTypeSpecification`,
+     :s:`TraitObjectTypeSpecificationOneBound`.
+   :chapter:
+     :dp:`fls_sgrvona1nb6h`
+     A :t:`trait object type` is a :t:`type` that implements a :t:`trait`, where the
+     :t:`type` is not known at compile time.
 
-:dp:`fls_eWac7zOda3lh`
-The :t:`principal trait` of :t:`trait object type` is the first :t:`trait bound`.
+.. glossary-entry:: principal trait
+   :glossary-dp: fls_mk3sa7OvtJvB
+   
+   :glossary:
+     :dp:`fls_YtYOHoPaMPFX`
+     The :dt:`principal trait` of :t:`trait object type` is its first :t:`trait bound`.
+   :chapter:
+     :dp:`fls_eWac7zOda3lh`
+     The :t:`principal trait` of :t:`trait object type` is the first :t:`trait bound`.
 
 :dp:`fls_9z8oleh0wdel`
 The :t:`principal trait` shall denote an :t:`object safe` :t:`trait`.
@@ -1242,9 +2129,20 @@ Inferred Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_xdtgr5toulpb`
-An :t:`inferred type` is a placeholder for a :t:`type` deduced by
-:t:`type inference`.
+.. glossary-entry:: inferred type
+   :glossary-dp: fls_z5593p7wfab
+   
+   :glossary:
+     :dp:`fls_9xgfexeqr4ed`
+     An :dt:`inferred type` is a placeholder for a :t:`type` deduced by
+     :t:`type inference`.
+     
+     :dp:`fls_z2p8378sd93z`
+     See :s:`InferredType`.
+   :chapter:
+     :dp:`fls_xdtgr5toulpb`
+     An :t:`inferred type` is a placeholder for a :t:`type` deduced by
+     :t:`type inference`.
 
 :dp:`fls_3abhsuaa8nas`
 An :t:`inferred type` shall not appear in the following positions:
@@ -1281,9 +2179,25 @@ Type Parameters
 
 .. rubric:: Legality Rules
 
-:dp:`fls_dCIIVXGhXDlO`
-A :t:`type parameter type` is a placeholder :t:`type` of a :t:`type parameter`
-to be substituted by :t:`generic substitution`.
+.. glossary-entry:: type parameter type
+   :glossary-dp: fls_HghjWqvyj5bN
+   
+   :glossary:
+     :dp:`fls_EuHHxwHd0RHV`
+     A :dt:`type parameter type` is a placeholder :t:`type` of a :t:`type parameter`
+     to be substituted by :t:`generic substitution`.
+   :chapter:
+     :dp:`fls_dCIIVXGhXDlO`
+     A :t:`type parameter type` is a placeholder :t:`type` of a :t:`type parameter`
+     to be substituted by :t:`generic substitution`.
+
+.. glossary-entry:: generic substitution
+   :glossary-dp: fls_VBEBshUrAOKE
+   
+   :glossary:
+     :dp:`fls_Led1Nxfcd70K`
+     A :dt:`generic substitution` is the replacement of a :t:`generic parameter`
+     with a :t:`generic argument`.
 
 .. rubric:: Examples
 
@@ -1305,9 +2219,20 @@ Never Type
 
 .. rubric:: Legality Rules
 
-:dp:`fls_4u0v5uy95pyf`
-The :t:`never type` is a :t:`type` that represents the result of a computation
-that never completes.
+.. glossary-entry:: never type
+   :glossary-dp: fls_cwcbtnzbqmq2
+   
+   :glossary:
+     :dp:`fls_m9v5j6detob4`
+     The :dt:`never type` is a :t:`type` that represents the result of a computation
+     that never completes.
+     
+     :dp:`fls_k5z1vjxepnfj`
+     See :s:`NeverType`.
+   :chapter:
+     :dp:`fls_4u0v5uy95pyf`
+     The :t:`never type` is a :t:`type` that represents the result of a computation
+     that never completes.
 
 :dp:`fls_xmtc10qzw0ui`
 The :t:`never type` has no :t:`[value]s`.
@@ -1337,9 +2262,20 @@ Parenthesized Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_1dvo1epstrdv`
-A :t:`parenthesized type` is a :t:`type` that disambiguates the interpretation
-of :t:`[lexical element]s`.
+.. glossary-entry:: parenthesized type
+   :glossary-dp: fls_gilx8zikdq9k
+   
+   :glossary:
+     :dp:`fls_pamypc7t7l5n`
+     A :dt:`parenthesized type` is a :t:`type` that disambiguates the interpretation
+     of :t:`[lexical element]s`.
+     
+     :dp:`fls_lovkvqoni3xs`
+     See :s:`ParenthesizedTypeSpecification`.
+   :chapter:
+     :dp:`fls_1dvo1epstrdv`
+     A :t:`parenthesized type` is a :t:`type` that disambiguates the interpretation
+     of :t:`[lexical element]s`.
 
 .. rubric:: Examples
 
@@ -1365,8 +2301,18 @@ Type Aliases
 
 .. rubric:: Legality Rules
 
-:dp:`fls_bibigic4jjad`
-A :t:`type alias` is an :t:`item` that defines a :t:`name` for a :t:`type`.
+.. glossary-entry:: type alias
+   :glossary-dp: fls_vaklivoy2ix2
+   
+   :glossary:
+     :dp:`fls_8pcsxodv1xp5`
+     A :dt:`type alias` is an :t:`item` that defines a :t:`name` for a :t:`type`.
+     
+     :dp:`fls_qfzskp1t3h5w`
+     See :s:`TypeAliasDeclaration`.
+   :chapter:
+     :dp:`fls_bibigic4jjad`
+     A :t:`type alias` is an :t:`item` that defines a :t:`name` for a :t:`type`.
 
 :dp:`fls_rosdkeck5ax2`
 A :t:`type alias` shall not have a :s:`TypeBoundList` unless it is an
@@ -1397,23 +2343,77 @@ Type Layout
 :dp:`fls_kdbq02iguzgl`
 All :t:`[value]s` have an :t:`alignment` and a :t:`size`.
 
-:dp:`fls_26Xgem831Nqg`
-A :dt:`dynamically sized type` is a :t:`type` that does not implement the :std:`core::marker::Sized` :t:`trait`.
+.. glossary-entry:: dynamically sized type
+   :glossary-dp: fls_6uovyjjzh6km
+   
+   :glossary:
+     :dp:`fls_eeyxu730z2pw`
+     A :dt:`dynamically sized type` is a :t:`type` that does not implement the
+     :std:`core::marker::Sized` :t:`trait`.
+   :chapter:
+     :dp:`fls_26Xgem831Nqg`
+     A :dt:`dynamically sized type` is a :t:`type` that does not implement the :std:`core::marker::Sized` :t:`trait`.
 
-:dp:`fls_ozYgHEHFTT5c`
-A :dt:`fat pointer type` is an :t:`indirection type` whose contained :t:`type specification` is a :t:`dynamically sized type`.
+.. glossary-entry:: thin pointer
+   :glossary-dp: fls_lfsgf6u142yb
+   
+   :glossary:
+     :dp:`fls_i2j0u4v5o1bs`
+     A :dt:`thin pointer` is a :t:`value` of a :t:`thin pointer type`.
 
-:dp:`fls_muxfn9soi47l`
-The :t:`alignment` of a :t:`value` specifies which addresses are valid for
-storing the :t:`value`. :t:`Alignment` is measured in bytes, is at least one,
-and always a power of two. A :t:`value` of :t:`alignment` ``N`` is stored at an
-address that is a multiple of ``N``.
+.. glossary-entry:: thin pointer type
+   :glossary-dp: fls_7ksqpi9j8ba9
+   
+   :glossary:
+     :dp:`fls_33rka3kyxgrk`
+     A :dt:`thin pointer type` is an :t:`indirection type` that refers to a
+     :t:`fixed sized type`.
 
-:dp:`fls_1pbwigq6f3ha`
-The :t:`size` of a :t:`type` is the offset in bytes between successive elements
-in :t:`array type` ``[T, N]`` where ``T`` is the :t:`type` of the :t:`value`,
-including any padding for :t:`alignment`. :t:`Size` is a multiple of the
-:t:`alignment`.
+.. glossary-entry:: fat pointer
+   :glossary-dp: fls_nkf9z4pqg8x1
+   
+   :glossary:
+     :dp:`fls_knbc2jv5c5ds`
+     A :dt:`fat pointer` is a :t:`value` of a :t:`fat pointer type`.
+
+.. glossary-entry:: fat pointer type
+   :glossary-dp: fls_trvkbidlsss8
+   
+   :glossary:
+     :dp:`fls_l8ew6udd79hh`
+     A :dt:`fat pointer type` is an :t:`indirection type` whose contained :t:`type specification` is a :t:`dynamically sized type`.
+   :chapter:
+     :dp:`fls_ozYgHEHFTT5c`
+     A :dt:`fat pointer type` is an :t:`indirection type` whose contained :t:`type specification` is a :t:`dynamically sized type`.
+
+.. glossary-entry:: alignment
+   :glossary-dp: fls_j775guurkgo4
+   
+   :glossary:
+     :dp:`fls_c0hbatn5o8x3`
+     The :dt:`alignment` of a :t:`value` specifies which addresses are valid for
+     storing the value.
+   :chapter:
+     :dp:`fls_muxfn9soi47l`
+     The :t:`alignment` of a :t:`value` specifies which addresses are valid for
+     storing the :t:`value`. :t:`Alignment` is measured in bytes, is at least one,
+     and always a power of two. A :t:`value` of :t:`alignment` ``N`` is stored at an
+     address that is a multiple of ``N``.
+
+.. glossary-entry:: size
+   :glossary-dp: fls_oy5xy5pm1enx
+   
+   :glossary:
+     :dp:`fls_3obnilqhkjux`
+     The :dt:`size` of a :t:`value` is the offset in bytes between successive
+     elements in an :t:`array type` with the same :t:`element type`, including any
+     padding for :t:`alignment`.
+   :chapter:
+     :dp:`fls_1pbwigq6f3ha`
+     The :t:`size` of a :t:`type` is the offset in bytes between successive elements
+     in :t:`array type` ``[T, N]`` where ``T`` is the :t:`type` of the :t:`value`,
+     including any padding for :t:`alignment`. :t:`Size` is a multiple of the
+     :t:`alignment`.
 
 :dp:`fls_bk3nm2n47afu`
 The :t:`size` of :t:`[scalar type]s` is as follows:
@@ -1454,6 +2454,14 @@ The :t:`size` of :t:`[scalar type]s` is as follows:
 :dp:`fls_lwmrljw9m0pb`
 Types :c:`usize` and :c:`isize` have :t:`size` big enough to contain every
 address on the target platform.
+
+.. glossary-entry:: layout
+   :glossary-dp: fls_w5gslebevlya
+   
+   :glossary:
+     :dp:`fls_qk602dmhc0d6`
+     :dt:`Layout` specifies the :t:`alignment`, :t:`size`, and the relative offset
+     of :t:`[field]s` in a :t:`type`.
 
 :dp:`fls_pzi6izljfv0f`
 For :t:`type` :c:`str`, the :t:`layout` is that of :t:`slice type`
@@ -1510,11 +2518,26 @@ Type Representation
 
 .. rubric:: Legality Rules
 
-:dp:`fls_mpqlyi3lgrfv`
-:t:`Type representation` specifies the :t:`layout` of :t:`[field]s` of
-:t:`[abstract data type]s`. :t:`Type representation` changes the bit padding
-between :t:`[field]s` of :t:`[abstract data type]s` as well as their order, but
-does not change the :t:`layout` of the :t:`[field]s` themselves.
+.. glossary-entry:: representation
+   :glossary-dp: fls_o34kkn5pi0sh
+   
+   :glossary:
+     :dp:`fls_69j7pq2o1iu`
+     See :t:`type representation`.
+
+.. glossary-entry:: type representation
+   :glossary-dp: fls_u1zkh2m8p92
+   
+   :glossary:
+     :dp:`fls_rv80nyxwj2z8`
+     :dt:`Type representation` specifies the :t:`layout` of :t:`[field]s` of
+     :t:`[abstract data type]s`.
+   :chapter:
+     :dp:`fls_mpqlyi3lgrfv`
+     :t:`Type representation` specifies the :t:`layout` of :t:`[field]s` of
+     :t:`[abstract data type]s`. :t:`Type representation` changes the bit padding
+     between :t:`[field]s` of :t:`[abstract data type]s` as well as their order, but
+     does not change the :t:`layout` of the :t:`[field]s` themselves.
 
 :dp:`fls_9dhnanv21y9z`
 :t:`Type representation` is classified into:
@@ -1531,24 +2554,67 @@ does not change the :t:`layout` of the :t:`[field]s` themselves.
 * :dp:`fls_ergdb18tpx25`
   :t:`Transparent representation`.
 
-:dp:`fls_8s1vddh8vdhy`
-:t:`C representation` lays out a :t:`type` such that the :t:`type` is
-interoperable with the :t:`C` language.
+.. glossary-entry:: C
+   :glossary-dp: fls_lfjgrkwra22i
+   
+   :glossary:
+     :dp:`fls_d4q2ro4nsnop`
+     :dt:`C` is the programming language described in the ISO/IEC 9899:2018
+     International Standard.
 
-:dp:`fls_b005bktrkrxy`
-:t:`Default representation` makes no guarantees about the :t:`layout`.
+.. glossary-entry:: C representation
+   :glossary-dp: fls_wenn1wdsicfz
+   
+   :glossary:
+     :dp:`fls_g9pdb06m5fto`
+     :dt:`C representation` is a :t:`type representation` that lays out :t:`[type]s`
+     such that they are interoperable with the :t:`C` language.
+   :chapter:
+     :dp:`fls_8s1vddh8vdhy`
+     :t:`C representation` lays out a :t:`type` such that the :t:`type` is
+     interoperable with the :t:`C` language.
 
-:dp:`fls_7plbkqlmed0r`
-:t:`Primitive representation` is the :t:`type representation` of individual
-:t:`[integer type]s`. :t:`Primitive representation` applies only to an
-:t:`enum type` that is not a :t:`zero-variant enum type`. It is possible to
-combine :t:`C representation` and :t:`primitive representation`.
+.. glossary-entry:: default representation
+   :glossary-dp: fls_g9v8ubx8m1sq
+   
+   :glossary:
+     :dp:`fls_e85fsp10acnh`
+     :dt:`Default representation` is a :t:`type representation` that does not make
+     any guarantees about :t:`layout`.
+   :chapter:
+     :dp:`fls_b005bktrkrxy`
+     :t:`Default representation` makes no guarantees about the :t:`layout`.
 
-:dp:`fls_ml4khttq3w5k`
-:t:`Transparent representation` applies only to an :t:`enum type` with a
-single :t:`enum variant` or a :t:`struct type` where the :t:`struct type` or
-:t:`enum variant` has a single :t:`field` of non-zero :t:`size` and any number
-of :t:`[field]s` of :t:`size` zero and :t:`alignment` one.
+.. glossary-entry:: primitive representation
+   :glossary-dp: fls_fikexts17v7a
+   
+   :glossary:
+     :dp:`fls_bydly1rt63pf`
+     :dt:`Primitive representation` is the :t:`type representation` of
+     :t:`[integer type]s`.
+   :chapter:
+     :dp:`fls_7plbkqlmed0r`
+     :t:`Primitive representation` is the :t:`type representation` of individual
+     :t:`[integer type]s`. :t:`Primitive representation` applies only to an
+     :t:`enum type` that is not a :t:`zero-variant enum type`. It is possible to
+     combine :t:`C representation` and :t:`primitive representation`.
+
+.. glossary-entry:: transparent representation
+   :glossary-dp: fls_sl62718i1kkn
+   
+   :glossary:
+     :dp:`fls_hb3e72rhzpnv`
+     :dt:`Transparent representation` is a :t:`type representation` that applies
+     only to an :t:`enum type` with a single :t:`enum variant` or a :t:`struct type`
+     where the :t:`struct type` or :t:`enum variant` has a single :t:`field` of
+     non-zero :t:`size` and any number of :t:`[field]s` of :t:`size` zero and
+     :t:`alignment` one.
+   :chapter:
+     :dp:`fls_ml4khttq3w5k`
+     :t:`Transparent representation` applies only to an :t:`enum type` with a
+     single :t:`enum variant` or a :t:`struct type` where the :t:`struct type` or
+     :t:`enum variant` has a single :t:`field` of non-zero :t:`size` and any number
+     of :t:`[field]s` of :t:`size` zero and :t:`alignment` one.
 
 :dp:`fls_9q2iqzbup8oy`
 :t:`[Type]s` subject to :t:`transparent representation` have the same
@@ -1567,6 +2633,17 @@ modified further using :t:`attribute` :c:`[repr]`'s :s:`Alignment`
 to a :t:`struct type` or a :t:`union type` subject to :t:`C representation` or
 :t:`default representation`.
 
+.. glossary-entry:: representation modifier
+   :glossary-dp: fls_TSbBt6WzropN
+   
+   :glossary:
+     :dp:`fls_BCvXL7HkXqdZ`
+     A :dt:`representation modifier` is a :t:`construct` that modifies the
+     :t:`alignment` of a :t:`type`.
+     
+     :dp:`fls_TAVyjj66UBUo`
+     See :s:`Alignment`.
+
 .. _fls_xc1hof4qbf6p:
 
 Enum Type Representation
@@ -1582,10 +2659,24 @@ The :t:`size` and :t:`alignment` of an :t:`enum type` without :t:`[field]s`
 subject to :t:`C representation`, :t:`default representation`, or
 :t:`primitive representation` are those of its :t:`discriminant`.
 
-:dp:`fls_s9c0a0lg6c0p`
-The :t:`discriminant type` of an :t:`enum type` with :t:`C representation` is
-the corresponding :t:`c signed int type` for the target platform's :t:`C`
-:t:`ABI`.
+.. glossary-entry:: discriminant type
+   :glossary-dp: fls_a0ezuPLtENme
+   
+   :glossary:
+     :dp:`fls_kqdvWGi9cglm`
+     A :dt:`discriminant type` is the :t:`type` of a :t:`discriminant`.
+   :chapter:
+     :dp:`fls_s9c0a0lg6c0p`
+     The :t:`discriminant type` of an :t:`enum type` with :t:`C representation` is
+     the corresponding :t:`c signed int type` for the target platform's :t:`C`
+     :t:`ABI`.
+
+.. glossary-entry:: C signed int type
+   :glossary-dp: fls_fls_J0xUy4Mcxoe6
+   
+   :glossary:
+     :dp:`fls_8QIcvapJehqY`
+     :dt:`C signed int type` is the `signed int` :t:`type` of the :t:`C` language.
 
 :dp:`fls_slhvf3gmqz4h`
 The :t:`discriminant type` of an :t:`enum type` with :t:`default representation`
@@ -1719,10 +2810,18 @@ Recursive Types
 
 .. rubric:: Legality Rules
 
-:dp:`fls_z22std1crl49`
-A :t:`recursive type` is a :t:`type` whose contained :t:`[type]s` refer back to
-the containing :t:`type`, either directly or by referring to another :t:`type`
-which refers back to the original :t:`recursive type`.
+.. glossary-entry:: recursive type
+   :glossary-dp: fls_94fkxohlnq9i
+   
+   :glossary:
+     :dp:`fls_2t8qom6dhcjb`
+     A :dt:`recursive type` is a :t:`type` that may define other types within its
+     :t:`type specification`.
+   :chapter:
+     :dp:`fls_z22std1crl49`
+     A :t:`recursive type` is a :t:`type` whose contained :t:`[type]s` refer back to
+     the containing :t:`type`, either directly or by referring to another :t:`type`
+     which refers back to the original :t:`recursive type`.
 
 :dp:`fls_eddnwlr0rz59`
 A :t:`type` that is not an :t:`abstract data type` shall not be recursive.
@@ -1743,19 +2842,58 @@ Type Unification
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ryvdhkgm7vzj`
-:t:`Type unification` is the process by which :t:`type inference` propagates
-known :t:`[type]s` across the :t:`type inference root` and assigns concrete
-:t:`[type]s` to :t:`[type variable]s`, as well as a general mechanism to check
-for compatibility between two :t:`[type]s` during :t:`method resolution`.
+.. glossary-entry:: type unification
+   :glossary-dp: fls_qoehu9p00q56
+   
+   :glossary:
+     :dp:`fls_3vyodut341b5`
+     :dt:`Type unification` is the process by which :t:`type inference` propagates
+     known :t:`[type]s` across the :t:`type inference root` and assigns concrete
+     :t:`[type]s` to :t:`[type variable]s`, as well as a general mechanism to check
+     for compatibility between two :t:`[type]s` during :t:`method resolution`.
+   :chapter:
+     :dp:`fls_ryvdhkgm7vzj`
+     :t:`Type unification` is the process by which :t:`type inference` propagates
+     known :t:`[type]s` across the :t:`type inference root` and assigns concrete
+     :t:`[type]s` to :t:`[type variable]s`, as well as a general mechanism to check
+     for compatibility between two :t:`[type]s` during :t:`method resolution`.
 
-:dp:`fls_67VZrx6dw68H`
-A :t:`type` is said to :t:`unify` with another :t:`type` when the domains,
-ranges, and structures of both :t:`[type]s` are compatible according to the
-rules detailed below.
+.. glossary-entry:: unify
+   :glossary-dp: fls_da6ssnmmsevo
+   
+   :glossary:
+     :dp:`fls_mango4gffb9e`
+     A :t:`type` is said to :dt:`unify` with another type when the domains, ranges,
+     and structures of both :t:`[type]s` are compatible.
+   :chapter:
+     :dp:`fls_67VZrx6dw68H`
+     A :t:`type` is said to :t:`unify` with another :t:`type` when the domains,
+     ranges, and structures of both :t:`[type]s` are compatible according to the
+     rules detailed below.
 
-:dp:`fls_aie0tr62vhw5`
-Two types that :t:`unify` are said to be :t:`[unifiable type]s`.
+.. glossary-entry:: unifiable
+   :glossary-dp: fls_y7m6AentM6Ik
+   
+   :glossary:
+     :dp:`fls_01BNTCL4u8Gn`
+     For :dt:`unifiable`, see :t:`unify`.
+
+.. glossary-entry:: unified type
+   :glossary-dp: fls_9RfuDiI6qrzZ
+   
+   :glossary:
+     :dp:`fls_tqRwIe6z3a4j`
+     A :dt:`unified type` is a :t:`type` produced by :t:`type unification`.
+
+.. glossary-entry:: unifiable types
+   :glossary-dp: fls_u03p4rvz1jhs
+   
+   :glossary:
+     :dp:`fls_jsbggfitv9xk`
+     Two :t:`[type]s` that :t:`unify` are said to be :dt:`[unifiable type]s`.
+   :chapter:
+     :dp:`fls_aie0tr62vhw5`
+     Two types that :t:`unify` are said to be :t:`[unifiable type]s`.
 
 :dp:`fls_3U7Ue6Xzuv9M`
 :t:`Type unification` is a symmetric operation. If :t:`type` ``A`` unifies
@@ -1889,6 +3027,20 @@ A :t:`function pointer type` is unifiable only with another
 * :dp:`fls_5dh8c5gg0hmk`
   The :t:`[return type]s` are unifiable.
 
+.. glossary-entry:: mutability
+   :glossary-dp: fls_yM11Bcxn4p7c
+   
+   :glossary:
+     :dp:`fls_lBrXj9lo4s6o`
+     :dt:`Mutability` determines whether a :t:`construct` can modify a :t:`value`.
+
+.. glossary-entry:: mutable
+   :glossary-dp: fls_wvejcadmzt5p
+   
+   :glossary:
+     :dp:`fls_dqm58deu1orn`
+     A :t:`value` is :dt:`mutable` when it can be modified.
+
 :dp:`fls_ismr7wwvek4q`
 A :t:`raw pointer type` is unifiable only with another :t:`raw pointer type`
 when:
@@ -1942,14 +3094,22 @@ Type Coercion
 
 .. rubric:: Legality Rules
 
-:dp:`fls_w5pjcj9qmgbv`
-:t:`Type coercion` is an implicit operation that changes the :t:`type` of a
-:t:`value`. Any implicit conversion allowed by :t:`type coercion` can be made
-explicit using a :t:`type cast expression`.
-
-:dp:`fls_5v0n2a32bk95`
-A :t:`type coercion` takes place at a :t:`coercion site` or within a
-:t:`coercion-propagating expression`.
+.. glossary-entry:: type coercion
+   :glossary-dp: fls_6j08yuafv0vl
+   
+   :glossary:
+     :dp:`fls_mt36qehtqova`
+     :dt:`Type coercion` is an implicit operation that changes the :t:`type` of
+     a :t:`value`.
+   :chapter:
+     :dp:`fls_w5pjcj9qmgbv`
+     :t:`Type coercion` is an implicit operation that changes the :t:`type` of a
+     :t:`value`. Any implicit conversion allowed by :t:`type coercion` can be made
+     explicit using a :t:`type cast expression`.
+     
+     :dp:`fls_5v0n2a32bk95`
+     A :t:`type coercion` takes place at a :t:`coercion site` or within a
+     :t:`coercion-propagating expression`.
 
 :dp:`fls_j3kbaf43sgpj`
 The following :t:`[construct]s` constitute a :dt:`coercion site`:
@@ -2050,51 +3210,73 @@ occur when:
   and the target :t:`type` is a :t:`trait object type` with some :t:`principal trait` ``U``,
   where ``U`` is a :t:`supertrait` of ``T``.
 
-:dp:`fls_iiiu2q7pym4p`
-An :t:`unsized coercion` is a :t:`type coercion` that converts a :t:`sized type`
-into an :t:`unsized type`. :t:`Unsized coercion` from a source :t:`type` to a
-target :t:`type` is allowed to occur when:
+.. glossary-entry:: sized type
+   :glossary-dp: fls_oiaoWEQQDE7I
+   
+   :glossary:
+     :dp:`fls_pwcgsRCNSwKn`
+     A :dt:`sized type` is a :t:`type` with statically known size.
 
-* :dp:`fls_jte6n2js32af`
-  The source :t:`type` is :t:`array type` ``[T; N]`` and the target :t:`type` is
-  :t:`slice type` ``[T]``.
+.. glossary-entry:: unsized type
+   :glossary-dp: fls_KiVgO7I3UUhh
+   
+   :glossary:
+     :dp:`fls_M9NpzBH8Wf4z`
+     An :dt:`unsized type` is a :t:`type` with statically unknown size.
 
-* :dp:`fls_20pvqqayzqra`
-  The source :t:`type` is ``T`` and the target :t:`type` is ``dyn U``, where
-  ``T`` implements ``U + core::marker::Sized``, and ``U`` is :t:`object safe`.
-
-* :dp:`fls_j8rcy0xvd155`
-  The source type is
-
-.. code-block:: rust
-
-               S<..., T, ...> {
-                   ...
-                   last_field: X
-               }
-
-:dp:`fls_wuka4uyo3oj7`
-where
-
-* :dp:`fls_w15yo8yvuxq3`
-  ``S`` is a :t:`struct type`,
-
-* :dp:`fls_7aw3ifbvfgbd`
-  ``T`` implements ``core::marker::Unsize<U>``,
-
-* :dp:`fls_cnkth59djwgl`
-  ``last_field`` is a :t:`struct field` of ``S``,
-
-* :dp:`fls_4wbk7pqj010i`
-  The :t:`type` of ``last_field`` involves ``T`` and if the :t:`type` of
-  ``last_field`` is ``W<T>``, then ``W<T>`` implements
-  ``core::marker::Unsize<W<U>>``,
-
-* :dp:`fls_47u0039t0l8f`
-  ``T`` is not part of any other :t:`struct field` of ``S``.
-
-:dp:`fls_bmh6g3jju7eq`
-and the target ``type`` is ``S<..., U, ...>``.
+.. glossary-entry:: unsized coercion
+   :glossary-dp: fls_pjup0piqlxe3
+   
+   :glossary:
+     :dp:`fls_olt5qhyvhmtq`
+     An :dt:`unsized coercion` is a :t:`type coercion` that converts a
+     :t:`sized type` into an :t:`unsized type`.
+   :chapter:
+     :dp:`fls_iiiu2q7pym4p`
+     An :t:`unsized coercion` is a :t:`type coercion` that converts a :t:`sized type`
+     into an :t:`unsized type`. :t:`Unsized coercion` from a source :t:`type` to a
+     target :t:`type` is allowed to occur when:
+     
+     * :dp:`fls_jte6n2js32af`
+       The source :t:`type` is :t:`array type` ``[T; N]`` and the target :t:`type` is
+       :t:`slice type` ``[T]``.
+     
+     * :dp:`fls_20pvqqayzqra`
+       The source :t:`type` is ``T`` and the target :t:`type` is ``dyn U``, where
+       ``T`` implements ``U + core::marker::Sized``, and ``U`` is :t:`object safe`.
+     
+     * :dp:`fls_j8rcy0xvd155`
+       The source type is
+     
+     .. code-block:: rust
+     
+                    S<..., T, ...> {
+                        ...
+                        last_field: X
+                    }
+     
+     :dp:`fls_wuka4uyo3oj7`
+     where
+     
+     * :dp:`fls_w15yo8yvuxq3`
+       ``S`` is a :t:`struct type`,
+     
+     * :dp:`fls_7aw3ifbvfgbd`
+       ``T`` implements ``core::marker::Unsize<U>``,
+     
+     * :dp:`fls_cnkth59djwgl`
+       ``last_field`` is a :t:`struct field` of ``S``,
+     
+     * :dp:`fls_4wbk7pqj010i`
+       The :t:`type` of ``last_field`` involves ``T`` and if the :t:`type` of
+       ``last_field`` is ``W<T>``, then ``W<T>`` implements
+       ``core::marker::Unsize<W<U>>``,
+     
+     * :dp:`fls_47u0039t0l8f`
+       ``T`` is not part of any other :t:`struct field` of ``S``.
+     
+     :dp:`fls_bmh6g3jju7eq`
+     and the target ``type`` is ``S<..., U, ...>``.
 
 :dp:`fls_da4w32rsrwxc`
 :dt:`Least upper bound coercion` is a :t:`multi-[type coercion]` that is used in
@@ -2162,9 +3344,17 @@ Structural Equality
 
 .. rubric:: Legality Rules
 
-:dp:`fls_uVTpA7gbLCYX`
-A :t:`type` is :t:`structurally equal` when its :t:`[value]s` can be compared
-for equality by structure.
+.. glossary-entry:: structurally equal
+   :glossary-dp: fls_P7920ALJisrH
+   
+   :glossary:
+     :dp:`fls_glRZUKhmaWmP`
+     A :t:`type` is :dt:`structurally equal` when its :t:`[value]s` can be compared
+     for equality by structure.
+   :chapter:
+     :dp:`fls_uVTpA7gbLCYX`
+     A :t:`type` is :t:`structurally equal` when its :t:`[value]s` can be compared
+     for equality by structure.
 
 :dp:`fls_2DZAP6JJjJ9h`
 The following :t:`[type]s` are :t:`structurally equal`:
@@ -2196,9 +3386,17 @@ Interior Mutability
 
 .. rubric:: Legality Rules
 
-:dp:`fls_khy2e23i9o7z`
-:t:`Interior mutability` is a property of :t:`[type]s` whose :t:`[value]s` can
-be modified through :t:`[immutable reference]s`.
+.. glossary-entry:: interior mutability
+   :glossary-dp: fls_mb3xnplwdw9l
+   
+   :glossary:
+     :dp:`fls_e0173dd09znl`
+     :dt:`Interior mutability` is a property of :t:`[type]s` whose :t:`[value]s` can
+     be modified through :t:`[immutable reference]s`.
+   :chapter:
+     :dp:`fls_khy2e23i9o7z`
+     :t:`Interior mutability` is a property of :t:`[type]s` whose :t:`[value]s` can
+     be modified through :t:`[immutable reference]s`.
 
 :dp:`fls_sWiU26n2xS3r`
 A :t:`type` is subject to :t:`interior mutability` when it contains a
@@ -2211,14 +3409,35 @@ Visible Emptiness
 
 .. rubric:: Legality Rules
 
-:dp:`fls_SD4yUEQ9hHa3`
-:t:`Visible emptiness <visible emptiness>` is a property of :t:`[type]s` and :t:`[enum variant]s` that have no :t:`[value]s` that are fully observable.
+.. glossary-entry:: visible emptiness
+   :glossary-dp: fls_dLlUt8PrXAls
+   
+   :glossary:
+     :dp:`fls_shXDYqnUy2Pb`
+     :dt:`Visible emptiness <visible emptiness>` is a property of :t:`[type]s` and :t:`[enum variant]s` that have no :t:`[value]s` that are fully observable.
+   :chapter:
+     :dp:`fls_SD4yUEQ9hHa3`
+     :t:`Visible emptiness <visible emptiness>` is a property of :t:`[type]s` and :t:`[enum variant]s` that have no :t:`[value]s` that are fully observable.
 
-:dp:`fls_GeoneCP5TYwf`
-A :t:`visible empty type` is a :t:`type` subject to :t:`visible emptiness`.
+.. glossary-entry:: visible empty type
+   :glossary-dp: fls_HYWQ0lJS3TET
+   
+   :glossary:
+     :dp:`fls_OLVD0u9w68Gl`
+     A :dt:`visible empty type` is a :t:`type` subject to :t:`visible emptiness`.
+   :chapter:
+     :dp:`fls_GeoneCP5TYwf`
+     A :t:`visible empty type` is a :t:`type` subject to :t:`visible emptiness`.
 
-:dp:`fls_A2W4v53ihTGx`
-A :t:`visible empty enum variant` is an :t:`enum variant` subject to :t:`visible emptiness`.
+.. glossary-entry:: visible empty enum variant
+   :glossary-dp: fls_EnT5zRuwviWM
+   
+   :glossary:
+     :dp:`fls_MQiPWNwdk95I`
+     A :dt:`visible empty enum variant` is an :t:`enum variant` subject to :t:`visible emptiness`.
+   :chapter:
+     :dp:`fls_A2W4v53ihTGx`
+     A :t:`visible empty enum variant` is an :t:`enum variant` subject to :t:`visible emptiness`.
 
 :dp:`fls_AXOtKdSQR4AF`
 A :t:`type` is subject to :t:`visible emptiness` as follows:
@@ -2251,14 +3470,31 @@ Type Inference
 
 .. rubric:: Legality Rules
 
-:dp:`fls_h8sedxew0d4u`
-:t:`Type inference` is the process of automatically determining the :t:`type` of
-:t:`[expression]s` and :t:`[pattern]s` within a :t:`type inference root`.
+.. glossary-entry:: type inference
+   :glossary-dp: fls_7fpvb2gvqng8
+   
+   :glossary:
+     :dp:`fls_ky8epvf9834e`
+     :dt:`Type inference` is the process of deducing the expected :t:`type` of an
+     arbitrary :t:`value`.
+   :chapter:
+     :dp:`fls_h8sedxew0d4u`
+     :t:`Type inference` is the process of automatically determining the :t:`type` of
+     :t:`[expression]s` and :t:`[pattern]s` within a :t:`type inference root`.
 
-:dp:`fls_ybvrhh96fc7y`
-A :t:`type inference root` is an :t:`expression` whose inner :t:`[expression]s`
-and :t:`[pattern]s` are subject to :t:`type inference` independently of those
-found in other :t:`[type inference root]s`.
+.. glossary-entry:: type inference root
+   :glossary-dp: fls_0jri0m3F1fAT
+   
+   :glossary:
+     :dp:`fls_hLI7lCixs48z`
+     A :dt:`type inference root` is a :t:`construct` whose inner :t:`[expression]s`
+     and :t:`[pattern]s` are subject to :t:`type inference` independently of other
+     :t:`[type inference root]s`.
+   :chapter:
+     :dp:`fls_ybvrhh96fc7y`
+     A :t:`type inference root` is an :t:`expression` whose inner :t:`[expression]s`
+     and :t:`[pattern]s` are subject to :t:`type inference` independently of those
+     found in other :t:`[type inference root]s`.
 
 :dp:`fls_EWBilpepaDcX`
 The following :t:`[expression]s` are considered :t:`[type inference root]s`:
@@ -2325,29 +3561,77 @@ depending on the :t:`type inference root` as follows:
   The :t:`expected type` of a :t:`size operand` of an :t:`array expression` or
   an :t:`array type` is :c:`usize`.
 
-:dp:`fls_uvvn4usfsbhr`
-A :t:`type variable` is a placeholder used during :t:`type inference` to stand
-in for an undetermined :t:`type` of an :t:`expression` or a :t:`pattern`.
+.. glossary-entry:: type variable
+   :glossary-dp: fls_6zhffgxtytku
+   
+   :glossary:
+     :dp:`fls_j9eusnwze4rz`
+     A :dt:`type variable` is a placeholder used during :t:`type inference` to stand
+     in for an undetermined :t:`type` of an :t:`expression` or a :t:`pattern`.
+   :chapter:
+     :dp:`fls_uvvn4usfsbhr`
+     A :t:`type variable` is a placeholder used during :t:`type inference` to stand
+     in for an undetermined :t:`type` of an :t:`expression` or a :t:`pattern`.
 
-:dp:`fls_gDalJm1XS0mi`
-A :t:`global type variable` is a :t:`type variable` that can refer to any
-:t:`type`.
+.. glossary-entry:: global type variable
+   :glossary-dp: fls_hy1clqvaewnp
+   
+   :glossary:
+     :dp:`fls_pvt4nayq006s`
+     A :dt:`global type variable` is a :t:`type variable` that can refer to any
+     :t:`type`.
+   :chapter:
+     :dp:`fls_gDalJm1XS0mi`
+     A :t:`global type variable` is a :t:`type variable` that can refer to any
+     :t:`type`.
 
-:dp:`fls_7ov36fpd9mwe`
-An :t:`integer type variable` is a :t:`type variable` that can refer only to
-:t:`[integer type]s`.
+.. glossary-entry:: integer type variable
+   :glossary-dp: fls_ctuvilpb30gq
+   
+   :glossary:
+     :dp:`fls_e3ed1tyrjsy4`
+     An :dt:`integer type variable` is a :t:`type variable` that can refer only to
+     :t:`[integer type]s`.
+   :chapter:
+     :dp:`fls_7ov36fpd9mwe`
+     An :t:`integer type variable` is a :t:`type variable` that can refer only to
+     :t:`[integer type]s`.
 
-:dp:`fls_3hv3wxkhjjp1`
-A :t:`floating-point type variable` is a :t:`type variable` that can refer only
-to :t:`[floating-point type]s`.
+.. glossary-entry:: floating-point type variable
+   :glossary-dp: fls_8ih3gh6hoy78
+   
+   :glossary:
+     :dp:`fls_ls41emhkrxdi`
+     A :dt:`floating-point type variable` is a :t:`type variable` that can refer
+     only to :t:`[floating-point type]s`.
+   :chapter:
+     :dp:`fls_3hv3wxkhjjp1`
+     A :t:`floating-point type variable` is a :t:`type variable` that can refer only
+     to :t:`[floating-point type]s`.
 
-:dp:`fls_bXQ63GYYDuMp`
-A :t:`diverging type variable` is a :t:`type variable` that can refer to any
-:t:`type` and originates from a :t:`diverging expression`.
+.. glossary-entry:: diverging type variable
+   :glossary-dp: fls_9DuaIn6cRbXf
+   
+   :glossary:
+     :dp:`fls_sxyL7yOp3H9s`
+     A :dt:`diverging type variable` is a :t:`type variable` that can refer to any
+     :t:`type` and originates from a :t:`diverging expression`.
+   :chapter:
+     :dp:`fls_bXQ63GYYDuMp`
+     A :t:`diverging type variable` is a :t:`type variable` that can refer to any
+     :t:`type` and originates from a :t:`diverging expression`.
 
-:dp:`fls_JryXiKBIFvF3`
-A :dt:`lifetime variable` is a placeholder used during :t:`type inference` to
-stand in for an undetermined :t:`lifetime` of a :t:`type`.
+.. glossary-entry:: lifetime variable
+   :glossary-dp: fls_joDjnHu1L9Lp
+   
+   :glossary:
+     :dp:`fls_ucZnCBWxXl6n`
+     A :dt:`lifetime variable` is a placeholder used during :t:`type inference` to
+     stand in for an undetermined :t:`lifetime` of a :t:`type`.
+   :chapter:
+     :dp:`fls_JryXiKBIFvF3`
+     A :dt:`lifetime variable` is a placeholder used during :t:`type inference` to
+     stand in for an undetermined :t:`lifetime` of a :t:`type`.
 
 :dp:`fls_rvj3XspFZ1u3`
 The :t:`type inference` algorithm uses :t:`type unification` to propagate known
@@ -2723,28 +4007,87 @@ Traits
 
 .. rubric:: Legality Rules
 
-:dp:`fls_tani6lesan9u`
-A :t:`trait` is an :t:`item` that describes an interface a :t:`type` can
-implement.
+.. glossary-entry:: trait
+   :glossary-dp: fls_cad25qns4164
+   
+   :glossary:
+     :dp:`fls_mf4x9g70o5z6`
+     A :dt:`trait` is an :t:`item` that describes an interface a :t:`type` can
+     implement.
+     
+     :dp:`fls_ypjhwvuyrns`
+     See :s:`TraitDeclaration`.
+   :chapter:
+     :dp:`fls_tani6lesan9u`
+     A :t:`trait` is an :t:`item` that describes an interface a :t:`type` can
+     implement.
 
-:dp:`fls_PiAR1B26SoZV`
-A :t:`trait body` is a :t:`construct` that encapsulates the
-:t:`[associated item]s`, :t:`[inner attribute]s`, and
-:t:`[inner doc comment]s` of a :t:`trait`.
+.. glossary-entry:: unsafe trait
+   :glossary-dp: fls_38ae1t48h9cb
+   
+   :glossary:
+     :dp:`fls_w6zlsf2ye457`
+     An :dt:`unsafe trait` is a :t:`trait` subject to :t:`keyword` ``unsafe``
+
+.. glossary-entry:: built-in trait
+   :glossary-dp: fls_QzAif2NyVJbk
+   
+   :glossary:
+     :dp:`fls_IgzD9l8o6R50`
+     A :dt:`built-in trait` is a language-defined :t:`trait`.
+
+.. glossary-entry:: trait body
+   :glossary-dp: fls_5hNydsQDrICq
+   
+   :glossary:
+     :dp:`fls_u221Me58aZmY`
+     A :dt:`trait body` is a :t:`construct` that encapsulates the
+     :t:`[associated item]s`, :t:`[inner attribute]s`, and
+     :t:`[inner doc comment]s` of a :t:`trait`.
+     
+     :dp:`fls_dITFx04TB4h0`
+     See :s:`TraitBody`.
+   :chapter:
+     :dp:`fls_PiAR1B26SoZV`
+     A :t:`trait body` is a :t:`construct` that encapsulates the
+     :t:`[associated item]s`, :t:`[inner attribute]s`, and
+     :t:`[inner doc comment]s` of a :t:`trait`.
 
 :dp:`fls_Y28596CVBzDG`
 Within a :t:`trait`, the :t:`type` :c:`Self` acts as a placeholder for a
 :t:`type` implementing the :t:`trait`, and behaves like a :t:`type parameter`.
 
-:dp:`fls_AdbbUZZgMEsQ`
-A :t:`local trait` is a :t:`trait` that is defined in the current :t:`crate`.
+.. glossary-entry:: local trait
+   :glossary-dp: fls_bYpBl5zfTibF
+   
+   :glossary:
+     :dp:`fls_H5vkbMFvzrFs`
+     A :dt:`local trait` is a :t:`trait` that is defined in the current :t:`crate`.
+   :chapter:
+     :dp:`fls_AdbbUZZgMEsQ`
+     A :t:`local trait` is a :t:`trait` that is defined in the current :t:`crate`.
 
-:dp:`fls_I9JaKZelMiby`
-A :t:`subtrait` is a :t:`trait` with a :t:`supertrait`.
+.. glossary-entry:: subtrait
+   :glossary-dp: fls_qw3fn1116se9
+   
+   :glossary:
+     :dp:`fls_wnj95vozis6n`
+     A :dt:`subtrait` is a :t:`trait` with a :t:`supertrait`.
+   :chapter:
+     :dp:`fls_I9JaKZelMiby`
+     A :t:`subtrait` is a :t:`trait` with a :t:`supertrait`.
 
-:dp:`fls_CYtxPjK3zq2T`
-A :t:`supertrait` is a transitive :t:`trait` that a :t:`type` must additionally
-implement.
+.. glossary-entry:: supertrait
+   :glossary-dp: fls_1axcyv628aov
+   
+   :glossary:
+     :dp:`fls_s4chur1wutwh`
+     A :dt:`supertrait` is a transitive :t:`trait` that a :t:`type` must
+     additionally implement.
+   :chapter:
+     :dp:`fls_CYtxPjK3zq2T`
+     A :t:`supertrait` is a transitive :t:`trait` that a :t:`type` must additionally
+     implement.
 
 :dp:`fls_ytn5cdonytyn`
 A :t:`subtrait` shall not be its own :t:`supertrait`.
@@ -2763,10 +4106,19 @@ is equivalent to a :t:`where clause` of the following form:
 
    	trait T where Self: Bound {}
 
-:dp:`fls_YynbrIceKmsJ`
-An :t:`auto trait` is a :t:`trait` that is implicitly and automatically
-implemented by a :t:`type` when the types of its constituent :t:`[field]s`
-implement the :t:`trait`.
+.. glossary-entry:: auto trait
+   :glossary-dp: fls_24iVIlHhvnVO
+   
+   :glossary:
+     :dp:`fls_d84nTOR4pZq5`
+     An :dt:`auto trait` is a :t:`trait` that is implicitly and automatically
+     implemented by a :t:`type` when the types of its constituent :t:`[field]s`
+     implement the :t:`trait`.
+   :chapter:
+     :dp:`fls_YynbrIceKmsJ`
+     An :t:`auto trait` is a :t:`trait` that is implicitly and automatically
+     implemented by a :t:`type` when the types of its constituent :t:`[field]s`
+     implement the :t:`trait`.
 
 :dp:`fls_Bd4HwdrRuXMm`
 A :t:`type` that has no :t:`[field]s` implements all :t:`[auto trait]s`.
@@ -2829,10 +4181,26 @@ Circle is a subtrait of Shape.
 Object Safety
 ~~~~~~~~~~~~~
 
+.. glossary-entry:: object safety
+   :glossary-dp: fls_vomlqv7i1fc4
+   
+   :glossary:
+     :dp:`fls_vqmng1l9ab8a`
+     :dt:`Object safety` is the process of determining whether a :t:`trait` can be
+     used as a :t:`trait object type`.
+
 .. rubric:: Legality Rules
 
-:dp:`fls_lrdki56hpc3k`
-A :t:`trait` is :t:`object safe` when:
+.. glossary-entry:: object safe
+   :glossary-dp: fls_a226qzrb4iq9
+   
+   :glossary:
+     :dp:`fls_oa2jiklr5nl2`
+     A :t:`trait` is :dt:`object safe` when it can be used as a
+     :t:`trait object type`.
+   :chapter:
+     :dp:`fls_lrdki56hpc3k`
+     A :t:`trait` is :t:`object safe` when:
 
 * :dp:`fls_5wlltclogfkw`
   Its :t:`[supertrait]s` are :t:`object safe`, and
@@ -2914,51 +4282,118 @@ Trait and Lifetime Bounds
 
 .. rubric:: Legality Rules
 
-:dp:`fls_5g508z6c7q5f`
-A :t:`bound` imposes a constraint on a :t:`generic parameter` by limiting the
-set of possible :t:`[generic substitution]s`.
+.. glossary-entry:: bound
+   :glossary-dp: fls_ehfvcdpo3l4a
+   
+   :glossary:
+     :dp:`fls_q6mxhn1fxjs6`
+     A :dt:`bound` imposes a constraint on a :t:`generic parameter` by limiting the
+     set of possible :t:`[generic substitution]s`.
+     
+     :dp:`fls_rxabhhigp5uy`
+     See :s:`TypeBound`.
+   :chapter:
+     :dp:`fls_5g508z6c7q5f`
+     A :t:`bound` imposes a constraint on a :t:`generic parameter` by limiting the
+     set of possible :t:`[generic substitution]s`.
 
 :dp:`fls_BqLPVaSyyXRG`
 A :t:`bound` does not impose a constraint on a :t:`generic parameter` of a
 :t:`type alias` unless it is an :t:`associated item`.
 
-:dp:`fls_grby8tmmd8sb`
-A :t:`lifetime bound` is a :t:`bound` that imposes a constraint on the
-:t:`[lifetime]s` of :t:`[generic parameter]s`.
+.. glossary-entry:: lifetime bound
+   :glossary-dp: fls_ca9pu348r9jm
+   
+   :glossary:
+     :dp:`fls_u6xfs8fg558`
+     A :dt:`lifetime bound` is a :t:`bound` that imposes a constraint on the
+     :t:`[lifetime]s` of :t:`[generic parameter]s`.
+     
+     :dp:`fls_ivcjmp54hdej`
+     See :s:`LifetimeIndication`.
+   :chapter:
+     :dp:`fls_grby8tmmd8sb`
+     A :t:`lifetime bound` is a :t:`bound` that imposes a constraint on the
+     :t:`[lifetime]s` of :t:`[generic parameter]s`.
 
-:dp:`fls_knut10hoz6wc`
-A :t:`trait bound` is a :t:`bound` that imposes a constraint on the
-:t:`[trait]s` of :t:`[generic parameter]s`.
+.. glossary-entry:: trait bound
+   :glossary-dp: fls_868cgnb1soeh
+   
+   :glossary:
+     :dp:`fls_95zx8unuxxpq`
+     A :dt:`trait bound` is a :t:`bound` that imposes a constraint on the
+     :t:`[trait]s` of :t:`[generic parameter]s`.
+     
+     :dp:`fls_bkbym8v4t6oh`
+     See :s:`TraitBound`.
+   :chapter:
+     :dp:`fls_knut10hoz6wc`
+     A :t:`trait bound` is a :t:`bound` that imposes a constraint on the
+     :t:`[trait]s` of :t:`[generic parameter]s`.
 
 :dp:`fls_sf6zg0ez9hbb`
 A :s:`ForGenericParameterList` shall not specify :s:`[ConstantParameter]s` or
 :s:`[TypeParameter]s`.
 
-:dp:`fls_vujl3fblz6x2`
-A :t:`higher-ranked trait bound` is a :t:`bound` that specifies an infinite
-list of :t:`[bound]s` for all possible :t:`[lifetime]s` specified by the
-:s:`ForGenericParameterList`.
+.. glossary-entry:: higher-ranked trait bound
+   :glossary-dp: fls_h87i5nbeuxky
+   
+   :glossary:
+     :dp:`fls_lpyc4omcthv`
+     A :dt:`higher-ranked trait bound` is a :t:`bound` that specifies an infinite
+     list of :t:`[bound]s` for all possible :t:`[lifetime]s`.
+     
+     :dp:`fls_m3nrsdvxxg6j`
+     See :s:`ForGenericParameterList`.
+   :chapter:
+     :dp:`fls_vujl3fblz6x2`
+     A :t:`higher-ranked trait bound` is a :t:`bound` that specifies an infinite
+     list of :t:`[bound]s` for all possible :t:`[lifetime]s` specified by the
+     :s:`ForGenericParameterList`.
 
-:dp:`fls_AzuZmR9DXSQh`
-An :t:`opt-out trait bound` is a :t:`trait bound` with :s:`Punctuation` ``?``
-that nullifies an implicitly added :t:`trait bound`.
+.. glossary-entry:: opt-out trait bound
+   :glossary-dp: fls_C5DiCsvsaBsj
+   
+   :glossary:
+     :dp:`fls_wS4EzN0N1GDP`
+     An :dt:`opt-out trait bound` is a :t:`trait bound` with :s:`Punctuation` ``?``
+     that nullifies an implicitly added :t:`trait bound`.
+   :chapter:
+     :dp:`fls_AzuZmR9DXSQh`
+     An :t:`opt-out trait bound` is a :t:`trait bound` with :s:`Punctuation` ``?``
+     that nullifies an implicitly added :t:`trait bound`.
 
-:dp:`fls_1Sm2Yq1Ow76f`
-An :t:`outlives bound` is a :t:`trait bound` which requires that a
-:t:`lifetime parameter` or :t:`type` outlives a :t:`lifetime parameter`.
+.. glossary-entry:: outlives bound
+   :glossary-dp: fls_5LhIr1kOIEO5
+   
+   :glossary:
+     :dp:`fls_J5dt34II7Pm6`
+     An :dt:`outlives bound` is a :t:`trait bound` which requires that a
+     :t:`generic parameter` outlives a :t:`lifetime parameter`.
+   :chapter:
+     :dp:`fls_1Sm2Yq1Ow76f`
+     An :t:`outlives bound` is a :t:`trait bound` which requires that a
+     :t:`lifetime parameter` or :t:`type` outlives a :t:`lifetime parameter`.
+     
+     :dp:`fls_tx4uspewnk7w`
+     :t:`Outlives bound` ``'a: 'b`` indicates that ``'a`` outlives ``'b``.
+     
+     :dp:`fls_5kj8bmvb8xfc`
+     :t:`Outlives bound` ``T: 'a`` indicates that all :t:`[lifetime parameter]s` of
+     ``T`` outlive ``'a``.
 
-:dp:`fls_tx4uspewnk7w`
-:t:`Outlives bound` ``'a: 'b`` indicates that ``'a`` outlives ``'b``.
-
-:dp:`fls_5kj8bmvb8xfc`
-:t:`Outlives bound` ``T: 'a`` indicates that all :t:`[lifetime parameter]s` of
-``T`` outlive ``'a``.
-
-:dp:`fls_J9DEsd06Ttu9`
-An :t:`implied bound` is a :t:`bound` that is not expressed in syntax, but is
-is the byproduct of relations between :t:`[lifetime parameter]s` and
-:t:`[function parameter]s`, between :t:`[lifetime parameter]s` and a
-:t:`return type`, and between :t:`[lifetime parameter]s` and :t:`[field]s`.
+.. glossary-entry:: implied bound
+   :glossary-dp: fls_43CCrG952l5i
+   
+   :glossary:
+     :dp:`fls_t77d8xwG1l9Q`
+     An :dt:`implied bound` is a :t:`bound` that is not expressed in syntax, but is the byproduct of relations between :t:`[lifetime parameter]s` and :t:`[function parameter]s`, between :t:`[lifetime parameter]s` and a :t:`return type`, and between :t:`[lifetime parameter]s` and :t:`[field]s`.
+   :chapter:
+     :dp:`fls_J9DEsd06Ttu9`
+     An :t:`implied bound` is a :t:`bound` that is not expressed in syntax, but is
+     is the byproduct of relations between :t:`[lifetime parameter]s` and
+     :t:`[function parameter]s`, between :t:`[lifetime parameter]s` and a
+     :t:`return type`, and between :t:`[lifetime parameter]s` and :t:`[field]s`.
 
 :dp:`fls_IfHRxSasGAih`
 A :t:`reference` of the form ``&'a T``, where ``'a`` is a
@@ -3004,8 +4439,18 @@ Lifetimes
 
 .. rubric:: Legality Rules
 
-:dp:`fls_nne91at3143t`
-A :t:`lifetime` specifies the expected longevity of a :t:`value`.
+.. glossary-entry:: lifetime
+   :glossary-dp: fls_vdhaa61g6kah
+   
+   :glossary:
+     :dp:`fls_il3n0w4m084b`
+     A :dt:`lifetime` specifies the expected longevity of a :t:`reference`.
+     
+     :dp:`fls_2nywjifee7q`
+     See :s:`Lifetime`.
+   :chapter:
+     :dp:`fls_nne91at3143t`
+     A :t:`lifetime` specifies the expected longevity of a :t:`value`.
 
 :dp:`fls_vbclxg9dq4yo`
 A :t:`lifetime bound` shall apply to :t:`[type]s` and other :t:`[lifetime]s`.
@@ -3027,15 +4472,47 @@ Subtyping and Variance
 
 .. rubric:: Legality Rules
 
-:dp:`fls_atq2cltx487m`
-:t:`Subtyping` is a property of :t:`[type]s`, allowing one :t:`type` to be used
-where another :t:`type` is expected.
+.. glossary-entry:: subtype
+   :glossary-dp: fls_pu4zqJ1tGrfH
+   
+   :glossary:
+     :dp:`fls_pmkjOWsieQog`
+     A :dt:`subtype` is a :t:`type` with additional constraints.
 
-:dp:`fls_df87d44kgwcv`
-:t:`Variance` is a property of :t:`[lifetime parameter]s` and
-:t:`[type parameter]s` that describes the circumstances under which a
-:t:`generic type` is a :t:`subtype` of an instantiation of itself with
-different :t:`[generic argument]s`.
+.. glossary-entry:: subtyping
+   :glossary-dp: fls_f5dxz8pvs1kz
+   
+   :glossary:
+     :dp:`fls_bo5xzjsdd3lj`
+     :dt:`Subtyping` is a property of :t:`[type]s`, allowing one :t:`type` to be
+     used where another :t:`type` is expected.
+   :chapter:
+     :dp:`fls_atq2cltx487m`
+     :t:`Subtyping` is a property of :t:`[type]s`, allowing one :t:`type` to be used
+     where another :t:`type` is expected.
+
+.. glossary-entry:: variance
+   :glossary-dp: fls_q0xplb4tbzpq
+   
+   :glossary:
+     :dp:`fls_il0krrsf09f8`
+     :dt:`Variance` is a property of :t:`[lifetime parameter]s` and
+     :t:`[type parameter]s` that describes the circumstances under which a
+     :t:`generic type` is a :t:`subtype` of an instantiation of itself with
+     different :t:`[generic argument]s`.
+   :chapter:
+     :dp:`fls_df87d44kgwcv`
+     :t:`Variance` is a property of :t:`[lifetime parameter]s` and
+     :t:`[type parameter]s` that describes the circumstances under which a
+     :t:`generic type` is a :t:`subtype` of an instantiation of itself with
+     different :t:`[generic argument]s`.
+
+.. glossary-entry:: generic type
+   :glossary-dp: fls_3Ss6jDgtF1of
+   
+   :glossary:
+     :dp:`fls_Zn2pIsMZoTry`
+     A :dt:`generic type` is a :t:`type` with a :t:`generic parameter`.
 
 :dp:`fls_7ex941yysuhq`
 A :t:`type` is its own :t:`subtype`.
@@ -3220,10 +4697,19 @@ Lifetime Elision
 
 .. rubric:: Legality Rules
 
-:dp:`fls_9wtuclhm7yz5`
-:t:`Lifetime elision` is a set of rules that automatically insert
-:t:`[lifetime parameter]s` and/or :t:`[lifetime argument]s` when they are
-elided in the source code.
+.. glossary-entry:: lifetime elision
+   :glossary-dp: fls_al39r9uz2zmy
+   
+   :glossary:
+     :dp:`fls_dq5wkd61ry3l`
+     :dt:`Lifetime elision` is a set of rules that automatically insert
+     :t:`[lifetime parameter]s` and/or :t:`[lifetime argument]s` when they are
+     elided in the source code.
+   :chapter:
+     :dp:`fls_9wtuclhm7yz5`
+     :t:`Lifetime elision` is a set of rules that automatically insert
+     :t:`[lifetime parameter]s` and/or :t:`[lifetime argument]s` when they are
+     elided in the source code.
 
 :dp:`fls_JmP6O9zj8fkV`
 A :t:`lifetime` may be elided either implicitly or explicitly.
@@ -3258,11 +4744,21 @@ Function Lifetime Elision
 
 .. rubric:: Legality Rules
 
-:dp:`fls_lAdIRCFFlydD`
-:t:`Function lifetime elision` is a form of :t:`lifetime elision` that applies
-to :t:`[function]s`, :t:`[function pointer type parameter]s`, and :t:`[path]s`
-that resolve to one of the :std:`core::ops::Fn`, :std:`core::ops::FnMut`, and
-:std:`core::ops::FnOnce` :t:`[trait]s`.
+.. glossary-entry:: function lifetime elision
+   :glossary-dp: fls_WMaE58yv1joW
+   
+   :glossary:
+     :dp:`fls_tZMmRHua1S8K`
+     :dt:`Function lifetime elision` is a form of :t:`lifetime elision` that applies
+     to :t:`[function]s`, :t:`[function pointer type parameter]s` and :t:`[path]s`
+     resolving to one of the :std:`core::ops::Fn`, :std:`core::ops::FnMut`, and
+     :std:`core::ops::FnOnce` :t:`[trait]s`.
+   :chapter:
+     :dp:`fls_lAdIRCFFlydD`
+     :t:`Function lifetime elision` is a form of :t:`lifetime elision` that applies
+     to :t:`[function]s`, :t:`[function pointer type parameter]s`, and :t:`[path]s`
+     that resolve to one of the :std:`core::ops::Fn`, :std:`core::ops::FnMut`, and
+     :std:`core::ops::FnOnce` :t:`[trait]s`.
 
 :dp:`fls_dpudys82dhdc`
 An :dt:`input lifetime` is one of the following :t:`[lifetime]s`:
@@ -3300,6 +4796,30 @@ An :dt:`output lifetime` is one of the following :t:`[lifetime]s`:
   Any :t:`lifetime` related to the :t:`[return type]s` of the
   :std:`core::ops::Fn`, :std:`core::ops::FnMut`, and :std:`core::ops::FnOnce`
   :t:`[trait]s`.
+
+.. glossary-entry:: unnamed lifetime
+   :glossary-dp: fls_r8567aozbyxl
+   
+   :glossary:
+     :dp:`fls_4iy6zpq66mit`
+     An :dt:`unnamed lifetime` is a :t:`lifetime` declared with character 0x5F (low
+     line).
+
+.. glossary-entry:: elided lifetime
+   :glossary-dp: fls_l2181y5566ck
+   
+   :glossary:
+     :dp:`fls_9q28407ev0a6`
+     An :dt:`elided lifetime` is either an :t:`unnamed lifetime` or a :t:`lifetime`
+     that has been explicitly omitted from a :t:`function signature` or an
+     :t:`implementation`.
+
+.. glossary-entry:: elided
+   :glossary-dp: fls_vygjg858yxej
+   
+   :glossary:
+     :dp:`fls_lo3c3n9wy6qz`
+     For :dt:`elided`, see :t:`elided lifetime`.
 
 :dp:`fls_g56br27hq2zj`
 :t:`Lifetime elision` proceeds as follows:
@@ -3344,9 +4864,17 @@ Static Lifetime Elision
 
 .. rubric:: Legality Rules
 
-:dp:`fls_l4RDXaFwnQZ6`
-:t:`Static lifetime elision` is a form of :t:`lifetime elision` that applies to
-the :t:`type ascription` of :t:`[constant]s` and :t:`[static]s`.
+.. glossary-entry:: static lifetime elision
+   :glossary-dp: fls_jCqiKgW9g8n5
+   
+   :glossary:
+     :dp:`fls_NbVewjYRnQPF`
+     :dt:`Static lifetime elision` is a form of :t:`lifetime elision` that applies
+     to :t:`[constant]s` and :t:`[static]s`.
+   :chapter:
+     :dp:`fls_l4RDXaFwnQZ6`
+     :t:`Static lifetime elision` is a form of :t:`lifetime elision` that applies to
+     the :t:`type ascription` of :t:`[constant]s` and :t:`[static]s`.
 
 :dp:`fls_8irr97rZWfSC`
 An :t:`elided` :t:`lifetime` of a :t:`reference type` or :t:`path` in the
@@ -3383,9 +4911,17 @@ Trait Object Lifetime Elision
 
 .. rubric:: Legality Rules
 
-:dp:`fls_fuBYWRrgxlbQ`
-:t:`Trait object lifetime elision` is a form of :t:`lifetime elision` that
-applies to :t:`[trait object type]s`.
+.. glossary-entry:: trait object lifetime elision
+   :glossary-dp: fls_TCIzYoMeGtub
+   
+   :glossary:
+     :dp:`fls_rALP9b6qjlp9`
+     :dt:`Trait object lifetime elision` is a form of :t:`lifetime elision` that
+     applies to :t:`[trait object type]s`.
+   :chapter:
+     :dp:`fls_fuBYWRrgxlbQ`
+     :t:`Trait object lifetime elision` is a form of :t:`lifetime elision` that
+     applies to :t:`[trait object type]s`.
 
 :dp:`fls_URl9CeIVsiWs`
 An :t:`elided` :t:`lifetime` of a :t:`trait object type` is inferred as follows:
@@ -3443,10 +4979,19 @@ Impl Header Lifetime Elision
 
 .. rubric:: Legality Rules
 
-:dp:`fls_FUdsmzN0T8XP`
-:t:`Impl header lifetime elision` is a form of :t:`lifetime elision` that
-applies to the :t:`implementing type` and :t:`implemented trait` (if any) of an
-:t:`implementation`.
+.. glossary-entry:: impl header lifetime elision
+   :glossary-dp: fls_L9XTxPSujx4v
+   
+   :glossary:
+     :dp:`fls_PvYGu85UAyFb`
+     :dt:`Impl header lifetime elision` is a form of :t:`lifetime elision` that
+     applies to the :t:`implementing type` and :t:`implemented trait` (if any) of an
+     :t:`implementation`.
+   :chapter:
+     :dp:`fls_FUdsmzN0T8XP`
+     :t:`Impl header lifetime elision` is a form of :t:`lifetime elision` that
+     applies to the :t:`implementing type` and :t:`implemented trait` (if any) of an
+     :t:`implementation`.
 
 :dp:`fls_3p5BdLn3JbKz`
 The :t:`impl header lifetime elision` rules are as follows:

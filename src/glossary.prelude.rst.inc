@@ -6,5 +6,7 @@
 
 .. informational-page::
 
-.. glossary-include:: ../build/generated.glossary.rst
-   :start-after: .. informational-page::
+.. _fls_bc2qwbfibrcs:
+
+Glossary
+========

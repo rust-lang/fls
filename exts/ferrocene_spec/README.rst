@@ -139,6 +139,45 @@ Words and characters wrapped within ``$$`` are considered "literals": they will
 be rendered differently than syntactic categories, and they won't be considered
 by the extension when looking for syntactic categories.
 
+Glossary entries
+================
+
+The extension provides directives to keep glossary and chapter definitions in a
+single place, and to render a glossary from those entries.
+
+Use ``glossary-entry`` to declare a term. It accepts a term argument and one or
+both content blocks (``:glossary:`` and ``:chapter:``). ``:glossary-dp:`` is
+required for any entry exported to the glossary.
+
+Options:
+
+* ``:kind:`` selects the entry kind (``term``, ``code``, or ``syntax``).
+* ``:propagate:`` controls whether the chapter text is reused as glossary text
+  when ``:glossary:`` is omitted (``true`` or ``false``).
+* ``:glossary-dp:`` provides the glossary anchor ID (``fls_`` + alphanumeric).
+
+.. code-block:: rst
+
+   .. glossary-entry:: subject expression
+      :glossary-dp: fls_wee9stfk0abp
+      :kind: term
+      :propagate: false
+
+      :glossary:
+        :dp:`fls_xisqke87ert`
+        A :dt:`subject expression` is an :t:`expression` that controls
+        :t:`[for loop]s`, :t:`[if expression]s`, and :t:`[match expression]s`.
+
+      :chapter:
+        :dp:`fls_pwut2jbmk66k`
+        A :ds:`SubjectExpression` is any expression in category :s:`Expression`, except
+        :s:`StructExpression`.
+
+Use ``glossary-include`` to insert glossary content (typically the generated
+glossary file under ``build/generated.glossary.rst``) into a page, with
+optional ``:tag:`` and ``:start-after:`` filters, similar to the standard
+``include`` directive.
+
 Paragraph IDs
 =============
 
