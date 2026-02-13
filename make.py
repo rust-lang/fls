@@ -51,26 +51,6 @@ def run_generate_glossary(root, tags):
     subprocess.run(generate_glossary_command(root, tags), check=True)
 
 
-def sync_static_glossary(root, overwrite):
-    generated_path = root / "build" / "generated.glossary.rst"
-    static_path = root / "src" / "glossary.rst.inc"
-    if not generated_path.is_file() or not static_path.is_file():
-        return
-    generated_text = generated_path.read_text(encoding="utf-8")
-    static_text = static_path.read_text(encoding="utf-8")
-    if generated_text == static_text:
-        return
-    if overwrite:
-        static_path.write_text(generated_text, encoding="utf-8")
-        print(f"updated {static_path} from generated glossary")
-        return
-    print(
-        "warning: static glossary does not match generated output; "
-        "run ./make.py --overwrite-glossary-from-build to update src/glossary.rst.inc",
-        file=sys.stderr,
-    )
-
-
 def supports_pre_build():
     try:
         result = subprocess.run(
@@ -123,7 +103,7 @@ def start_glossary_watcher(root, tags, stamp_path, stop_event):
     return thread
 
 
-def build_docs(root, builder, clear, serve, debug, tags, overwrite_glossary_from_build):
+def build_docs(root, builder, clear, serve, debug, tags):
     dest = root / "build"
     dest.mkdir(parents=True, exist_ok=True)
     output_dir = dest / builder
@@ -160,7 +140,6 @@ def build_docs(root, builder, clear, serve, debug, tags, overwrite_glossary_from
         args += ["-D", f"html_theme_options.commit={commit}"]
 
     run_generate_glossary(root, tags)
-    sync_static_glossary(root, overwrite_glossary_from_build)
 
     watcher_thread = None
     watcher_stop = None
@@ -284,16 +263,6 @@ def main(root):
         action="store_true",
     )
     parser.add_argument(
-        "--use-generated-glossary",
-        help="Build with generated glossary content",
-        action="store_true",
-    )
-    parser.add_argument(
-        "--overwrite-glossary-from-build",
-        help="Overwrite src/glossary.rst.inc from build output",
-        action="store_true",
-    )
-    parser.add_argument(
         "-t",
         "--tag",
         action="append",
@@ -303,8 +272,6 @@ def main(root):
     args = parser.parse_args()
 
     tags = list(dict.fromkeys(args.tag))
-    if args.use_generated_glossary and "use_generated_glossary" not in tags:
-        tags.append("use_generated_glossary")
 
     rendered = build_docs(
         root,
@@ -313,7 +280,6 @@ def main(root):
         args.serve,
         args.debug,
         tags,
-        args.overwrite_glossary_from_build,
     )
 
     if args.check_links:

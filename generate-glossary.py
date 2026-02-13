@@ -64,8 +64,7 @@ def main() -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     tags = list(dict.fromkeys(args.tag))
-    if "use_generated_glossary" in tags:
-        write_lines(output_path, prelude.lines, prelude.trailing_newline)
+    write_lines(output_path, prelude.lines, prelude.trailing_newline)
 
     glossary_ext = load_glossary_ext()
     app = build_sphinx_app(src_dir, ROOT, tags)

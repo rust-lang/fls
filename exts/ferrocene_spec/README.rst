@@ -173,9 +173,10 @@ Options:
         A :ds:`SubjectExpression` is any expression in category :s:`Expression`, except
         :s:`StructExpression`.
 
-Use ``glossary-include`` to insert a generated or static glossary file into a
-page, with optional ``:tag:`` and ``:start-after:`` filters, similar to the
-standard ``include`` directive.
+Use ``glossary-include`` to insert glossary content (typically the generated
+glossary file under ``build/generated.glossary.rst``) into a page, with
+optional ``:tag:`` and ``:start-after:`` filters, similar to the standard
+``include`` directive.
 
 Paragraph IDs
 =============

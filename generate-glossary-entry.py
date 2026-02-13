@@ -40,8 +40,8 @@ def main() -> int:
     parser.add_argument("--repo-root", default=".", help="Repo root directory")
     parser.add_argument(
         "--glossary",
-        default="src/glossary.rst.inc",
-        help="Static glossary file",
+        default="build/generated.glossary.rst",
+        help="Glossary source file (defaults to generated glossary)",
     )
     parser.add_argument(
         "--glossary-dp",
@@ -98,7 +98,11 @@ def main() -> int:
     static_entries = None
     if needs_static:
         if not glossary_path.is_file():
-            print(f"error: missing glossary file at {glossary_path}", file=sys.stderr)
+            print(
+                "error: missing glossary file at "
+                f"{glossary_path}; run ./generate-glossary.py or pass glossary text",
+                file=sys.stderr,
+            )
             return 1
         static_entries = parse_glossary_static(glossary_path)
 
@@ -143,7 +147,11 @@ def resolve_block_lines(
         return trim_trailing_blanks(manual_lines)
 
     if static_entries is None:
-        print(f"error: missing glossary file at {glossary_path}", file=sys.stderr)
+        print(
+            "error: glossary text not provided and glossary source is unavailable; "
+            f"run ./generate-glossary.py (expected {glossary_path})",
+            file=sys.stderr,
+        )
         raise SystemExit(1)
     entry = static_entries.get(term)
     if entry is None:
@@ -178,7 +186,7 @@ def resolve_glossary_dp(
 
     if static_entries is None:
         print(
-            "error: --glossary-dp is required without a static glossary",
+            "error: --glossary-dp is required when glossary source is unavailable",
             file=sys.stderr,
         )
         raise SystemExit(1)
