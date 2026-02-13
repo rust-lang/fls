@@ -36,42 +36,117 @@ Implementations
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ivxpoxggy7s6`
-An :t:`implementation` is an :t:`item` that supplements an
-:t:`implementing type` by extending its functionality.
+.. glossary-entry:: implementation
+   :glossary-dp: fls_bj1u4k3akecp
+   
+   :glossary:
+     :dp:`fls_pjulppit1r6`
+     An :dt:`implementation` is an :t:`item` that supplements an
+     :t:`implementing type` by extending its functionality.
+     
+     :dp:`fls_z4ij5skptoay`
+     See :s:`Implementation`.
+   :chapter:
+     :dp:`fls_ivxpoxggy7s6`
+     An :t:`implementation` is an :t:`item` that supplements an
+     :t:`implementing type` by extending its functionality.
 
-:dp:`fls_yopmjbnw8tbl`
-An :t:`implementing type` is the :t:`type` that the :t:`[associated item]s` of
-an :t:`implementation` are associated with.
+.. glossary-entry:: implementing type
+   :glossary-dp: fls_ow4b5iqas115
+   
+   :glossary:
+     :dp:`fls_vs5ia3uupdcc`
+     An :dt:`implementing type` is the :t:`type` that the :t:`[associated item]s` of
+     an :t:`implementation` are associated with.
+     
+     :dp:`fls_9ixcwh6to74g`
+     See :s:`ImplementingType`.
+   :chapter:
+     :dp:`fls_yopmjbnw8tbl`
+     An :t:`implementing type` is the :t:`type` that the :t:`[associated item]s` of
+     an :t:`implementation` are associated with.
 
 :dp:`fls_eIHc8Y9fBtr0`
 Within an :t:`implementation`, the :t:`type` :c:`Self` acts as a :t:`type alias`
 for the :t:`implementing type`.
 
-:dp:`fls_Mcpdzzcw43M7`
-An :t:`implementation body` is a :t:`construct` that encapsulates the
-:t:`[associated item]s`, :t:`[inner attribute]s`, and
-:t:`[inner doc comment]s` of an :t:`implementation`.
+.. glossary-entry:: implementation body
+   :glossary-dp: fls_vofxuHcXpt6X
+   
+   :glossary:
+     :dp:`fls_1iS30Nv9myEd`
+     An :dt:`implementation body` is a :t:`construct` that encapsulates the
+     :t:`[associated item]s`, :t:`[inner attribute]s`, and
+     :t:`[inner doc comment]s` of an :t:`implementation`.
+     
+     :dp:`fls_u75iHi53PnNP`
+     See :s:`ImplementationBody`.
+   :chapter:
+     :dp:`fls_Mcpdzzcw43M7`
+     An :t:`implementation body` is a :t:`construct` that encapsulates the
+     :t:`[associated item]s`, :t:`[inner attribute]s`, and
+     :t:`[inner doc comment]s` of an :t:`implementation`.
 
-:dp:`fls_v0n0bna40dqr`
-An :t:`inherent implementation` is an :t:`implementation` that adds direct
-functionality.
+.. glossary-entry:: inherent implementation
+   :glossary-dp: fls_o57p4yhjci61
+   
+   :glossary:
+     :dp:`fls_6fpicw8ss4h3`
+     An :dt:`inherent implementation` is an :t:`implementation` that adds direct
+     functionality.
+     
+     :dp:`fls_s8zjk7hms1o0`
+     See :s:`InherentImplementation`.
+   :chapter:
+     :dp:`fls_v0n0bna40dqr`
+     An :t:`inherent implementation` is an :t:`implementation` that adds direct
+     functionality.
 
 :dp:`fls_797etpdk5dyb`
 :t:`[Inherent implementation]s` of the same :t:`implementing type` shall be
 defined within the same :t:`crate`.
 
-:dp:`fls_ry3an0mwb63g`
-A :t:`trait implementation` is an :t:`implementation` that adds functionality
-specified by a :t:`trait`.
+.. glossary-entry:: trait implementation
+   :glossary-dp: fls_kflieu6uottg
+   
+   :glossary:
+     :dp:`fls_5v7kbg144pr8`
+     A :dt:`trait implementation` is an :t:`implementation` that adds functionality
+     specified by a :t:`trait`.
+     
+     :dp:`fls_rytylyyxh27f`
+     See :s:`TraitImplementation`.
+   :chapter:
+     :dp:`fls_ry3an0mwb63g`
+     A :t:`trait implementation` is an :t:`implementation` that adds functionality
+     specified by a :t:`trait`.
 
-:dp:`fls_8pwr7ibvhmhu`
-An :t:`unsafe trait implementation` is a :t:`trait implementation` subject to
-:t:`keyword` ``unsafe``.
+.. glossary-entry:: unsafe trait implementation
+   :glossary-dp: fls_h62dfjfyqcbn
+   
+   :glossary:
+     :dp:`fls_kqwcv076dzie`
+     An :dt:`unsafe trait implementation` is a :t:`trait implementation` subject to
+     :t:`keyword` ``unsafe``.
+   :chapter:
+     :dp:`fls_8pwr7ibvhmhu`
+     An :t:`unsafe trait implementation` is a :t:`trait implementation` subject to
+     :t:`keyword` ``unsafe``.
 
-:dp:`fls_47x0ep8of8wr`
-An :t:`implemented trait` is a :t:`trait` whose functionality has been
-implemented by an :t:`implementing type`.
+.. glossary-entry:: implemented trait
+   :glossary-dp: fls_c0xxvivt8t1u
+   
+   :glossary:
+     :dp:`fls_7twlizi3v8cb`
+     An :dt:`implemented trait` is a :t:`trait` whose functionality has been
+     implemented by an :t:`implementing type`.
+     
+     :dp:`fls_2brvfx5wmvkf`
+     See :s:`ImplementedTrait`.
+   :chapter:
+     :dp:`fls_47x0ep8of8wr`
+     An :t:`implemented trait` is a :t:`trait` whose functionality has been
+     implemented by an :t:`implementing type`.
 
 :dp:`fls_agitlryvyc16`
 The :t:`type path` of a :t:`trait implementation` shall resolve to a :t:`trait`.
@@ -135,9 +210,17 @@ Implementation Coherence
 
 .. rubric:: Legality Rules
 
-:dp:`fls_fv1l4yjuut7p`
-A :t:`trait implementation` exhibits :t:`implementation coherence` when it is
-valid and does not overlap with another :t:`trait implementation`.
+.. glossary-entry:: implementation coherence
+   :glossary-dp: fls_41GLrzVxcOV6
+   
+   :glossary:
+     :dp:`fls_hAmKcuYT9hHi`
+     A :t:`trait implementation` exhibits :dt:`implementation coherence` when it is
+     valid and does not overlap with another :t:`trait implementation`.
+   :chapter:
+     :dp:`fls_fv1l4yjuut7p`
+     A :t:`trait implementation` exhibits :t:`implementation coherence` when it is
+     valid and does not overlap with another :t:`trait implementation`.
 
 :dp:`fls_swdusjwzgksx`
 Two :t:`[trait implementation]s` of the same :t:`implemented trait` overlap when
@@ -163,10 +246,19 @@ Given :t:`trait implementation`
     :t:`type` may appear in the :t:`non-[local type]s` and
     :t:`non-[fundamental]` :t:`[type]s` of ``T0, T1, .., TN``.
 
-:dp:`fls_UkQhjEWSJpDq`
-A :t:`trait` or :t:`type` is :t:`fundamental` when its
-:t:`implementation coherence` rules are relaxed and the :t:`trait` or :t:`type`
-is always treated as if it was a :t:`local trait` or a :t:`local type`.
+.. glossary-entry:: fundamental
+   :glossary-dp: fls_OFMoUA3eFtuC
+   
+   :glossary:
+     :dp:`fls_e0dRD4NTE0UP`
+     A :t:`trait` or :t:`type` is :dt:`fundamental` when its
+     :t:`implementation coherence` rules are relaxed and the :t:`trait` or :t:`type`
+     is always treated as if it was a :t:`local trait` or a :t:`local type`.
+   :chapter:
+     :dp:`fls_UkQhjEWSJpDq`
+     A :t:`trait` or :t:`type` is :t:`fundamental` when its
+     :t:`implementation coherence` rules are relaxed and the :t:`trait` or :t:`type`
+     is always treated as if it was a :t:`local trait` or a :t:`local type`.
 
 :dp:`fls_fSybUG40hA5r`
 The following :t:`[type]s` are :t:`fundamental`:
@@ -205,9 +297,17 @@ Implementation Conformance
 
 .. rubric:: Legality Rules
 
-:dp:`fls_YyUSuAYG4lX6`
-A :t:`trait implementation` exhibits :t:`implementation conformance` when it
-satisfies the constraints of its :t:`implemented trait`.
+.. glossary-entry:: implementation conformance
+   :glossary-dp: fls_SBkTVa8bzGDx
+   
+   :glossary:
+     :dp:`fls_Gpq4EP1SsYJR`
+     :dt:`Implementation conformance` measures the compatibility between a
+     :t:`trait implementation` and the :t:`implemented trait`.
+   :chapter:
+     :dp:`fls_YyUSuAYG4lX6`
+     A :t:`trait implementation` exhibits :t:`implementation conformance` when it
+     satisfies the constraints of its :t:`implemented trait`.
 
 :dp:`fls_v31idwjau90d`
 An :t:`associated trait constant` is conformant with an :t:`associated constant`
@@ -267,4 +367,3 @@ A :t:`trait implementation` is conformant with an :t:`implemented trait` when:
 
 :dp:`fls_8yq1g7nzv9px`
 A :t:`trait implementation` shall be conformant.
-

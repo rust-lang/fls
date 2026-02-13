@@ -8,6 +8,16 @@
 Statements
 ==========
 
+.. glossary-entry:: statement
+   :glossary-dp: fls_e7cvo0usw86i
+   
+   :glossary:
+     :dp:`fls_faijgwg4lhp9`
+     A :dt:`statement` is a component of a block expression.
+     
+     :dp:`fls_th7edvxml3mn`
+     See :s:`Statement`.
+
 .. rubric:: Syntax
 
 .. syntax::
@@ -24,22 +34,60 @@ Statements
 :dp:`fls_7zh6ziglo5iy`
 An :t:`expression statement` is an :t:`expression` whose result is ignored.
 
-:dp:`fls_kdxe1ukmgl1`
-An :t:`item statement` is a :t:`statement` that is expressed as an :t:`item`.
+.. glossary-entry:: item statement
+   :glossary-dp: fls_yaurxo4ogfsh
+   
+   :glossary:
+     :dp:`fls_r0crucpuhtj`
+     An :dt:`item statement` is a :t:`statement` that is expressed as an :t:`item`.
+   :chapter:
+     :dp:`fls_kdxe1ukmgl1`
+     An :t:`item statement` is a :t:`statement` that is expressed as an :t:`item`.
 
-:dp:`fls_fftdnwe22xrb`
-An :t:`empty statement` is a :t:`statement` expressed as character 0x3B
-(semicolon).
+.. glossary-entry:: empty statement
+   :glossary-dp: fls_iwed9n4jz6b8
+   
+   :glossary:
+     :dp:`fls_irw5gwuvj3nn`
+     An :dt:`empty statement` is a :t:`statement` expressed as character 0x3B
+     (semicolon).
+   :chapter:
+     :dp:`fls_fftdnwe22xrb`
+     An :t:`empty statement` is a :t:`statement` expressed as character 0x3B
+     (semicolon).
 
-:dp:`fls_or125cqtxg9j`
-A :t:`macro statement` is a :t:`statement` expressed as a
-:t:`terminated macro invocation`.
+.. glossary-entry:: macro statement
+   :glossary-dp: fls_i4yf4lt8qvkt
+   
+   :glossary:
+     :dp:`fls_yhh9k9epv3g6`
+     A :dt:`macro statement` is a :t:`statement` expressed as a
+     :t:`terminated macro invocation`.
+   :chapter:
+     :dp:`fls_or125cqtxg9j`
+     A :t:`macro statement` is a :t:`statement` expressed as a
+     :t:`terminated macro invocation`.
 
 .. rubric:: Dynamic Semantics
 
-:dp:`fls_estqu395zxgk`
-:t:`Execution` is the process by which a :t:`statement` achieves its runtime
-effects.
+.. glossary-entry:: execution
+   :glossary-dp: fls_q0ur239s8uv
+   
+   :glossary:
+     :dp:`fls_e5jbii84hd5g`
+     :dt:`Execution` is the process by which a :t:`statement` achieves its runtime
+     effects.
+   :chapter:
+     :dp:`fls_estqu395zxgk`
+     :t:`Execution` is the process by which a :t:`statement` achieves its runtime
+     effects.
+
+.. glossary-entry:: executed
+   :glossary-dp: fls_nw0eg7gwayrg
+   
+   :glossary:
+     :dp:`fls_kelmsc68lyf7`
+     See :t:`execution`.
 
 :dp:`fls_dl763ssb54q1`
 The :t:`execution` of an :t:`empty statement` has no effect.
@@ -61,15 +109,54 @@ Let Statements
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ct7pp7jnfr86`
-A :t:`let statement` is a :t:`statement` that introduces new :t:`[binding]s`
-produced by its :t:`pattern-without-alternation` that are optionally
-initialized to a :t:`value`.
+.. glossary-entry:: initialization
+   :glossary-dp: fls_c1wbumq0bumj
+   
+   :glossary:
+     :dp:`fls_xi07ycze6mo0`
+     :dt:`Initialization` is the act of supplying an initial :t:`value` to a
+     :t:`constant`, a :t:`static`, or a :t:`variable`.
 
-:dp:`fls_SR3dIgR5K0Kq`
-A :t:`let initializer` is a :t:`construct` that provides the :t:`value` of
-the :t:`[binding]s` of the :t:`let statement` using an :t:`expression`, or
-alternatively executes a :t:`block expression`.
+.. glossary-entry:: let binding
+   :glossary-dp: fls_DdZ1ZwjLZTeG
+   
+   :glossary:
+     :dp:`fls_sw6HrsxsnG2y`
+     A :dt:`let binding` is the :t:`binding` introduced by a :t:`let statement`, an :t:`if let expression`, or a :t:`while let loop expression`.
+
+.. glossary-entry:: let statement
+   :glossary-dp: fls_39k0ebr7snb0
+   
+   :glossary:
+     :dp:`fls_yh7hn6jjv3ur`
+     A :dt:`let statement` is a :t:`statement` that introduces new :t:`[variable]s`
+     given by the :t:`[binding]s` produced by its :t:`pattern-without-alternation`
+     that are optionally initialized to a :t:`value`.
+     
+     :dp:`fls_tsem3c6zqmh4`
+     See :s:`LetStatement`.
+   :chapter:
+     :dp:`fls_ct7pp7jnfr86`
+     A :t:`let statement` is a :t:`statement` that introduces new :t:`[binding]s`
+     produced by its :t:`pattern-without-alternation` that are optionally
+     initialized to a :t:`value`.
+
+.. glossary-entry:: let initializer
+   :glossary-dp: fls_hqj80jHcxEBB
+   
+   :glossary:
+     :dp:`fls_jtTpBZ4ujZRc`
+     A :dt:`let initializer` is a :t:`construct` that provides the :t:`value` of
+     the :t:`[binding]s` of the :t:`let statement` using an :t:`expression`, or
+     alternatively executes a :t:`block expression`.
+     
+     :dp:`fls_GmHsJb6FICfA`
+     See :s:`LetInitializer`.
+   :chapter:
+     :dp:`fls_SR3dIgR5K0Kq`
+     A :t:`let initializer` is a :t:`construct` that provides the :t:`value` of
+     the :t:`[binding]s` of the :t:`let statement` using an :t:`expression`, or
+     alternatively executes a :t:`block expression`.
 
 :dp:`fls_iqar7vvtw22c`
 If a :t:`let statement` lacks a :t:`block expression`, then the :t:`pattern` of
@@ -163,8 +250,18 @@ Expression Statements
 
 .. rubric:: Legality Rules
 
-:dp:`fls_xmdj8uj7ixoe`
-An :t:`expression statement` is an :t:`expression` whose result is ignored.
+.. glossary-entry:: expression statement
+   :glossary-dp: fls_a1rorkjt3vpc
+   
+   :glossary:
+     :dp:`fls_ds0pspiqk4am`
+     An :dt:`expression statement` is an :t:`expression` whose result is ignored.
+     
+     :dp:`fls_41jt1h3audzv`
+     See :s:`ExpressionStatement`.
+   :chapter:
+     :dp:`fls_xmdj8uj7ixoe`
+     An :t:`expression statement` is an :t:`expression` whose result is ignored.
 
 :dp:`fls_gzzmudc1hl6s`
 The :t:`expected type` of an :t:`expression statement` without character 0x3B

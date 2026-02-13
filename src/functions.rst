@@ -48,28 +48,69 @@ Functions
 
 .. rubric:: Legality Rules
 
-:dp:`fls_gn1ngtx2tp2s`
-A :t:`function` is a :t:`value` of a :t:`function type` that models a behavior.
+.. glossary-entry:: function
+   :glossary-dp: fls_yllg093syzdi
+   
+   :glossary:
+     :dp:`fls_ni14pcm4ap9l`
+     A :dt:`function` is a :t:`value` of a :t:`function type` that models a behavior.
+     
+     :dp:`fls_hn01vvw2fx9m`
+     See :s:`FunctionDeclaration`.
+   :chapter:
+     :dp:`fls_gn1ngtx2tp2s`
+     A :t:`function` is a :t:`value` of a :t:`function type` that models a behavior.
 
 :dp:`fls_bdx9gnnjxru3`
 A :t:`function` declares a unique :t:`function item type` for itself.
 
-:dp:`fls_87jnkimc15gi`
-A :t:`function qualifier` is a :t:`construct` that determines the role of
-a :t:`function`.
+.. glossary-entry:: function qualifier
+   :glossary-dp: fls_2uvom1x42dcs
+   
+   :glossary:
+     :dp:`fls_8cux22275v8r`
+     A :dt:`function qualifier` is a :t:`construct` that determines the role of
+     a :t:`function`.
+     
+     :dp:`fls_3td9tztnj2jq`
+     See :s:`FunctionQualifierList`.
+   :chapter:
+     :dp:`fls_87jnkimc15gi`
+     A :t:`function qualifier` is a :t:`construct` that determines the role of
+     a :t:`function`.
 
 :dp:`fls_nwywh1vjt6rr`
 A :t:`function` shall not be subject to both :t:`keyword` ``async`` and
 :t:`keyword` ``const``.
 
-:dp:`fls_uwuthzfgslif`
-A :t:`function parameter` is a :t:`construct` that yields a set of
-:t:`[binding]s` that bind matched input :t:`[value]s` to :t:`[name]s` at the
-site of a :t:`call expression` or a :t:`method call expression`.
+.. glossary-entry:: function parameter
+   :glossary-dp: fls_xn800gcjnln1
+   
+   :glossary:
+     :dp:`fls_2feq1ky9pla1`
+     A :dt:`function parameter` is a :t:`construct` that yields a set of
+     :t:`[binding]s` that bind matched input :t:`[value]s` to :t:`[name]s` at the
+     site of a :t:`call expression` or a :t:`method call expression`.
+     
+     :dp:`fls_4tf20svi3rjx`
+     See :s:`FunctionParameter`.
+   :chapter:
+     :dp:`fls_uwuthzfgslif`
+     A :t:`function parameter` is a :t:`construct` that yields a set of
+     :t:`[binding]s` that bind matched input :t:`[value]s` to :t:`[name]s` at the
+     site of a :t:`call expression` or a :t:`method call expression`.
 
-:dp:`fls_ymeo93t4mz4`
-A :t:`self parameter` is a :t:`function parameter` expressed by :t:`keyword`
-``self``.
+.. glossary-entry:: self parameter
+   :glossary-dp: fls_6wjlbzmlx9n4
+   
+   :glossary:
+     :dp:`fls_ksne48eip15`
+     A :dt:`self parameter` is a :t:`function parameter` expressed by :t:`keyword`
+     ``self``.
+   :chapter:
+     :dp:`fls_ymeo93t4mz4`
+     A :t:`self parameter` is a :t:`function parameter` expressed by :t:`keyword`
+     ``self``.
 
 :dp:`fls_ijbt4tgnl95n`
 A :t:`function` shall not specify a :t:`self parameter` unless it is an
@@ -137,8 +178,18 @@ A :t:`variadic function` shall specify one of the following :t:`[ABI]s`:
 * :dp:`fls_4B4B5FIqAes9`
   ``extern "win64-unwind"``
 
-:dp:`fls_vljy4mm0zca2`
-A :t:`return type` is the :t:`type` of the result a :t:`function`, :t:`closure type` or :t:`function pointer type` returns.
+.. glossary-entry:: return type
+   :glossary-dp: fls_b8dbm1bs65kw
+   
+   :glossary:
+     :dp:`fls_cwucgbmmhnnm`
+     A :dt:`return type` is the :t:`type` of the result a :t:`function` returns.
+     
+     :dp:`fls_utuprsem6n58`
+     See :s:`ReturnType`.
+   :chapter:
+     :dp:`fls_vljy4mm0zca2`
+     A :t:`return type` is the :t:`type` of the result a :t:`function`, :t:`closure type` or :t:`function pointer type` returns.
 
 :dp:`fls_EqJb3Jl3vK8K`
 The :t:`return type` of a :t:`function` is determined as follows:
@@ -149,8 +200,18 @@ The :t:`return type` of a :t:`function` is determined as follows:
 * :dp:`fls_J8X8ahnJLrMo`
   Otherwise the :t:`return type` is the :t:`unit type`.
 
-:dp:`fls_927nfm5mkbsp`
-A :t:`function body` is the :t:`block expression` of a :t:`function`.
+.. glossary-entry:: function body
+   :glossary-dp: fls_vjgkg8kfi93
+   
+   :glossary:
+     :dp:`fls_y5ha4123alik`
+     A :dt:`function body` is the :t:`block expression` of a :t:`function`.
+     
+     :dp:`fls_r0g0i730x6x4`
+     See :s:`FunctionBody`.
+   :chapter:
+     :dp:`fls_927nfm5mkbsp`
+     A :t:`function body` is the :t:`block expression` of a :t:`function`.
 
 :dp:`fls_yfm0jh62oaxr`
 A :t:`function` shall have a :t:`function body` unless it is an
@@ -159,18 +220,52 @@ A :t:`function` shall have a :t:`function body` unless it is an
 :dp:`fls_bHwy8FLzEUi3`
 A :t:`function body` denotes a :t:`control flow boundary`.
 
+.. glossary-entry:: control flow boundary
+   :glossary-dp: fls_nC4Knv4tpenW
+   
+   :glossary:
+     :dp:`fls_SmipZJDp02ij`
+     A :dt:`control flow boundary` is a :t:`construct` that limits control flow from
+     returning beyond the :t:`construct`, and acts as the target of control flow
+     returning operations.
+
+.. glossary-entry:: async control flow boundary
+   :glossary-dp: fls_lYrTaCM1LcXU
+   
+   :glossary:
+     :dp:`fls_EXoGOkCRsfKK`
+     An :dt:`async control flow boundary` is a :t:`control flow boundary` that
+     additionally allows the suspension of execution via :t:`[await expression]s`.
+
 :dp:`fls_5Q861wb08DU3`
 A :t:`function body` of an :t:`async function` denotes an
 :t:`async control flow boundary`.
 
-:dp:`fls_owdlsaaygtho`
-A :t:`function signature` is a unique identification of a :t:`function`
-that encompasses of its :t:`[function qualifier]s`, :t:`name`,
-:t:`[generic parameter]s`, :t:`[function parameter]s`, :t:`return type`, and
-:t:`where clause`.
+.. glossary-entry:: function signature
+   :glossary-dp: fls_hz3zunp8lrfl
+   
+   :glossary:
+     :dp:`fls_ndld48kg6o8d`
+     A :dt:`function signature` is a unique identification of a :t:`function`
+     that encompasses of its :t:`[function qualifier]s`, :t:`name`,
+     :t:`[generic parameter]s`, :t:`[function parameter]s`, :t:`return type`, and
+     :t:`where clause`.
+   :chapter:
+     :dp:`fls_owdlsaaygtho`
+     A :t:`function signature` is a unique identification of a :t:`function`
+     that encompasses of its :t:`[function qualifier]s`, :t:`name`,
+     :t:`[generic parameter]s`, :t:`[function parameter]s`, :t:`return type`, and
+     :t:`where clause`.
 
-:dp:`fls_2049qu3ji5x7`
-A :t:`constant function` is a :t:`function` subject to :t:`keyword` ``const``.
+.. glossary-entry:: constant function
+   :glossary-dp: fls_6j1wluj8sku8
+   
+   :glossary:
+     :dp:`fls_4glkwg11p5ml`
+     A :dt:`constant function` is a :t:`function` subject to :t:`keyword` ``const``.
+   :chapter:
+     :dp:`fls_2049qu3ji5x7`
+     A :t:`constant function` is a :t:`function` subject to :t:`keyword` ``const``.
 
 :dp:`fls_7mlanuh5mvpn`
 The :t:`function body` of a :t:`constant function` shall be a
@@ -179,29 +274,43 @@ The :t:`function body` of a :t:`constant function` shall be a
 :dp:`fls_otr3hgp8lj1q`
 A :t:`constant function` shall be callable from a :t:`constant context`.
 
-:dp:`fls_m3jiunibqj81`
-An :t:`async function` is a :t:`function` subject to :t:`keyword` ``async``. An
-:t:`async function` of the form
+.. glossary-entry:: async function
+   :glossary-dp: fls_nlafxy2z1moc
+   
+   :glossary:
+     :dp:`fls_gv9wl1cbaw1g`
+     An :dt:`async function` is a :t:`function` subject to :t:`keyword` ``async``.
+   :chapter:
+     :dp:`fls_m3jiunibqj81`
+     An :t:`async function` is a :t:`function` subject to :t:`keyword` ``async``. An
+     :t:`async function` of the form
+     
+     .. code-block:: rust
+     
+        async fn async_fn(param: &param_type) -> return_type {
+            /* tail expression */
+        }
+     
+     :dp:`fls_7vogmqyd87ey`
+     is equivalent to :t:`function`
+     
+     .. code-block:: rust
+     
+        fn async_fn<'a>(param: &'a param_type) -> impl Future<Output = return_type> + 'a {
+            async move {
+                /* tail expression */
+            }
+        }
 
-.. code-block:: rust
-
-   async fn async_fn(param: &param_type) -> return_type {
-       /* tail expression */
-   }
-
-:dp:`fls_7vogmqyd87ey`
-is equivalent to :t:`function`
-
-.. code-block:: rust
-
-   fn async_fn<'a>(param: &'a param_type) -> impl Future<Output = return_type> + 'a {
-       async move {
-           /* tail expression */
-       }
-   }
-
-:dp:`fls_7ucwmzqtittv`
-An :t:`unsafe function` is a :t:`function` subject to an :s:`ItemSafety` with :t:`keyword` ``unsafe``.
+.. glossary-entry:: unsafe function
+   :glossary-dp: fls_ua64pv82skaw
+   
+   :glossary:
+     :dp:`fls_2ht13dgtxi1o`
+     An :dt:`unsafe function` is a :t:`function` subject to :t:`keyword` ``unsafe``.
+   :chapter:
+     :dp:`fls_7ucwmzqtittv`
+     An :t:`unsafe function` is a :t:`function` subject to an :s:`ItemSafety` with :t:`keyword` ``unsafe``.
 
 :dp:`fls_nUADhgcfvvGC`
 A :t:`function` shall only be subject to an :s:`ItemSafety` with :t:`keyword` ``safe`` if it is an :t:`external function` in an :t:`unsafe external block`.

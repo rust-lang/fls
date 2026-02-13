@@ -40,6 +40,17 @@ Items
        $$unsafe$$
      | $$safe$$
 
+.. glossary-entry:: item
+   :glossary-dp: fls_yh2a7e3d3894
+   
+   :glossary:
+     :dp:`fls_2ghaujiqkhyy`
+     An :dt:`item` is the most basic semantic element in program text. An item
+     defines the compile- and run-time semantics of a program.
+     
+     :dp:`fls_xd997kd2i73a`
+     See :s:`Item`.
+
 .. rubric:: Legality Rules
 
 :dp:`fls_s3b1cba9lfj5`
@@ -52,4 +63,3 @@ an :t:`item`.
 :dp:`fls_hil5f7y4xdhe`
 :t:`Elaboration` is the process by which a :t:`declaration` achieves its runtime
 effects.
-

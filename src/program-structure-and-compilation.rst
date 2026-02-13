@@ -34,10 +34,21 @@ Source Files
 
 .. rubric:: Legality Rules
 
-:dp:`fls_4vicosdeaqmp`
-A :t:`source file` contains the program text consisting of :t:`[inner
-attribute]s`, :t:`[inner doc comment]s`, and :t:`[item]s`. The location of a
-:t:`source file` is tool defined.
+.. glossary-entry:: source file
+   :glossary-dp: fls_wlwwxzpnhk6i
+   
+   :glossary:
+     :dp:`fls_nh737q4mn27u`
+     A :dt:`source file` contains the program text of :t:`[inner attribute]s`,
+     :t:`[inner doc comment]s`, and :t:`[item]s`.
+     
+     :dp:`fls_zgh1m5357ex1`
+     See :s:`SourceFile`.
+   :chapter:
+     :dp:`fls_4vicosdeaqmp`
+     A :t:`source file` contains the program text consisting of :t:`[inner
+     attribute]s`, :t:`[inner doc comment]s`, and :t:`[item]s`. The location of a
+     :t:`source file` is tool defined.
 
 :dp:`fls_ann3cha1xpek`
 A :s:`Shebang` does not have an effect on the compilation.
@@ -69,22 +80,53 @@ Modules
 
 .. rubric:: Legality Rules
 
-:dp:`fls_odd1hj3y1mgu`
-A :t:`module` is a container for zero or more :t:`[item]s`.
+.. glossary-entry:: module
+   :glossary-dp: fls_kbxk78vm564e
+   
+   :glossary:
+     :dp:`fls_ujlsg58bskl5`
+     A :dt:`module` is a container for zero or more :t:`[item]s`.
+     
+     :dp:`fls_os60q6vvm71c`
+     See :s:`ModuleDeclaration`.
+   :chapter:
+     :dp:`fls_odd1hj3y1mgu`
+     A :t:`module` is a container for zero or more :t:`[item]s`.
 
 :dp:`fls_whgv72emrm47`
 The ``unsafe`` :t:`keyword` of a :t:`module` is rejected, but may still
 be consumed by :t:`[macro]s`.
 
-:dp:`fls_qypjjpcf8uwq`
-An :t:`inline module` is a :t:`module` with an :s:`InlineModuleSpecification`.
+.. glossary-entry:: inline module
+   :glossary-dp: fls_c54lmkluwbwr
+   
+   :glossary:
+     :dp:`fls_tbldwtisl9vc`
+     An :dt:`inline module` is a :t:`module` with an :s:`InlineModuleSpecification`.
+     
+     :dp:`fls_8bmjz8o3xu60`
+     See :s:`InlineModuleSpecification`.
+   :chapter:
+     :dp:`fls_qypjjpcf8uwq`
+     An :t:`inline module` is a :t:`module` with an :s:`InlineModuleSpecification`.
 
-:dp:`fls_cavwpr1ybk37`
-An :t:`outline module` is a :t:`module` with an :s:`OutlineModuleSpecification`.
-
-:dp:`fls_plepew2319g4`
-An :t:`outline module` loads a :t:`source file` and considers the text of the
-:t:`source file` to be inlined within the context of the :t:`outline module`.
+.. glossary-entry:: outline module
+   :glossary-dp: fls_de935b1pzd28
+   
+   :glossary:
+     :dp:`fls_xhe5gmr0r9zn`
+     An :dt:`outline module` is a :t:`module` with an
+     :s:`OutlineModuleSpecification`.
+     
+     :dp:`fls_wu5wqylzx9ke`
+     See :s:`OutlineModuleSpecification`.
+   :chapter:
+     :dp:`fls_cavwpr1ybk37`
+     An :t:`outline module` is a :t:`module` with an :s:`OutlineModuleSpecification`.
+     
+     :dp:`fls_plepew2319g4`
+     An :t:`outline module` loads a :t:`source file` and considers the text of the
+     :t:`source file` to be inlined within the context of the :t:`outline module`.
 
 :dp:`fls_1aruwps62c4p`
 The location of a :t:`module` :t:`source file` can be specified using
@@ -109,14 +151,31 @@ Crates
 
 .. rubric:: Legality Rules
 
-:dp:`fls_qwghk79ok5h0`
-A :t:`crate` is a unit of compilation and linking that contains a tree of
-nested :t:`[module]s`.
+.. glossary-entry:: crate
+   :glossary-dp: fls_kf8yukhxudw8
+   
+   :glossary:
+     :dp:`fls_qplsjzb2uyim`
+     A :dt:`crate` is a unit of compilation and linking that contains a tree of
+     nested :t:`[module]s`.
+   :chapter:
+     :dp:`fls_qwghk79ok5h0`
+     A :t:`crate` is a unit of compilation and linking that contains a tree of
+     nested :t:`[module]s`.
 
-:dp:`fls_unxalgMqIr3v`
-The :t:`crate type` of a :t:`crate` is the value of the :t:`attribute`
-``crate_type`` of a :t:`crate` or the value of ``--crate-type`` flag passed to
-the tool compiling the :t:`crate`.
+.. glossary-entry:: crate type
+   :glossary-dp: fls_lVpE4uFDsXH4
+   
+   :glossary:
+     :dp:`fls_eaxsgPMFNH7f`
+     The :dt:`crate type` of a :t:`crate` is the value of the :t:`attribute`
+     ``crate_type`` of a :t:`crate` or the value of ``--crate-type`` flag passed to
+     the tool compiling the :t:`crate`.
+   :chapter:
+     :dp:`fls_unxalgMqIr3v`
+     The :t:`crate type` of a :t:`crate` is the value of the :t:`attribute`
+     ``crate_type`` of a :t:`crate` or the value of ``--crate-type`` flag passed to
+     the tool compiling the :t:`crate`.
 
 :dp:`fls_e7jGvXvTsFpC`
 The :t:`crate type` of a :t:`crate` if not specified is ``bin``.
@@ -125,8 +184,15 @@ The :t:`crate type` of a :t:`crate` if not specified is ``bin``.
 A :t:`crate` may be subject to multiple :t:`[crate type]s`, treating each type
 as a separate :t:`crate`.
 
-:dp:`fls_9ub6ks8qrang`
-A :t:`binary crate` is a :t:`crate` whose :t:`crate type` is ``bin``.
+.. glossary-entry:: binary crate
+   :glossary-dp: fls_kahj3y4rvmvb
+   
+   :glossary:
+     :dp:`fls_8gfe7hajxkd7`
+     A :dt:`binary crate` is a :t:`crate` whose :t:`crate type` is ``bin``.
+   :chapter:
+     :dp:`fls_9ub6ks8qrang`
+     A :t:`binary crate` is a :t:`crate` whose :t:`crate type` is ``bin``.
 
 :dp:`fls_OyFwBtDGVimT`
 A :t:`binary crate` that is not subject to :t:`attribute` ``no_main`` shall have
@@ -138,12 +204,29 @@ The :t:`function` in scope of a :t:`binary crate`'s :t:`crate root module` under
 the :t:`name` ``main`` with a :t:`main function signature` is the :t:`binary
 crate`'s :t:`program entry point`.
 
-:dp:`fls_d9nn4yuiw1ja`
-A :t:`library crate` is a :t:`crate` whose :t:`crate type` is ``lib``, ``rlib``,
-``staticlib``, ``dylib``, or ``cdylib``.
+.. glossary-entry:: library crate
+   :glossary-dp: fls_r1sk7vdgckym
+   
+   :glossary:
+     :dp:`fls_3m8lg4mdc2x0`
+     A :dt:`library crate` is a :t:`crate` whose :t:`crate type` is ``lib``, ``rlib``,
+     ``staticlib``, ``dylib``, or ``cdylib``.
+   :chapter:
+     :dp:`fls_d9nn4yuiw1ja`
+     A :t:`library crate` is a :t:`crate` whose :t:`crate type` is ``lib``, ``rlib``,
+     ``staticlib``, ``dylib``, or ``cdylib``.
 
-:dp:`fls_Mf62VqAhoZ3c`
-A :t:`proc-macro crate` is a :t:`crate` whose :t:`crate type` is ``proc-macro``.
+.. glossary-entry:: proc-macro crate
+   :glossary-dp: fls_kCA6SW8bUq5x
+   
+   :glossary:
+     .. _fls_AjjdLZWiL9Tq:
+     
+     :dp:`fls_DfTszT1PjV7o`
+     A :dt:`proc-macro crate` is a :t:`crate` whose :t:`crate type` is ``proc-macro``.
+   :chapter:
+     :dp:`fls_Mf62VqAhoZ3c`
+     A :t:`proc-macro crate` is a :t:`crate` whose :t:`crate type` is ``proc-macro``.
 
 :dp:`fls_RJJmN4tP7j4m`
 A :t:`proc-macro crate` shall not declare :t:`[item]s` in its :t:`crate root
@@ -171,11 +254,31 @@ Crate Imports
 
 .. rubric:: Legality Rules
 
-:dp:`fls_d0pa807s5d5h`
-A :t:`crate import` specifies a required dependency on an external :t:`crate`.
+.. glossary-entry:: crate import
+   :glossary-dp: fls_xwbmmcbbowtu
+   
+   :glossary:
+     :dp:`fls_y91ja1a87g7a`
+     A :dt:`crate import` specifies a dependency on an external :t:`crate`.
+     
+     :dp:`fls_nmdxagg39hz6`
+     See :s:`ExternalCrateImport`.
+   :chapter:
+     :dp:`fls_d0pa807s5d5h`
+     A :t:`crate import` specifies a required dependency on an external :t:`crate`.
 
-:dp:`fls_vfam3wzeAiah`
-A :t:`crate indication` is a :t:`construct` that indicates a :t:`crate`.
+.. glossary-entry:: crate indication
+   :glossary-dp: fls_CXvNvsO10pLL
+   
+   :glossary:
+     :dp:`fls_XUSFUErxQRRA`
+     A :dt:`crate indication` is a :t:`construct` that indicates a :t:`crate`.
+     
+     :dp:`fls_s1eFklbzjLxQ`
+     See :s:`CrateIndication`.
+   :chapter:
+     :dp:`fls_vfam3wzeAiah`
+     A :t:`crate indication` is a :t:`construct` that indicates a :t:`crate`.
 
 :dp:`fls_ft860vkz0lkc`
 A :t:`crate import` binds an external :t:`crate` to its :t:`crate indication`.
@@ -203,16 +306,38 @@ Compilation Roots
 
 .. rubric:: Legality Rules
 
-:dp:`fls_fhiqvgdamq5`
-A :t:`crate root module` is the root of the nested :t:`module` tree of a
-:t:`crate`.
+.. glossary-entry:: crate root
+   :glossary-dp: fls_hv9zyxb72soh
+   
+   :glossary:
+     :dp:`fls_yxcgiuybqqy8`
+     A :dt:`crate root` is an entry point into a :t:`crate`.
+
+.. glossary-entry:: crate root module
+   :glossary-dp: fls_iucxone5ta26
+   
+   :glossary:
+     :dp:`fls_oo4nmqv78wno`
+     A :dt:`crate root module` is the root of the nested :t:`module` tree of a
+     :t:`crate`.
+   :chapter:
+     :dp:`fls_fhiqvgdamq5`
+     A :t:`crate root module` is the root of the nested :t:`module` tree of a
+     :t:`crate`.
 
 :dp:`fls_tk8tl2e0a34`
 A tool can define a :t:`crate root module` for a single :t:`crate`.
 
-:dp:`fls_bsyfxdk3ap1t`
-A :t:`compilation root` is an input to a compilation performed by a tool. A
-:t:`crate root module` is a :t:`compilation root`.
+.. glossary-entry:: compilation root
+   :glossary-dp: fls_riwule1euzlj
+   
+   :glossary:
+     :dp:`fls_stwsfyvov2fx`
+     A :dt:`compilation root` is an input to a compilation performed by a tool.
+   :chapter:
+     :dp:`fls_bsyfxdk3ap1t`
+     A :t:`compilation root` is an input to a compilation performed by a tool. A
+     :t:`crate root module` is a :t:`compilation root`.
 
 .. _fls_u1afezy1ye99:
 
@@ -252,31 +377,47 @@ Program Entry Point
 
 .. rubric:: Legality Rules
 
-:dp:`fls_dp64b08em9BJ`
-A :t:`program entry point` is a :t:`function` that is invoked at the start of
-a Rust program.
+.. glossary-entry:: program entry point
+   :glossary-dp: fls_SIFecOZqloyx
+   
+   :glossary:
+     :dp:`fls_9m37hN9zgEQf`
+     A :dt:`program entry point` is a :t:`function` that is invoked at the start of
+     a Rust program.
+   :chapter:
+     :dp:`fls_dp64b08em9BJ`
+     A :t:`program entry point` is a :t:`function` that is invoked at the start of
+     a Rust program.
 
-:dp:`fls_sbGnkm8Ephiu`
-A :t:`main function signature` is a :t:`function signature` subject to the
-following restrictions:
-
-* :dp:`fls_o4fxok23134r`
-  It lacks :t:`[function qualifier]s` ``async`` and ``unsafe``,
-
-* :dp:`fls_bk755pvc1l53`
-  Its :t:`ABI` is Rust,
-
-* :dp:`fls_a3je4wc53bmo`
-  It lacks :t:`[generic parameter]s`,
-
-* :dp:`fls_w8q15zp7kyl0`
-  It lacks :t:`[function parameter]s`,
-
-* :dp:`fls_4psnfphsgdek`
-  It lacks a :t:`return type`,
-
-* :dp:`fls_m7xfrhqif74`
-  It lacks a :t:`where clause`,
-
-* :dp:`fls_qq9fzrw4aykd`
-  It has a :t:`function body`.
+.. glossary-entry:: main function signature
+   :glossary-dp: fls_MJ1YWiOpxAa8
+   
+   :glossary:
+     :dp:`fls_QijObGZEIykU`
+     A :dt:`main function signature` is a :t:`function signature` subject to specific
+     restrictions.
+   :chapter:
+     :dp:`fls_sbGnkm8Ephiu`
+     A :t:`main function signature` is a :t:`function signature` subject to the
+     following restrictions:
+     
+     * :dp:`fls_o4fxok23134r`
+       It lacks :t:`[function qualifier]s` ``async`` and ``unsafe``,
+     
+     * :dp:`fls_bk755pvc1l53`
+       Its :t:`ABI` is Rust,
+     
+     * :dp:`fls_a3je4wc53bmo`
+       It lacks :t:`[generic parameter]s`,
+     
+     * :dp:`fls_w8q15zp7kyl0`
+       It lacks :t:`[function parameter]s`,
+     
+     * :dp:`fls_4psnfphsgdek`
+       It lacks a :t:`return type`,
+     
+     * :dp:`fls_m7xfrhqif74`
+       It lacks a :t:`where clause`,
+     
+     * :dp:`fls_qq9fzrw4aykd`
+       It has a :t:`function body`.

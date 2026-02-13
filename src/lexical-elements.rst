@@ -25,12 +25,37 @@ Character Set
 The program text of a Rust program is written using the :t:`Unicode` character
 set.
 
+.. glossary-entry:: Unicode
+   :glossary-dp: fls_kafgmevvzl5t
+   
+   :glossary:
+     :dp:`fls_y7gwku7pe1f4`
+     :dt:`Unicode` is the universal character encoding standard for written
+     characters and text described in the Unicode® Standard by the Unicode
+     Consortium.
+
 .. rubric:: Syntax
 
 :dp:`fls_vfx8byq5zo8t`
 A character is defined by this document for each cell in the coding space
 described by :t:`Unicode`, regardless of whether or not :t:`Unicode` allocates a
 character to that cell.
+
+.. glossary-entry:: code point
+   :glossary-dp: fls_aqovhozevngd
+   
+   :glossary:
+     :dp:`fls_6xw8jtiomc2n`
+     In :t:`Unicode`, a :dt:`code point` is a numeric :t:`value` that maps to a
+     character.
+
+.. glossary-entry:: plane
+   :glossary-dp: fls_dr6wbsqjd2qm
+   
+   :glossary:
+     :dp:`fls_x1wbguoqdsf9`
+     In :t:`Unicode`, a :dt:`plane` is a continuous group of 65,536
+     :t:`[code point]s`.
 
 :dp:`fls_pvslhm3chtlb`
 A :dt:`whitespace character` is one of the following characters:
@@ -68,9 +93,17 @@ A :dt:`whitespace character` is one of the following characters:
 * :dp:`fls_zfs15iel08y0`
   0x2029 (paragraph separator)
 
-:dp:`fls_7eifv4ksunu1`
-A :t:`whitespace string` is a string that consists of one or more
-:t:`[whitespace character]s`.
+.. glossary-entry:: whitespace string
+   :glossary-dp: fls_cxm8nw6qiryr
+   
+   :glossary:
+     :dp:`fls_nljkmadklwdp`
+     A :dt:`whitespace string` is a string that consists of one or more
+     :t:`[whitespace character]s`.
+   :chapter:
+     :dp:`fls_7eifv4ksunu1`
+     A :t:`whitespace string` is a string that consists of one or more
+     :t:`[whitespace character]s`.
 
 :dp:`fls_PIDKEm8GiLNL`
 An :ds:`AsciiCharacter` is any :t:`Unicode` character in the range 0x00 - 0x7F, both inclusive.
@@ -159,22 +192,54 @@ The text of a :t:`source file` is a sequence of separate :t:`[lexical
 element]s`. The meaning of a program depends only on the particular sequence of
 :t:`[lexical element]s`, excluding :t:`non-[doc comment]s`.
 
-:dp:`fls_a1zylpqha73x`
-A :t:`lexical element` is the most basic syntactic element in program text.
+.. glossary-entry:: lexical element
+   :glossary-dp: fls_h2tqtmm5686y
+   
+   :glossary:
+     :dp:`fls_nrxnbkatn63n`
+     A :dt:`lexical element` is the most basic syntactic element in program
+     text.
+   :chapter:
+     :dp:`fls_a1zylpqha73x`
+     A :t:`lexical element` is the most basic syntactic element in program text.
 
 :dp:`fls_jy6wifn5r2bu`
 The text of a :t:`source file` is divided into :t:`[line]s`.
 
-:dp:`fls_efdfq9nhpmp5`
-A :t:`line` is a sequence of zero or more characters followed by an end of
-line.
+.. glossary-entry:: line
+   :glossary-dp: fls_8qputmx0i7ku
+   
+   :glossary:
+     :dp:`fls_oqf2439j3y7b`
+     A :dt:`line` is a sequence of zero or more characters followed by an end of
+     line.
+   :chapter:
+     :dp:`fls_efdfq9nhpmp5`
+     A :t:`line` is a sequence of zero or more characters followed by an end of
+     line.
 
 :dp:`fls_go25sisi5fdp`
 The representation of an end of line is tool-defined.
 
-:dp:`fls_a6t53o8h1vdk`
-A :t:`separator` is a character or a string that separates adjacent :t:`[lexical
-element]s`. A :t:`whitespace string` is a :t:`separator`.
+.. glossary-entry:: separator
+   :glossary-dp: fls_at8q1svh3isg
+   
+   :glossary:
+     :dp:`fls_128xny4qfcj5`
+     A :dt:`separator` is a character or a string that separates adjacent
+     :t:`[lexical element]s`.
+   :chapter:
+     :dp:`fls_a6t53o8h1vdk`
+     A :t:`separator` is a character or a string that separates adjacent :t:`[lexical
+     element]s`. A :t:`whitespace string` is a :t:`separator`.
+
+.. glossary-entry:: punctuator
+   :glossary-dp: fls_hdwmw3jbwefi
+   
+   :glossary:
+     :dp:`fls_gwqgi0b7jxmu`
+     A :dt:`punctuator` is a character or a sequence of characters in category
+     :s:`Punctuation`.
 
 :dp:`fls_8fv63w6f4udl`
 A :dt:`simple punctuator` is one of the following special characters:
@@ -467,12 +532,30 @@ except ``crate``, ``self``, ``Self``, and ``super``.
 
 .. rubric:: Legality Rules
 
-:dp:`fls_xsdmun5uqy4c`
-An :t:`identifier` is a :t:`lexical element` that refers to a :t:`name`.
+.. glossary-entry:: identifier
+   :glossary-dp: fls_kpsyz8yopova
+   
+   :glossary:
+     :dp:`fls_14zc5bcm9d8o`
+     An :dt:`identifier` is a :t:`lexical element` that refers to a :t:`name`.
+     
+     :dp:`fls_oddu2wzhczvq`
+     See :s:`Identifier`.
+   :chapter:
+     :dp:`fls_xsdmun5uqy4c`
+     An :t:`identifier` is a :t:`lexical element` that refers to a :t:`name`.
 
-:dp:`fls_ktnf6zkrdy45`
-A :t:`pure identifier` is an :t:`identifier` that does not include :t:`[weak
-keyword]s`.
+.. glossary-entry:: pure identifier
+   :glossary-dp: fls_sgwvmnoio1ql
+   
+   :glossary:
+     :dp:`fls_6pez8fyiew0k`
+     A :dt:`pure identifier` is an :t:`identifier` that does not include
+     :t:`[weak keyword]s`.
+   :chapter:
+     :dp:`fls_ktnf6zkrdy45`
+     A :t:`pure identifier` is an :t:`identifier` that does not include :t:`[weak
+     keyword]s`.
 
 :dp:`fls_jpecw46eh061`
 A :t:`pure identifier` shall follow the specification in Unicode Standard Annex
@@ -554,8 +637,18 @@ Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_s76un78zyd0j`
-A :t:`literal` is a fixed :t:`value` in program text.
+.. glossary-entry:: literal
+   :glossary-dp: fls_z850pyf9r1f4
+   
+   :glossary:
+     :dp:`fls_ckbyt11pku9j`
+     A :dt:`literal` is a fixed :t:`value` in program text.
+     
+     :dp:`fls_h1g46cevrqjv`
+     See :s:`Literal`.
+   :chapter:
+     :dp:`fls_s76un78zyd0j`
+     A :t:`literal` is a fixed :t:`value` in program text.
 
 .. _fls_2ifjqwnw03ms:
 
@@ -590,8 +683,18 @@ return), 0x27 (apostrophe), and 0x5C (reverse solidus).
 
 .. rubric:: Legality Rules
 
-:dp:`fls_q0qwr83frszx`
-A :t:`byte literal` is a :t:`literal` that denotes a fixed byte :t:`value`.
+.. glossary-entry:: byte literal
+   :glossary-dp: fls_e8rokiw23i9t
+   
+   :glossary:
+     :dp:`fls_l67oo0u12zjb`
+     A :dt:`byte literal` is a :t:`literal` that denotes a fixed byte :t:`value`.
+     
+     :dp:`fls_iu9twvm648dx`
+     See :s:`ByteLiteral`.
+   :chapter:
+     :dp:`fls_q0qwr83frszx`
+     A :t:`byte literal` is a :t:`literal` that denotes a fixed byte :t:`value`.
 
 :dp:`fls_fggytrv5jvw0`
 The :t:`type` of a :t:`byte literal` is :c:`u8`.
@@ -619,9 +722,20 @@ Byte String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_t63zfv5JdUhj`
-A :t:`byte string literal` is a :t:`literal` that consists of multiple
-:s:`[AsciiCharacter]s`.
+.. glossary-entry:: byte string literal
+   :glossary-dp: fls_uwe7iomhvgtp
+   
+   :glossary:
+     :dp:`fls_my4r1l3ilyt2`
+     A :dt:`byte string literal` is a :t:`literal` that consists of multiple
+     :s:`[AsciiCharacter]s`.
+     
+     :dp:`fls_4yhag19z61bl`
+     See :s:`ByteStringLiteral`.
+   :chapter:
+     :dp:`fls_t63zfv5JdUhj`
+     A :t:`byte string literal` is a :t:`literal` that consists of multiple
+     :s:`[AsciiCharacter]s`.
 
 :dp:`fls_Xd6LnfzMb7t7`
 The character sequence 0x0D 0x0A (carriage return, new line) is replaced by 0x0A
@@ -651,9 +765,20 @@ except characters 0x0D (carriage return), 0x22 (quotation mark), and 0x5C
 
 .. rubric:: Legality Rules
 
-:dp:`fls_moe3zfx39ox2`
-A :t:`simple byte string literal` is a :t:`byte string literal` that consists of multiple
-:s:`[AsciiCharacter]s`.
+.. glossary-entry:: simple byte string literal
+   :glossary-dp: fls_4GvXiDfcPlRD
+   
+   :glossary:
+     :dp:`fls_XpbU4Up0Aza8`
+     A :dt:`simple byte string literal` is a :t:`byte string literal` that consists
+     of multiple :s:`[AsciiCharacter]s`.
+     
+     :dp:`fls_OfI70zK68TnQ`
+     See :s:`SimpleByteStringLiteral`.
+   :chapter:
+     :dp:`fls_moe3zfx39ox2`
+     A :t:`simple byte string literal` is a :t:`byte string literal` that consists of multiple
+     :s:`[AsciiCharacter]s`.
 
 :dp:`fls_vffxb6arj9jf`
 The :t:`type` of a :t:`simple byte string literal` of size ``N`` is ``&'static [u8;
@@ -689,9 +814,20 @@ Raw Byte String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_yyw7nv651580`
-A :t:`raw byte string literal` is a :t:`simple byte string literal` that does not
-recognize :t:`[escaped character]s`.
+.. glossary-entry:: raw byte string literal
+   :glossary-dp: fls_ipeh92kh17ze
+   
+   :glossary:
+     :dp:`fls_8v5k3wemy4tl`
+     A :dt:`raw byte string literal` is a :t:`simple byte string literal` that does
+     not recognize :t:`[escaped character]s`.
+     
+     :dp:`fls_5x71i3ay3na2`
+     See :s:`RawByteStringLiteral`.
+   :chapter:
+     :dp:`fls_yyw7nv651580`
+     A :t:`raw byte string literal` is a :t:`simple byte string literal` that does not
+     recognize :t:`[escaped character]s`.
 
 :dp:`fls_5ybq0euwya42`
 The :t:`type` of a :t:`raw byte string literal` of size ``N`` is ``&'static
@@ -720,9 +856,20 @@ C String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_VKCW830CzhhN`
-A :t:`c string literal` is a :t:`literal` that consists of multiple characters
-with an implicit 0x00 byte appended to it.
+.. glossary-entry:: c string literal
+   :glossary-dp: fls_roz4WXH5JZFj
+   
+   :glossary:
+     :dp:`fls_g3NHtaOhTB7g`
+     A :dt:`c string literal` is a :t:`literal` that consists of multiple characters
+     with an implicit 0x00 byte appended to it.
+     
+     :dp:`fls_FZ6QSpjmVme5`
+     See :s:`CStringLiteral`.
+   :chapter:
+     :dp:`fls_VKCW830CzhhN`
+     A :t:`c string literal` is a :t:`literal` that consists of multiple characters
+     with an implicit 0x00 byte appended to it.
 
 :dp:`fls_XJprzaEn82Xs`
 The character sequence 0x0D 0x0A (carriage return, new line) is replaced by 0x0A
@@ -746,10 +893,22 @@ Simple C String Literals
      | StringContinuation
      | UnicodeEscape
 
-:dp:`fls_fnwQHo7twAom`
-A :t:`simple c string literal` is any :t:`Unicode` character except characters
-0x0D (carriage return), 0x22 (quotation mark), 0x5C (reverse solidus) and 0x00
-(null byte).
+.. glossary-entry:: simple c string literal
+   :glossary-dp: fls_fx2hhB0HHSUG
+   
+   :glossary:
+     :dp:`fls_qoHXrmds9SgI`
+     A :dt:`simple c string literal` is any :t:`Unicode` character except characters
+     0x0D (carriage return), 0x22 (quotation mark), 0x5C (reverse solidus) and 0x00
+     (null byte).
+     
+     :dp:`fls_ggm5FNUqg9EY`
+     See :s:`SimpleCStringLiteral`.
+   :chapter:
+     :dp:`fls_fnwQHo7twAom`
+     A :t:`simple c string literal` is any :t:`Unicode` character except characters
+     0x0D (carriage return), 0x22 (quotation mark), 0x5C (reverse solidus) and 0x00
+     (null byte).
 
 .. rubric:: Legality Rules
 
@@ -796,9 +955,20 @@ Raw C String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_gLrei65i8Uzq`
-A :t:`raw c string literal` is a :t:`simple c string literal` that does not
-recognize :t:`[escaped character]s`.
+.. glossary-entry:: raw c string literal
+   :glossary-dp: fls_yGGvg3e0nPOh
+   
+   :glossary:
+     :dp:`fls_qhWBzqoYZL0e`
+     A :dt:`raw c string literal` is a :t:`simple c string literal` that does not
+     recognize :t:`[escaped character]s`.
+     
+     :dp:`fls_WpFJyq6q4k6E`
+     See :s:`RawCStringLiteral`.
+   :chapter:
+     :dp:`fls_gLrei65i8Uzq`
+     A :t:`raw c string literal` is a :t:`simple c string literal` that does not
+     recognize :t:`[escaped character]s`.
 
 :dp:`fls_9nJHsg9dCi66`
 The :t:`type` of a :t:`simple string literal` is :std:`&'static
@@ -827,8 +997,18 @@ Numeric Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_fqpqnku27v99`
-A :t:`numeric literal` is a :t:`literal` that denotes a number.
+.. glossary-entry:: numeric literal
+   :glossary-dp: fls_a0qsojiymgjy
+   
+   :glossary:
+     :dp:`fls_978ndaqdv4r`
+     A :dt:`numeric literal` is a :t:`literal` that denotes a number.
+     
+     :dp:`fls_swue4tma9fmf`
+     See :s:`NumericLiteral`.
+   :chapter:
+     :dp:`fls_fqpqnku27v99`
+     A :t:`numeric literal` is a :t:`literal` that denotes a number.
 
 .. _fls_2ed4axpsy9u0:
 
@@ -910,31 +1090,107 @@ Integer Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_vkk2krfn93ry`
-An :t:`integer literal` is a :t:`numeric literal` that denotes a whole number.
+.. glossary-entry:: integer literal
+   :glossary-dp: fls_e2kizieowvuh
+   
+   :glossary:
+     :dp:`fls_23a1fjpf15qv`
+     An :dt:`integer literal` is a :t:`numeric literal` that denotes a whole number.
+     
+     :dp:`fls_6qpj0nr0jpjr`
+     See :s:`IntegerLiteral`.
+   :chapter:
+     :dp:`fls_vkk2krfn93ry`
+     An :t:`integer literal` is a :t:`numeric literal` that denotes a whole number.
 
-:dp:`fls_nxqncu5yq4eu`
-A :t:`binary literal` is an :t:`integer literal` in base 2.
+.. glossary-entry:: binary literal
+   :glossary-dp: fls_or4o65fyt28y
+   
+   :glossary:
+     :dp:`fls_hy54uj6u3nqw`
+     A :dt:`binary literal` is an :t:`integer literal` in base 2.
+     
+     :dp:`fls_693r7vs2s7o7`
+     See :s:`BinaryLiteral`.
+   :chapter:
+     :dp:`fls_nxqncu5yq4eu`
+     A :t:`binary literal` is an :t:`integer literal` in base 2.
 
-:dp:`fls_rn8xfd66yvst`
-A :t:`decimal literal` is an :t:`integer literal` in base 10.
+.. glossary-entry:: decimal literal
+   :glossary-dp: fls_128iunbbiuql
+   
+   :glossary:
+     :dp:`fls_lwv823lih69m`
+     A :dt:`decimal literal` is an :t:`integer literal` in base 10.
+     
+     :dp:`fls_pxiba4se64y4`
+     See :s:`DecimalLiteral`.
+   :chapter:
+     :dp:`fls_rn8xfd66yvst`
+     A :t:`decimal literal` is an :t:`integer literal` in base 10.
 
-:dp:`fls_2268lchxkzjp`
-A :t:`hexadecimal literal` is an :t:`integer literal` in base 16.
+.. glossary-entry:: hexadecimal literal
+   :glossary-dp: fls_5uiij8eqln5g
+   
+   :glossary:
+     :dp:`fls_8b6njsi8g68i`
+     A :dt:`hexadecimal literal` is an :t:`integer literal` in base 16.
+     
+     :dp:`fls_vssa4z5wcgaa`
+     See :s:`HexadecimalLiteral`.
+   :chapter:
+     :dp:`fls_2268lchxkzjp`
+     A :t:`hexadecimal literal` is an :t:`integer literal` in base 16.
 
-:dp:`fls_4v7awnutbpoe`
-An :t:`octal literal` is an :t:`integer literal` in base 8.
+.. glossary-entry:: octal literal
+   :glossary-dp: fls_q47u2zq6clon
+   
+   :glossary:
+     :dp:`fls_pf4341vnqiin`
+     An :dt:`octal literal` is an :t:`integer literal` in base 8.
+     
+     :dp:`fls_8u0n6xu0mizm`
+     See ``OctalLiteral.``
+   :chapter:
+     :dp:`fls_4v7awnutbpoe`
+     An :t:`octal literal` is an :t:`integer literal` in base 8.
 
-:dp:`fls_f1e29aj0sqvl`
-An :t:`integer suffix` is a component of an :t:`integer literal` that specifies
-an explicit :t:`integer type`.
+.. glossary-entry:: integer suffix
+   :glossary-dp: fls_bhvh8qwqy8ve
+   
+   :glossary:
+     :dp:`fls_qazh8f8rs528`
+     An :dt:`integer suffix` is a component of an :t:`integer literal` that
+     specifies an explicit :t:`integer type`.
+     
+     :dp:`fls_jqagv350kw2m`
+     See ``IntegerSuffix.``
+   :chapter:
+     :dp:`fls_f1e29aj0sqvl`
+     An :t:`integer suffix` is a component of an :t:`integer literal` that specifies
+     an explicit :t:`integer type`.
 
-:dp:`fls_u83mffscqm6`
-A :t:`suffixed integer` is an :t:`integer literal` with an :t:`integer suffix`.
+.. glossary-entry:: suffixed integer
+   :glossary-dp: fls_bmbu11ycjpor
+   
+   :glossary:
+     :dp:`fls_ltzetxu3sq7k`
+     A :dt:`suffixed integer` is an :t:`integer literal` with an :t:`integer suffix`.
+   :chapter:
+     :dp:`fls_u83mffscqm6`
+     A :t:`suffixed integer` is an :t:`integer literal` with an :t:`integer suffix`.
 
-:dp:`fls_g10nuv14q4jn`
-An :t:`unsuffixed integer` is an :t:`integer literal` without an :t:`integer
-suffix`.
+.. glossary-entry:: unsuffixed integer
+   :glossary-dp: fls_d18nctsj8wu5
+   
+   :glossary:
+     :dp:`fls_t419z3zder0q`
+     An :dt:`unsuffixed integer` is an :t:`integer literal` without an
+     :t:`integer suffix`.
+   :chapter:
+     :dp:`fls_g10nuv14q4jn`
+     An :t:`unsuffixed integer` is an :t:`integer literal` without an :t:`integer
+     suffix`.
 
 :dp:`fls_hpkkvuj1z1ez`
 The :t:`type` of a :t:`suffixed integer` is determined by its :t:`integer
@@ -1036,18 +1292,54 @@ Float Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_rzi7oeqokd6e`
-A :t:`float literal` is a :t:`numeric literal` that denotes a fractional number.
+.. glossary-entry:: float literal
+   :glossary-dp: fls_achdyw3nbme3
+   
+   :glossary:
+     :dp:`fls_53o8dio9vpjh`
+     A :dt:`float literal` is a :t:`numeric literal` that denotes a fractional
+     number.
+     
+     :dp:`fls_hqeaakhsqxok`
+     See :s:`FloatLiteral`.
+   :chapter:
+     :dp:`fls_rzi7oeqokd6e`
+     A :t:`float literal` is a :t:`numeric literal` that denotes a fractional number.
 
-:dp:`fls_2ru1zyrykd37`
-A :t:`float suffix` is a component of a :t:`float literal` that specifies an
-explicit :t:`floating-point type`.
+.. glossary-entry:: float suffix
+   :glossary-dp: fls_wgylj1n4wrqe
+   
+   :glossary:
+     :dp:`fls_vka2z7frq9j8`
+     A :dt:`float suffix` is a component of a :t:`float literal` that specifies an
+     explicit :t:`floating-point type`.
+     
+     :dp:`fls_2k1ddqhsgxqk`
+     See :s:`FloatSuffix`.
+   :chapter:
+     :dp:`fls_2ru1zyrykd37`
+     A :t:`float suffix` is a component of a :t:`float literal` that specifies an
+     explicit :t:`floating-point type`.
 
-:dp:`fls_21mhnhplzam7`
-A :t:`suffixed float` is a :t:`float literal` with a :t:`float suffix`.
+.. glossary-entry:: suffixed float
+   :glossary-dp: fls_qar9v52smi9j
+   
+   :glossary:
+     :dp:`fls_7reb4jp0x1wf`
+     A :dt:`suffixed float` is a :t:`float literal` with a :t:`float suffix`.
+   :chapter:
+     :dp:`fls_21mhnhplzam7`
+     A :t:`suffixed float` is a :t:`float literal` with a :t:`float suffix`.
 
-:dp:`fls_drqh80k0sfkb`
-An :t:`unsuffixed float` is a :t:`float literal` without a :t:`float suffix`.
+.. glossary-entry:: unsuffixed float
+   :glossary-dp: fls_4ph9cact2scc
+   
+   :glossary:
+     :dp:`fls_7wp6y0xeqqve`
+     An :dt:`unsuffixed float` is a :t:`float literal` without a :t:`float suffix`.
+   :chapter:
+     :dp:`fls_drqh80k0sfkb`
+     An :t:`unsuffixed float` is a :t:`float literal` without a :t:`float suffix`.
 
 :dp:`fls_cbs7j9pjpusw`
 The :t:`type` of a :t:`suffixed float` is determined by the :t:`float suffix`
@@ -1125,9 +1417,20 @@ the range of U+D800 and U+DFFF, inclusive.
 
 .. rubric:: Legality Rules
 
-:dp:`fls_vag2oy4q7d4n`
-A :t:`character literal` is a :t:`literal` that denotes a fixed :t:`Unicode`
-character.
+.. glossary-entry:: character literal
+   :glossary-dp: fls_cfphqaml82ik
+   
+   :glossary:
+     :dp:`fls_8oah1cf8p0lb`
+     A :dt:`character literal` is a :t:`literal` that denotes a fixed :t:`Unicode`
+     character.
+     
+     :dp:`fls_sup0h5mvibzs`
+     See :s:`CharacterLiteral`.
+   :chapter:
+     :dp:`fls_vag2oy4q7d4n`
+     A :t:`character literal` is a :t:`literal` that denotes a fixed :t:`Unicode`
+     character.
 
 :dp:`fls_n8z6p6g564r2`
 The :t:`type` of a :t:`character literal` is :c:`char`.
@@ -1156,8 +1459,18 @@ String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_7fuctvtvdi7x`
-A :t:`string literal` is a :t:`literal` that consists of multiple characters.
+.. glossary-entry:: string literal
+   :glossary-dp: fls_cck2tmyzmpja
+   
+   :glossary:
+     :dp:`fls_dphk5br0ag35`
+     A :dt:`string literal` is a :t:`literal` that consists of multiple characters.
+     
+     :dp:`fls_z0t3ae24h5h5`
+     See :s:`StringLiteral`.
+   :chapter:
+     :dp:`fls_7fuctvtvdi7x`
+     A :t:`string literal` is a :t:`literal` that consists of multiple characters.
 
 :dp:`fls_NyiCpU2tzJlQ`
 The character sequence 0x0D 0x0A (carriage return, new line) is replaced by 0x0A
@@ -1191,9 +1504,20 @@ new line).
 
 .. rubric:: Legality Rules
 
-:dp:`fls_ycy5ee6orjx`
-A :t:`simple string literal` is a :t:`string literal` where the characters are
-:t:`Unicode` characters.
+.. glossary-entry:: simple string literal
+   :glossary-dp: fls_dpod2gc7a0u
+   
+   :glossary:
+     :dp:`fls_p6qyyptz8w8w`
+     A :dt:`simple string literal` is a :t:`string literal` where the characters are
+     :t:`Unicode` characters.
+     
+     :dp:`fls_osj0c4dmr6e0`
+     See :s:`SimpleStringLiteral`.
+   :chapter:
+     :dp:`fls_ycy5ee6orjx`
+     A :t:`simple string literal` is a :t:`string literal` where the characters are
+     :t:`Unicode` characters.
 
 :dp:`fls_6nt5kls21xes`
 The :t:`type` of a :t:`simple string literal` is ``&'static str``.
@@ -1233,9 +1557,20 @@ Raw String Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_36suwhbwmq1t`
-A :t:`raw string literal` is a :t:`simple string literal` that does not
-recognize :t:`[escaped character]s`.
+.. glossary-entry:: raw string literal
+   :glossary-dp: fls_echjohx6fjc
+   
+   :glossary:
+     :dp:`fls_48t4v316951j`
+     A :dt:`raw string literal` is a :t:`simple string literal` that does not
+     recognize :t:`[escaped character]s`.
+     
+     :dp:`fls_26ol7lrnux94`
+     See :s:`RawStringLiteral`.
+   :chapter:
+     :dp:`fls_36suwhbwmq1t`
+     A :t:`raw string literal` is a :t:`simple string literal` that does not
+     recognize :t:`[escaped character]s`.
 
 :dp:`fls_ms43w1towz40`
 The :t:`type` of a :t:`raw string literal` is ``&'static str``.
@@ -1263,9 +1598,20 @@ Boolean Literals
 
 .. rubric:: Legality Rules
 
-:dp:`fls_1lll64ftupjd`
-A :t:`boolean literal` is a :t:`literal` that denotes the truth :t:`[value]s` of
-logic and Boolean algebra.
+.. glossary-entry:: boolean literal
+   :glossary-dp: fls_oz4tdyp3rvm4
+   
+   :glossary:
+     :dp:`fls_5mrxdqh474vk`
+     A :dt:`boolean literal` is a :t:`literal` that denotes the truth :t:`[value]s`
+     of logic and Boolean algebra.
+     
+     :dp:`fls_i13qcchm9vkk`
+     See :s:`BooleanLiteral`.
+   :chapter:
+     :dp:`fls_1lll64ftupjd`
+     A :t:`boolean literal` is a :t:`literal` that denotes the truth :t:`[value]s` of
+     logic and Boolean algebra.
 
 :dp:`fls_pgngble3ilyx`
 The :t:`type` of a :t:`boolean literal` is :c:`bool`.
@@ -1322,44 +1668,144 @@ Comments
 
 .. rubric:: Legality Rules
 
-:dp:`fls_8obn3dtzpe5f`
-A :t:`comment` is a :t:`lexical element` that acts as an annotation or an
-explanation in program text.
+.. glossary-entry:: comment
+   :glossary-dp: fls_2moavfyeit0m
+   
+   :glossary:
+     :dp:`fls_3xhoz9f7xy1t`
+     A :dt:`comment` is a :t:`lexical element` that acts as an annotation or an
+     explanation in program text.
+     
+     :dp:`fls_pi32rhfqghma`
+     See :s:`Comment`.
+   :chapter:
+     :dp:`fls_8obn3dtzpe5f`
+     A :t:`comment` is a :t:`lexical element` that acts as an annotation or an
+     explanation in program text.
 
-:dp:`fls_qsbnl11be35s`
-A :t:`block comment` is a :t:`comment` that spans one or more :t:`[line]s`.
+.. glossary-entry:: block comment
+   :glossary-dp: fls_aa980vviqjue
+   
+   :glossary:
+     :dp:`fls_a0ejcfs7y5uy`
+     A :dt:`block comment` is a :t:`comment` that spans one or more :t:`[line]s`.
+     
+     :dp:`fls_21r4tblk8awi`
+     See :s:`BlockComment`.
+   :chapter:
+     :dp:`fls_qsbnl11be35s`
+     A :t:`block comment` is a :t:`comment` that spans one or more :t:`[line]s`.
 
-:dp:`fls_nayisy85kyq2`
-A :t:`line comment` is a :t:`comment` that spans exactly one :t:`line`.
+.. glossary-entry:: line comment
+   :glossary-dp: fls_k5ycqijslkxh
+   
+   :glossary:
+     :dp:`fls_3e7asah7lkqj`
+     A :dt:`line comment` is a :t:`comment` that spans exactly one :t:`line`.
+     
+     :dp:`fls_8j5j777dv2jm`
+     See :s:`LineComment`.
+   :chapter:
+     :dp:`fls_nayisy85kyq2`
+     A :t:`line comment` is a :t:`comment` that spans exactly one :t:`line`.
 
-:dp:`fls_k3hj30hjkdhw`
-An :t:`inner block doc` is a :t:`block comment` that applies to an enclosing
-:t:`non-[comment]` :t:`construct`.
+.. glossary-entry:: inner block doc
+   :glossary-dp: fls_chbp2je32okc
+   
+   :glossary:
+     :dp:`fls_f4nqkybpwj1a`
+     An :dt:`inner block doc` is a :t:`block comment` that applies to an enclosing
+     :t:`non-[comment]` :t:`construct`.
+     
+     :dp:`fls_lmpaznk198ga`
+     See :s:`InnerBlockDoc`.
+   :chapter:
+     :dp:`fls_k3hj30hjkdhw`
+     An :t:`inner block doc` is a :t:`block comment` that applies to an enclosing
+     :t:`non-[comment]` :t:`construct`.
 
-:dp:`fls_tspijl68lduc`
-An :t:`inner line doc` is a :t:`line comment` that applies to an enclosing
-:t:`non-[comment]` :t:`construct`.
+.. glossary-entry:: inner line doc
+   :glossary-dp: fls_xgm53126q9c4
+   
+   :glossary:
+     :dp:`fls_vtwavwjhgvlz`
+     An :dt:`inner line doc` is a :t:`line comment` that applies to an enclosing
+     :t:`non-[comment]` :t:`construct`.
+     
+     :dp:`fls_8cnikewkqs7`
+     See :s:`InnerLineDoc`.
+   :chapter:
+     :dp:`fls_tspijl68lduc`
+     An :t:`inner line doc` is a :t:`line comment` that applies to an enclosing
+     :t:`non-[comment]` :t:`construct`.
 
-:dp:`fls_KZp0yiFLTqxb`
-An :t:`inner doc comment` is either an :t:`inner block doc` or an
-:t:`inner line doc`.
+.. glossary-entry:: inner doc comment
+   :glossary-dp: fls_vR1ucGTBKjlH
+   
+   :glossary:
+     :dp:`fls_6KunKwZf9QaF`
+     An :dt:`inner doc comment` is either an :t:`inner block doc` or an
+     :t:`inner line doc`.
+   :chapter:
+     :dp:`fls_KZp0yiFLTqxb`
+     An :t:`inner doc comment` is either an :t:`inner block doc` or an
+     :t:`inner line doc`.
 
-:dp:`fls_63gzofa9ktic`
-An :t:`outer block doc` is a :t:`block comment` that applies to a subsequent
-:t:`non-[comment]` :t:`construct`.
+.. glossary-entry:: outer block doc
+   :glossary-dp: fls_toncretg92qh
+   
+   :glossary:
+     :dp:`fls_531ggn1f8f6u`
+     An :dt:`outer block doc` is a :t:`block comment` that applies to a subsequent
+     :t:`non-[comment]` :t:`construct`.
+     
+     :dp:`fls_ddy9a66tpytp`
+     See :s:`OuterBlockDoc`.
+   :chapter:
+     :dp:`fls_63gzofa9ktic`
+     An :t:`outer block doc` is a :t:`block comment` that applies to a subsequent
+     :t:`non-[comment]` :t:`construct`.
 
-:dp:`fls_scko7crha0um`
-An :t:`outer line doc` is a :t:`line comment` that applies to a subsequent
-:t:`non-[comment]` :t:`construct`.
+.. glossary-entry:: outer line doc
+   :glossary-dp: fls_eqjbv8sovvfl
+   
+   :glossary:
+     :dp:`fls_m3u30fu8uac3`
+     An :dt:`outer line doc` is a :t:`line comment` that applies to a subsequent
+     :t:`non-[comment]` :t:`construct`.
+     
+     :dp:`fls_1ppwidw7szk5`
+     See :s:`OuterLineDoc`.
+   :chapter:
+     :dp:`fls_scko7crha0um`
+     An :t:`outer line doc` is a :t:`line comment` that applies to a subsequent
+     :t:`non-[comment]` :t:`construct`.
 
-:dp:`fls_RYVL9KgaxKvl`
-An :t:`outer doc comment` is either an :t:`outer block doc` or an
-:t:`outer line doc`.
+.. glossary-entry:: outer doc comment
+   :glossary-dp: fls_PuTD100sWO5N
+   
+   :glossary:
+     :dp:`fls_mgSEUNUPcPBs`
+     An :dt:`outer doc comment` is either an :t:`outer block doc` or an
+     :t:`outer line doc`.
+   :chapter:
+     :dp:`fls_RYVL9KgaxKvl`
+     An :t:`outer doc comment` is either an :t:`outer block doc` or an
+     :t:`outer line doc`.
 
-:dp:`fls_7n6d3jx61ose`
-A :t:`doc comment` is a :t:`comment` class that includes :t:`[inner block
-doc]s`, :t:`[inner line doc]s`, :t:`[outer block doc]s`, and :t:`[outer line
-doc]s`.
+.. glossary-entry:: doc comment
+   :glossary-dp: fls_4nm1r57ntecm
+   
+   :glossary:
+     :dp:`fls_wkc1w2xk7ebh`
+     A :dt:`doc comment` is a :t:`comment` class that includes
+     :t:`[inner block doc]s`, :t:`[inner line doc]s`, :t:`[outer block doc]s`,
+     and :t:`[outer line doc]s`.
+   :chapter:
+     :dp:`fls_7n6d3jx61ose`
+     A :t:`doc comment` is a :t:`comment` class that includes :t:`[inner block
+     doc]s`, :t:`[inner line doc]s`, :t:`[outer block doc]s`, and :t:`[outer line
+     doc]s`.
 
 :dp:`fls_6fxcs17n4kw`
 Character 0x0D (carriage return) shall not appear in a :t:`comment`.
@@ -1436,8 +1882,18 @@ Keywords
 
 .. rubric:: Legality Rules
 
-:dp:`fls_dti0uu7rz81w`
-A :t:`keyword` is a word in program text that has special meaning.
+.. glossary-entry:: keyword
+   :glossary-dp: fls_yjs58mp5fkxz
+   
+   :glossary:
+     :dp:`fls_z3825koc9c1w`
+     A :dt:`keyword` is a word in program text that has special meaning.
+     
+     :dp:`fls_yvnf2mu4pr75`
+     See :s:`Keyword`.
+   :chapter:
+     :dp:`fls_dti0uu7rz81w`
+     A :t:`keyword` is a word in program text that has special meaning.
 
 :dp:`fls_sxg1o4oxql51`
 :t:`[Keyword]s` are case sensitive.
@@ -1493,8 +1949,18 @@ Strict Keywords
 
 .. rubric:: Legality Rules
 
-:dp:`fls_bsh7qsyvox21`
-A :t:`strict keyword` is a :t:`keyword` that always holds its special meaning.
+.. glossary-entry:: strict keyword
+   :glossary-dp: fls_bzhaq3q378ay
+   
+   :glossary:
+     :dp:`fls_hza9spr6behn`
+     A :dt:`strict keyword` is a :t:`keyword` that always holds its special meaning.
+     
+     :dp:`fls_67pzayd9qzzs`
+     See :s:`StrictKeyword`.
+   :chapter:
+     :dp:`fls_bsh7qsyvox21`
+     A :t:`strict keyword` is a :t:`keyword` that always holds its special meaning.
 
 .. _fls_cbsgp6k0qa82:
 
@@ -1522,8 +1988,18 @@ Reserved Keywords
 
 .. rubric:: Legality Rules
 
-:dp:`fls_w4b97ewwnql`
-A :t:`reserved keyword` is a :t:`keyword` that is not yet in use.
+.. glossary-entry:: reserved keyword
+   :glossary-dp: fls_x7yd6o4akrrg
+   
+   :glossary:
+     :dp:`fls_b67hj7fdbq4s`
+     A :dt:`reserved keyword` is a :t:`keyword` that is not yet in use.
+     
+     :dp:`fls_hp9iqdrkt0cg`
+     See :s:`ReservedKeyword`.
+   :chapter:
+     :dp:`fls_w4b97ewwnql`
+     A :t:`reserved keyword` is a :t:`keyword` that is not yet in use.
 
 .. _fls_9kjpxri0axvg:
 
@@ -1542,9 +2018,20 @@ Weak Keywords
 
 .. rubric:: Legality Rules
 
-:dp:`fls_bv87t1gvj7bz`
-A :t:`weak keyword` is a :t:`keyword` whose special meaning depends on the
-context.
+.. glossary-entry:: weak keyword
+   :glossary-dp: fls_iplp3gvfbcpw
+   
+   :glossary:
+     :dp:`fls_4hiznltf5wlu`
+     A :dt:`weak keyword` is a :t:`keyword` whose special meaning depends on the
+     context.
+     
+     :dp:`fls_psah573fsrig`
+     See :s:`WeakKeyword`.
+   :chapter:
+     :dp:`fls_bv87t1gvj7bz`
+     A :t:`weak keyword` is a :t:`keyword` whose special meaning depends on the
+     context.
 
 :dp:`fls_bl55g03jmayf`
 Word ``macro_rules`` acts as a :t:`keyword` only when used in the context of a
@@ -1560,4 +2047,3 @@ Word ``union`` acts as a :t:`keyword` only when used in the context of a
 
 :dp:`fls_g0JEluWqBpNc`
 Word ``safe`` acts as a :t:`keyword` only when used as a qualifier of :s:`FunctionDeclaration` or :s:`StaticDeclaration` in the context of a :s:`ExternalBlock`.
-
