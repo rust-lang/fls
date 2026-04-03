@@ -98,12 +98,6 @@ anonymous return type
 An :dt:`anonymous return type` is an :t:`impl trait type` ascribed to a
 :t:`function` return type.
 
-anonymous type parameter
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`anonymous type parameter` is an :t:`impl trait type` ascribed to a
-:t:`function parameter`.
-
 any configuration predicate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -383,11 +377,6 @@ async function
 ^^^^^^^^^^^^^^
 
 An :dt:`async function` is a :t:`function` subject to :t:`keyword` ``async``.
-
-atomic
-^^^^^^
-
-See :t:`atomic type`.
 
 atomic type
 ^^^^^^^^^^^
@@ -1046,11 +1035,6 @@ A :dt:`crate public modifier` is a :t:`visibility modifier` that grants a
 
 See :s:`CratePublicModifier`.
 
-crate root
-^^^^^^^^^^
-
-A :dt:`crate root` is an entry point into a :t:`crate`.
-
 crate root module
 ^^^^^^^^^^^^^^^^^
 
@@ -1387,11 +1371,6 @@ solidus), followed by the single character encoding of the special meaning
 character. For example, ``\t`` is the escaped character for 0x09 (horizontal
 tabulation).
 
-evaluated
-^^^^^^^^^
-
-See :t:`evaluation`.
-
 evaluation
 ^^^^^^^^^^
 
@@ -1405,11 +1384,6 @@ An :dt:`exclusive range pattern` is a :t:`range pattern` with both a
 :t:`range pattern low bound` and a :t:`range pattern high bound`.
 
 See :s:`ExclusiveRangePattern`.
-
-executed
-^^^^^^^^
-
-See :t:`execution`.
 
 execution
 ^^^^^^^^^
@@ -1513,11 +1487,6 @@ f64
 
 :dc:`f64` is a :t:`floating-point type` equivalent to the IEEE 754-2008
 binary64 :t:`type`.
-
-fat pointer
-^^^^^^^^^^^
-
-A :dt:`fat pointer` is a :t:`value` of a :t:`fat pointer type`.
 
 fat pointer type
 ^^^^^^^^^^^^^^^^
@@ -2016,12 +1985,6 @@ immutable static
 
 An :dt:`immutable static` is a :t:`static` whose :t:`value` cannot be modified.
 
-immutable variable
-^^^^^^^^^^^^^^^^^^
-
-An :dt:`immutable variable` is a :t:`variable` whose :t:`value` cannot be
-modified.
-
 impl header lifetime elision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2111,24 +2074,6 @@ An :dt:`inclusive range pattern` is a :t:`range pattern` with both a
 :t:`range pattern low bound` and a :t:`range pattern high bound`.
 
 See :s:`InclusiveRangePattern`.
-
-incomplete associated constant
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated constant` is an :t:`associated constant` without
-a :t:`constant initializer`.
-
-incomplete associated function
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated function` is an :t:`associated function` without
-a :t:`function body`.
-
-incomplete associated type
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated type` is an :t:`associated type` without an
-:t:`initialization type`.
 
 index expression
 ^^^^^^^^^^^^^^^^
@@ -2614,16 +2559,6 @@ local type
 
 A :dt:`local type` is a :t:`type` that is defined in the current :t:`crate`.
 
-local variable
-^^^^^^^^^^^^^^
-
-For :dt:`local variable`, see :t:`variable`.
-
-loop
-^^^^
-
-For :dt:`loop`, see :t:`loop expression`.
-
 loop body
 ^^^^^^^^^
 
@@ -3088,12 +3023,6 @@ object safe
 A :t:`trait` is :dt:`object safe` when it can be used as a
 :t:`trait object type`.
 
-object safety
-^^^^^^^^^^^^^
-
-:dt:`Object safety` is the process of determining whether a :t:`trait` can be
-used as a :t:`trait object type`.
-
 obsolete range pattern
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3339,12 +3268,6 @@ place expression context
 
 A :dt:`place expression context` is a :t:`construct` that may evaluate its
 operand as a memory location.
-
-plane
-^^^^^
-
-In :t:`Unicode`, a :dt:`plane` is a continuous group of 65,536
-:t:`[code point]s`.
 
 pointer
 ^^^^^^^
@@ -3672,11 +3595,6 @@ record struct type
 
 A :dt:`record struct type` is the :t:`type` of a :t:`record struct`.
 
-record struct value
-^^^^^^^^^^^^^^^^^^^
-
-A :dt:`record struct value` is a :t:`value` of a :t:`record struct type`.
-
 recursive type
 ^^^^^^^^^^^^^^
 
@@ -3845,11 +3763,6 @@ of times a :t:`macro repetition in matching` or a
 :t:`macro repetition in transcription` can be repeated.
 
 See :s:`MacroRepetitionOperator`.
-
-representation
-^^^^^^^^^^^^^^
-
-See :t:`type representation`.
 
 representation modifier
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -4777,11 +4690,6 @@ u128
 :dc:`u128` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
 2\ :sup:`128` - 1, all inclusive.
 
-unary operator
-^^^^^^^^^^^^^^
-
-A :dt:`unary operator` operates on one :t:`operand`.
-
 undefined behavior
 ^^^^^^^^^^^^^^^^^^
 
@@ -4887,16 +4795,6 @@ unit struct constant
 
 A :dt:`unit struct constant` is a :t:`constant` implicitly created by a
 :t:`unit struct`.
-
-unit struct type
-^^^^^^^^^^^^^^^^
-
-A :dt:`unit struct type` is the :t:`type` of a :t:`unit struct`.
-
-unit struct value
-^^^^^^^^^^^^^^^^^
-
-A :dt:`unit struct value` is a :t:`value` of a :t:`unit struct type`.
 
 unit tuple
 ^^^^^^^^^^
@@ -5167,11 +5065,6 @@ evaluate its :t:`loop body` as long as its :t:`subject let expression` yields a
 
 See :s:`WhileLetLoopExpression`.
 
-while loop
-^^^^^^^^^^
-
-For :dt:`while loop`, see :t:`while loop expression`.
-
 while loop expression
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5186,11 +5079,6 @@ whitespace string
 
 A :dt:`whitespace string` is a string that consists of one or more
 :t:`[whitespace character]s`.
-
-zero-sized type
-^^^^^^^^^^^^^^^
-
-A :dt:`zero-sized type` is a :t:`fixed sized type` with :t:`size` zero.
 
 zero-variant enum type
 ^^^^^^^^^^^^^^^^^^^^^^
