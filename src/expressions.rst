@@ -3562,6 +3562,9 @@ The :t:`evaluation` of a :t:`method call expression` proceeds as follows:
 Call Conformance
 ~~~~~~~~~~~~~~~~
 
+:dp:`fls_BBz4Iy7AeaU4`
+:dt:`Call conformance` measures the compatibility between a set of :t:`[argument operand]s` and a set of :t:`[function parameter]s` or :t:`[field]s`.
+
 :dp:`fls_tsn6SUUG9LvW`
 A :t:`method call expression` is equivalent to a :t:`call expression` where the
 :t:`call operand` is the resolved :t:`method` and the adjusted
