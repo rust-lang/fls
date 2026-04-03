@@ -4456,18 +4456,17 @@ thin pointer type
 A :dt:`thin pointer type` is an :t:`indirection type` that refers to a
 :t:`fixed sized type`.
 
+token
+^^^^^
+
+A :dt:`token` is a :t:`lexical element` that can be consumed by a :t:`macro`.
+
 token matching
 ^^^^^^^^^^^^^^
 
 :dt:`Token matching` is the process of consuming a :s:`TokenTree` in an attempt
 to fully satisfy a :t:`macro match` of a selected :t:`macro matcher` that
 belongs to a resolved :t:`declarative macro`.
-
-tokens
-^^^^^^
-
-:dt:`[Token]s` are a subset of :t:`[lexical element]s` consumed by
-:t:`[macro]s`.
 
 trait
 ^^^^^
