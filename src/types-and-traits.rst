@@ -1503,6 +1503,9 @@ share a common storage.
 :dp:`fls_njvdevz0xqc0`
 The :t:`size` of a :t:`recursive type` shall be finite.
 
+:dp:`fls_twC8XhwbI60x`
+A :dt:`thin pointer` is a :t:`value` of  an :t:`indirection type` that refers to a :t:`fixed sized type`.
+
 .. _fls_ohhsmifo0urd:
 
 Type Representation

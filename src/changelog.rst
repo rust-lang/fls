@@ -19,6 +19,16 @@ with the change that has been applied due to it.
    just the language changes that had an impact to the FLS. See the `release
    notes`_ for a full list of changes.
 
+FLS maintenance
+---------------
+
+- Paragraphs added or changed to ensure all glossary terms are also found in the main text:
+
+  - :p:`fls_BBz4Iy7AeaU4`
+  - :p:`fls_cxNAtLSLjqbQ`
+  - :p:`fls_hyi2jnp38v1n`
+  - :p:`fls_twC8XhwbI60x`
+
 Language changes in Rust 1.94.0
 -------------------------------
 
