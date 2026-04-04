@@ -1485,11 +1485,6 @@ A :dt:`field index` is the position of a :t:`field` within a
 
 See :s:`FieldIndex`.
 
-field list
-^^^^^^^^^^
-
-A :dt:`field list` is a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
-
 field resolution
 ^^^^^^^^^^^^^^^^
 
@@ -4714,12 +4709,12 @@ A :dt:`unique immutable reference` is an :t:`immutable reference` produced by
 unit enum variant
 ^^^^^^^^^^^^^^^^^
 
-A :dt:`unit enum variant` is an :t:`enum variant` without a :t:`field list`.
+A :dt:`unit enum variant` is an :t:`enum variant` without a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
 
 unit struct
 ^^^^^^^^^^^
 
-A :dt:`unit struct` is a :t:`struct` without a :t:`field list`.
+A :dt:`unit struct` is a :t:`struct` without a :s:`RecordStructFieldList` or a :s:`TupleStructFieldList`.
 
 See :s:`UnitStructDeclaration`.
 
