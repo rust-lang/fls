@@ -580,9 +580,7 @@ If a :t:`value` has a smaller size than the :t:`register` it is allocated in,
 then
 
 * :dp:`fls_drg7v8hxb5ca`
-  On RISC-V architectures, if the :t:`register` belongs to :t:`register class`
-  ``freg``, then :c:`f32` :t:`[value]s` are :t:`NaN-boxed <NaN-boxing>` in a
-  :c:`f64` :t:`value`.
+  On RISC-V architectures, if the :t:`register` belongs to :t:`register class` ``freg``, then :c:`f32` :t:`[value]s` are :t:`NaN-boxed <NaN-boxing>` in a :c:`f64` :t:`value`.
 
 * :dp:`fls_78gb8z1fyluc`
   Otherwise, for an :t:`input register`, the upper bits of the :t:`register`
