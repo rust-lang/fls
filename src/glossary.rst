@@ -46,11 +46,6 @@ active attribute
 An :dt:`active attribute` is an :t:`attribute` that is removed from the
 :t:`item` it decorates.
 
-addition assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`addition assignment`, see :t:`addition assignment expression`.
-
 addition assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -232,11 +227,6 @@ An :dt:`assignee operand` is the target :t:`operand` of an
 :t:`assignment expression`.
 
 See :s:`AssigneeOperand`.
-
-assignment
-^^^^^^^^^^
-
-See :t:`assignment expression`.
 
 assignment expression
 ^^^^^^^^^^^^^^^^^^^^^
@@ -489,11 +479,6 @@ binding scope
 
 A :dt:`binding scope` is a :t:`scope` for :t:`[binding]s`.
 
-bit and assignment
-^^^^^^^^^^^^^^^^^^
-
-For :dt:`bit and assignment`, see :t:`bit and assignment expression`.
-
 bit and assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -518,11 +503,6 @@ two :t:`[operand]s` using bit arithmetic.
 
 See :s:`BitExpression`.
 
-bit or assignment
-^^^^^^^^^^^^^^^^^
-
-For :dt:`bit or assignment`, see :t:`bit or assignment expression`.
-
 bit or assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -537,11 +517,6 @@ bit or expression
 A :dt:`bit or expression` is a :t:`bit expression` that uses bit or arithmetic.
 
 See :s:`BitOrExpression`.
-
-bit xor assignment
-^^^^^^^^^^^^^^^^^^
-
-For :dt:`bit xor assignment`, see :t:`bit xor assignment expression`.
 
 bit xor assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -854,11 +829,6 @@ compilation root
 ^^^^^^^^^^^^^^^^
 
 A :dt:`compilation root` is an input to a compilation performed by a tool.
-
-compound assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`compound assignment`, see :t:`compound assignment expression`.
 
 compound assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1195,11 +1165,6 @@ diverging type variable
 
 A :dt:`diverging type variable` is a :t:`type variable` that can refer to any
 :t:`type` and originates from a :t:`diverging expression`.
-
-division assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`division assignment`, see :t:`division assignment expression`.
 
 division assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2794,12 +2759,6 @@ multi segment path
 A :dt:`multi segment path` is a :t:`path` consisting of more than one
 :t:`path segment`.
 
-multiplication assignment
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`multiplication assignment`, see
-:t:`multiplication assignment expression`.
-
 multiplication assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3716,11 +3675,6 @@ A :dt:`register parameter modifier` is a substring that starts with character
 0x3A (colon), follows a :t:`register parameter`, and changes the formatting of
 the related :t:`register parameter`.
 
-remainder assignment
-^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`remainder assignment`, see :t:`remainder assignment expression`.
-
 remainder assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3921,11 +3875,6 @@ shared reference type
 A :dt:`shared reference type` is a :t:`reference type` not subject to
 :t:`keyword` ``mut``.
 
-shift left assignment
-^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`shift left assignment`, see :t:`shift left assignment expression`.
-
 shift left assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3941,11 +3890,6 @@ A :dt:`shift left expression` is a :t:`bit expression` that uses bit shift left
 arithmetic.
 
 See :s:`ShiftLeftExpression`.
-
-shift right assignment
-^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`shift right assignment`, see :t:`shift right assignment expression`.
 
 shift right assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -4241,11 +4185,6 @@ subpattern
 ^^^^^^^^^^
 
 A :dt:`subpattern` is a :t:`pattern` nested within another :t:`pattern`.
-
-subtraction assignment
-^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`subtraction assignment`, see :t:`subtraction assignment`.
 
 subtraction assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

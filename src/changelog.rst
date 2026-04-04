@@ -29,6 +29,32 @@ FLS maintenance
   - :p:`fls_hyi2jnp38v1n`
   - :p:`fls_twC8XhwbI60x`
 
+- Paragraphs changed to avoid referencing indirect terms:
+
+  - :p:`fls_xmgcdw9yhb55`
+  - :p:`fls_yeh6mvyvb4dp`
+  - :p:`fls_657knnsobdyu`
+  - :p:`fls_m942dwwmr2cl`
+  - :p:`fls_np33oqrz33mp`
+  - :p:`fls_atdpr8be2o2r`
+  - :p:`fls_fbgwb3pdfgz`
+  - :p:`fls_8tbxq95x06yt`
+  - :p:`fls_9oy9zo3x3fy3`
+  - :p:`fls_pdgj2xekdead`
+  - :p:`fls_4uoi6k8r7mvc`
+  - :p:`fls_fjaz4m90cagr`
+  - :p:`fls_eesn9kuylim`
+  - :p:`fls_ijfmnnrdlu8n`
+  - :p:`fls_6x7j9x354pkb`
+  - :p:`fls_h2cpbz2t74hy`
+  - :p:`fls_whj50spxz3bh`
+  - :p:`fls_d1cxq1zbt5fq`
+  - :p:`fls_48i245an2449`
+  - :p:`fls_69wr03rt0ali`
+  - :p:`fls_9d970yfwmj2d`
+  - :p:`fls_p9687v3xckps`
+  - :p:`fls_8j408kckzzud`
+
 Language changes in Rust 1.94.0
 -------------------------------
 

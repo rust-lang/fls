@@ -2606,60 +2606,60 @@ is used in the calculation of a :t:`compound assignment expression`.
 An :t:`assigned operand` shall denote a :t:`mutable assignee expression`.
 
 :dp:`fls_xmgcdw9yhb55`
-The :t:`type` of a :t:`compound assignment` is the :t:`unit type`.
+The :t:`type` of a :t:`compound assignment expression` is the :t:`unit type`.
 
 :dp:`fls_yeh6mvyvb4dp`
-The :t:`value` of a :t:`compound assignment` is the :t:`unit value`.
+The :t:`value` of a :t:`compound assignment expression` is the :t:`unit value`.
 
 :dp:`fls_657knnsobdyu`
-The :t:`type` of the :t:`assigned operand` of an :t:`addition assignment` shall
+The :t:`type` of the :t:`assigned operand` of an :t:`addition assignment expression` shall
 implement the :std:`core::ops::AddAssign` trait where the type of the right
 operand is the trait implementation type parameter.
 
 :dp:`fls_m942dwwmr2cl`
-The :t:`type` of the :t:`assigned operand` of a :t:`bit and assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`bit and assignment expression` shall
 implement the :std:`core::ops::BitAndAssign` :t:`trait` where the :t:`type` of
 the :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_np33oqrz33mp`
-The :t:`type` of the :t:`assigned operand` of a :t:`bit or assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`bit or assignment expression` shall
 implement the :std:`core::ops::BitOrAssign` :t:`trait` where the :t:`type` of
 the :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_atdpr8be2o2r`
-The :t:`type` of the :t:`assigned operand` of a :t:`bit xor assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`bit xor assignment expression` shall
 implement the :std:`core::ops::BitXorAssign` :t:`trait` where the :t:`type` of
 the :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_fbgwb3pdfgz`
-The :t:`type` of the :t:`assigned operand` of a :t:`division assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`division assignment expression` shall
 implement the :std:`core::ops::DivAssign` :t:`trait` where the :t:`type` of the
 :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_8tbxq95x06yt`
-The :t:`type` of the :t:`assigned operand` of a :t:`multiplication assignment`
+The :t:`type` of the :t:`assigned operand` of a :t:`multiplication assignment expression`
 shall implement the :std:`core::ops::MulAssign` :t:`trait` where the :t:`type`
 of the :t:`modifying operand` is the :t:`trait implementation`
 :t:`type parameter`.
 
 :dp:`fls_9oy9zo3x3fy3`
-The :t:`type` of the :t:`assigned operand` of a :t:`remainder assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`remainder assignment expression` shall
 implement the :std:`core::ops::RemAssign` :t:`trait` where the :t:`type` of the
 :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_pdgj2xekdead`
-The :t:`type` of the :t:`assigned operand` of a :t:`shift left assignment` shall
+The :t:`type` of the :t:`assigned operand` of a :t:`shift left assignment expression` shall
 implement the :std:`core::ops::ShlAssign` :t:`trait` where the :t:`type` of the
 :t:`modifying operand` is the :t:`trait implementation` :t:`type parameter`.
 
 :dp:`fls_4uoi6k8r7mvc`
-The :t:`type` of the :t:`assigned operand` of a :t:`shift right assignment`
+The :t:`type` of the :t:`assigned operand` of a :t:`shift right assignment expression`
 shall implement the :std:`core::ops::ShrAssign` :t:`trait` where the :t:`type`
 of the :t:`modifying operand` is the :t:`trait implementation`
 :t:`type parameter`.
 
 :dp:`fls_fjaz4m90cagr`
-The :t:`type` of the :t:`assigned operand` of a :t:`subtraction assignment`
+The :t:`type` of the :t:`assigned operand` of a :t:`subtraction assignment expression`
 shall implement the :std:`core::ops::SubAssign` :t:`trait` where the :t:`type`
 of the :t:`modifying operand` is the :t:`trait implementation`
 :t:`type parameter`.
@@ -2667,7 +2667,7 @@ of the :t:`modifying operand` is the :t:`trait implementation`
 .. rubric:: Dynamic Semantics
 
 :dp:`fls_eesn9kuylim`
-The :t:`evaluation` of a :t:`compound assignment` proceeds as follows:
+The :t:`evaluation` of a :t:`compound assignment expression` proceeds as follows:
 
 #. :dp:`fls_4nnqz4etisgw`
    If the :t:`[type]s` of both :t:`[operand]s` are :t:`[integer type]s` or :t:`[floating-point type]s`, then
@@ -2694,52 +2694,52 @@ The :t:`evaluation` of a :t:`compound assignment` proceeds as follows:
       The appropriate :t:`function` is invoked as indicated below.
 
 :dp:`fls_ijfmnnrdlu8n`
-For an :t:`addition assignment`,
+For an :t:`addition assignment expression`,
 ``core::ops::AddAssign::add_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_6x7j9x354pkb`
-For a :t:`bit and assignment`,
+For a :t:`bit and assignment expression`,
 ``core::ops::BitAndAssign::bitand_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_h2cpbz2t74hy`
-For a :t:`bit or assignment`,
+For a :t:`bit or assignment expression`,
 ``core::ops::BitOrAssign::bitor_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_whj50spxz3bh`
-For a :t:`bit xor assignment`,
+For a :t:`bit xor assignment expression`,
 ``core::ops::BitXorAssign::bitxor_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_d1cxq1zbt5fq`
-For a :t:`division assignment`,
+For a :t:`division assignment expression`,
 ``core::ops::DivAssign::div_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_48i245an2449`
-For a :t:`multiplication assignment`,
+For a :t:`multiplication assignment expression`,
 ``core::ops::MulAssign::mul_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_69wr03rt0ali`
-For a :t:`remainder assignment`,
+For a :t:`remainder assignment expression`,
 ``core::ops::RemAssign::rem_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_9d970yfwmj2d`
-For a :t:`shift left assignment`,
+For a :t:`shift left assignment expression`,
 ``core::ops::ShlAssign::shl_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_p9687v3xckps`
-For a :t:`shift right assignment`,
+For a :t:`shift right assignment expression`,
 ``core::ops::ShrAssign::shr_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
 :dp:`fls_8j408kckzzud`
-For a :t:`subtraction assignment`,
+For a :t:`subtraction assignment expression`,
 ``core::ops::SubAssign::sub_assign(&mut assigned_operand, modifying_operand)``
 is invoked.
 
