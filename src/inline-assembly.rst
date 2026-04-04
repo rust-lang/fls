@@ -594,6 +594,7 @@ If a :t:`register argument` has :t:`direction modifier` ``inout`` and an
 :t:`input-output register expression`, then the :t:`input register expression`
 and the :t:`output register expression` shall have the same :t:`type`.
 
+:dp:`fls_FG0EmVgrDUDq`
 :dt:`NaN-boxing` is a technique for encoding :t:`[value]s` using the low order bits of the mantissa of a 64-bit IEEE floating-point ``NaN``.
 
 .. _fls_hejgghwzblf:
