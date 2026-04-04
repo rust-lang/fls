@@ -716,9 +716,7 @@ See :s:`CStringLiteral`.
 Call conformance
 ^^^^^^^^^^^^^^^^
 
-:dt:`Call conformance` measures the compatibility between a set of
-:t:`[argument operand]s` and a set if :t:`[function parameter]s` or
-:t:`[field]s`.
+:dt:`Call conformance` measures the compatibility between a set of :t:`[argument operand]s` and a set of :t:`[function parameter]s` or :t:`[field]s`.
 
 call expression
 ^^^^^^^^^^^^^^^
@@ -977,8 +975,7 @@ into a :t:`constant`.
 constrain
 ^^^^^^^^^
 
-A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if
-it makes the :t:`[implementation]'s` applicability more narrow.
+A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if it makes the applicability of the :t:`implementation` more narrow.
 
 construct
 ^^^^^^^^^
