@@ -4358,13 +4358,7 @@ A :dt:`textual type` is a :t:`type` class that includes type :c:`char` and type
 thin pointer
 ^^^^^^^^^^^^
 
-A :dt:`thin pointer` is a :t:`value` of a :t:`thin pointer type`.
-
-thin pointer type
-^^^^^^^^^^^^^^^^^
-
-A :dt:`thin pointer type` is an :t:`indirection type` that refers to a
-:t:`fixed sized type`.
+A :dt:`thin pointer` is a :t:`value` of  an :t:`indirection type` that refers to a :t:`fixed sized type`.
 
 token
 ^^^^^
