@@ -88,7 +88,7 @@ restrictions:
 
 * :dp:`fls_kv533rntni1x`
   Any two :t:`[binding]s` with the same name in the two :t:`[pattern-without-alternation]s` shall have
-  :t:`[unifiable type]s` and shall have the same :t:`[binding mode]s`.
+  :t:`unifiable types` and shall have the same :t:`[binding mode]s`.
 
 .. _fls_uh76pw6ykd57:
 
