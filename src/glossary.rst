@@ -4655,7 +4655,7 @@ For :dt:`unifiable`, see :t:`unify`.
 unifiable types
 ^^^^^^^^^^^^^^^
 
-Two :t:`[type]s` that :t:`unify` are said to be :dt:`[unifiable type]s`.
+Two :t:`[type]s` that :t:`unify` are said to be :dt:`unifiable types`.
 
 unified type
 ^^^^^^^^^^^^

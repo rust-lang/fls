@@ -1764,7 +1764,7 @@ ranges, and structures of both :t:`[type]s` are compatible according to the
 rules detailed below.
 
 :dp:`fls_aie0tr62vhw5`
-Two types that :t:`unify` are said to be :t:`[unifiable type]s`.
+Two types that :t:`unify` are said to be :t:`unifiable types`.
 
 :dp:`fls_3U7Ue6Xzuv9M`
 :t:`Type unification` is a symmetric operation. If :t:`type` ``A`` unifies
