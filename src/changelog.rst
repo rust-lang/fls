@@ -28,6 +28,8 @@ FLS maintenance
   - :p:`fls_cxNAtLSLjqbQ`
   - :p:`fls_hyi2jnp38v1n`
   - :p:`fls_twC8XhwbI60x`
+  - :p:`fls_9bp4cKSfW9A0`
+  - :p:`fls_Odh6Z7ivD1U4`
 
 - Paragraphs changed to avoid referencing indirect terms:
 
