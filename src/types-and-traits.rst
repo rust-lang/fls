@@ -696,6 +696,9 @@ It is a static error if the :t:`value` of a :t:`discriminant` exceeds the
 maximum :t:`value` of the :t:`type` of the :t:`expression` of a :t:`discriminant
 initializer`.
 
+:dp:`fls_Odh6Z7ivD1U4`
+A :dt:`unit enum variant` is an :t:`enum variant` without a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
+
 .. rubric:: Undefined Behavior
 
 :dp:`fls_f046du2fkgr6`
@@ -777,6 +780,9 @@ the :s:`RecordStructFieldList`.
 If the :t:`type` of a :t:`tuple struct field` is a :t:`dynamically sized type`,
 then the :t:`tuple struct field` shall be the last :t:`tuple struct field` in
 the :s:`TupleStructFieldList`.
+
+:dp:`fls_9bp4cKSfW9A0`
+A :dt:`unit struct` is a :t:`struct` without a :s:`RecordStructFieldList` or a :s:`TupleStructFieldList`.
 
 .. rubric:: Examples
 
@@ -1503,6 +1509,9 @@ share a common storage.
 :dp:`fls_njvdevz0xqc0`
 The :t:`size` of a :t:`recursive type` shall be finite.
 
+:dp:`fls_twC8XhwbI60x`
+A :dt:`thin pointer` is a :t:`value` of  an :t:`indirection type` that refers to a :t:`fixed sized type`.
+
 .. _fls_ohhsmifo0urd:
 
 Type Representation
@@ -1755,7 +1764,7 @@ ranges, and structures of both :t:`[type]s` are compatible according to the
 rules detailed below.
 
 :dp:`fls_aie0tr62vhw5`
-Two types that :t:`unify` are said to be :t:`[unifiable type]s`.
+Two types that :t:`unify` are said to be :t:`unifiable types`.
 
 :dp:`fls_3U7Ue6Xzuv9M`
 :t:`Type unification` is a symmetric operation. If :t:`type` ``A`` unifies
