@@ -36,6 +36,13 @@ Language changes in Rust 1.95.0
 - `Const blocks are no longer evaluated to determine if expressions involving fallible operations can implicitly be constant-promoted <https://github.com/rust-lang/rust/pull/150557>`_
 - `Make operational semantics of pattern matching independent of crate and module <https://github.com/rust-lang/rust/pull/150681>`_
 
+FLS corrections
+---------------
+
+Changed paragraph: :p:`fls_1941wid94hlg`
+
+New paragraph: :p:`fls_CSuxTkwR96j9`
+
 Language changes in Rust 1.94.0
 -------------------------------
 
