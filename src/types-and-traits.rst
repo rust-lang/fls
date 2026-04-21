@@ -929,7 +929,10 @@ A :t:`function item type` is coercible to a :t:`function pointer type`.
 A :t:`function item type` implements the :std:`core::clone::Clone` :t:`trait`, the :std:`core::marker::Copy` :t:`trait`, the :std:`core::marker::Send` :t:`trait`, and the :std:`core::marker::Sync` :t:`trait`.
 
 :dp:`fls_CSuxTkwR96j9`
-A :t:`function item type` implements the :std:`core::ops::Fn` :t:`trait`, the :std:`core::ops::FnMut` :t:`trait`, the :std:`core::ops::FnOnce` :t:`trait`, unless it is an :t:`unsafe function`, unless it has :t:`attribute` :c:`target_feature`, or unless it does not have a :t:`Rust ABI`.
+A :t:`function item type` implements the :std:`core::ops::Fn` :t:`trait`, the :std:`core::ops::FnMut` :t:`trait`, the :std:`core::ops::FnOnce` :t:`trait`, unless the corresponding :t:`function`
+- is an :t:`unsafe function`, or
+- has :t:`attribute` :c:`target_feature`, or
+- does not have a :t:`Rust ABI`.
 
 .. _fls_3i4ou0dq64ny:
 
