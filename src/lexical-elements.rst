@@ -1332,6 +1332,12 @@ A :t:`block comment` is a :t:`comment` that spans one or more :t:`[line]s`.
 :dp:`fls_nayisy85kyq2`
 A :t:`line comment` is a :t:`comment` that spans exactly one :t:`line`.
 
+:dp:`fls_5SVthCNZBcVS`
+A :dt:`syntactic category` is a nonterminal in the Backus-Naur Form grammar definition of the Rust programming language.
+
+:dp:`fls_SonodAQVL5J4`
+A :dt:`construct` is a piece of program text that is an instance of a :t:`syntactic category`.
+
 :dp:`fls_k3hj30hjkdhw`
 An :t:`inner block doc` is a :t:`block comment` that applies to an enclosing
 :t:`non-[comment]` :t:`construct`.
@@ -1560,4 +1566,3 @@ Word ``union`` acts as a :t:`keyword` only when used in the context of a
 
 :dp:`fls_g0JEluWqBpNc`
 Word ``safe`` acts as a :t:`keyword` only when used as a qualifier of :s:`FunctionDeclaration` or :s:`StaticDeclaration` in the context of a :s:`ExternalBlock`.
-
