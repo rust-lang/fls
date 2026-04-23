@@ -5181,7 +5181,7 @@ A :dt:`place projection` is a :t:`field access expression`, :t:`dereference`, :t
 A :dt:`capture path` is a sequence starting with a :t:`variable` from the :t:`capturing environment` followed by zero or more :t:`[place projection]s` from that :t:`variable`.
 
 :dp:`fls_TbfUxVf8PKPs`
-A :t:`closure expression` :t:`[borrow]s` or :t:`moves <by move>` the :t:`capture path`, which may be truncated based on these rules:
+A :t:`closure expression` :t:`[borrow]s` or :t:`moves <by move>` the :t:`capture path`, as follows:
 
 - :dp:`fls_4TESOxGpEY2h`
   When a :t:`capture path` and an ancestor :t:`capture path` are both :t:`captured <capturing>`, the ancestor :t:`capture path` is captured with the highest :t:`capture mode` among the two :t:`[capture path]s`.
