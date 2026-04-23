@@ -57,6 +57,10 @@ FLS maintenance
   - :p:`fls_9d970yfwmj2d`
   - :p:`fls_p9687v3xckps`
   - :p:`fls_8j408kckzzud`
+  - :p:`fls_mdejdc0nNgyO`
+  - :p:`fls_WUCvCauUCmsD`
+  - :p:`fls_5SVthCNZBcVS`
+  - :p:`fls_SonodAQVL5J4`
 
 Language changes in Rust 1.94.0
 -------------------------------

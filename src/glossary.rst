@@ -1242,18 +1242,6 @@ a :t:`slice type`.
 
 See :s:`ElementType`.
 
-elided
-^^^^^^
-
-For :dt:`elided`, see :t:`elided lifetime`.
-
-elided lifetime
-^^^^^^^^^^^^^^^
-
-An :dt:`elided lifetime` is either an :t:`unnamed lifetime` or a :t:`lifetime`
-that has been explicitly omitted from a :t:`function signature` or an
-:t:`implementation`.
-
 else expression
 ^^^^^^^^^^^^^^^
 
@@ -4743,12 +4731,6 @@ unnamed constant
 ^^^^^^^^^^^^^^^^
 
 An :dt:`unnamed constant` is a :t:`constant` declared with character 0x5F (low
-line).
-
-unnamed lifetime
-^^^^^^^^^^^^^^^^
-
-An :dt:`unnamed lifetime` is a :t:`lifetime` declared with character 0x5F (low
 line).
 
 unqualified path expression

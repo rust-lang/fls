@@ -463,7 +463,7 @@ of the :t:`type parameter`.
   Any remaining :t:`[generic parameter]s` without corresponding conformant
   :t:`[generic argument]s` are :t:`[constant parameter]s` with
   :t:`[constant parameter initializer]s`, :t:`[lifetime parameter]s` with
-  either inferred :t:`[lifetime argument]s` or :t:`[elided lifetime]s`,
+  either inferred :t:`[lifetime argument]s` or :t:`elided lifetimes <lifetime elision>`,
   :t:`[type parameter]s` with :t:`[type parameter initializer]s` or inferred
   :t:`[type argument]s`, and
 

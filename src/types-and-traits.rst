@@ -767,6 +767,12 @@ Struct Types
 A :t:`struct type` is an :t:`abstract data type` that is a product of other
 :t:`[type]s`.
 
+:dp:`fls_mdejdc0nNgyO`
+A :dt:`record struct type` is the :t:`type` of a :t:`record struct`.
+
+:dp:`fls_WUCvCauUCmsD`
+A :dt:`record struct field` is a :t:`field` of a :t:`record struct type`.
+
 :dp:`fls_r885av95eivp`
 The :t:`name` of a :t:`record struct field` shall be unique within the
 related :s:`RecordStructDeclaration`.
@@ -3314,17 +3320,17 @@ An :dt:`output lifetime` is one of the following :t:`[lifetime]s`:
 :t:`Lifetime elision` proceeds as follows:
 
 #. :dp:`fls_1j204m1wy333`
-   Each :t:`elided` :t:`input lifetime` is a distinct :t:`lifetime parameter` in
+   Each :t:`elided <lifetime elision>` :t:`input lifetime` is a distinct :t:`lifetime parameter` in
    its related :t:`construct`.
 
 #. :dp:`fls_6km3cbchuxr2`
    If a :t:`construct` has exactly one :t:`input lifetime`, then that
-   :t:`lifetime` is assigned to all :t:`elided` :t:`[output lifetime]s`.
+   :t:`lifetime` is assigned to all :t:`elided <lifetime elision>` :t:`[output lifetime]s`.
 
 #. :dp:`fls_crb6m6b3cdwh`
    If a :t:`function` has a :t:`self parameter` with exactly 1
    :t:`self input lifetime`, then the :t:`lifetime` of the
-   :t:`self input lifetime` is assigned to all :t:`elided`
+   :t:`self input lifetime` is assigned to all :t:`elided <lifetime elision>`
    :t:`[output lifetime]s`.
 
 #. :dp:`fls_ac9tdlfwp5et`
@@ -3340,7 +3346,7 @@ Given :t:`function` ``f`` of the form
    fn f <'a, 'b, T: ToCStr>(&'a mut self, args: &'b [T]) -> &'a mut Command;
 
 :dp:`fls_vcmmkp9uruhr`
-its :t:`lifetime` :t:`elided` form is
+its :t:`lifetime` :t:`elided <lifetime elision>` form is
 
 .. code-block:: rust
 
@@ -3358,16 +3364,16 @@ Static Lifetime Elision
 the :t:`type ascription` of :t:`[constant]s` and :t:`[static]s`.
 
 :dp:`fls_8irr97rZWfSC`
-An :t:`elided` :t:`lifetime` of a :t:`reference type` or :t:`path` in the
+An :t:`elided <lifetime elision>` :t:`lifetime` of a :t:`reference type` or :t:`path` in the
 :t:`type specification` of a :t:`constant` or :t:`static` is inferred to be the
 ``'static'`` lifetime.
 
 :dp:`fls_37udexenqv3p`
 The :t:`lifetime` of an :t:`associated implementation constant` shall not be
-:t:`elided`.
+:t:`elided <lifetime elision>`.
 
 :dp:`fls_xi86he5vvill`
-The :t:`lifetime` of an :t:`associated trait constant` shall not be :t:`elided`.
+The :t:`lifetime` of an :t:`associated trait constant` shall not be :t:`elided <lifetime elision>`.
 
 .. rubric:: Examples
 
@@ -3379,7 +3385,7 @@ Given :t:`static` ``S`` of the form
    static S: &'static [&'static usize] = &[];
 
 :dp:`fls_f3yZ31dRuTPG`
-its :t:`lifetime` :t:`elided` form is
+its :t:`lifetime` :t:`elided <lifetime elision>` form is
 
 .. code-block:: rust
 
@@ -3397,12 +3403,12 @@ Trait Object Lifetime Elision
 applies to :t:`[trait object type]s`.
 
 :dp:`fls_URl9CeIVsiWs`
-An :t:`elided` :t:`lifetime` of a :t:`trait object type` is inferred as follows:
+An :t:`elided <lifetime elision>` :t:`lifetime` of a :t:`trait object type` is inferred as follows:
 
 * :dp:`fls_SHhw6lYHeYyQ`
   If the :t:`trait object type` is used as the :t:`type specification` of a
   :t:`reference type`, then the :t:`lifetime` of the :t:`reference type` is the
-  :t:`elided` :t:`lifetime`,
+  :t:`elided <lifetime elision>` :t:`lifetime`,
 
 * :dp:`fls_lC2rwdPLRwaf`
   If the :t:`trait object type` is used as a :t:`generic argument` and
@@ -3410,7 +3416,7 @@ An :t:`elided` :t:`lifetime` of a :t:`trait object type` is inferred as follows:
   * :dp:`fls_e36Hh4oJvfhv`
     if the corresponding :t:`generic parameter` has exactly one
     :t:`lifetime bound`, then the :t:`lifetime` of that :t:`bound` is the
-    :t:`elided` :t:`lifetime`,
+    :t:`elided <lifetime elision>` :t:`lifetime`,
 
   * :dp:`fls_ptejalcnIQtm`
     Otherwise it is a static error to infer the :t:`lifetime` :t:`bound`.
@@ -3422,8 +3428,8 @@ An :t:`elided` :t:`lifetime` of a :t:`trait object type` is inferred as follows:
 
 * :dp:`fls_JhmQpUoExiNZ`
   If the :t:`trait` of the :t:`trait object type` has no :t:`[lifetime bound]s`
-  specified, then the :t:`elided` :t:`lifetime` is the ``'static``
-  :t:`lifetime` unless it is :t:`elided` in :t:`[expression]s` where it is
+  specified, then the :t:`elided <lifetime elision>` :t:`lifetime` is the ``'static``
+  :t:`lifetime` unless it is :t:`elided <lifetime elision>` in :t:`[expression]s` where it is
   instead inferred,
 
 * :dp:`fls_cglZigwAnASl`
@@ -3439,7 +3445,7 @@ Given :t:`type alias` ``T`` of the form
    type T<'a> = &'a dyn Trait;
 
 :dp:`fls_YPesUZqYHVUX`
-its :t:`lifetime` :t:`elided` form is
+its :t:`lifetime` :t:`elided <lifetime elision>` form is
 
 .. code-block:: rust
 
@@ -3481,7 +3487,7 @@ Given an :t:`implementation` of the form
     impl Trait<&u8, Strukt<'_>> for &i32 {}
 
 :dp:`fls_w0vwdmO8qV9j`
-its :t:`lifetime` :t:`elided` form is
+its :t:`lifetime` :t:`elided <lifetime elision>` form is
 
 .. code-block:: rust
 
