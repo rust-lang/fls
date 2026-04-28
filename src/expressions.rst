@@ -5189,47 +5189,47 @@ A :t:`closure expression` :t:`[borrow]s` or :t:`moves <by move>` the :t:`capture
 - :dp:`fls_eNkZWskzznW6`
   The :t:`capture path` is truncated at the rightmost :t:`dereference` in the :t:`capture path` if the :t:`dereference` is applied to a :t:`shared reference`.
 
+:dp:`fls_Vt9C9mKxHOwo`
+A :t:`place` is :t:`captured` by :t:`immutable borrow` if its :t:`discriminant` is read by :t:`pattern matching`.
+
 :dp:`fls_v8IFXHJnXhez`
-A :t:`place` is not captured when an :t:`underscore expression` is used to bind it.
+A :t:`place` is not :t:`captured` when an :t:`underscore expression` is used to bind it.
 
 :dp:`fls_gujpU7p5n9Zx`
-A :t:`place` is not captured by destructuring tuples, structs, and single-variant enums.
+A :t:`place` is not :t:`captured` by destructuring :t:`[struct]s`, :t:`[tuple]s`, and :t:`[enum]s` with a single :t:`enum variant`.
 
 :dp:`fls_t8tFLUg8O83Q`
-A :t:`place` is not captured by being matched against a :t:`rest pattern`.
+A :t:`place` is not :t:`captured` by being matched against a :t:`rest pattern`.
 
 :dp:`fls_RaONmCLH2KGM`
-The entire :t:`slice` or :t:`array` is always captured even if used with :t:`underscore expression`, :t:`indexing <index expression>`, or :t:`slicing <slice>`.
-
-:dp:`fls_Vt9C9mKxHOwo`
-A :t:`place` is captured by :t:`immutable borrow` if its :t:`discriminant` is read by :t:`pattern matching`.
+An :t:`array` or :t:`slice` is :t:`captured` whole.
 
 :dp:`fls_Fs12dmznjsMf`
-Matching against a variant of an enum that has more than one variant captures the :t:`place` by :t:`immutable borrow`.
+Matching against an :t:`enum variant` of an :t:`enum` with more than one :t:`[enum variant]s` :t:`captures` the :t:`place` by :t:`immutable borrow`.
 
 :dp:`fls_7EXHdE2eOVek`
-Matching against a variant of an enum that has one variant does not capture the place, unless it is marked with :t:`attribute` ``non_exhaustive``, in which case the place is captured by :t:`immutable borrow`.
+Matching against an :t:`enum variant` of an :t:`enum` with one :t:`enum variant` does not :t:`capture` the :t:`place`, unless it is subject to :t:`attribute` ``non_exhaustive``, in which case the :t:`place` is captured by :t:`immutable borrow`.
 
 :dp:`fls_iLH8X2U4ADHb`
-Matching against a :t:`range pattern` captures the place by :t:`immutable borrow`.
+Matching against a :t:`range pattern` :t:`captures` the :t:`place` by :t:`immutable borrow`.
 
 :dp:`fls_HMJUXHrvOmPl`
-Matching a :t:`slice` against a slice :t:`pattern`, other than one with only a single rest pattern ``[..]``, captures the slice by :t:`immutable borrow`.
+Matching a :t:`slice` against a :t:`slice pattern`, other than one with only a single :t:`rest pattern`, :t:`captures` the :t:`slice` by :t:`immutable borrow`.
 
 :dp:`fls_Gj1znNpthHY6`
-Matching an array against a slice pattern does not capture the :t:`place`.
+Matching an :t:`array` against a :t:`slice pattern` does not :t:`capture` the :t:`place`.
 
 :dp:`fls_IFyJvb6mlFU4`
-Move closures can only capture the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`reference`.
+A :t:`closure expression` subject to keyword ``move`` :t:`captures` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`reference`.
 
 :dp:`fls_7NEEJgKSpQQ8`
-Closures will only capture the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`raw pointer`.
+A :t:`closure expression` :t:`captures` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`raw pointer`.
 
 :dp:`fls_kYFd3p06pWWV`
-Closures will only capture the prefix of a :t:`capture path` of a :t:`union` that runs up to the union itself.
+A :t:`closure expression` :t:`captures` the prefix of a :t:`capture path` of a :t:`union` that runs up to the :t:`union` itself.
 
 :dp:`fls_fATMTNUOHsfb`
-Closures will only capture the prefix of the :t:`capture path` that runs up to, but not including, the first :t:`field access expression` into a structure that uses the :t:`attribute` ``packed`` representation, in unaligned :t:`[field]s` in a struct.
+A :t:`closure expression` :t:`captures` the prefix of the :t:`capture path` that runs up to, but not including, the first :t:`field access expression` into a :t:`struct` that uses the :t:`attribute` :c:`repr` with modifier ``packed``, in unaligned :t:`[field]s` in a :t:`struct`.
 
 :dp:`fls_fITor3jpmgrl`
 Taking the address of an unaligned :t:`field` captures the entire struct.
