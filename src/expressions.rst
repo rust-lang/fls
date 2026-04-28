@@ -5205,31 +5205,31 @@ A :t:`place` is not :t:`captured` by being matched against a :t:`rest pattern`.
 An :t:`array` or :t:`slice` is :t:`captured` whole.
 
 :dp:`fls_Fs12dmznjsMf`
-Matching against an :t:`enum variant` of an :t:`enum` with more than one :t:`[enum variant]s` :t:`captures` the :t:`place` by :t:`immutable borrow`.
+Matching against an :t:`enum variant` of an :t:`enum` with more than one :t:`[enum variant]s` :t:`captures <capturing>` the :t:`place` by :t:`immutable borrow`.
 
 :dp:`fls_7EXHdE2eOVek`
-Matching against an :t:`enum variant` of an :t:`enum` with one :t:`enum variant` does not :t:`capture` the :t:`place`, unless it is subject to :t:`attribute` ``non_exhaustive``, in which case the :t:`place` is captured by :t:`immutable borrow`.
+Matching against an :t:`enum variant` of an :t:`enum` with one :t:`enum variant` does not :t:`capture <capturing>` the :t:`place`, unless it is subject to :t:`attribute` ``non_exhaustive``, in which case the :t:`place` is captured by :t:`immutable borrow`.
 
 :dp:`fls_iLH8X2U4ADHb`
-Matching against a :t:`range pattern` :t:`captures` the :t:`place` by :t:`immutable borrow`.
+Matching against a :t:`range pattern` :t:`captures <capturing>` the :t:`place` by :t:`immutable borrow`.
 
 :dp:`fls_HMJUXHrvOmPl`
-Matching a :t:`slice` against a :t:`slice pattern`, other than one with only a single :t:`rest pattern`, :t:`captures` the :t:`slice` by :t:`immutable borrow`.
+Matching a :t:`slice` against a :t:`slice pattern`, other than one with only a single :t:`rest pattern`, :t:`captures <capturing>` the :t:`slice` by :t:`immutable borrow`.
 
 :dp:`fls_Gj1znNpthHY6`
-Matching an :t:`array` against a :t:`slice pattern` does not :t:`capture` the :t:`place`.
+Matching an :t:`array` against a :t:`slice pattern` does not :t:`capture <capturing>` the :t:`place`.
 
 :dp:`fls_IFyJvb6mlFU4`
-A :t:`closure expression` subject to keyword ``move`` :t:`captures` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`reference`.
+A :t:`closure expression` subject to keyword ``move`` :t:`captures <capturing>` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`reference`.
 
 :dp:`fls_7NEEJgKSpQQ8`
-A :t:`closure expression` :t:`captures` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`raw pointer`.
+A :t:`closure expression` :t:`captures <capturing>` the prefix of a :t:`capture path` that runs up to, but not including, the first :t:`dereference` of a :t:`raw pointer`.
 
 :dp:`fls_kYFd3p06pWWV`
-A :t:`closure expression` :t:`captures` the prefix of a :t:`capture path` of a :t:`union` that runs up to the :t:`union` itself.
+A :t:`closure expression` :t:`captures <capturing>` the prefix of a :t:`capture path` of a :t:`union` that runs up to the :t:`union` itself.
 
 :dp:`fls_fATMTNUOHsfb`
-A :t:`closure expression` :t:`captures` the prefix of the :t:`capture path` that runs up to, but not including, the first :t:`field access expression` into a :t:`struct` that uses the :t:`attribute` :c:`repr` with modifier ``packed``, in unaligned :t:`[field]s` in a :t:`struct`.
+A :t:`closure expression` :t:`captures <capturing>` the prefix of the :t:`capture path` that runs up to, but not including, the first :t:`field access expression` into a :t:`struct` that uses the :t:`attribute` :c:`repr` with modifier ``packed``, in unaligned :t:`[field]s` in a :t:`struct`.
 
 :dp:`fls_fITor3jpmgrl`
 Taking the address of an unaligned :t:`field` captures the entire struct.
