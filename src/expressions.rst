@@ -5193,7 +5193,7 @@ A :t:`closure expression` :t:`[borrow]s` or :t:`moves <by move>` the :t:`capture
 A :t:`place` is :t:`captured` by :t:`immutable borrow` if its :t:`discriminant` is read by :t:`pattern matching`.
 
 :dp:`fls_v8IFXHJnXhez`
-A :t:`place` is not :t:`captured` when an :t:`underscore expression` is used to bind it.
+A :t:`place` is not :t:`captured` when an :t:`underscore pattern` is used to bind it.
 
 :dp:`fls_gujpU7p5n9Zx`
 A :t:`place` is not :t:`captured` by destructuring :t:`[struct]s`, :t:`[tuple]s`, and :t:`[enum]s` with a single :t:`enum variant`.
