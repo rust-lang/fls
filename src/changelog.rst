@@ -23,6 +23,31 @@ Language changes in Rust 1.95.0
 -------------------------------
 
 - `Stabilize if let guards on match arms <https://github.com/rust-lang/rust/pull/141295>`_
+
+  Changed syntax: :s:`MatchArmGuard`
+
+  New syntax:
+
+  - :s:`MatchArmGuardChain`
+  - :s:`MatchArmGuardCondition`
+  - :s:`MatchArmGuardExpression`
+  - :s:`MatchArmGuardLetPattern`
+
+  New paragraphs:
+
+  - :p:`fls_UlxLrpyPlVmv`
+  - :p:`fls_XADcpJBUxSfv`
+  - :p:`fls_gfHe2Cy6WXsK`
+  - :p:`fls_QQep7FKA1EQX`
+  - :p:`fls_Wepy5R7FZQPU`
+  - :p:`fls_imEIc7PUUO1x`
+  - :p:`fls_fs4ZpXjt0Wqt`
+  - :p:`fls_DT4N2rr6wpvZ`
+  - :p:`fls_AAuyKfxLgJ43`
+  - :p:`fls_uCDQMkWx5OMS`
+
+  Removed paragraph: :p:`fls_sbtx1l6n2tp2`
+
 - `irrefutable_let_patterns lint no longer lints on let chains <https://github.com/rust-lang/rust/pull/146832>`_
 
   - Lints are outside the scope of the FLS.
