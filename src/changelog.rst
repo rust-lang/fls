@@ -66,6 +66,10 @@ Language changes in Rust 1.95.0
   - :p:`fls_kYFd3p06pWWV`
   - :p:`fls_fATMTNUOHsfb`
   - :p:`fls_fITor3jpmgrl`
+  - :p:`fls_UfvoShNTxVD2`
+  - :p:`fls_wAMHIDvLG0LM`
+  - :p:`fls_YuQxJCjneaW5`
+  - :p:`fls_nrTZ4mn6IJCl`
 
 FLS corrections
 ---------------
