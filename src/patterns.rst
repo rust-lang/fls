@@ -90,6 +90,18 @@ restrictions:
   Any two :t:`[binding]s` with the same name in the two :t:`[pattern-without-alternation]s` shall have
   :t:`[unifiable type]s` and shall have the same :t:`[binding mode]s`.
 
+:dp:`fls_UfvoShNTxVD2`
+:dt:`Pattern destructuring` is where :t:`[value]s` of :t:`[struct]s`, :t:`[enum]s`, and :t:`[tuple]s` are broken into :t:`[struct field]s`, :t:`[enum variant]s`, and :t:`[tuple field]s`, respectively.
+
+:dp:`fls_wAMHIDvLG0LM`
+In a pattern whose :t:`subject expression` is a :t:`struct type`, an :t:`underscore pattern` matches a single :t:`struct field`, and a :t:`rest pattern` matches the remaining fields.
+
+:dp:`fls_YuQxJCjneaW5`
+In a pattern whose :t:`subject expression` is an :t:`enum type`, an :t:`underscore pattern` matches a single :t:`enum variant`, and a :t:`rest pattern` matches the remaining variants.
+
+:dp:`fls_nrTZ4mn6IJCl`
+In a pattern whose :t:`subject expression` is a :t:`tuple type`, an :t:`underscore pattern` matches a single :t:`tuple field`, and a :t:`rest pattern` matches the remaining fields.
+
 .. _fls_uh76pw6ykd57:
 
 Refutability
