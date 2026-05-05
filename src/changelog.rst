@@ -178,6 +178,8 @@ FLS maintenance
   - :p:`fls_uqy5w9uc8gla`
   - :p:`fls_1941wid94hlg`
 
+- New section: :ref:`fls_buRbhu22Gfdu`
+
 - New paragraphs:
 
   - :p:`fls_CSuxTkwR96j9`
