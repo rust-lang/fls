@@ -44,6 +44,8 @@ Language changes in Rust 1.95.0
   - :p:`fls_33hfay24hx8u`
   - :p:`fls_uqy5w9uc8gla`
 
+  New section, which documents functionality that existed well before this release: :ref:`fls_buRbhu22Gfdu`
+
   New paragraphs, which mostly document behavior that existed before this release:
 
   - :p:`fls_rdDT7jsaOMbs`
