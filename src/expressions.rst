@@ -5378,7 +5378,7 @@ A :t:`place` is not :t:`captured` when an :t:`underscore pattern` is used to bin
 A :t:`place` is not :t:`captured` by using a :t:`rest pattern` when :t:`destructuring <pattern destructuring>` :t:`[struct]s`, :t:`[tuple]s`, and :t:`[enum]s` with a single :t:`enum variant`.
 
 :dp:`fls_t8tFLUg8O83Q`
-A :t:`place` is not :t:`captured` by being matched against a :t:`rest pattern`.
+A :t:`field` is not :t:`captured` by being matched against a :t:`rest pattern`.
 
 :dp:`fls_RaONmCLH2KGM`
 An :t:`array` or :t:`slice` is :t:`captured` whole.
