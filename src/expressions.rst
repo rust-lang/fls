@@ -5375,7 +5375,7 @@ A :t:`place` is :t:`captured` by :t:`immutable borrow` if its :t:`discriminant` 
 A :t:`place` is not :t:`captured` when an :t:`underscore pattern` is used to bind it.
 
 :dp:`fls_gujpU7p5n9Zx`
-A :t:`place` is not :t:`captured` by using a :t:`rest pattern` when destructuring :t:`[struct]s`, :t:`[tuple]s`, and :t:`[enum]s` with a single :t:`enum variant`.
+A :t:`place` is not :t:`captured` by using a :t:`rest pattern` when :t:`destructuring <pattern destructuring>` :t:`[struct]s`, :t:`[tuple]s`, and :t:`[enum]s` with a single :t:`enum variant`.
 
 :dp:`fls_t8tFLUg8O83Q`
 A :t:`place` is not :t:`captured` by being matched against a :t:`rest pattern`.
@@ -5411,7 +5411,7 @@ A :t:`closure expression` :t:`captures <capturing>` the prefix of a :t:`capture 
 A :t:`closure expression` :t:`captures <capturing>` the prefix of the :t:`capture path` that runs up to, but not including, the first :t:`field access expression` into a :t:`struct` that uses the :t:`attribute` :c:`repr` with modifier ``packed``, in unaligned :t:`[field]s` in a :t:`struct`.
 
 :dp:`fls_fITor3jpmgrl`
-Taking the address of an unaligned :t:`field` captures the entire struct.
+Taking the address of an unaligned :t:`field` :t:`captures <capturing>` the entire :t:`struct`.
 
 .. _fls_ZfIBiJMf8qE1:
 
