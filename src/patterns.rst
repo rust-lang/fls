@@ -93,15 +93,14 @@ restrictions:
 :dp:`fls_UfvoShNTxVD2`
 :dt:`Pattern destructuring` is where :t:`[value]s` of :t:`[enum]s`, :t:`[struct]s`, and :t:`[tuple]s` are broken into :t:`[enum variant]s`, :t:`[struct field]s`, and :t:`[tuple field]s`, respectively.
 
-:dp:`fls_wAMHIDvLG0LM`
-In a pattern whose :t:`subject expression` is a :t:`struct type`, an :t:`underscore pattern` matches a single :t:`struct field`, and a :t:`rest pattern` matches the remaining fields.
-
 :dp:`fls_YuQxJCjneaW5`
 In a pattern whose :t:`subject expression` is an :t:`enum type`, an :t:`underscore pattern` matches a single :t:`enum variant`, and a :t:`rest pattern` matches the remaining variants.
 
+:dp:`fls_wAMHIDvLG0LM`
+In a pattern whose :t:`subject expression` is a :t:`struct type`, an :t:`underscore pattern` matches a single :t:`struct field`, and a :t:`rest pattern` matches the remaining fields.
+
 :dp:`fls_nrTZ4mn6IJCl`
 In a pattern whose :t:`subject expression` is a :t:`tuple type`, an :t:`underscore pattern` matches a single :t:`tuple field`, and a :t:`rest pattern` matches the remaining fields.
-
 .. _fls_uh76pw6ykd57:
 
 Refutability
