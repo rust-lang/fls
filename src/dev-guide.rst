@@ -10,6 +10,13 @@ Developer Guide
 
 This document outlines the various formats, processes, and procedures associated with the maintenance of the FLS.
 
+Enumeration
+-----------
+
+When mentioning multiple entities, sort them by alphabet.
+
+As an example, "A function item type implements Clone, Copy, Send, and Sync traits".
+
 Changelog maintenance
 ---------------------
 
