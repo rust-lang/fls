@@ -5384,7 +5384,7 @@ A :t:`field` is not :t:`captured` by being matched against a :t:`rest pattern`.
 An :t:`array` or :t:`slice` is :t:`captured` whole.
 
 :dp:`fls_Fs12dmznjsMf`
-Matching against an :t:`enum variant` of an :t:`enum` with more than one :t:`[enum variant]s` :t:`captures <capturing>` the :t:`place` by :t:`immutable borrow`.
+Matching against an :t:`enum variant` of an :t:`enum` with more than one :t:`enum variant` :t:`captures <capturing>` the :t:`place` by :t:`immutable borrow`.
 
 :dp:`fls_7EXHdE2eOVek`
 Matching against an :t:`enum variant` of an :t:`enum` with one :t:`enum variant` does not :t:`capture <capturing>` the :t:`place`, unless the :t:`enum` is subject to :t:`attribute` ``non_exhaustive``, in which case the :t:`place` is captured by :t:`immutable borrow`.
