@@ -15,7 +15,7 @@ Enumeration
 
 When enumerating multiple entities, sort them alphabetically.
 
-For example, in the sentence "A function item type implements Clone, Copy, Send, and Sync traits" the enumerated traits are sorted alphabetically.
+For example, in the sentence "A function item type implements Clone, Copy, Send, and Sync traits", the enumerated traits are sorted alphabetically.
 
 Changelog maintenance
 ---------------------
