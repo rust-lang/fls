@@ -34,7 +34,6 @@ Language changes in Rust 1.95.0
     - :p:`fls_sUhnfV62HJrb`
     - :p:`fls_QGdeRTe0H1Uc`
     - :p:`fls_aam34hsRmKU2`
-    - :p:`fls_LV94x3HlpBWk`
 
   - Changed paragraphs:
 
@@ -59,7 +58,10 @@ FLS corrections
 
 Changed paragraph: :p:`fls_1941wid94hlg`
 
-New paragraph: :p:`fls_CSuxTkwR96j9`
+New paragraphs:
+
+- :p:`fls_CSuxTkwR96j9`
+- :p:`fls_LV94x3HlpBWk`
 
 Language changes in Rust 1.94.0
 -------------------------------
