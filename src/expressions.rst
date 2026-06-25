@@ -5357,7 +5357,7 @@ Capture precision
 ~~~~~~~~~~~~~~~~~
 
 :dp:`fls_j9WyKVyOLFon`
-A :dt:`place projection` is a :t:`field access expression`, :t:`dereference`, :t:`array` or :t:`slice` :t:`index expression`, or :t:`pattern destructuring` applied to a :t:`variable`.
+A :dt:`place projection` is an :t:`array` :t:`index expression`, an automatic :t:`dereference`, an explicit :t:`dereference`, a :t:`field access expression`, a :t:`pattern destructuring` applied to a :t:`variable`, or a :t:`slice` :t:`index expression`.
 
 :dp:`fls_rdDT7jsaOMbs`
 A :dt:`capture path` is a sequence starting with a :t:`variable` from the :t:`capturing environment` followed by zero or more :t:`[place projection]s` from that :t:`variable`.
