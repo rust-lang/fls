@@ -5287,6 +5287,9 @@ The :t:`capturing environment` of a :t:`capturing expression` consists of the
 :t:`Capturing` is the process of saving the :t:`[capture target]s` of a
 :t:`[capturing expression]'s` :t:`capturing environment`.
 
+:dp:`fls_zxcXuPAadEUH`
+:t:`Capturing` shall only happen when the :t:`capture target` needs to be read.
+
 :dp:`fls_ip81lt2mm940`
 A :t:`capture target` requires :t:`capturing` when it is used by
 the :t:`capturing expression` and it is defined outside of the
