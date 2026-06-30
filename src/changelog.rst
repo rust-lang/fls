@@ -66,15 +66,17 @@ Language changes in Rust 1.95.0
 
 - `Make operational semantics of pattern matching independent of crate and module <https://github.com/rust-lang/rust/pull/150681>`_
 
-FLS corrections
----------------
+FLS fixes/improvements
+----------------------
 
-Changed paragraph: :p:`fls_1941wid94hlg`
+- Changed paragraph: :p:`fls_1941wid94hlg`
 
-New paragraphs:
+- New paragraphs:
 
-- :p:`fls_CSuxTkwR96j9`
-- :p:`fls_LV94x3HlpBWk`
+  - :p:`fls_CSuxTkwR96j9`
+  - :p:`fls_LV94x3HlpBWk`
+
+- Replace the term "simple path prefix" with "common path prefix", to improve clarity.
 
 Language changes in Rust 1.94.0
 -------------------------------
