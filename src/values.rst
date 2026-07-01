@@ -42,6 +42,15 @@ Two :t:`[value]s` :t:`overlap` when
 * :dp:`fls_eoak5mdl6ma`
   Both :t:`[value]s` are elements of the same :t:`array`.
 
+:dp:`fls_jriT46yWgIR0`
+An :t:`indirection value` is either a :t:`raw pointer` or a :t:`reference`.
+
+:dp:`fls_VWUlxTy0QF9d`
+An :t:`original indirection value` is an :t:`indirection value` created via allocation.
+
+:dp:`fls_kaPNJ7iIHPro`
+A :t:`derived indirection value` is an :t:`indirection value` obtained by performing address or pointer arithmetic on another :t:`indirection value`.
+
 .. rubric:: Undefined Behavior
 
 :dp:`fls_6lg0oaaopc26`
@@ -108,8 +117,11 @@ The :t:`expression` of a :t:`constant initializer` shall be a
 :t:`constant expression`.
 
 :dp:`fls_deuo1pn8cjd6`
-The value of a :t:`constant` is determined by evaluating its
+The :t:`value` of a :t:`constant` is determined by evaluating its
 :t:`constant initializer`.
+
+:dp:`fls_l1FOH8zt0XRZ`
+If the :t:`value` produced by evaluating a :t:`constant initializer` denotes an :t:`indirection value`, then the :t:`value` shall be a :t:`well-formed indirection value`.
 
 .. rubric:: Dynamic Semantics
 
@@ -187,6 +199,12 @@ A :t:`static` shall have a :t:`static initializer`, unless it is an
 :dp:`fls_vgidvfwzm4ks`
 The :t:`expression` of a :t:`static initializer` shall be a
 :t:`constant expression`.
+
+:dp:`fls_41zoQ54MiLMm`
+The :t:`static` is determined by evaluating its :t:`static initializer`.
+
+:dp:`fls_37oocZVDne5Y`
+If the :t:`value` produced by evaluating a :t:`static initializer` denotes an :t:`indirection value`, then the :t:`value` shall be a :t:`well-formed indirection value`.
 
 :dp:`fls_8dcldbvu7lav`
 A use of a :t:`static` is a :t:`place expression` referring to the unique
@@ -306,3 +324,30 @@ promoting the produced :t:`mutable borrow` to have ``'static`` :t:`lifetime`.
 #. :dp:`fls_ap85svxyuhvg`
    The :t:`value` of the anonymous :t:`constant` is :t:`borrowed` with
    ``'static`` :t:`lifetime`.
+
+.. _fls_Dqk4eIvxHloY:
+
+Provenance
+----------
+
+.. rubric:: Legality Rules
+
+:dp:`fls_5MkKtNL9oCsL`
+:t:`Provenance` is an optional property of :t:`[indirection value]s` that restricts the addresses an :t:`indirection value` may point to, the timespan during which the :t:`indirection value` may point to those addresses, and whether the :t:`indirection value` can read from and write to those addresses.
+
+:dp:`fls_1NJhTBN1D2qv`
+An :t:`original indirection value` always carries :t:`provenance`.
+
+:dp:`fls_wnJmQYT7iKQf`
+A :t:`derived indirection value` inherits the :t:`provenance` of the :t:`indirection value` it was created from, if any.
+
+:dp:`fls_ffh8mAkebORJ`
+A :t:`well-formed indirection value` is an :t:`indirection value` with :t:`provenance`, where all bytes that comprise the :t:`indirection value` are initialized, correctly ordered, and are fragments of the same :t:`original indirection value`.
+
+.. rubric:: Undefined Behavior
+
+:dp:`fls_c3DaCLQEBpYQ`
+It is undefined behavior to access memory through an :t:`indirection value` which does not have :t:`provenance` over that memory.
+
+:dp:`fls_MwDoxVPRZCqm`
+It is undefined behavior to offset an :t:`indirection value` beyond the bounds of the memory block it has :t:`provenance` over.

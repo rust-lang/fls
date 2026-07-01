@@ -1156,6 +1156,11 @@ A :dt:`derive macro` is a :t:`procedural macro` that consumes a stream of
 :t:`[token]s` and produces a stream of tokens, and is invoked via attribute
 :c:`derive`.
 
+derived indirection value
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`derived indirection value` is an :t:`indirection value` obtained by performing address or pointer arithmetic on another :t:`indirection value`.
+
 destruction
 ^^^^^^^^^^^
 
@@ -2193,6 +2198,11 @@ indirection type
 An :dt:`indirection type` is a :t:`type` whose :t:`[value]s` refer to memory
 locations.
 
+indirection value
+^^^^^^^^^^^^^^^^^
+
+An :dt:`indirection value` is either a :t:`raw pointer` or a :t:`reference`.
+
 inert attribute
 ^^^^^^^^^^^^^^^
 
@@ -3186,13 +3196,17 @@ opt-out trait bound
 An :dt:`opt-out trait bound` is a :t:`trait bound` with :s:`Punctuation` ``?``
 that nullifies an implicitly added :t:`trait bound`.
 
-
 or-pattern
 ^^^^^^^^^^
 
 An :dt:`or-pattern` is a :t:`pattern` that matches on one of two or more :t:`[pattern-without-alternation]s` and or-s them using character 0x7C (vertical line, i.e. ``|``).
 
 See :s:`Pattern`.
+
+original indirection value
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+An :dt:`original indirection value` is an :t:`indirection value` created via allocation.
 
 outer attribute
 ^^^^^^^^^^^^^^^
@@ -3476,6 +3490,11 @@ program entry point
 A :dt:`program entry point` is a :t:`function` that is invoked at the start of
 a Rust program.
 
+provenance
+^^^^^^^^^^
+
+:dt:`Provenance` is an optional property of :t:`[indirection value]s` that restricts the addresses an :t:`indirection value` may point to, the timespan during which the :t:`indirection value` may point to those addresses, and whether the :t:`indirection value` can read from and write to those addresses.
+
 public visibility
 ^^^^^^^^^^^^^^^^^
 
@@ -3659,7 +3678,7 @@ See :s:`RawCStringLiteral`.
 raw pointer
 ^^^^^^^^^^^
 
-A :dt:`raw pointer` is a pointer of a :t:`raw pointer type`.
+A :dt:`raw pointer` is a :t:`value` of a :t:`raw pointer type`.
 
 raw pointer type
 ^^^^^^^^^^^^^^^^
@@ -5185,6 +5204,11 @@ A :dt:`weak keyword` is a :t:`keyword` whose special meaning depends on the
 context.
 
 See :s:`WeakKeyword`.
+
+well-formed indirection value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`well-formed indirection value` is an :t:`indirection value` with :t:`provenance`, where all bytes that comprise the :t:`indirection value` are initialized, correctly ordered, and are fragments of the same :t:`original indirection value`.
 
 where clause
 ^^^^^^^^^^^^
