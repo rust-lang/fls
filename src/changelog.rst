@@ -19,6 +19,21 @@ with the change that has been applied due to it.
    just the language changes that had an impact to the FLS. See the `release
    notes`_ for a full list of changes.
 
+Language changes in Rust 1.96.1
+-------------------------------
+
+- `Cargo: fix timeout/retry behavior <https://github.com/rust-lang/cargo/pull/17131>`_
+
+  - Cargo is outside the scope of the FLS.
+
+- `Cargo: apply patches for CVE-2025-15661, CVE-2026-55199, and CVE-2026-55200 to libssh2 <https://github.com/rust-lang/cargo/pull/17140>`_
+
+  - Cargo is outside the scope of the FLS.
+
+- `rustc: fix miscompilation in MIR optimization <https://github.com/rust-lang/rust/pull/158214>`_
+
+  - Bug fix in the compiler without visible ramifications.
+
 Language changes in Rust 1.95.0
 -------------------------------
 
