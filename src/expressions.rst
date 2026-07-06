@@ -4645,7 +4645,38 @@ Match Expressions
        OuterAttributeOrDoc* Pattern MatchArmGuard?
 
    MatchArmGuard ::=
-       $$if$$ Operand
+       $$if$$ MatchArmGuardConditions
+
+   MatchArmGuardConditions ::=
+       MatchArmGuardChain
+     | MatchArmGuardOperand
+
+   MatchArmGuardOperand ::=
+       Operand
+
+   MatchArmGuardChain ::=
+       MatchArmGuardCondition ($$&&$$ MatchArmGuardCondition)*
+
+   MatchArmGuardCondition ::=
+       MatchArmGuardConditionOperand
+     | MatchArmGuardLetPattern
+
+   MatchArmGuardLetPattern ::=
+       $$let$$ Pattern $$=$$ MatchArmGuardScrutinee
+
+:dp:`fls_3TGpt9OGydQi`
+A :ds:`MatchArmGuardConditionOperand` is any expression in category
+:s:`Expression`, except expressions in categories :s:`AssignmentExpression`,
+:s:`CompoundAssignmentExpression`, :s:`LazyBooleanExpression`,
+:s:`RangeFromExpression`, :s:`RangeFromToExpression`, and
+:s:`RangeInclusiveExpression`.
+
+:dp:`fls_7OkU5RVrAyev`
+A :ds:`MatchArmGuardScrutinee` is any expression in category
+:s:`Expression`, except expressions in categories :s:`AssignmentExpression`,
+:s:`CompoundAssignmentExpression`, :s:`LazyBooleanExpression`,
+:s:`RangeFromExpression`, :s:`RangeFromToExpression`, and
+:s:`RangeInclusiveExpression`.
 
 .. rubric:: Legality Rules
 
@@ -4679,6 +4710,31 @@ A :t:`match arm body` is the :t:`operand` of a :t:`match arm`.
 A :t:`match arm guard` is a :t:`construct` that provides additional filtering to
 a :t:`match arm matcher`.
 
+:dp:`fls_Uv7QsP2nKcDx`
+A :t:`match arm guard operand` is the :t:`operand` of a :t:`match arm guard`
+that does not have a :t:`match arm guard chain`.
+
+:dp:`fls_DT4N2rr6wpvZ`
+A :t:`match arm guard chain` is a sequence of one or more
+:t:`[match arm guard condition]s`, separated by ``&&``.
+
+:dp:`fls_gNQBzI92IAir`
+A :t:`match arm guard` that contains a :t:`match arm guard let pattern` has a
+:t:`match arm guard chain`; otherwise it has a :t:`match arm guard operand`.
+
+:dp:`fls_Er5TmL9bXwVq`
+A :t:`match arm guard condition operand` is a :t:`match arm guard condition`
+that consists of an :t:`expression`.
+
+:dp:`fls_AAuyKfxLgJ43`
+A :t:`match arm guard let pattern` is a :t:`match arm guard condition` that
+consists of a :t:`pattern` and a :t:`match arm guard scrutinee`.
+
+:dp:`fls_Yq4NhC8sRpJm`
+A :t:`match arm guard scrutinee` is the :t:`expression` of a
+:t:`match arm guard let pattern` whose :t:`value` is matched against the
+:t:`pattern` of that :t:`match arm guard let pattern`.
+
 :dp:`fls_RPMOAaZ6lflI`
 :t:`[Binding]s` introduced in the :t:`pattern` of a :t:`match arm matcher` are
 :t:`immutable` in the :t:`match arm guard`.
@@ -4688,8 +4744,16 @@ The :t:`type` of the :t:`subject expression` and the :t:`[type]s` of all
 :t:`[pattern]s` of all :t:`[match arm matcher]s` shall be :t:`unifiable`.
 
 :dp:`fls_bzhz5wjd90ii`
-The :t:`type` of the :t:`operand` of a :t:`match arm guard` shall be :t:`type`
+The :t:`type` of a :t:`match arm guard operand` shall be :t:`type` :c:`bool`.
+
+:dp:`fls_kM6dZv3PaNqT`
+The :t:`type` of a :t:`match arm guard condition operand` shall be :t:`type`
 :c:`bool`.
+
+:dp:`fls_Lc8EwS5rYpBn`
+The :t:`expected type` of the :t:`pattern` of a
+:t:`match arm guard let pattern` is the :t:`type` of its
+:t:`match arm guard scrutinee`.
 
 :dp:`fls_17ag0wzdbxv6`
 The :t:`[type]s` of all :t:`match arm bodies <match arm body>` shall be
@@ -4708,8 +4772,9 @@ A :t:`match arm` is selected when its :t:`pattern` matches the
 :t:`Match arm` selection happens in declarative order.
 
 :dp:`fls_e02um1gb89d0`
-The :t:`[pattern]s` of all :t:`[match arm]s` taken together shall exhaustively
-match the :t:`[subject expression]'s` :t:`type`.
+The :t:`[pattern]s` of all :t:`[match arm]s` without a
+:t:`match arm guard` taken together shall exhaustively match the
+:t:`[subject expression]'s` :t:`type`.
 
 :dp:`fls_4sh2yrslszvb`
 The :t:`value` of a :t:`match expression` is the :t:`value` of the :t:`operand`
@@ -4742,35 +4807,133 @@ The :t:`evaluation` of a :t:`match expression` proceeds as follows:
       Otherwise control proceeds with the :t:`evaluation` of the next
       :t:`match arm`.
 
+:dp:`fls_Nc6JvS9rFaLm`
+When the :t:`pattern` of a :t:`match arm matcher` is an :t:`or-pattern`, each
+:t:`pattern-without-alternation` of the :t:`or-pattern` is considered in source
+order during :t:`evaluation` of the :t:`match arm matcher`. Otherwise, the
+:t:`pattern` itself is considered.
+
 :dp:`fls_4dv7x9nh2h4e`
 The :t:`evaluation` of a :t:`match arm matcher` proceeds as follows:
 
-#. :dp:`fls_k7kliy101m0f`
-   The :t:`pattern` of the :t:`match arm matcher` is evaluated.
+#. :dp:`fls_Qr3TcH8vNpKs`
+   Each :t:`pattern` determined by :p:`fls_Nc6JvS9rFaLm` is considered in
+   source order as follows:
 
-#. :dp:`fls_k68zkb6jv0vz`
-   If the :t:`pattern` succeeds, then
+   #. :dp:`fls_Lm5WqZ2dJvYp`
+      If :t:`pattern matching` with the :t:`pattern` and the :t:`value` of the
+      :t:`subject expression` fails, then evaluation continues with the next
+      :t:`pattern`, if any.
 
-   #. :dp:`fls_gbb6wbmher5z`
-      If the :t:`match arm matcher` has a :t:`match arm guard`, then
+   #. :dp:`fls_Bx8KsV4nQdRt`
+      If :t:`pattern matching` with the :t:`pattern` succeeds, then:
 
-      #. :dp:`fls_jl4av757yx8j`
-         The :t:`match arm guard` is evaluated.
+      #. :dp:`fls_Mv2YpG7sLcHw`
+         If the :t:`match arm matcher` has no :t:`match arm guard`, then the
+         :t:`match arm matcher` succeeds and its :t:`evaluation` is complete.
 
-      #. :dp:`fls_wkh5wztauwhu`
+      #. :dp:`fls_Xd4LqN9vTrPm`
+         If the :t:`match arm matcher` has a :t:`match arm guard`, then the
+         :t:`match arm guard` is evaluated.
+
+      #. :dp:`fls_Hw6CkR3mVzQn`
          If the :t:`match arm guard` evaluates to ``true``, then the
-         :t:`match arm matcher` succeeds.
+         :t:`match arm matcher` succeeds and its :t:`evaluation` is complete.
 
-   #. :dp:`fls_f5f0x8jstp1g`
-      Otherwise the :t:`match arm matcher` fails.
+      #. :dp:`fls_gfD9XwVj5hab`
+         If the :t:`match arm guard` evaluates to ``false``, then the
+         :t:`drop scope` of the related :t:`match arm` is left, and evaluation
+         continues with the next :t:`pattern`, including later
+         :t:`[pattern-without-alternation]s` of the same :t:`or-pattern`.
 
-#. :dp:`fls_yk8l9zjh7i0d`
-   Otherwise the :t:`match arm matcher` fails.
+#. :dp:`fls_Zm9VxF5pQwLd`
+   If no considered :t:`pattern` causes the :t:`match arm matcher` to succeed,
+   then the :t:`match arm matcher` fails.
 
 :dp:`fls_sbtx1l6n2tp2`
-The :t:`evaluation` of a :t:`match arm guard` evaluates its :t:`operand`. A
-:t:`match arm guard` evaluates to ``true`` when its :t:`operand` evaluates to
-``true``, otherwise it evaluates to ``false``.
+The :t:`evaluation` of a :t:`match arm guard` proceeds as follows:
+
+#. :dp:`fls_Dp8aJr2LqYwS`
+   If the :t:`match arm guard` has a :t:`match arm guard operand`, then:
+
+   #. :dp:`fls_Wm4QvN7xTcRb`
+      The :t:`match arm guard operand` is evaluated.
+
+   #. :dp:`fls_Ks9FdL3pVxQa`
+      If the :t:`match arm guard operand` evaluates to ``false``, then the
+      :t:`match arm guard` evaluates to ``false`` and its :t:`evaluation` is
+      complete.
+
+   #. :dp:`fls_Rt5XcG8nMbPw`
+      If the :t:`match arm guard operand` evaluates to ``true``, then the
+      :t:`match arm guard` evaluates to ``true`` and its :t:`evaluation` is
+      complete.
+
+#. :dp:`fls_Yh2NqT6vLsCk`
+   Otherwise, the :t:`match arm guard` has a :t:`match arm guard chain`, and:
+
+   #. :dp:`fls_Cw2RsH7pVnQx`
+      Each :t:`match arm guard condition` of the chain is evaluated in source
+      order as follows:
+
+      #. :dp:`fls_Pb7MzD4wQkXe`
+         If the :t:`match arm guard condition` is a
+         :t:`match arm guard condition operand`, then:
+
+         #. :dp:`fls_Fj8QpM3dLsVt`
+            The :t:`match arm guard condition operand` is evaluated.
+
+         #. :dp:`fls_Qf4VnH8sMxRa`
+            If the :t:`match arm guard condition operand` evaluates to
+            ``false``, then the :t:`match arm guard` evaluates to ``false`` and
+            no later :t:`[match arm guard condition]s` are evaluated.
+
+         #. :dp:`fls_Kz7NvR2xYpWm`
+            If the :t:`match arm guard condition operand` evaluates to
+            ``true``, then evaluation continues with the next
+            :t:`match arm guard condition`, if any.
+
+      #. :dp:`fls_Zc6TbK2wLpNd`
+         If the :t:`match arm guard condition` is a
+         :t:`match arm guard let pattern`, then:
+
+         #. :dp:`fls_Bd9TmL4qVcNs`
+            The :t:`match arm guard scrutinee` is evaluated.
+
+         #. :dp:`fls_Rp5HxK8wJqYd`
+            :t:`Pattern matching` is performed with the :t:`pattern` of the
+            :t:`match arm guard let pattern` against the resulting :t:`value`.
+
+         #. :dp:`fls_Vr9MqJ5xNsYd`
+            If the :t:`pattern matching` fails, then the
+            :t:`match arm guard` evaluates to ``false`` and no later
+            :t:`[match arm guard condition]s` are evaluated.
+
+         #. :dp:`fls_Nt6QmC3sLpXz`
+            If the :t:`pattern matching` succeeds, then any :t:`[binding]s`
+            introduced by the :t:`pattern` are bound to the matched
+            :t:`[value]s` as described in :p:`fls_t34oqarwcusu`, and evaluation
+            continues with the next :t:`match arm guard condition`, if any.
+
+   #. :dp:`fls_Av4JyT9nMkRp`
+      If every :t:`match arm guard condition` of the chain has been evaluated
+      without the :t:`match arm guard` evaluating to ``false``, then the
+      :t:`match arm guard` evaluates to ``true``.
+
+:dp:`fls_Gc5RpT8nYvQm`
+During the :t:`evaluation` of a :t:`match arm guard`, each :t:`binding`
+introduced by the :t:`pattern` of the related :t:`match arm matcher` is
+accessed through a shared reference to the matched part of the
+:t:`subject expression`'s :t:`value`.
+
+:dp:`fls_Nw2KxL7qVmRs`
+If the :t:`binding mode` of such a :t:`binding` is :t:`by value`, then the copy
+or move described by :p:`fls_pxvtqxke1enp` is performed only if the related
+:t:`match arm guard` evaluates to ``true``.
+
+:dp:`fls_Rh9TsD4vQpLm`
+If the related :t:`match arm guard` evaluates to ``false``, then no copy or
+move into such a :t:`binding` is performed.
 
 .. rubric:: Examples
 
@@ -4782,6 +4945,22 @@ The :t:`evaluation` of a :t:`match arm guard` evaluates its :t:`operand`. A
            2 ..= 9 => println!("a few"),
            _ if number_of_things < 0 => println!("you owe me"),
            _ => println!("lots")
+       }
+   }
+
+:dp:`fls_8Vrz9SNfjSh7`
+A match arm guard chain consisting of a match arm guard let pattern followed by
+a match arm guard condition operand.
+
+.. code-block:: rust
+
+   fn categorize(input: Option<&str>) -> &'static str {
+       match input {
+           Some(text)
+               if let Ok(number) = text.parse::<i32>()
+                   && number > 9 => "big number",
+           Some(_) => "other text",
+           None => "no text"
        }
    }
 

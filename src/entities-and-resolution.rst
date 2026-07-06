@@ -496,6 +496,11 @@ related :t:`let statement` appears.
 The :t:`binding` of a :t:`match arm` is :t:`in scope` within its related
 :t:`[expression]s` and related :t:`match arm guard`.
 
+:dp:`fls_Td7McP9rQxVn`
+Each :t:`let binding` introduced by a :t:`match arm guard let pattern` is
+:t:`in scope` within the following :t:`[match arm guard condition]s` of the
+same :t:`match arm guard` and within the related :t:`match arm body`.
+
 :dp:`fls_eBacCVlDaKYK`
 A :t:`binding` declared outside of a :t:`const block expression` is not :t:`in
 scope` within such a :t:`const block expression`.
