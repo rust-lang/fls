@@ -4651,9 +4651,6 @@ Match Expressions
        MatchArmGuardChain
      | MatchArmGuardOperand
 
-   MatchArmGuardOperand ::=
-       Operand
-
    MatchArmGuardChain ::=
        MatchArmGuardCondition ($$&&$$ MatchArmGuardCondition)*
 
@@ -4663,6 +4660,9 @@ Match Expressions
 
    MatchArmGuardLetPattern ::=
        $$let$$ Pattern $$=$$ MatchArmGuardScrutinee
+
+   MatchArmGuardOperand ::=
+       Operand
 
 :dp:`fls_3TGpt9OGydQi`
 A :ds:`MatchArmGuardConditionOperand` is any expression in category
@@ -4843,7 +4843,7 @@ The :t:`evaluation` of a :t:`match arm matcher` proceeds as follows:
       #. :dp:`fls_gfD9XwVj5hab`
          If the :t:`match arm guard` evaluates to ``false``, then the
          :t:`drop scope` of the related :t:`match arm` is left, and evaluation
-         continues with the next :t:`pattern`, including later
+         continues with the next :t:`pattern`, including subsequent
          :t:`[pattern-without-alternation]s` of the same :t:`or-pattern`.
 
 #. :dp:`fls_Zm9VxF5pQwLd`
@@ -4886,7 +4886,7 @@ The :t:`evaluation` of a :t:`match arm guard` proceeds as follows:
          #. :dp:`fls_Qf4VnH8sMxRa`
             If the :t:`match arm guard condition operand` evaluates to
             ``false``, then the :t:`match arm guard` evaluates to ``false`` and
-            no later :t:`[match arm guard condition]s` are evaluated.
+            no subsequent :t:`[match arm guard condition]s` are evaluated.
 
          #. :dp:`fls_Kz7NvR2xYpWm`
             If the :t:`match arm guard condition operand` evaluates to
@@ -4906,7 +4906,7 @@ The :t:`evaluation` of a :t:`match arm guard` proceeds as follows:
 
          #. :dp:`fls_Vr9MqJ5xNsYd`
             If the :t:`pattern matching` fails, then the
-            :t:`match arm guard` evaluates to ``false`` and no later
+            :t:`match arm guard` evaluates to ``false`` and no subsequent
             :t:`[match arm guard condition]s` are evaluated.
 
          #. :dp:`fls_Nt6QmC3sLpXz`
@@ -4923,7 +4923,7 @@ The :t:`evaluation` of a :t:`match arm guard` proceeds as follows:
 :dp:`fls_Gc5RpT8nYvQm`
 During the :t:`evaluation` of a :t:`match arm guard`, each :t:`binding`
 introduced by the :t:`pattern` of the related :t:`match arm matcher` is
-accessed through a shared reference to the matched part of the
+accessed through a :t:`shared reference` to the matched part of the
 :t:`subject expression`'s :t:`value`.
 
 :dp:`fls_Nw2KxL7qVmRs`
