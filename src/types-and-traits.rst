@@ -939,6 +939,11 @@ A :t:`function item type` implements the :std:`core::ops::Fn` :t:`trait`, the :s
 Indirection Types
 -----------------
 
+.. rubric:: Legality Rules
+
+:dp:`fls_3qI8FXMsyk0f`
+A :t:`pointer type` is a :t:`type` whose :t:`[value]s` indicate memory locations.
+
 .. _fls_xztr1kebz8bo:
 
 Function Pointer Types

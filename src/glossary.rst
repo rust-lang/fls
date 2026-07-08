@@ -1156,10 +1156,10 @@ A :dt:`derive macro` is a :t:`procedural macro` that consumes a stream of
 :t:`[token]s` and produces a stream of tokens, and is invoked via attribute
 :c:`derive`.
 
-derived indirection value
-^^^^^^^^^^^^^^^^^^^^^^^^^
+derived pointer
+^^^^^^^^^^^^^^^
 
-A :dt:`derived indirection value` is an :t:`indirection value` obtained by performing address or pointer arithmetic on another :t:`indirection value`.
+A :dt:`derived pointer` is a :t:`pointer` obtained by performing address or pointer arithmetic on another :t:`pointer`.
 
 destruction
 ^^^^^^^^^^^
@@ -2198,11 +2198,6 @@ indirection type
 An :dt:`indirection type` is a :t:`type` whose :t:`[value]s` refer to memory
 locations.
 
-indirection value
-^^^^^^^^^^^^^^^^^
-
-An :dt:`indirection value` is either a :t:`raw pointer` or a :t:`reference`.
-
 inert attribute
 ^^^^^^^^^^^^^^^
 
@@ -3203,10 +3198,10 @@ An :dt:`or-pattern` is a :t:`pattern` that matches on one of two or more :t:`[pa
 
 See :s:`Pattern`.
 
-original indirection value
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+original pointer
+^^^^^^^^^^^^^^^^
 
-An :dt:`original indirection value` is an :t:`indirection value` created via allocation.
+An :dt:`original pointer` is a :t:`pointer` created via allocation.
 
 outer attribute
 ^^^^^^^^^^^^^^^
@@ -3425,7 +3420,7 @@ A :dt:`pointer` is a :t:`value` of a :t:`pointer type`.
 pointer type
 ^^^^^^^^^^^^
 
-A :dt:`pointer type` is a :t:`type` whose values indicate memory locations.
+A :dt:`pointer type` is a :t:`type` whose :t:`[value]s` indicate memory locations.
 
 positional register argument
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3493,7 +3488,7 @@ a Rust program.
 provenance
 ^^^^^^^^^^
 
-:dt:`Provenance` is an optional property of :t:`[indirection value]s` that restricts the addresses an :t:`indirection value` may point to, the timespan during which the :t:`indirection value` may point to those addresses, and whether the :t:`indirection value` can read from and write to those addresses.
+:dt:`Provenance` is an optional property of :t:`[pointer]s` that restricts the addresses a :t:`pointer` may point to, the timespan during which the :t:`pointer` may point to those addresses, and whether the :t:`pointer` can read from and write to those addresses.
 
 public visibility
 ^^^^^^^^^^^^^^^^^
@@ -5205,10 +5200,10 @@ context.
 
 See :s:`WeakKeyword`.
 
-well-formed indirection value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+well-formed pointer
+^^^^^^^^^^^^^^^^^^^
 
-A :dt:`well-formed indirection value` is an :t:`indirection value` with :t:`provenance`, where all bytes that comprise the :t:`indirection value` are initialized, correctly ordered, and are fragments of the same :t:`original indirection value`.
+A :dt:`well-formed pointer` is a :t:`pointer` with :t:`provenance`, where all bytes that comprise the :t:`pointer` are initialized, correctly ordered, and are fragments of the same :t:`original pointer`.
 
 where clause
 ^^^^^^^^^^^^

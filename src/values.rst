@@ -43,13 +43,13 @@ Two :t:`[value]s` :t:`overlap` when
   Both :t:`[value]s` are elements of the same :t:`array`.
 
 :dp:`fls_jriT46yWgIR0`
-An :t:`indirection value` is either a :t:`raw pointer` or a :t:`reference`.
+A :t:`pointer` is a :t:`value` of a :t:`pointer type`.
 
 :dp:`fls_VWUlxTy0QF9d`
-An :t:`original indirection value` is an :t:`indirection value` created via allocation.
+An :t:`original pointer` is a :t:`pointer` created via allocation.
 
 :dp:`fls_kaPNJ7iIHPro`
-A :t:`derived indirection value` is an :t:`indirection value` obtained by performing address or pointer arithmetic on another :t:`indirection value`.
+A :t:`derived pointer` is a :t:`pointer` obtained by performing address or pointer arithmetic on another :t:`pointer`.
 
 .. rubric:: Undefined Behavior
 
@@ -121,7 +121,7 @@ The :t:`value` of a :t:`constant` is determined by evaluating its
 :t:`constant initializer`.
 
 :dp:`fls_l1FOH8zt0XRZ`
-If the :t:`value` produced by evaluating a :t:`constant initializer` denotes an :t:`indirection value`, then the :t:`value` shall be a :t:`well-formed indirection value`.
+If the :t:`value` produced by evaluating a :t:`constant initializer` is a :t:`pointer`, then the :t:`pointer` shall be a :t:`well-formed pointer`.
 
 .. rubric:: Dynamic Semantics
 
@@ -204,7 +204,7 @@ The :t:`expression` of a :t:`static initializer` shall be a
 The :t:`static` is determined by evaluating its :t:`static initializer`.
 
 :dp:`fls_37oocZVDne5Y`
-If the :t:`value` produced by evaluating a :t:`static initializer` denotes an :t:`indirection value`, then the :t:`value` shall be a :t:`well-formed indirection value`.
+If the :t:`value` produced by evaluating a :t:`static initializer` is a :t:`pointer`, then the :t:`pointer` shall be a :t:`well-formed pointer`.
 
 :dp:`fls_8dcldbvu7lav`
 A use of a :t:`static` is a :t:`place expression` referring to the unique
@@ -333,21 +333,21 @@ Provenance
 .. rubric:: Legality Rules
 
 :dp:`fls_5MkKtNL9oCsL`
-:t:`Provenance` is an optional property of :t:`[indirection value]s` that restricts the addresses an :t:`indirection value` may point to, the timespan during which the :t:`indirection value` may point to those addresses, and whether the :t:`indirection value` can read from and write to those addresses.
+:t:`Provenance` is an optional property of :t:`[pointer]s` that restricts the addresses a :t:`pointer` may point to, the timespan during which the :t:`pointer` may point to those addresses, and whether the :t:`pointer` can read from and write to those addresses.
 
 :dp:`fls_1NJhTBN1D2qv`
-An :t:`original indirection value` always carries :t:`provenance`.
+An :t:`original pointer` always carries :t:`provenance`.
 
 :dp:`fls_wnJmQYT7iKQf`
-A :t:`derived indirection value` inherits the :t:`provenance` of the :t:`indirection value` it was created from, if any.
+A :t:`derived pointer` inherits the :t:`provenance` of the :t:`pointer` it was created from, if any.
 
 :dp:`fls_ffh8mAkebORJ`
-A :t:`well-formed indirection value` is an :t:`indirection value` with :t:`provenance`, where all bytes that comprise the :t:`indirection value` are initialized, correctly ordered, and are fragments of the same :t:`original indirection value`.
+A :t:`well-formed pointer` is a :t:`pointer` with :t:`provenance`, where all bytes that comprise the :t:`pointer` are initialized, correctly ordered, and are fragments of the same :t:`original pointer`.
 
 .. rubric:: Undefined Behavior
 
 :dp:`fls_c3DaCLQEBpYQ`
-It is undefined behavior to access memory through an :t:`indirection value` which does not have :t:`provenance` over that memory.
+It is undefined behavior to access memory through a :t:`pointer` which does not have :t:`provenance` over that memory.
 
 :dp:`fls_MwDoxVPRZCqm`
-It is undefined behavior to offset an :t:`indirection value` beyond the bounds of the memory block it has :t:`provenance` over.
+It is undefined behavior to offset a :t:`pointer` beyond the bounds of the memory block it has :t:`provenance` over.
