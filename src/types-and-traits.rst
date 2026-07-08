@@ -2498,8 +2498,13 @@ The :t:`type inference` rules for :t:`[expression]s` are as follows:
      the :t:`type` of the :t:`[pattern]s`.
 
   #. :dp:`fls_st9onPgDrc8y`
-     Infer the :t:`[operand]s` of all :t:`[match arm guard]s` with
-     :t:`expected type` :c:`bool`.
+     Infer each :t:`match arm guard operand` and each
+     :t:`match arm guard condition operand` with :t:`expected type` :c:`bool`.
+
+  #. :dp:`fls_vQ3tHg9XmDkF`
+     Infer each :t:`match arm guard scrutinee` with the :t:`expected type` set
+     to the :t:`type` of the :t:`pattern` of the related
+     :t:`match arm guard let pattern`.
 
   #. :dp:`fls_F999gqcBfff9`
      Infer the :t:`match arm body` of every :t:`match arm` with the
