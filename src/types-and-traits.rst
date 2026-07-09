@@ -942,7 +942,7 @@ Indirection Types
 .. rubric:: Legality Rules
 
 :dp:`fls_3qI8FXMsyk0f`
-A :t:`pointer type` is a :t:`type` whose :t:`[value]s` indicate memory locations.
+A :t:`pointer type` is either a :t:`raw pointer type` or a :t:`reference type`.
 
 .. _fls_xztr1kebz8bo:
 

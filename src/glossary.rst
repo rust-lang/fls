@@ -1159,7 +1159,7 @@ A :dt:`derive macro` is a :t:`procedural macro` that consumes a stream of
 derived pointer
 ^^^^^^^^^^^^^^^
 
-A :dt:`derived pointer` is a :t:`pointer` obtained by performing address or pointer arithmetic on another :t:`pointer`.
+A :dt:`derived pointer` is a :t:`pointer` obtained by :t:`borrowing`, copying a :t:`pointer`, loading a stored :t:`pointer`, performing :t:`pointer` arithmetic, or :t:`casting` a :t:`pointer`.
 
 destruction
 ^^^^^^^^^^^
@@ -3420,7 +3420,7 @@ A :dt:`pointer` is a :t:`value` of a :t:`pointer type`.
 pointer type
 ^^^^^^^^^^^^
 
-A :dt:`pointer type` is a :t:`type` whose :t:`[value]s` indicate memory locations.
+A :dt:`pointer type` is either a :t:`raw pointer type` or a :t:`reference type`.
 
 positional register argument
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3488,7 +3488,7 @@ a Rust program.
 provenance
 ^^^^^^^^^^
 
-:dt:`Provenance` is an optional property of :t:`[pointer]s` that restricts the addresses a :t:`pointer` may point to, the timespan during which the :t:`pointer` may point to those addresses, and whether the :t:`pointer` can read from and write to those addresses.
+:dt:`Provenance` is an optional property of :t:`[pointer]s` that restricts the memory locations the :t:`pointer` may access, the timespan during which the accesses may occur, and whether the accesses may read from or write to memory.
 
 public visibility
 ^^^^^^^^^^^^^^^^^
@@ -5203,7 +5203,7 @@ See :s:`WeakKeyword`.
 well-formed pointer
 ^^^^^^^^^^^^^^^^^^^
 
-A :dt:`well-formed pointer` is a :t:`pointer` with :t:`provenance`, where all bytes that comprise the :t:`pointer` are initialized, correctly ordered, and are fragments of the same :t:`original pointer`.
+A :dt:`well-formed pointer` is a :t:`pointer` where either no byte of the :t:`pointer` carries :t:`provenance`, or every byte of the :t:`pointer` is the corresponding byte of a single :t:`pointer` with :t:`provenance`.
 
 where clause
 ^^^^^^^^^^^^
