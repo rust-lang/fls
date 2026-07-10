@@ -131,6 +131,33 @@ Language changes in Rust 1.95.0
   - Lints are outside the scope of the FLS.
 
 - `Support importing path-segment keywords with renaming <https://github.com/rust-lang/rust/pull/146972>`_
+
+  - New paragraphs:
+
+    - :p:`fls_sUhnfV62HJrb`
+    - :p:`fls_QGdeRTe0H1Uc`
+    - :p:`fls_aam34hsRmKU2`
+    - :p:`fls_uSajfdSsbxna`
+    - :p:`fls_aam34hsRmKU2`
+
+  - Changed paragraphs:
+
+    - :p:`fls_2bkcn83smy2y`
+    - :p:`fls_iuzvtr3oax1o`
+    - :p:`fls_90hQvSh7Bfyg`
+    - :p:`fls_RUiFQ17bmRLt`
+    - :p:`fls_opn5n5t2mo3m`
+    - :p:`fls_7k88ypcgaoff`
+    - :p:`fls_yY58pFpkig9o`
+    - :p:`fls_ar03D5rxjzy0`
+
+  - Removed paragraphs:
+
+    - :p:`fls_cw006jhlboa`
+    - :p:`fls_hv3xT2CjZuxc`
+    - :p:`fls_Pxc0Ts8Y7pfW`
+    - :p:`fls_kz2Gij5wHXnl`
+
 - `Stabilize ppc inline assembly <https://github.com/rust-lang/rust/pull/147996>`_
 
   - The target is outside the scope of the FLS.
@@ -142,12 +169,17 @@ Language changes in Rust 1.95.0
 
 - `Make operational semantics of pattern matching independent of crate and module <https://github.com/rust-lang/rust/pull/150681>`_
 
-FLS corrections
----------------
+FLS fixes/improvements
+----------------------
 
-Changed paragraph: :p:`fls_1941wid94hlg`
+- Changed paragraph: :p:`fls_1941wid94hlg`
 
-New paragraph: :p:`fls_CSuxTkwR96j9`
+- New paragraphs:
+
+  - :p:`fls_CSuxTkwR96j9`
+  - :p:`fls_LV94x3HlpBWk`
+
+- Replace the term "simple path prefix" with "common path prefix", to improve clarity.
 
 Language changes in Rust 1.94.0
 -------------------------------
