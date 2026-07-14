@@ -3488,7 +3488,7 @@ a Rust program.
 provenance
 ^^^^^^^^^^
 
-:dt:`Provenance` is an optional property of :t:`[pointer]s` that restricts the memory locations the :t:`pointer` may access, the timespan during which the accesses may occur, and whether the accesses may read from or write to memory.
+:dt:`Provenance` is an optional property of :t:`[pointer]s` that restricts the memory locations the :t:`pointer` may access, the timespan during which the accesses may occur, and whether the accesses may read from or write to said memory locations.
 
 public visibility
 ^^^^^^^^^^^^^^^^^
