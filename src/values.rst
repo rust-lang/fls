@@ -141,7 +141,7 @@ The :t:`expression` of a :t:`constant initializer` shall be a
 :t:`constant expression`.
 
 :dp:`fls_l1FOH8zt0XRZ`
-If the :t:`value` produced by evaluating a :t:`constant initializer` is or contains a :t:`pointer`, then each such :t:`pointer` shall be a :t:`well-formed pointer`.
+If the :t:`value` produced by evaluating a :t:`constant initializer` is or contains a :t:`pointer`, then each such :t:`pointer` shall be a non-dangling :t:`well-formed pointer`.
 
 .. rubric:: Dynamic Semantics
 
@@ -221,7 +221,7 @@ The :t:`expression` of a :t:`static initializer` shall be a
 :t:`constant expression`.
 
 :dp:`fls_37oocZVDne5Y`
-If the :t:`value` produced by evaluating a :t:`static initializer` is or contains a :t:`pointer`, then each such :t:`pointer` shall be a :t:`well-formed pointer`.
+If the :t:`value` produced by evaluating a :t:`static initializer` is or contains a :t:`pointer`, then each such :t:`pointer` shall be a non-dangling :t:`well-formed pointer`.
 
 :dp:`fls_8dcldbvu7lav`
 A use of a :t:`static` is a :t:`place expression` referring to the unique
