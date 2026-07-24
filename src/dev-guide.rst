@@ -96,6 +96,30 @@ Use the following sentence pattern for multiple syntax categories::
 
 ``<Action>`` must denote either ``Changed``, ``New``, or ``Removed``.
 
+Dealing with PR blockers
+------------------------
+
+Incorrect or incomplete semantics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+While working on a PR, a developer may need to modify existing FLS semantics or terminology, only for the developer to discover that these semantics or terms are either incorrect or incomplete.
+In such cases, bring up the issue to the FLS team.
+
+Depending on the scope of the required changes, the FLS team may decide to either:
+- Enact the necessary changes in the same PR-in-development, or
+- Approximate the contents of the PR-in-development, and open a GitHub issue to track the update on the semantics or terms.
+
+Missing semantics
+~~~~~~~~~~~~~~~~~
+
+While working on a PR, a developer may need to modify existing FLS semantics or use existing terminology, only for the developer to discover that these semantics or terms are missing.
+This may happen when the Rust Reference or other sources the FLS team may use as reference were changed irrespective of Rust releases.
+In such cases, bring up the issue to the FLS team.
+
+Depending on the scope of the required changes, the FLS team may decide to either:
+- Enact the necessary changes in the same PR, or
+- Create a separate PR to introduce the missing semantics or terms, and then update the contents of the PR-in-development.
+
 Merge ordering
 --------------
 
