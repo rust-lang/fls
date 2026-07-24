@@ -169,17 +169,49 @@ Language changes in Rust 1.95.0
 
 - `Make operational semantics of pattern matching independent of crate and module <https://github.com/rust-lang/rust/pull/150681>`_
 
-FLS fixes/improvements
-----------------------
+  Previous behavior was not documented,
+  and a new paragraph was added to include the new behavior: :p:`fls_7EXHdE2eOVek`.
 
-- Changed paragraph: :p:`fls_1941wid94hlg`
+FLS maintenance
+---------------
+
+- Replace the term "simple path prefix" with "common path prefix", to improve clarity.
+
+- Changed paragraphs:
+
+  - :p:`fls_33hfay24hx8u`
+  - :p:`fls_uqy5w9uc8gla`
+  - :p:`fls_1941wid94hlg`
+
+- New section: :ref:`fls_buRbhu22Gfdu`
 
 - New paragraphs:
 
   - :p:`fls_CSuxTkwR96j9`
   - :p:`fls_LV94x3HlpBWk`
-
-- Replace the term "simple path prefix" with "common path prefix", to improve clarity.
+  - :p:`fls_rdDT7jsaOMbs`
+  - :p:`fls_j9WyKVyOLFon`
+  - :p:`fls_TbfUxVf8PKPs`
+  - :p:`fls_4TESOxGpEY2h`
+  - :p:`fls_eNkZWskzznW6`
+  - :p:`fls_v8IFXHJnXhez`
+  - :p:`fls_gujpU7p5n9Zx`
+  - :p:`fls_t8tFLUg8O83Q`
+  - :p:`fls_RaONmCLH2KGM`
+  - :p:`fls_Vt9C9mKxHOwo`
+  - :p:`fls_Fs12dmznjsMf`
+  - :p:`fls_iLH8X2U4ADHb`
+  - :p:`fls_HMJUXHrvOmPl`
+  - :p:`fls_Gj1znNpthHY6`
+  - :p:`fls_IFyJvb6mlFU4`
+  - :p:`fls_7NEEJgKSpQQ8`
+  - :p:`fls_kYFd3p06pWWV`
+  - :p:`fls_fATMTNUOHsfb`
+  - :p:`fls_fITor3jpmgrl`
+  - :p:`fls_UfvoShNTxVD2`
+  - :p:`fls_wAMHIDvLG0LM`
+  - :p:`fls_YuQxJCjneaW5`
+  - :p:`fls_nrTZ4mn6IJCl`
 
 Language changes in Rust 1.94.0
 -------------------------------
