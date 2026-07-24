@@ -49,7 +49,7 @@ Language changes in Rust 1.95.0
   - :t:`match arm guard operand`
   - :t:`match arm guard scrutinee`
 
-  Updated glossary entries:
+  Changed glossary entries:
 
   - :t:`let binding`
 
@@ -163,6 +163,46 @@ Language changes in Rust 1.95.0
   - The target is outside the scope of the FLS.
 
 - `const-eval: be more consistent in the behavior of padding during typed copies <https://github.com/rust-lang/rust/pull/148967>`_
+
+  New glossary entries:
+
+  - :t:`derived pointer`
+  - :t:`original pointer`
+  - :t:`provenance`
+  - :t:`well-formed pointer`
+
+  Changed glossary entries:
+  
+  - :t:`pointer type`
+  - :t:`raw pointer`
+
+  New paragraphs:
+
+  - :p:`fls_3qI8FXMsyk0f`
+  - :p:`fls_c2Guy3fPYaUV`
+  - :p:`fls_jriT46yWgIR0`
+  - :p:`fls_VWUlxTy0QF9d`
+  - :p:`fls_kaPNJ7iIHPro`
+  - :p:`fls_5MkKtNL9oCsL`
+  - :p:`fls_1NJhTBN1D2qv`
+  - :p:`fls_wnJmQYT7iKQf`
+  - :p:`fls_ffh8mAkebORJ`
+  - :p:`fls_c3DaCLQEBpYQ`
+  - :p:`fls_l1FOH8zt0XRZ`
+  - :p:`fls_37oocZVDne5Y`
+
+  Changed paragraphs:
+
+  - :p:`fls_hrum767l6dte`
+  - :p:`fls_k6ues2936pjq`
+  - :p:`fls_jd1inwz7ulyw`
+
+  Removed paragraphs:
+
+  - :p:`fls_deuo1pn8cjd6`
+
+  New section: :ref:`fls_Dqk4eIvxHloY`
+
 - `Const blocks are no longer evaluated to determine if expressions involving fallible operations can implicitly be constant-promoted <https://github.com/rust-lang/rust/pull/150557>`_
 
   - This implementation-specifc behavior is outside the scope of the FLS.
