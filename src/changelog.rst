@@ -169,6 +169,9 @@ Language changes in Rust 1.95.0
 
 - `Make operational semantics of pattern matching independent of crate and module <https://github.com/rust-lang/rust/pull/150681>`_
 
+  Previous behavior was not documented,
+  and a new paragraph was added to include the new behavior: :p:`fls_7EXHdE2eOVek`.
+
 FLS maintenance
 ---------------
 
@@ -197,7 +200,6 @@ FLS maintenance
   - :p:`fls_RaONmCLH2KGM`
   - :p:`fls_Vt9C9mKxHOwo`
   - :p:`fls_Fs12dmznjsMf`
-  - :p:`fls_7EXHdE2eOVek`
   - :p:`fls_iLH8X2U4ADHb`
   - :p:`fls_HMJUXHrvOmPl`
   - :p:`fls_Gj1znNpthHY6`
