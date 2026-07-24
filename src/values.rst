@@ -76,7 +76,7 @@ A :t:`pointer` is a :t:`value` of a :t:`pointer type`.
 An :t:`original pointer` is a :t:`pointer` created via allocation.
 
 :dp:`fls_kaPNJ7iIHPro`
-A :t:`derived pointer` is a :t:`pointer` obtained by :t:`borrowing`, copying a :t:`pointer`, loading a stored :t:`pointer`, performing :t:`pointer` arithmetic, or :t:`casting` a :t:`pointer`.
+A :t:`derived pointer` is a :t:`pointer` obtained by :t:`borrowing`, copying a :t:`pointer`, reading a stored :t:`pointer`, performing :t:`pointer` arithmetic, or :t:`casting` a :t:`pointer`.
 
 :dp:`fls_5MkKtNL9oCsL`
 :t:`Provenance` is an optional property of :t:`[pointer]s` that restricts the memory locations the :t:`pointer` may access, the timespan during which the accesses may occur, and whether the accesses may read from or write to said memory locations.

@@ -1159,7 +1159,7 @@ A :dt:`derive macro` is a :t:`procedural macro` that consumes a stream of
 derived pointer
 ^^^^^^^^^^^^^^^
 
-A :dt:`derived pointer` is a :t:`pointer` obtained by :t:`borrowing`, copying a :t:`pointer`, loading a stored :t:`pointer`, performing :t:`pointer` arithmetic, or :t:`casting` a :t:`pointer`.
+A :dt:`derived pointer` is a :t:`pointer` obtained by :t:`borrowing`, copying a :t:`pointer`, reading a stored :t:`pointer`, performing :t:`pointer` arithmetic, or :t:`casting` a :t:`pointer`.
 
 destruction
 ^^^^^^^^^^^
