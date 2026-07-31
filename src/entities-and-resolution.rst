@@ -1019,16 +1019,16 @@ A :t:`use import` brings :t:`entities <entity>` :t:`in scope` within the
 :t:`use import` resides.
 
 :dp:`fls_sxo1jb25pl8a`
-A :dt:`common path prefix` is the :t:`simple path` of a :s:`CommonPathPrefix` when one is present, and otherwise consists only of :t:`namespace qualifier` ``::``.
+A :dt:`common path prefix` is the :t:`simple path` of a :s:`CommonPathPrefix` when the :s:`CommonPathPrefix` contains a :s:`SimplePath`, and otherwise consists only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_WAA4WmohGu6T`
-An :dt:`import path prefix` is the fully constructed sequence of :t:`[path segment]s` and :t:`[namespace qualifier]s` that precedes the selected :t:`entity` of a :t:`simple import` or the character asterisk ``*`` of a :t:`glob import`. The :t:`import path prefix` for a given :t:`simple import` or :t:`glob import` is constructed as follows:
+An :dt:`import path prefix` is a sequence of :t:`[path segment]s` and :t:`[namespace qualifier]s` associated with a :t:`simple import` or :t:`glob import`. The :t:`import path prefix` for a given :t:`simple import` or :t:`glob import` is constructed as follows:
 
 #. :dp:`fls_IPYvldMqduf4`
    Make the given :t:`use import` the current :t:`use import`, and start the :t:`import path prefix` as follows:
 
    * :dp:`fls_MOXId37fcNPY`
-     If the :t:`use import` is a :t:`simple import`, then start with the :t:`simple import`'s :t:`simple path` :t:`path prefix`, retaining any leading :t:`namespace qualifier` of the :t:`simple path`.
+     If the :t:`use import` is a :t:`simple import`, then start with the :t:`simple import`'s :t:`simple path` after removing its last :t:`path segment` and, if another :t:`path segment` precedes the last :t:`path segment`, the :t:`namespace qualifier` that separates them.
 
    * :dp:`fls_2UyFcB6Our1v`
      If the :t:`use import` is a :t:`glob import`, then start with the :t:`glob import`'s :t:`common path prefix`, or an empty sequence if the :t:`glob import` lacks a :t:`common path prefix`.
@@ -1054,10 +1054,10 @@ into :t:`scope`.
 Each :t:`namespace qualifier` of an :t:`import path prefix` shall either be the first element of the :t:`import path prefix` or appear between two :t:`[path segment]s`.
 
 :dp:`fls_UZHHtqJ0ekju`
-An empty :t:`import path prefix` resolves to the current :t:`module`.
+An empty :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` resolves to the current :t:`module`.
 
 :dp:`fls_JHU0ersYB6eL`
-An :t:`import path prefix` shall resolve to a :t:`module` or :t:`enum`.
+An :t:`import path prefix` that contains a :t:`path segment` shall resolve to a :t:`module` or :t:`enum`.
 
 :dp:`fls_jlNKxkuhsvX4`
 A :t:`glob import` brings :t:`[name]s` into :t:`scope` as follows:
@@ -1125,7 +1125,7 @@ A :t:`use import` with a single :t:`path segment` expressed as either :t:`keywor
 When a :t:`path segment` expressed as :t:`keyword` ``super`` is used to import a parent :t:`module`, the imported :t:`entity` shall be subject to a :t:`renaming`.
 
 :dp:`fls_aam34hsRmKU2`
-An :t:`import path prefix` shall not consist only of :t:`namespace qualifier` ``::`` when it is the :t:`import path prefix` of a :t:`glob import` or selects the :t:`entity` of a :t:`simple import`.
+The :t:`import path prefix` of a :t:`glob import` shall neither be empty nor consist only of :t:`namespace qualifier` ``::``. An :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` shall not consist only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_LV94x3HlpBWk`
 A :t:`simple import` shall not refer to :t:`[enum variant]s` through a :t:`type alias`.
