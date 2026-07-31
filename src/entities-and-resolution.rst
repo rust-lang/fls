@@ -1103,8 +1103,7 @@ A :t:`nesting import` is a :t:`use import` that provides a common
 :t:`common path prefix` for its nested :t:`[use import]s`.
 
 :dp:`fls_iNUBX5fJAI1N`
-A :t:`glob import` outside of a :t:`nesting import` without a :t:`common path
-prefix` is rejected, but may still be consumed by :t:`[macro]s`.
+A :t:`glob import` whose :t:`import path prefix` is empty or consists only of :t:`namespace qualifier` ``::`` is rejected, but may still be consumed by :t:`[macro]s`.
 
 :dp:`fls_wB3fVglLOqbZ`
 It is a static error if two :t:`[glob import]s` import the same :t:`name` in the
@@ -1125,7 +1124,7 @@ A :t:`use import` with a single :t:`path segment` expressed as either :t:`keywor
 When a :t:`path segment` expressed as :t:`keyword` ``super`` is used to import a parent :t:`module`, the imported :t:`entity` shall be subject to a :t:`renaming`.
 
 :dp:`fls_aam34hsRmKU2`
-The :t:`import path prefix` of a :t:`glob import` shall neither be empty nor consist only of :t:`namespace qualifier` ``::``. An :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` shall not consist only of :t:`namespace qualifier` ``::``.
+An :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` shall not consist only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_LV94x3HlpBWk`
 A :t:`simple import` shall not refer to :t:`[enum variant]s` through a :t:`type alias`.
