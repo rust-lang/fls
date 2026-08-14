@@ -1005,7 +1005,8 @@ Use Imports
        SimplePath Renaming?
 
    CommonPathPrefix ::=
-       SimplePath? $$::$$
+       SimplePath $$::$$
+     | $$::$$
 
    UseImportContentList ::=
        UseImportContent ($$,$$ UseImportContent)* $$,$$?
@@ -1018,35 +1019,28 @@ A :t:`use import` brings :t:`entities <entity>` :t:`in scope` within the
 :t:`use import` resides.
 
 :dp:`fls_sxo1jb25pl8a`
-A :dt:`common path prefix` is the leading :t:`simple path` of a :t:`glob import`
-or a :t:`nesting import`.
+A :dt:`common path prefix` is the :t:`simple path` of a :s:`CommonPathPrefix` when the :s:`CommonPathPrefix` contains a :s:`SimplePath`, and otherwise consists only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_WAA4WmohGu6T`
-An :dt:`import path prefix` is the fully constructed :t:`path` prefix of a
-:t:`use import`. An :t:`import path prefix` for a given
-:t:`simple import` or :t:`glob import` is constructed as follows:
+An :dt:`import path prefix` is a sequence of :t:`[path segment]s` and :t:`[namespace qualifier]s` associated with a :t:`simple import` or :t:`glob import`. The :t:`import path prefix` for a given :t:`simple import` or :t:`glob import` is constructed as follows:
 
 #. :dp:`fls_IPYvldMqduf4`
-   Start the :t:`import path prefix` as follows:
+   Make the given :t:`use import` the current :t:`use import`, and start the :t:`import path prefix` as follows:
 
    * :dp:`fls_MOXId37fcNPY`
-     If the :t:`use import` is a :t:`simple import` then start with the
-     :t:`[path segment]s` of the :t:`simple import`'s :t:`simple path`
-     :t:`path prefix`.
+     If the :t:`use import` is a :t:`simple import`, then start with the :t:`simple import`'s :t:`simple path` after removing its last :t:`path segment` and, if another :t:`path segment` precedes the last :t:`path segment`, the :t:`namespace qualifier` that separates them.
 
    * :dp:`fls_2UyFcB6Our1v`
-     If the :t:`use import` is a :t:`glob import` then start with the
-     :t:`[path segment]s` of the :t:`glob import`'s :t:`common path prefix`.
-
-   * :dp:`fls_irdKqoYzBM0M`
-     If the :t:`use import` is a :t:`nesting import` then start with the
-     :t:`[path segment]s` of the :t:`nesting import`'s :t:`common path prefix`.
+     If the :t:`use import` is a :t:`glob import`, then start with the :t:`glob import`'s :t:`common path prefix`, or an empty sequence if the :t:`glob import` lacks a :t:`common path prefix`.
 
 #. :dp:`fls_gAWsqibl4GLq`
-   Then if the current :t:`use import` is the child of a :t:`nesting import`,
-   prepend the :t:`nesting import`'s :t:`common path prefix` to the
-   :t:`import path prefix`. Repeat this step with the :t:`nesting import` as
-   the current :t:`use import`.
+   While the current :t:`use import` is the child of a :t:`nesting import`, repeat the following steps:
+
+   * :dp:`fls_irdKqoYzBM0M`
+     If the :t:`nesting import` has a :t:`common path prefix`, prepend the :t:`common path prefix` to the :t:`import path prefix`. If the :t:`common path prefix` contains a :t:`path segment` and the :t:`import path prefix` was not empty, place a :t:`namespace qualifier` ``::`` between them.
+
+   * :dp:`fls_lfsIPXV0OTI5`
+     Make the :t:`nesting import` the current :t:`use import`.
 
 :dp:`fls_2bkcn83smy2y`
 A :dt:`simple import` is a :t:`use import` that brings into :t:`scope` an :t:`entity` selected by its :t:`simple import path`, or by its :t:`import path prefix` when its :t:`simple path` ends in :t:`keyword` ``self`` and the :t:`simple path` appears in a :t:`nesting import`.
@@ -1056,8 +1050,14 @@ A :t:`glob import` is a :t:`use import` that brings all :t:`entities <entity>`
 exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
 into :t:`scope`.
 
+:dp:`fls_BMtRtjJ7gBKT`
+Each :t:`namespace qualifier` of an :t:`import path prefix` shall either be the first element of the :t:`import path prefix` or appear between two :t:`[path segment]s`.
+
+:dp:`fls_UZHHtqJ0ekju`
+An empty :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` resolves to the current :t:`module`.
+
 :dp:`fls_JHU0ersYB6eL`
-An :t:`import path prefix` shall resolve to a :t:`module` or :t:`enum`.
+An :t:`import path prefix` that contains a :t:`path segment` shall resolve to a :t:`module` or :t:`enum`.
 
 :dp:`fls_jlNKxkuhsvX4`
 A :t:`glob import` brings :t:`[name]s` into :t:`scope` as follows:
@@ -1103,8 +1103,7 @@ A :t:`nesting import` is a :t:`use import` that provides a common
 :t:`common path prefix` for its nested :t:`[use import]s`.
 
 :dp:`fls_iNUBX5fJAI1N`
-A :t:`glob import` outside of a :t:`nesting import` without a :t:`common path
-prefix` is rejected, but may still be consumed by :t:`[macro]s`.
+A :t:`glob import` whose :t:`import path prefix` is empty or consists only of :t:`namespace qualifier` ``::`` is rejected, but may still be consumed by :t:`[macro]s`.
 
 :dp:`fls_wB3fVglLOqbZ`
 It is a static error if two :t:`[glob import]s` import the same :t:`name` in the
@@ -1125,7 +1124,7 @@ A :t:`use import` with a single :t:`path segment` expressed as either :t:`keywor
 When a :t:`path segment` expressed as :t:`keyword` ``super`` is used to import a parent :t:`module`, the imported :t:`entity` shall be subject to a :t:`renaming`.
 
 :dp:`fls_aam34hsRmKU2`
-A :t:`simple import` whose :t:`import path prefix` consists only of :t:`namespace qualifier` ``::`` and whose :t:`simple path` consists of a single :t:`path segment` expressed as :t:`keyword` ``self`` shall not be used.
+An :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` shall not consist only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_LV94x3HlpBWk`
 A :t:`simple import` shall not refer to :t:`[enum variant]s` through a :t:`type alias`.

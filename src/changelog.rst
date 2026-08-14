@@ -19,6 +19,32 @@ with the change that has been applied due to it.
    just the language changes that had an impact to the FLS. See the `release
    notes`_ for a full list of changes.
 
+FLS maintenance
+---------------
+
+- Fix the construction of :t:`[import path prefix]es` to preserve leading :t:`[namespace qualifier]s`.
+
+  Changed syntax: :s:`CommonPathPrefix`
+
+  Changed paragraphs:
+
+  - :p:`fls_sxo1jb25pl8a`
+  - :p:`fls_WAA4WmohGu6T`
+  - :p:`fls_IPYvldMqduf4`
+  - :p:`fls_MOXId37fcNPY`
+  - :p:`fls_2UyFcB6Our1v`
+  - :p:`fls_gAWsqibl4GLq`
+  - :p:`fls_irdKqoYzBM0M`
+  - :p:`fls_JHU0ersYB6eL`
+  - :p:`fls_iNUBX5fJAI1N`
+  - :p:`fls_aam34hsRmKU2`
+
+  New paragraphs:
+
+  - :p:`fls_lfsIPXV0OTI5`
+  - :p:`fls_BMtRtjJ7gBKT`
+  - :p:`fls_UZHHtqJ0ekju`
+
 Language changes in Rust 1.96.0
 -------------------------------
 
