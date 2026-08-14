@@ -120,7 +120,7 @@ Type Classification
     :t:`[Function item type]s`
 
 * :dp:`fls_jrohsv7hx7yw`
-  :t:`[Indirection type]s`
+  :t:`[Pointer type]s`
 
   * :dp:`fls_1kg1mknf4yx7`
     :t:`[Function pointer type]s`
@@ -936,13 +936,19 @@ A :t:`function item type` implements the :std:`core::ops::Fn` :t:`trait`, the :s
 
 .. _fls_3i4ou0dq64ny:
 
-Indirection Types
+Pointer Types
 -----------------
 
 .. rubric:: Legality Rules
 
 :dp:`fls_3qI8FXMsyk0f`
-A :t:`pointer type` is either a :t:`raw pointer type` or a :t:`reference type`.
+A :t:`pointer type` is a :t:`type` whose :t:`[value]s` refer to memory locations.
+
+:dp:`fls_f3TcmFrVoNis`
+A :t:`pointer` is a :t:`value` of a :t:`pointer type`.
+
+:dp:`fls_8RBNIR0E6pnI`
+A :t:`pointer` is :t:`dangling` if it is either :c:`null` or not all of the bytes at the referred memory location are part of the same allocation.
 
 .. _fls_xztr1kebz8bo:
 
@@ -973,8 +979,7 @@ Function Pointer Types
 .. rubric:: Legality Rules
 
 :dp:`fls_v2wrytr3t04h`
-A :t:`function pointer type` is an :t:`indirection type` that refers to a
-:t:`function`.
+A :t:`function pointer type` is a :t:`pointer type` that refers to a :t:`function`.
 
 :dp:`fls_5dd7icjcl3nt`
 An :t:`unsafe function pointer type` is a function pointer type subject to
@@ -1023,7 +1028,7 @@ Raw Pointer Types
 .. rubric:: Legality Rules
 
 :dp:`fls_rpbhr0xukbx9`
-A :t:`raw pointer type` is an :t:`indirection type` without validity guarantees.
+A :t:`raw pointer type` is a :t:`pointer type` without validity guarantees.
 
 :dp:`fls_bYWfGDAQcWfA`
 A :t:`mutable raw pointer type` is a :t:`raw pointer type` subject to
@@ -1064,7 +1069,7 @@ Reference Types
 .. rubric:: Legality Rules
 
 :dp:`fls_twhq24s8kchh`
-A :t:`reference type` is an :t:`indirection type` with :t:`ownership`.
+A :t:`reference type` is a :t:`pointer type` with :t:`ownership`.
 
 :dp:`fls_w4NbA7WhZfR2`
 A :t:`shared reference type` is a :t:`reference type` not subject to
@@ -1405,11 +1410,17 @@ Type Layout
 :dp:`fls_kdbq02iguzgl`
 All :t:`[value]s` have an :t:`alignment` and a :t:`size`.
 
+:dp:`fls_Im7miUSS87xs`
+A :t:`fixed sized type` is a :t:`type` that implements the :std:`core::marker::Sized` :t:`trait`.
+
+:dp:`fls_aQgOFrzAhdsC`
+A :t:`thin pointer type` is a :t:`pointer type` that refers to a :t:`fixed sized type`.
+
 :dp:`fls_26Xgem831Nqg`
-A :dt:`dynamically sized type` is a :t:`type` that does not implement the :std:`core::marker::Sized` :t:`trait`.
+A :t:`dynamically sized type` is a :t:`type` that does not implement the :std:`core::marker::Sized` :t:`trait`.
 
 :dp:`fls_ozYgHEHFTT5c`
-A :dt:`fat pointer type` is an :t:`indirection type` whose contained :t:`type specification` is a :t:`dynamically sized type`.
+A :t:`fat pointer type` is a :t:`pointer type` whose contained :t:`type specification` is a :t:`dynamically sized type`.
 
 :dp:`fls_muxfn9soi47l`
 The :t:`alignment` of a :t:`value` specifies which addresses are valid for

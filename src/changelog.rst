@@ -19,6 +19,44 @@ with the change that has been applied due to it.
    just the language changes that had an impact to the FLS. See the `release
    notes`_ for a full list of changes.
 
+FLS maintenance
+---------------
+
+- `[Change]: Remove the term "indirection", and associated derivatives <https://github.com/rust-lang/fls/issues/710>`_
+
+  Changed glossary entries:
+
+  - :t:`dangling`
+  - :t:`fat pointer type`
+  - :t:`function pointer type`
+  - :t:`pointer type`
+  - :t:`raw pointer type`
+  - :t:`reference type`
+  - :t:`thin pointer type`
+
+  Removed glossary entries:
+
+  - :t:`indirection type`
+
+  New paragraphs:
+
+  - :p:`fls_f3TcmFrVoNis`
+  - :p:`fls_8RBNIR0E6pnI`
+  - :p:`fls_Im7miUSS87xs`
+  - :p:`fls_aQgOFrzAhdsC`
+
+  Changed paragraphs:
+
+  - :p:`fls_jrohsv7hx7yw`
+  - :p:`fls_3qI8FXMsyk0f`
+  - :p:`fls_v2wrytr3t04h`
+  - :p:`fls_rpbhr0xukbx9`
+  - :p:`fls_twhq24s8kchh`
+  - :p:`fls_26Xgem831Nqg`
+  - :p:`fls_ozYgHEHFTT5c`
+
+  Changed section :ref:`fls_3i4ou0dq64ny`
+
 Language changes in Rust 1.96.0
 -------------------------------
 
@@ -76,7 +114,7 @@ Language changes in Rust 1.95.0
 
   - :t:`let binding`
 
-  Changed existing paragraphs:
+  Changed paragraphs:
 
   - :p:`fls_72JHo343O7jp`
   - :p:`fls_6bwTtGKb7ba7`
