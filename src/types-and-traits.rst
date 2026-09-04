@@ -645,6 +645,9 @@ A :t:`zero-variant enum type` has no :t:`[value]s`.
 An :t:`enum variant` is a :t:`construct` that declares one of the
 possible variations of an :t:`enum`.
 
+:dp:`fls_Odh6Z7ivD1U4`
+A :dt:`unit enum variant` is an :t:`enum variant` without a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
+
 :dp:`fls_g5qle7xzaoif`
 The :t:`name` of an :t:`enum variant` shall be unique within the related
 :s:`EnumDeclaration`.
@@ -695,9 +698,6 @@ with the same :t:`value`.
 It is a static error if the :t:`value` of a :t:`discriminant` exceeds the
 maximum :t:`value` of the :t:`type` of the :t:`expression` of a :t:`discriminant
 initializer`.
-
-:dp:`fls_Odh6Z7ivD1U4`
-A :dt:`unit enum variant` is an :t:`enum variant` without a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
 
 .. rubric:: Undefined Behavior
 
