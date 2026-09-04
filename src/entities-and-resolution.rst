@@ -1065,7 +1065,10 @@ exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
 into :t:`scope`.
 
 :dp:`fls_BMtRtjJ7gBKT`
-Each :t:`namespace qualifier` of an :t:`import path prefix` shall either be the first element of the :t:`import path prefix` or appear between two :t:`[path segment]s`.
+A :t:`simple import`, :t:`glob import`, or :t:`nesting import` expressed with a
+leading :t:`namespace qualifier` ``::`` shall not be nested, directly or
+indirectly, within any :t:`nesting import` whose :s:`CommonPathPrefix` is
+present.
 
 :dp:`fls_UZHHtqJ0ekju`
 An empty :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` resolves to the current :t:`module`.
