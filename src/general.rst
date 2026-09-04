@@ -159,6 +159,9 @@ relevant to the topic:
 :dp:`fls_oxzjqxgejx9t`
 The syntax representation of a :t:`construct`.
 
+:dp:`fls_SonodAQVL5J4`
+A :dt:`construct` is a piece of program text that is an instance of a :t:`syntactic category`.
+
 .. rubric:: Legality Rules
 
 :dp:`fls_gmx688d6ek1o`
@@ -252,6 +255,9 @@ together with context-dependent requirements expressed by narrative rules.
 :dp:`fls_ioyp4wux6skt`
 The semantic meaning of a Rust program is described by means of narrative rules defining
 both the effects of each construct and the composition rules for constructs.
+
+:dp:`fls_5SVthCNZBcVS`
+A :dt:`syntactic category` is a nonterminal in the Backus-Naur Form grammar definition of the Rust programming language.
 
 :dp:`fls_jsflt7691ye4`
 The context-free syntax of Rust is described using a simple variant of the
