@@ -1125,8 +1125,10 @@ An :t:`impl trait type` is a :t:`type` that implements a :t:`trait`, where the
 :t:`type` is known at compile time.
 
 :dp:`fls_ieyqx5vzas2m`
-An :t:`impl trait type` shall appear only within a :t:`function parameter` or
-the :t:`return type` of a :t:`function`.
+An :t:`impl trait type` is either an :t:`anonymous type parameter` or an :t:`anonymous return type`.
+
+:dp:`fls_EyvBbFdFHWwo`
+An :dt:`anonymous type parameter` is an :t:`impl trait type` ascribed to a :t:`function parameter`.
 
 :dp:`fls_3aKZB0ILIkZw`
 An :t:`anonymous return type` is an :t:`impl trait type` ascribed to a
