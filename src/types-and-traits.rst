@@ -770,6 +770,9 @@ A :t:`struct type` is an :t:`abstract data type` that is a product of other
 :dp:`fls_mdejdc0nNgyO`
 A :dt:`record struct type` is the :t:`type` of a :t:`record struct`.
 
+:dp:`fls_9bp4cKSfW9A0`
+A :dt:`unit struct` is a :t:`struct` without a :s:`RecordStructFieldList` or a :s:`TupleStructFieldList`.
+
 :dp:`fls_WUCvCauUCmsD`
 A :dt:`record struct field` is a :t:`field` of a :t:`record struct type`.
 
@@ -786,9 +789,6 @@ the :s:`RecordStructFieldList`.
 If the :t:`type` of a :t:`tuple struct field` is a :t:`dynamically sized type`,
 then the :t:`tuple struct field` shall be the last :t:`tuple struct field` in
 the :s:`TupleStructFieldList`.
-
-:dp:`fls_9bp4cKSfW9A0`
-A :dt:`unit struct` is a :t:`struct` without a :s:`RecordStructFieldList` or a :s:`TupleStructFieldList`.
 
 .. rubric:: Examples
 
