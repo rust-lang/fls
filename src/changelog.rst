@@ -108,6 +108,16 @@ Language changes in Rust 1.98.0
 
   - Lints are outside the scope of the FLS.
 
+FLS maintenance
+---------------
+
+Removed paragraphs:
+
+- :p:`fls_B5cmkWfD5GNt`
+- :p:`fls_uhwpuv6cx4ip`
+
+Changed paragraph: :p:`fls_xuuFKmm181bs`
+
 Language changes in Rust 1.97.0
 -------------------------------
 
