@@ -44,6 +44,123 @@ FLS maintenance
   - :p:`fls_lfsIPXV0OTI5`
   - :p:`fls_BMtRtjJ7gBKT`
   - :p:`fls_UZHHtqJ0ekju`
+- Remove the term "indirection", and associated derivatives
+
+  Changed glossary entries:
+
+  - :t:`dangling`
+  - :t:`fat pointer type`
+  - :t:`function pointer type`
+  - :t:`pointer type`
+  - :t:`raw pointer type`
+  - :t:`reference type`
+  - :t:`thin pointer type`
+
+  Removed glossary entries:
+
+  - indirection type
+
+  Changed paragraphs:
+
+  - :p:`fls_jrohsv7hx7yw`
+  - :p:`fls_3qI8FXMsyk0f`
+  - :p:`fls_rpbhr0xukbx9`
+  - :p:`fls_twhq24s8kchh`
+  - :p:`fls_15zdiqsm1q3p`
+  - :p:`fls_ozYgHEHFTT5c`
+
+  Moved paragraphs:
+
+  - :p:`fls_1kg1mknf4yx7`
+  - :p:`fls_v2wrytr3t04h`
+  - :p:`fls_5dd7icjcl3nt`
+  - :p:`fls_B0SMXRqQMS1E`
+  - :p:`fls_hbn1l42xmr3h`
+  - :p:`fls_g1iYVw7upBnH`
+  - :p:`fls_8gpvNJfVlyaD`
+  - :p:`fls_KcI6yK0P8Onn`
+  - :p:`fls_52thmi9hnoks`
+  - :p:`fls_bYWfGDAQcWfA`
+  - :p:`fls_c2Guy3fPYaUV`
+  - :p:`fls_hrum767l6dte`
+  - :p:`fls_k6ues2936pjq`
+  - :p:`fls_csdjfwczlzfd`
+  - :p:`fls_ezh8aq6fmdvz`
+  - :p:`fls_jriT46yWgIR0`
+  - :p:`fls_VWUlxTy0QF9d`
+  - :p:`fls_kaPNJ7iIHPro`
+  - :p:`fls_5MkKtNL9oCsL`
+  - :p:`fls_1NJhTBN1D2qv`
+  - :p:`fls_wnJmQYT7iKQf`
+  - :p:`fls_ffh8mAkebORJ`
+  - :p:`fls_c3DaCLQEBpYQ`
+
+  New paragraphs:
+
+  - :p:`fls_Im7miUSS87xs`
+  - :p:`fls_aQgOFrzAhdsC`
+
+  Changed sections:
+
+  - :ref:`fls_3i4ou0dq64ny`
+
+  Moved sections:
+
+  - :ref:`fls_xztr1kebz8bo`
+  - :ref:`fls_Dqk4eIvxHloY`
+
+  New sections:
+
+  - :ref:`fls_xOuhiItK1hK0`
+  - :ref:`fls_qPWQnNXH52R3`
+  - :ref:`fls_phgP8YIwpXpi`
+
+Language changes in Rust 1.98.0
+-------------------------------
+
+- `Allow shortening lifetime in CoerceUnsized for &mut <https://github.com/rust-lang/rust/pull/149219>`_
+
+  - The Rust Standard Library is outside the scope of the FLS.
+
+- `Add lint against invalid runtime symbol definitions <https://github.com/rust-lang/rust/pull/155521>`_
+
+  - Lints are outside the scope of the FLS.
+
+- `Lint on core::ffi::c_void as a return type <https://github.com/rust-lang/rust/pull/156379>`_
+
+  - Lints are outside the scope of the FLS.
+
+Language changes in Rust 1.97.0
+-------------------------------
+
+- `Consider 'Result<T, Uninhabited>' and 'ControlFlow<Uninhabited, T>' to be equivalent to 'T' for must use lint <https://github.com/rust-lang/rust/pull/148214>`_
+
+  - Lints are outside the scope of the FLS.
+
+- `Add allow-by-default 'dead_code_pub_in_binary' lint for unused pub items in binary crates <https://github.com/rust-lang/rust/pull/149509>`_
+
+  - Lints are outside the scope of the FLS.
+
+- `Stabilize the 'div32', 'lam-bh', 'lamcas', 'ld-seq-sa' and 'scq' target features <https://github.com/rust-lang/rust/pull/154510>`_
+
+  - The target is outside the scope of the FLS
+
+- `Stabilize 'cfg(target_has_atomic_primitive_alignment)' <https://github.com/rust-lang/rust/pull/155006>`_
+
+  - Configuration options are environment-specific and not exhaustive
+
+- `Allow trailing 'self' in imports in more cases <https://github.com/rust-lang/rust/pull/155137>`_
+
+  Changed paragraphs:
+
+  - :p:`fls_uSajfdSsbxna`
+  - :p:`fls_2bkcn83smy2y`
+  - :p:`fls_ar03D5rxjzy0`
+
+FLS maintenance
+---------------
+
+New paragraph: :p:`fls_oRdi3KXFbJcR`
 
 Language changes in Rust 1.96.0
 -------------------------------
@@ -75,10 +192,6 @@ Language changes in Rust 1.95.0
 
   Changed syntax: :s:`MatchArmGuard`
 
-  The FLS models the Rust 2021 syntax accepted by stable :t:`rustc` 1.95.0.
-  It does not add the Rust Reference's attribute position before a guard
-  ``let`` pattern because attributes remain unstable in that position.
-
   New syntax:
 
   - :s:`MatchArmGuardChain`
@@ -102,7 +215,7 @@ Language changes in Rust 1.95.0
 
   - :t:`let binding`
 
-  Changed existing paragraphs:
+  Changed paragraphs:
 
   - :p:`fls_72JHo343O7jp`
   - :p:`fls_6bwTtGKb7ba7`
@@ -156,7 +269,6 @@ Language changes in Rust 1.95.0
   - :p:`fls_Gc5RpT8nYvQm`
   - :p:`fls_Nw2KxL7qVmRs`
   - :p:`fls_Rh9TsD4vQpLm`
-  - :p:`fls_8Vrz9SNfjSh7`
   - :p:`fls_X4y3QltM208J`
   - :p:`fls_vQ3tHg9XmDkF`
   - :p:`fls_Td7McP9rQxVn`
@@ -221,7 +333,7 @@ Language changes in Rust 1.95.0
   - :t:`well-formed pointer`
 
   Changed glossary entries:
-  
+
   - :t:`pointer type`
   - :t:`raw pointer`
 
