@@ -1008,8 +1008,7 @@ Use Imports
        SimplePath Renaming?
 
    CommonPathPrefix ::=
-       SimplePath $$::$$
-     | $$::$$
+       SimplePath? $$::$$
 
    UseImportContentList ::=
        UseImportContent ($$,$$ UseImportContent)* $$,$$?
@@ -1022,28 +1021,40 @@ A :t:`use import` brings :t:`entities <entity>` :t:`in scope` within the
 :t:`use import` resides.
 
 :dp:`fls_sxo1jb25pl8a`
-A :dt:`common path prefix` is the :t:`simple path` of a :s:`CommonPathPrefix` when the :s:`CommonPathPrefix` contains a :s:`SimplePath`, and otherwise consists only of :t:`namespace qualifier` ``::``.
+A :dt:`common path prefix` is the leading :t:`simple path` of a :t:`glob import`
+or a :t:`nesting import`.
 
 :dp:`fls_WAA4WmohGu6T`
-An :dt:`import path prefix` is a sequence of :t:`[path segment]s` and :t:`[namespace qualifier]s` associated with a :t:`simple import` or :t:`glob import`. The :t:`import path prefix` for a given :t:`simple import` or :t:`glob import` is constructed as follows:
-
-#. :dp:`fls_IPYvldMqduf4`
-   Make the given :t:`use import` the current :t:`use import`, and start the :t:`import path prefix` as follows:
-
-   * :dp:`fls_MOXId37fcNPY`
-     If the :t:`use import` is a :t:`simple import`, then start with the :t:`simple import`'s :t:`simple path` after removing its last :t:`path segment` and, if another :t:`path segment` precedes the last :t:`path segment`, the :t:`namespace qualifier` that separates them.
-
-   * :dp:`fls_2UyFcB6Our1v`
-     If the :t:`use import` is a :t:`glob import`, then start with the :t:`glob import`'s :t:`common path prefix`, or an empty sequence if the :t:`glob import` lacks a :t:`common path prefix`.
+An :dt:`import path prefix` is a sequence of :t:`[path segment]s` and
+:t:`[namespace qualifier]s` associated with a :t:`simple import` or
+:t:`glob import`. The :t:`import path prefix` is formed by concatenating the
+following sequences in order. When concatenation would place two
+:t:`[path segment]s` next to each other, :t:`namespace qualifier` ``::`` is
+placed between them.
 
 #. :dp:`fls_gAWsqibl4GLq`
-   While the current :t:`use import` is the child of a :t:`nesting import`, repeat the following steps:
+   For each :t:`nesting import` in which the :t:`simple import` or
+   :t:`glob import` is nested, from outermost to innermost:
 
    * :dp:`fls_irdKqoYzBM0M`
-     If the :t:`nesting import` has a :t:`common path prefix`, prepend the :t:`common path prefix` to the :t:`import path prefix`. If the :t:`common path prefix` contains a :t:`path segment` and the :t:`import path prefix` was not empty, place a :t:`namespace qualifier` ``::`` between them.
+     The :t:`nesting import`'s :t:`common path prefix` if it has one,
+     :t:`namespace qualifier` ``::`` if it lacks a :t:`common path prefix`
+     and its :s:`CommonPathPrefix` is present, or an empty sequence otherwise.
 
-   * :dp:`fls_lfsIPXV0OTI5`
-     Make the :t:`nesting import` the current :t:`use import`.
+#. :dp:`fls_IPYvldMqduf4`
+   A sequence determined by the kind of import:
+
+   * :dp:`fls_MOXId37fcNPY`
+     For a :t:`simple import`, the :t:`simple import`'s :t:`simple path` after
+     removing its last :t:`path segment` and, if another :t:`path segment`
+     precedes the last :t:`path segment`, the :t:`namespace qualifier` that
+     separates them.
+
+   * :dp:`fls_2UyFcB6Our1v`
+     For a :t:`glob import`, the :t:`glob import`'s :t:`common path prefix` if
+     it has one, :t:`namespace qualifier` ``::`` if it lacks a
+     :t:`common path prefix` and its :s:`CommonPathPrefix` is present, or an
+     empty sequence otherwise.
 
 :dp:`fls_2bkcn83smy2y`
 A :dt:`simple import` is a :t:`use import` that brings into :t:`scope` an :t:`entity` selected by its :t:`simple import path`, or by its :t:`import path prefix` when its :t:`simple path` ends in :t:`keyword` ``self``.
