@@ -954,7 +954,7 @@ using external :t:`[crate import]s` or supplied by a tool. If the external
 :t:`crate import` uses a :t:`renaming`, then the :t:`identifier` of the
 :t:`renaming` is instead added to the :t:`external prelude`. The core
 :t:`crate` is always added to the :t:`external prelude` unless the :t:`crate
-root` is subject to :t:`attribute` ``no_core``.
+root module` is subject to :t:`attribute` ``no_core``.
 
 :dp:`fls_pbc7ktlu0pl`
 The :dt:`language prelude` is a :t:`prelude` that brings :t:`in scope` of every
