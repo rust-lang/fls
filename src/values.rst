@@ -142,7 +142,7 @@ A :t:`pointer` is :t:`dangling` if it is either :c:`null` or not all of the byte
 A :t:`thin pointer` is a :t:`value` of a :t:`thin pointer type`.
 
 :dp:`fls_qpARFqqnKGMn`
-A :t:`fat pointer` is a :t:`value` of a :t:`fat pointer type`.
+A :dt:`fat pointer` is a :t:`value` of a :t:`fat pointer type`.
 
 :dp:`fls_VWUlxTy0QF9d`
 An :t:`original pointer` is a :t:`pointer` created via allocation.

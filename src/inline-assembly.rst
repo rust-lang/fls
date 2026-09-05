@@ -580,9 +580,7 @@ If a :t:`value` has a smaller size than the :t:`register` it is allocated in,
 then
 
 * :dp:`fls_drg7v8hxb5ca`
-  On RISC-V architectures, if the :t:`register` belongs to :t:`register class`
-  ``freg``, then :c:`f32` :t:`[value]s` are :t:`NaN-boxed <NaN-boxing>`. in a
-  :c:`f64` :t:`value`.
+  On RISC-V architectures, if the :t:`register` belongs to :t:`register class` ``freg``, then :c:`f32` :t:`[value]s` are :t:`NaN-boxed <NaN-boxing>` in a :c:`f64` :t:`value`.
 
 * :dp:`fls_78gb8z1fyluc`
   Otherwise, for an :t:`input register`, the upper bits of the :t:`register`
@@ -595,6 +593,9 @@ then
 If a :t:`register argument` has :t:`direction modifier` ``inout`` and an
 :t:`input-output register expression`, then the :t:`input register expression`
 and the :t:`output register expression` shall have the same :t:`type`.
+
+:dp:`fls_FG0EmVgrDUDq`
+:dt:`NaN-boxing` is a technique for encoding :t:`[value]s` using the low order bits of the mantissa of a 64-bit IEEE floating-point ``NaN``.
 
 .. _fls_hejgghwzblf:
 

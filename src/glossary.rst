@@ -46,11 +46,6 @@ active attribute
 An :dt:`active attribute` is an :t:`attribute` that is removed from the
 :t:`item` it decorates.
 
-addition assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`addition assignment`, see :t:`addition assignment expression`.
-
 addition assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -97,12 +92,6 @@ anonymous return type
 
 An :dt:`anonymous return type` is an :t:`impl trait type` ascribed to a
 :t:`function` return type.
-
-anonymous type parameter
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`anonymous type parameter` is an :t:`impl trait type` ascribed to a
-:t:`function parameter`.
 
 any configuration predicate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -238,11 +227,6 @@ An :dt:`assignee operand` is the target :t:`operand` of an
 :t:`assignment expression`.
 
 See :s:`AssigneeOperand`.
-
-assignment
-^^^^^^^^^^
-
-See :t:`assignment expression`.
 
 assignment expression
 ^^^^^^^^^^^^^^^^^^^^^
@@ -384,11 +368,6 @@ async function
 
 An :dt:`async function` is a :t:`function` subject to :t:`keyword` ``async``.
 
-atomic
-^^^^^^
-
-See :t:`atomic type`.
-
 atomic type
 ^^^^^^^^^^^
 
@@ -500,11 +479,6 @@ binding scope
 
 A :dt:`binding scope` is a :t:`scope` for :t:`[binding]s`.
 
-bit and assignment
-^^^^^^^^^^^^^^^^^^
-
-For :dt:`bit and assignment`, see :t:`bit and assignment expression`.
-
 bit and assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -529,11 +503,6 @@ two :t:`[operand]s` using bit arithmetic.
 
 See :s:`BitExpression`.
 
-bit or assignment
-^^^^^^^^^^^^^^^^^
-
-For :dt:`bit or assignment`, see :t:`bit or assignment expression`.
-
 bit or assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -548,11 +517,6 @@ bit or expression
 A :dt:`bit or expression` is a :t:`bit expression` that uses bit or arithmetic.
 
 See :s:`BitOrExpression`.
-
-bit xor assignment
-^^^^^^^^^^^^^^^^^^
-
-For :dt:`bit xor assignment`, see :t:`bit xor assignment expression`.
 
 bit xor assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -716,9 +680,7 @@ See :s:`CStringLiteral`.
 Call conformance
 ^^^^^^^^^^^^^^^^
 
-:dt:`Call conformance` measures the compatibility between a set of
-:t:`[argument operand]s` and a set if :t:`[function parameter]s` or
-:t:`[field]s`.
+:dt:`Call conformance` measures the compatibility between a set of :t:`[argument operand]s` and a set of :t:`[function parameter]s` or :t:`[field]s`.
 
 call expression
 ^^^^^^^^^^^^^^^
@@ -866,11 +828,6 @@ compilation root
 
 A :dt:`compilation root` is an input to a compilation performed by a tool.
 
-compound assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`compound assignment`, see :t:`compound assignment expression`.
-
 compound assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -977,8 +934,7 @@ into a :t:`constant`.
 constrain
 ^^^^^^^^^
 
-A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if
-it makes the :t:`[implementation]'s` applicability more narrow.
+A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if it makes the applicability of the :t:`implementation` more narrow.
 
 construct
 ^^^^^^^^^
@@ -1048,11 +1004,6 @@ A :dt:`crate public modifier` is a :t:`visibility modifier` that grants a
 :t:`name` :t:`public visibility` within the current :t:`crate` only.
 
 See :s:`CratePublicModifier`.
-
-crate root
-^^^^^^^^^^
-
-A :dt:`crate root` is an entry point into a :t:`crate`.
 
 crate root module
 ^^^^^^^^^^^^^^^^^
@@ -1216,11 +1167,6 @@ diverging type variable
 A :dt:`diverging type variable` is a :t:`type variable` that can refer to any
 :t:`type` and originates from a :t:`diverging expression`.
 
-division assignment
-^^^^^^^^^^^^^^^^^^^
-
-For :dt:`division assignment`, see :t:`division assignment expression`.
-
 division assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1298,18 +1244,6 @@ An :dt:`element type` is the :t:`type` of the elements of an :t:`array type` or
 a :t:`slice type`.
 
 See :s:`ElementType`.
-
-elided
-^^^^^^
-
-For :dt:`elided`, see :t:`elided lifetime`.
-
-elided lifetime
-^^^^^^^^^^^^^^^
-
-An :dt:`elided lifetime` is either an :t:`unnamed lifetime` or a :t:`lifetime`
-that has been explicitly omitted from a :t:`function signature` or an
-:t:`implementation`.
 
 else expression
 ^^^^^^^^^^^^^^^
@@ -1393,11 +1327,6 @@ solidus), followed by the single character encoding of the special meaning
 character. For example, ``\t`` is the escaped character for 0x09 (horizontal
 tabulation).
 
-evaluated
-^^^^^^^^^
-
-See :t:`evaluation`.
-
 evaluation
 ^^^^^^^^^^
 
@@ -1411,11 +1340,6 @@ An :dt:`exclusive range pattern` is a :t:`range pattern` with both a
 :t:`range pattern low bound` and a :t:`range pattern high bound`.
 
 See :s:`ExclusiveRangePattern`.
-
-executed
-^^^^^^^^
-
-See :t:`execution`.
 
 execution
 ^^^^^^^^^
@@ -1520,11 +1444,6 @@ f64
 :dc:`f64` is a :t:`floating-point type` equivalent to the IEEE 754-2008
 binary64 :t:`type`.
 
-fat pointer
-^^^^^^^^^^^
-
-A :dt:`fat pointer` is a :t:`value` of a :t:`fat pointer type`.
-
 fat pointer type
 ^^^^^^^^^^^^^^^^
 
@@ -1556,11 +1475,6 @@ A :dt:`field index` is the position of a :t:`field` within a
 :t:`field index` of zero, the Nth :t:`field` has a :t:`field index` of N-1.
 
 See :s:`FieldIndex`.
-
-field list
-^^^^^^^^^^
-
-A :dt:`field list` is a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
 
 field resolution
 ^^^^^^^^^^^^^^^^
@@ -2021,12 +1935,6 @@ immutable static
 
 An :dt:`immutable static` is a :t:`static` whose :t:`value` cannot be modified.
 
-immutable variable
-^^^^^^^^^^^^^^^^^^
-
-An :dt:`immutable variable` is a :t:`variable` whose :t:`value` cannot be
-modified.
-
 impl header lifetime elision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2116,24 +2024,6 @@ An :dt:`inclusive range pattern` is a :t:`range pattern` with both a
 :t:`range pattern low bound` and a :t:`range pattern high bound`.
 
 See :s:`InclusiveRangePattern`.
-
-incomplete associated constant
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated constant` is an :t:`associated constant` without
-a :t:`constant initializer`.
-
-incomplete associated function
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated function` is an :t:`associated function` without
-a :t:`function body`.
-
-incomplete associated type
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An :dt:`incomplete associated type` is an :t:`associated type` without an
-:t:`initialization type`.
 
 index expression
 ^^^^^^^^^^^^^^^^
@@ -2615,16 +2505,6 @@ local type
 
 A :dt:`local type` is a :t:`type` that is defined in the current :t:`crate`.
 
-local variable
-^^^^^^^^^^^^^^
-
-For :dt:`local variable`, see :t:`variable`.
-
-loop
-^^^^
-
-For :dt:`loop`, see :t:`loop expression`.
-
 loop body
 ^^^^^^^^^
 
@@ -2910,12 +2790,6 @@ multi segment path
 A :dt:`multi segment path` is a :t:`path` consisting of more than one
 :t:`path segment`.
 
-multiplication assignment
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`multiplication assignment`, see
-:t:`multiplication assignment expression`.
-
 multiplication assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3140,12 +3014,6 @@ object safe
 
 A :t:`trait` is :dt:`object safe` when it can be used as a
 :t:`trait object type`.
-
-object safety
-^^^^^^^^^^^^^
-
-:dt:`Object safety` is the process of determining whether a :t:`trait` can be
-used as a :t:`trait object type`.
 
 obsolete range pattern
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -3396,12 +3264,6 @@ place expression context
 
 A :dt:`place expression context` is a :t:`construct` that may evaluate its
 operand as a memory location.
-
-plane
-^^^^^
-
-In :t:`Unicode`, a :dt:`plane` is a continuous group of 65,536
-:t:`[code point]s`.
 
 pointer
 ^^^^^^^
@@ -3733,11 +3595,6 @@ record struct type
 
 A :dt:`record struct type` is the :t:`type` of a :t:`record struct`.
 
-record struct value
-^^^^^^^^^^^^^^^^^^^
-
-A :dt:`record struct value` is a :t:`value` of a :t:`record struct type`.
-
 recursive type
 ^^^^^^^^^^^^^^
 
@@ -3862,11 +3719,6 @@ A :dt:`register parameter modifier` is a substring that starts with character
 0x3A (colon), follows a :t:`register parameter`, and changes the formatting of
 the related :t:`register parameter`.
 
-remainder assignment
-^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`remainder assignment`, see :t:`remainder assignment expression`.
-
 remainder assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -3906,11 +3758,6 @@ of times a :t:`macro repetition in matching` or a
 :t:`macro repetition in transcription` can be repeated.
 
 See :s:`MacroRepetitionOperator`.
-
-representation
-^^^^^^^^^^^^^^
-
-See :t:`type representation`.
 
 representation modifier
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -4072,11 +3919,6 @@ shared reference type
 A :dt:`shared reference type` is a :t:`reference type` not subject to
 :t:`keyword` ``mut``.
 
-shift left assignment
-^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`shift left assignment`, see :t:`shift left assignment expression`.
-
 shift left assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -4092,11 +3934,6 @@ A :dt:`shift left expression` is a :t:`bit expression` that uses bit shift left
 arithmetic.
 
 See :s:`ShiftLeftExpression`.
-
-shift right assignment
-^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`shift right assignment`, see :t:`shift right assignment expression`.
 
 shift right assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -4384,11 +4221,6 @@ subpattern
 
 A :dt:`subpattern` is a :t:`pattern` nested within another :t:`pattern`.
 
-subtraction assignment
-^^^^^^^^^^^^^^^^^^^^^^
-
-For :dt:`subtraction assignment`, see :t:`subtraction assignment`.
-
 subtraction assignment expression
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -4504,18 +4336,17 @@ thin pointer type
 
 A :dt:`thin pointer type` is a :t:`pointer type` that refers to a :t:`fixed sized type`.
 
+token
+^^^^^
+
+A :dt:`token` is a :t:`lexical element` that can be consumed by a :t:`macro`.
+
 token matching
 ^^^^^^^^^^^^^^
 
 :dt:`Token matching` is the process of consuming a :s:`TokenTree` in an attempt
 to fully satisfy a :t:`macro match` of a selected :t:`macro matcher` that
 belongs to a resolved :t:`declarative macro`.
-
-tokens
-^^^^^^
-
-:dt:`[Token]s` are a subset of :t:`[lexical element]s` consumed by
-:t:`[macro]s`.
 
 trait
 ^^^^^
@@ -4829,11 +4660,6 @@ u128
 :dc:`u128` is an :t:`unsigned integer type` whose :t:`[value]s` range from 0 to
 2\ :sup:`128` - 1, all inclusive.
 
-unary operator
-^^^^^^^^^^^^^^
-
-A :dt:`unary operator` operates on one :t:`operand`.
-
 undefined behavior
 ^^^^^^^^^^^^^^^^^^
 
@@ -4880,7 +4706,7 @@ For :dt:`unifiable`, see :t:`unify`.
 unifiable types
 ^^^^^^^^^^^^^^^
 
-Two :t:`[type]s` that :t:`unify` are said to be :dt:`[unifiable type]s`.
+Two :t:`[type]s` that :t:`unify` are said to be :dt:`unifiable types`.
 
 unified type
 ^^^^^^^^^^^^
@@ -4925,12 +4751,12 @@ A :dt:`unique immutable reference` is an :t:`immutable reference` produced by
 unit enum variant
 ^^^^^^^^^^^^^^^^^
 
-A :dt:`unit enum variant` is an :t:`enum variant` without a :t:`field list`.
+A :dt:`unit enum variant` is an :t:`enum variant` without a :s:`RecordStructFieldList` or :s:`TupleStructFieldList`.
 
 unit struct
 ^^^^^^^^^^^
 
-A :dt:`unit struct` is a :t:`struct` without a :t:`field list`.
+A :dt:`unit struct` is a :t:`struct` without a :s:`RecordStructFieldList` or a :s:`TupleStructFieldList`.
 
 See :s:`UnitStructDeclaration`.
 
@@ -4939,16 +4765,6 @@ unit struct constant
 
 A :dt:`unit struct constant` is a :t:`constant` implicitly created by a
 :t:`unit struct`.
-
-unit struct type
-^^^^^^^^^^^^^^^^
-
-A :dt:`unit struct type` is the :t:`type` of a :t:`unit struct`.
-
-unit struct value
-^^^^^^^^^^^^^^^^^
-
-A :dt:`unit struct value` is a :t:`value` of a :t:`unit struct type`.
 
 unit tuple
 ^^^^^^^^^^
@@ -4969,12 +4785,6 @@ unnamed constant
 ^^^^^^^^^^^^^^^^
 
 An :dt:`unnamed constant` is a :t:`constant` declared with character 0x5F (low
-line).
-
-unnamed lifetime
-^^^^^^^^^^^^^^^^
-
-An :dt:`unnamed lifetime` is a :t:`lifetime` declared with character 0x5F (low
 line).
 
 unqualified path expression
@@ -5224,11 +5034,6 @@ evaluate its :t:`loop body` as long as its :t:`subject let expression` yields a
 
 See :s:`WhileLetLoopExpression`.
 
-while loop
-^^^^^^^^^^
-
-For :dt:`while loop`, see :t:`while loop expression`.
-
 while loop expression
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5243,11 +5048,6 @@ whitespace string
 
 A :dt:`whitespace string` is a string that consists of one or more
 :t:`[whitespace character]s`.
-
-zero-sized type
-^^^^^^^^^^^^^^^
-
-A :dt:`zero-sized type` is a :t:`fixed sized type` with :t:`size` zero.
 
 zero-variant enum type
 ^^^^^^^^^^^^^^^^^^^^^^
