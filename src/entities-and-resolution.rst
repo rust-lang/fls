@@ -1025,31 +1025,22 @@ A :dt:`common path prefix` is the leading :t:`simple path` of a :t:`glob import`
 or a :t:`nesting import`.
 
 :dp:`fls_WAA4WmohGu6T`
-An :dt:`import path prefix` is the fully constructed :t:`path` prefix of a
-:t:`use import`. An :t:`import path prefix` for a given
-:t:`simple import` or :t:`glob import` is constructed as follows:
-
-#. :dp:`fls_IPYvldMqduf4`
-   Start the :t:`import path prefix` as follows:
-
-   * :dp:`fls_MOXId37fcNPY`
-     If the :t:`use import` is a :t:`simple import` then start with the
-     :t:`[path segment]s` of the :t:`simple import`'s :t:`simple path`
-     :t:`path prefix`.
-
-   * :dp:`fls_2UyFcB6Our1v`
-     If the :t:`use import` is a :t:`glob import` then start with the
-     :t:`[path segment]s` of the :t:`glob import`'s :t:`common path prefix`.
-
-   * :dp:`fls_irdKqoYzBM0M`
-     If the :t:`use import` is a :t:`nesting import` then start with the
-     :t:`[path segment]s` of the :t:`nesting import`'s :t:`common path prefix`.
+An :dt:`import path prefix` is a sequence of :t:`[namespace qualifier]s` and :t:`[path segment]s` associated with a :t:`glob import` or :t:`simple import`. The :t:`import path prefix` is formed by concatenating the following sequences in order. When concatenation would place two :t:`[path segment]s` next to each other, :t:`namespace qualifier` ``::`` is placed between them.
 
 #. :dp:`fls_gAWsqibl4GLq`
-   Then if the current :t:`use import` is the child of a :t:`nesting import`,
-   prepend the :t:`nesting import`'s :t:`common path prefix` to the
-   :t:`import path prefix`. Repeat this step with the :t:`nesting import` as
-   the current :t:`use import`.
+   For each :t:`nesting import` in which the :t:`glob import` or :t:`simple import` is nested, from outermost to innermost:
+
+   * :dp:`fls_irdKqoYzBM0M`
+     The :t:`nesting import`'s :t:`common path prefix` if it has one, :t:`namespace qualifier` ``::`` if it lacks a :t:`common path prefix` and its :s:`CommonPathPrefix` is present, or an empty sequence otherwise.
+
+#. :dp:`fls_IPYvldMqduf4`
+   A sequence determined by the kind of import:
+
+   * :dp:`fls_2UyFcB6Our1v`
+     For a :t:`glob import`, the :t:`glob import`'s :t:`common path prefix` if it has one, :t:`namespace qualifier` ``::`` if it lacks a :t:`common path prefix` and its :s:`CommonPathPrefix` is present, or an empty sequence otherwise.
+
+   * :dp:`fls_MOXId37fcNPY`
+     For a :t:`simple import`, the :t:`simple import`'s :t:`simple path` after removing its last :t:`path segment` and, if another :t:`path segment` precedes the last :t:`path segment`, the :t:`namespace qualifier` that separates them.
 
 :dp:`fls_2bkcn83smy2y`
 A :dt:`simple import` is a :t:`use import` that brings into :t:`scope` an :t:`entity` selected by its :t:`simple import path`, or by its :t:`import path prefix` when its :t:`simple path` ends in :t:`keyword` ``self``.
@@ -1059,8 +1050,14 @@ A :t:`glob import` is a :t:`use import` that brings all :t:`entities <entity>`
 exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
 into :t:`scope`.
 
+:dp:`fls_BMtRtjJ7gBKT`
+A :t:`glob import`, :t:`nesting import`, or :t:`simple import` expressed with a leading :t:`namespace qualifier` ``::`` shall not be nested, directly or indirectly, within any :t:`nesting import` whose :s:`CommonPathPrefix` is present.
+
+:dp:`fls_UZHHtqJ0ekju`
+An empty :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` resolves to the current :t:`module`.
+
 :dp:`fls_JHU0ersYB6eL`
-An :t:`import path prefix` shall resolve to a :t:`module` or :t:`enum`.
+An :t:`import path prefix` that contains a :t:`path segment` shall resolve to an :t:`enum` or :t:`module`.
 
 :dp:`fls_jlNKxkuhsvX4`
 A :t:`glob import` brings :t:`[name]s` into :t:`scope` as follows:
@@ -1106,8 +1103,7 @@ A :t:`nesting import` is a :t:`use import` that provides a common
 :t:`common path prefix` for its nested :t:`[use import]s`.
 
 :dp:`fls_iNUBX5fJAI1N`
-A :t:`glob import` outside of a :t:`nesting import` without a :t:`common path
-prefix` is rejected, but may still be consumed by :t:`[macro]s`.
+A :t:`glob import` whose :t:`import path prefix` is empty or consists only of :t:`namespace qualifier` ``::`` is rejected, but may still be consumed by :t:`[macro]s`.
 
 :dp:`fls_wB3fVglLOqbZ`
 It is a static error if two :t:`[glob import]s` import the same :t:`name` in the
@@ -1128,7 +1124,7 @@ A :t:`use import` with a single :t:`path segment` expressed as either :t:`keywor
 When a :t:`path segment` expressed as :t:`keyword` ``super`` is used to import a parent :t:`module`, the imported :t:`entity` shall be subject to a :t:`renaming`.
 
 :dp:`fls_aam34hsRmKU2`
-A :t:`simple import` whose :t:`import path prefix` consists only of :t:`namespace qualifier` ``::`` and whose :t:`simple path` consists of a single :t:`path segment` expressed as :t:`keyword` ``self`` shall not be used.
+An :t:`import path prefix` that selects the :t:`entity` of a :t:`simple import` shall not consist only of :t:`namespace qualifier` ``::``.
 
 :dp:`fls_LV94x3HlpBWk`
 A :t:`simple import` shall not refer to :t:`[enum variant]s` through a :t:`type alias`.
@@ -1170,10 +1166,7 @@ Shadowing
 .. rubric:: Legality Rules
 
 :dp:`fls_ob0riinmitkl`
-:t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be
-:t:`shadowed` when another :t:`name` with the same characters is introduced
-in the same :t:`scope` within the same :t:`namespace`, effectively hiding it.
-A :t:`name` cannot be referred to by any means once it is :t:`shadowed`.
+:t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be :t:`shadowed` when another :t:`name` with the same characters is introduced in the same :t:`scope` within the same :t:`namespace`, effectively hiding it. A :t:`name` cannot be referred to once it is :t:`shadowed`, except that a :t:`name` introduced by the :t:`external prelude` may be used as the leftmost :t:`path segment` of a :t:`global path`.
 
 :dp:`fls_fslg89a70e3n`
 No :t:`name` shall be :t:`shadowed` except for
@@ -1615,8 +1608,7 @@ The resolution of the rightmost :t:`path segment` is determined based on the
 :t:`candidate selected entity` is restricted by the :t:`namespace context`.
 
 :dp:`fls_bATFGtxjKq0B`
-It is a static error if the leftmost :t:`path segment` is an :t:`identifier`
-introduced by the :t:`external prelude` that is also :t:`shadowed <shadowing>`.
+It is a static error if the leftmost :t:`path segment` of a :t:`path` that is not a :t:`global path` is an :t:`identifier` introduced by the :t:`external prelude` that is also :t:`shadowed <shadowing>`.
 
 .. _fls_bbso3c45kr9z:
 
