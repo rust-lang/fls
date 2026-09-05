@@ -150,9 +150,9 @@ class DefinitionsTransform(SphinxTransform):
                     )
                 else:
                     if node["ref_kind"] == "term":
-                        print(
-                            f"warn: document={node['ref_source_doc']} has dangling term, {node['ref_text']}"
-                        )
+                        doc = node["ref_source_doc"]
+                        text = node["ref_text"]
+                        print(f"warn: document={doc} has dangling term, {text}")
                     new = nodes.inline(
                         "",
                         "",
