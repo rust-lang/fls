@@ -1166,10 +1166,7 @@ Shadowing
 .. rubric:: Legality Rules
 
 :dp:`fls_ob0riinmitkl`
-:t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be
-:t:`shadowed` when another :t:`name` with the same characters is introduced
-in the same :t:`scope` within the same :t:`namespace`, effectively hiding it.
-A :t:`name` cannot be referred to by any means once it is :t:`shadowed`.
+:t:`Shadowing` is a property of :t:`[name]s`. A :t:`name` is said to be :t:`shadowed` when another :t:`name` with the same characters is introduced in the same :t:`scope` within the same :t:`namespace`, effectively hiding it. A :t:`name` cannot be referred to once it is :t:`shadowed`, except that a :t:`name` introduced by the :t:`external prelude` may be used as the leftmost :t:`path segment` of a :t:`global path`.
 
 :dp:`fls_fslg89a70e3n`
 No :t:`name` shall be :t:`shadowed` except for
@@ -1611,8 +1608,7 @@ The resolution of the rightmost :t:`path segment` is determined based on the
 :t:`candidate selected entity` is restricted by the :t:`namespace context`.
 
 :dp:`fls_bATFGtxjKq0B`
-It is a static error if the leftmost :t:`path segment` is an :t:`identifier`
-introduced by the :t:`external prelude` that is also :t:`shadowed <shadowing>`.
+It is a static error if the leftmost :t:`path segment` of a :t:`path` that is not a :t:`global path` is an :t:`identifier` introduced by the :t:`external prelude` that is also :t:`shadowed <shadowing>`.
 
 .. _fls_bbso3c45kr9z:
 

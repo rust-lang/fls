@@ -22,7 +22,7 @@ with the change that has been applied due to it.
 FLS maintenance
 ---------------
 
-- Fix the construction of :t:`[import path prefix]es` to preserve leading :t:`[namespace qualifier]s`.
+- Fix the construction of :t:`[import path prefix]es` to preserve leading :t:`[namespace qualifier]s`, and permit :t:`[global path]s` to refer to :t:`shadowed` :t:`[name]s` from the :t:`external prelude`.
 
   Changed paragraphs:
 
@@ -35,6 +35,8 @@ FLS maintenance
   - :p:`fls_JHU0ersYB6eL`
   - :p:`fls_iNUBX5fJAI1N`
   - :p:`fls_aam34hsRmKU2`
+  - :p:`fls_ob0riinmitkl`
+  - :p:`fls_bATFGtxjKq0B`
 
   New paragraphs:
 
