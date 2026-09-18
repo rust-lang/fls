@@ -1033,14 +1033,13 @@ Function Pointer Types
        $$unsafe$$? AbiSpecification?
 
    FunctionPointerTypeParameterList ::=
-       FunctionPointerTypeParameter ($$,$$ FunctionPointerTypeParameter)*
-         ($$,$$ VariadicPart | $$,$$?)
-
-   VariadicPart ::=
-       OuterAttributeOrDoc* $$...$$
+       FunctionPointerTypeParameter ($$,$$ FunctionPointerTypeParameter)* $$,$$?
 
    FunctionPointerTypeParameter ::=
-       OuterAttributeOrDoc* (IdentifierOrUnderscore $$:$$)? TypeSpecification
+       OuterAttributeOrDoc* (FunctionPointerTypeParameterCore | VariadicPart | TypeSpecification)
+
+   FunctionPointerTypeParameterCore ::=
+       IdentifierOrUnderscore (TypeAscription | ($$:$$ VariadicPart))
 
 .. rubric:: Legality Rules
 
@@ -1049,12 +1048,6 @@ A :t:`function pointer type` is a :t:`type` that refers to a :t:`function`.
 
 :dp:`fls_5dd7icjcl3nt`
 An :t:`unsafe function pointer type` is a function pointer type subject to :t:`keyword` ``unsafe``.
-
-:dp:`fls_B0SMXRqQMS1E`
-A :t:`variadic part` indicates the presence of :t:`C`-like optional parameters.
-
-:dp:`fls_hbn1l42xmr3h`
-A :t:`variadic part` can only be used in a :t:`variadic function`.
 
 :dp:`fls_g1iYVw7upBnH`
 The :t:`return type` of a :t:`function pointer type` is determined as follows:
