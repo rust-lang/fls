@@ -42,6 +42,12 @@ FLS maintenance
 
   - :p:`fls_BMtRtjJ7gBKT`
   - :p:`fls_UZHHtqJ0ekju`
+  - :p:`fls_H1hL5ogQjruY`
+  - :p:`fls_ZTDNlERRToGG`
+  - :p:`fls_9dRQ4YGKstSN`
+  - :p:`fls_Sod1jJALoUHc`
+  - :p:`fls_zth1OR1dU4q6`
+  - :p:`fls_GO9rlHrbXAZn`
 
 - Remove the term "indirection", and associated derivatives
 

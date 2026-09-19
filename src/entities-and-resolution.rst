@@ -1031,13 +1031,31 @@ An :dt:`import path prefix` is a sequence of :t:`[namespace qualifier]s` and :t:
    For each :t:`nesting import` in which the :t:`glob import` or :t:`simple import` is nested, from outermost to innermost:
 
    * :dp:`fls_irdKqoYzBM0M`
-     The :s:`SimplePath` of the :t:`nesting import`'s :s:`CommonPathPrefix` if that :s:`SimplePath` is present, :t:`namespace qualifier` ``::`` if the :s:`CommonPathPrefix` is present without a :s:`SimplePath`, or an empty sequence if the :s:`CommonPathPrefix` is absent.
+     A sequence determined as follows:
+
+     * :dp:`fls_H1hL5ogQjruY`
+       If the :t:`nesting import` has a :t:`common path prefix`, then the sequence is that :t:`common path prefix`.
+
+     * :dp:`fls_ZTDNlERRToGG`
+       Otherwise, if the :t:`nesting import` is expressed with a leading :t:`namespace qualifier` ``::``, then the sequence consists only of that :t:`namespace qualifier`.
+
+     * :dp:`fls_9dRQ4YGKstSN`
+       Otherwise the sequence is empty.
 
 #. :dp:`fls_IPYvldMqduf4`
    A sequence determined by the kind of import:
 
    * :dp:`fls_2UyFcB6Our1v`
-     For a :t:`glob import`, the :s:`SimplePath` of the :t:`glob import`'s :s:`CommonPathPrefix` if that :s:`SimplePath` is present, :t:`namespace qualifier` ``::`` if the :s:`CommonPathPrefix` is present without a :s:`SimplePath`, or an empty sequence if the :s:`CommonPathPrefix` is absent.
+     For a :t:`glob import`, a sequence determined as follows:
+
+     * :dp:`fls_Sod1jJALoUHc`
+       If the :t:`glob import` has a :t:`common path prefix`, then the sequence is that :t:`common path prefix`.
+
+     * :dp:`fls_zth1OR1dU4q6`
+       Otherwise, if the :t:`glob import` is expressed with a leading :t:`namespace qualifier` ``::``, then the sequence consists only of that :t:`namespace qualifier`.
+
+     * :dp:`fls_GO9rlHrbXAZn`
+       Otherwise the sequence is empty.
 
    * :dp:`fls_MOXId37fcNPY`
      For a :t:`simple import`, the :t:`simple import`'s :t:`simple path` after removing the last :t:`path segment` and any :t:`namespace qualifier` ``::`` that separates the last :t:`path segment` from a preceding :t:`path segment`.
