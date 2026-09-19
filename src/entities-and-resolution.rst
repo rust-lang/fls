@@ -1069,7 +1069,7 @@ exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
 into :t:`scope`.
 
 :dp:`fls_BMtRtjJ7gBKT`
-A :t:`glob import`, :t:`nesting import`, or :t:`simple import` expressed with a leading :t:`namespace qualifier` ``::`` shall not be nested within any :t:`nesting import` whose :s:`CommonPathPrefix` is present.
+A :t:`glob import`, :t:`nesting import`, or :t:`simple import` expressed with a leading :t:`namespace qualifier` ``::`` shall not be nested within any :t:`nesting import` that has a :t:`common path prefix` or is expressed with a leading :t:`namespace qualifier` ``::``.
 
 :dp:`fls_UZHHtqJ0ekju`
 An empty :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` is expressed as :t:`keyword` ``self`` resolves to the current :t:`module`.
