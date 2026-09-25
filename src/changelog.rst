@@ -79,6 +79,33 @@ Language changes in Rust 1.99.0
 FLS maintenance
 ---------------
 
+- Fix the construction of :t:`[import path prefix]es` to preserve leading :t:`[namespace qualifier]s`, and permit :t:`[global path]s` to refer to :t:`shadowed` :t:`[name]s` from the :t:`external prelude`.
+
+  Changed paragraphs:
+
+  - :p:`fls_WAA4WmohGu6T`
+  - :p:`fls_gAWsqibl4GLq`
+  - :p:`fls_irdKqoYzBM0M`
+  - :p:`fls_IPYvldMqduf4`
+  - :p:`fls_MOXId37fcNPY`
+  - :p:`fls_2UyFcB6Our1v`
+  - :p:`fls_JHU0ersYB6eL`
+  - :p:`fls_iNUBX5fJAI1N`
+  - :p:`fls_aam34hsRmKU2`
+  - :p:`fls_ob0riinmitkl`
+  - :p:`fls_bATFGtxjKq0B`
+
+  New paragraphs:
+
+  - :p:`fls_BMtRtjJ7gBKT`
+  - :p:`fls_UZHHtqJ0ekju`
+  - :p:`fls_H1hL5ogQjruY`
+  - :p:`fls_ZTDNlERRToGG`
+  - :p:`fls_9dRQ4YGKstSN`
+  - :p:`fls_Sod1jJALoUHc`
+  - :p:`fls_zth1OR1dU4q6`
+  - :p:`fls_GO9rlHrbXAZn`
+
 - Remove the term "indirection", and associated derivatives
 
   Changed glossary entries:
