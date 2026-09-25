@@ -713,6 +713,11 @@ with an implicit 0x00 byte appended to it.
 
 See :s:`CStringLiteral`.
 
+C-variadic function
+^^^^^^^^^^^^^^^^^^^
+
+A :dt:`C-variadic function` is a :t:`variadic function` with :t:`ABI` ``extern "C"`` or ``extern "C-unwind"``.
+
 Call conformance
 ^^^^^^^^^^^^^^^^
 
@@ -5138,11 +5143,15 @@ variable
 A :dt:`variable` is a placeholder for a :t:`value` that is allocated on the
 stack.
 
+variadic function
+^^^^^^^^^^^^^^^^^
+
+A :dt:`variadic function` is a :t:`function` that specifies a :t:`variadic part`.
+
 variadic part
 ^^^^^^^^^^^^^
 
-A :dt:`variadic part` indicates the presence of :t:`C`-like optional
-parameters.
+A :dt:`variadic part` indicates the presence of :t:`C`-like optional parameters.
 
 See :s:`VariadicPart`.
 

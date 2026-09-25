@@ -181,7 +181,7 @@ An :t:`external block` is a :t:`construct` that provides the declarations of
 :t:`[external function]s` and :t:`[external static]s` as unchecked imports.
 
 :dp:`fls_8ltVLtAfvy0m`
-An :t:`unsafe external block` is an :t:`external block` subject to keyword ``unsafe``.
+An :t:`unsafe external block` is an :t:`external block` subject to :t:`keyword` ``unsafe``.
 
 :dp:`fls_Nz0l16hMxqTd`
 The :t:`ABI` of an :t:`external block` is determined as follows:
@@ -218,10 +218,10 @@ External Functions
 An :t:`external function` is an unchecked import of a foreign :t:`function`.
 
 :dp:`fls_l88r9fj82650`
-An :t:`external function` shall be invoked from an :t:`unsafe context` unless it is defined in an :t:`unsafe external block` and subject to :s:`ItemSafety` with keyword ``safe``.
+An :t:`external function` shall be invoked from an :t:`unsafe context` unless it is defined in an :t:`unsafe external block` and subject to :s:`ItemSafety` with :t:`keyword` ``safe``.
 
 :dp:`fls_qwchgvvnp0qe`
-An :t:`external function` shall not specify a :s:`FunctionQualifierList`.
+An :t:`external function` shall not be subject to :t:`[function qualifier]s` ``async`` and ``const``, and :t:`keyword` ``extern``.
 
 :dp:`fls_w00qi1gx204e`
 An :t:`external function` inherits the :t:`ABI` of its enclosing
@@ -238,10 +238,6 @@ An :t:`external function` shall not specify a :s:`FunctionBody`.
 An :t:`external function` shall not specify :t:`[pattern]s` other than
 :t:`[identifier pattern]s` and :t:`[underscore pattern]s`.
 
-:dp:`fls_juob30rst11r`
-Only the last parameter :s:`FunctionParameter` of an :t:`external function` may
-specify a :s:`FunctionParameterVariadicPart`.
-
 .. _fls_s4yt19sptl7d:
 
 External Statics
@@ -257,7 +253,7 @@ An :t:`external static` inherits the :t:`ABI` of its enclosing
 :t:`external block`.
 
 :dp:`fls_fo9with6xumo`
-An :t:`external static` shall be referenced from an :t:`unsafe context` unless it is defined in an :t:`unsafe external block` and subject to :s:`ItemSafety` with keyword ``safe``.
+An :t:`external static` shall be referenced from an :t:`unsafe context` unless it is defined in an :t:`unsafe external block` and subject to :s:`ItemSafety` with :t:`keyword` ``safe``.
 
 :dp:`fls_tr7purzcldn0`
 An :t:`external static` shall not specify a :t:`static initializer`.

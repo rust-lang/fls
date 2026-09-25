@@ -23,13 +23,10 @@ Functions
      | (SelfParameter ($$,$$ FunctionParameter)* $$,$$?)
 
    FunctionParameter ::=
-       OuterAttributeOrDoc* (FunctionParameterPattern | FunctionParameterVariadicPart | TypeSpecification)
+       OuterAttributeOrDoc* (FunctionParameterCore | VariadicPart | TypeSpecification)
 
-   FunctionParameterPattern ::=
-       PatternWithoutAlternation (TypeAscription | ($$:$$ FunctionParameterVariadicPart))
-
-   FunctionParameterVariadicPart ::=
-       $$...$$
+   FunctionParameterCore ::=
+       PatternWithoutAlternation (TypeAscription | ($$:$$ VariadicPart))
 
    ReturnType ::=
        $$->$$ TypeSpecification
@@ -102,40 +99,6 @@ The :t:`expected type` of the :t:`pattern` of a :t:`function parameter` is the :
 
 :dp:`fls_PGDKWK7nPvgw`
 The :t:`[binding]s` of all :t:`[pattern]s` of all :t:`[function parameter]s` of a :t:`function` shall not shadow another.
-
-:dp:`fls_o4uSLPo00KUg`
-A :dt:`variadic function` is an :t:`external function` that specifies
-:s:`FunctionParameterVariadicPart` as the last :t:`function parameter`.
-
-:dp:`fls_icdzs1mjh0n4`
-A :t:`variadic function` shall specify one of the following :t:`[ABI]s`:
-
-* :dp:`fls_OR85NVifPwjr`
-  ``extern "C"``
-* :dp:`fls_4s2IdfYDzPrX`
-  ``extern "C-unwind"``
-* :dp:`fls_ZJJppPfiJRou`
-  ``extern "aapcs"``
-* :dp:`fls_jOyZh9ujWWHQ`
-  ``extern "aapcs-unwind"``
-* :dp:`fls_Xdr0bFwxhWiB`
-  ``extern "cdecl"``
-* :dp:`fls_DpTFEHZAABdD`
-  ``extern "cdecl-unwind"``
-* :dp:`fls_b7FTlWfnX2OI`
-  ``extern "efiapi"``
-* :dp:`fls_6urL6fZ5cpaA`
-  ``extern "system"``
-* :dp:`fls_TMOzb6cYIOlH`
-  ``extern "system-unwind"``
-* :dp:`fls_eHPWHrvs7ETl`
-  ``extern "sysv64"``
-* :dp:`fls_mjCrvmikm58M`
-  ``extern "sysv64-unwind"``
-* :dp:`fls_4EUb9zFatZ97`
-  ``extern "win64"``
-* :dp:`fls_4B4B5FIqAes9`
-  ``extern "win64-unwind"``
 
 :dp:`fls_vljy4mm0zca2`
 A :t:`return type` is the :t:`type` of the result a :t:`function`, :t:`closure type` or :t:`function pointer type` returns.
@@ -221,3 +184,71 @@ The invocation of an :t:`unsafe function` shall require :t:`unsafe context`.
    }
 
    fn main() {}
+
+.. _fls_mtPH3Q90xNwE:
+
+Variadic Functions
+------------------
+
+.. rubric:: Syntax
+
+.. syntax::
+
+    VariadicPart ::=
+       $$...$$
+
+.. rubric:: Legality Rules
+
+:dp:`fls_B0SMXRqQMS1E`
+A :t:`variadic part` indicates the presence of :t:`C`-like optional parameters.
+
+:dp:`fls_hbn1l42xmr3h`
+A :t:`variadic part` shall be specified as the last :t:`function parameter`.
+
+:dp:`fls_gHhCHlxtxCGU`
+The :t:`type` of a :t:`variadic part` is :std:`core::ffi::VaList`.
+
+:dp:`fls_o4uSLPo00KUg`
+A :t:`variadic function` is a :t:`function` that specifies a :t:`variadic part`.
+
+:dp:`fls_icdzs1mjh0n4`
+A :t:`variadic function` shall specify one of the following :t:`[ABI]s`:
+
+* :dp:`fls_OR85NVifPwjr`
+  ``extern "C"``
+* :dp:`fls_4s2IdfYDzPrX`
+  ``extern "C-unwind"``
+* :dp:`fls_ZJJppPfiJRou`
+  ``extern "aapcs"``
+* :dp:`fls_jOyZh9ujWWHQ`
+  ``extern "aapcs-unwind"``
+* :dp:`fls_Xdr0bFwxhWiB`
+  ``extern "cdecl"``
+* :dp:`fls_DpTFEHZAABdD`
+  ``extern "cdecl-unwind"``
+* :dp:`fls_b7FTlWfnX2OI`
+  ``extern "efiapi"``
+* :dp:`fls_6urL6fZ5cpaA`
+  ``extern "system"``
+* :dp:`fls_TMOzb6cYIOlH`
+  ``extern "system-unwind"``
+* :dp:`fls_eHPWHrvs7ETl`
+  ``extern "sysv64"``
+* :dp:`fls_mjCrvmikm58M`
+  ``extern "sysv64-unwind"``
+* :dp:`fls_4EUb9zFatZ97`
+  ``extern "win64"``
+* :dp:`fls_4B4B5FIqAes9`
+  ``extern "win64-unwind"``
+
+:dp:`fls_srbY4Ilm0u2E`
+A :t:`C-variadic function` is a :t:`variadic function` with :t:`ABI` ``extern "C"`` or ``extern "C-unwind"``.
+
+:dp:`fls_pquTAwmZENdh`
+A :t:`C-variadic function` shall be an :t:`unsafe function` when the :t:`C-variadic function` has a :t:`function body` or when the :t:`C-variadic function` appears within a :t:`trait` declaration.
+
+:dp:`fls_MoJFg4StLGwF`
+A :t:`C-variadic function` shall not be subject to :t:`[function qualifier]s` ``async`` and ``const``.
+
+:dp:`fls_cNcLhlgFbpcb`
+The :t:`variadic part` of a :t:`C-variadic function` shall appear with a :t:`pattern-without-alternation` when the :t:`C-variadic function` has a :t:`function body` or when the :t:`C-variadic function` appears within a :t:`trait` declaration.
