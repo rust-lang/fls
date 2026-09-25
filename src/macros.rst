@@ -25,7 +25,7 @@ distinct forms:
   return a stream of :t:`[lexical element]s`.
 
 :dp:`fls_rnty1c8l5495`
-:t:`[Token]s` are a subset of :t:`[lexical element]s` consumed by :t:`[macro]s`.
+A :dt:`token` is a :t:`lexical element` that can be consumed by a :t:`macro`.
 
 .. _fls_xa7lp0zg1ol2:
 
@@ -1113,4 +1113,3 @@ Every :t:`macro` has associated :t:`hygiene` that depends on its kind:
 :dp:`fls_7eqqk2cj0clr`
 The :t:`metavariable` ``$crate`` in a :t:`declarative macro`'s expansion refers
 to the crate the :t:`declarative macro` was declared in.
-

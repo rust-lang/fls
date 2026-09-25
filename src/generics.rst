@@ -123,8 +123,10 @@ A :t:`generic union` shall use all of its :t:`[type parameter]s` and
 :t:`[lifetime parameter]s` at least once in at least one of its :t:`[field]s`.
 
 :dp:`fls_hyi2jnp38v1n`
-A :t:`generic parameter` is said to constrain an :t:`implementation` if the
-:t:`generic parameter` appears at least once in one of the following:
+A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if it makes the applicability of the :t:`implementation` more narrow.
+
+:dp:`fls_cxNAtLSLjqbQ`
+A :t:`[constrain]t` happens when a :t:`generic parameter` appears at least once in one of the following:
 
 * :dp:`fls_sseo6u6pbcki`
   As a :t:`binding argument` in the :t:`[trait bound]s` of a :t:`type` that
@@ -461,7 +463,7 @@ of the :t:`type parameter`.
   Any remaining :t:`[generic parameter]s` without corresponding conformant
   :t:`[generic argument]s` are :t:`[constant parameter]s` with
   :t:`[constant parameter initializer]s`, :t:`[lifetime parameter]s` with
-  either inferred :t:`[lifetime argument]s` or :t:`[elided lifetime]s`,
+  either inferred :t:`[lifetime argument]s` or :t:`elided lifetimes <lifetime elision>`,
   :t:`[type parameter]s` with :t:`[type parameter initializer]s` or inferred
   :t:`[type argument]s`, and
 
