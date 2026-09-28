@@ -85,7 +85,6 @@ FLS maintenance
 
   - :p:`fls_WAA4WmohGu6T`
   - :p:`fls_gAWsqibl4GLq`
-  - :p:`fls_irdKqoYzBM0M`
   - :p:`fls_IPYvldMqduf4`
   - :p:`fls_MOXId37fcNPY`
   - :p:`fls_2UyFcB6Our1v`
@@ -101,10 +100,10 @@ FLS maintenance
   - :p:`fls_UZHHtqJ0ekju`
   - :p:`fls_H1hL5ogQjruY`
   - :p:`fls_ZTDNlERRToGG`
-  - :p:`fls_9dRQ4YGKstSN`
-  - :p:`fls_Sod1jJALoUHc`
   - :p:`fls_zth1OR1dU4q6`
-  - :p:`fls_GO9rlHrbXAZn`
+  - :p:`fls_Z2B0tUmym1gV`
+
+  Removed paragraph: :p:`fls_irdKqoYzBM0M`
 
 - Remove the term "indirection", and associated derivatives
 

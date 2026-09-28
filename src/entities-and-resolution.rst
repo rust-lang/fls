@@ -1028,37 +1028,28 @@ or a :t:`nesting import`.
 An :dt:`import path prefix` is a sequence of :t:`[namespace qualifier]s` and :t:`[path segment]s` associated with a :t:`glob import` or :t:`simple import`. The :t:`import path prefix` is formed by concatenating the following sequences in order. When concatenation would place two :t:`[path segment]s` next to each other, :t:`namespace qualifier` ``::`` is placed between them.
 
 #. :dp:`fls_gAWsqibl4GLq`
-   For each :t:`nesting import` in which the :t:`glob import` or :t:`simple import` is nested, from outermost to innermost:
+   For each :t:`nesting import` in which the :t:`glob import` or :t:`simple import` is nested and that either has a :t:`common path prefix` or is expressed with a leading :t:`namespace qualifier` ``::``, from outermost to innermost, the sequence is determined as follows:
 
-   * :dp:`fls_irdKqoYzBM0M`
-     A sequence determined as follows:
+   * :dp:`fls_H1hL5ogQjruY`
+     If the :t:`nesting import` has a :t:`common path prefix`, then the sequence is that :t:`common path prefix`.
 
-     * :dp:`fls_H1hL5ogQjruY`
-       If the :t:`nesting import` has a :t:`common path prefix`, then the sequence is that :t:`common path prefix`.
-
-     * :dp:`fls_ZTDNlERRToGG`
-       Otherwise, if the :t:`nesting import` is expressed with a leading :t:`namespace qualifier` ``::``, then the sequence consists only of that :t:`namespace qualifier`.
-
-     * :dp:`fls_9dRQ4YGKstSN`
-       Otherwise the sequence is empty.
+   * :dp:`fls_ZTDNlERRToGG`
+     Otherwise the sequence consists only of the leading :t:`namespace qualifier` ``::`` with which the :t:`nesting import` is expressed.
 
 #. :dp:`fls_IPYvldMqduf4`
-   A sequence determined by the kind of import:
+   A further sequence, if one of the following cases applies:
 
    * :dp:`fls_2UyFcB6Our1v`
-     For a :t:`glob import`, a sequence determined as follows:
+     For a :t:`glob import` that has a :t:`common path prefix`, the sequence is that :t:`common path prefix`.
 
-     * :dp:`fls_Sod1jJALoUHc`
-       If the :t:`glob import` has a :t:`common path prefix`, then the sequence is that :t:`common path prefix`.
-
-     * :dp:`fls_zth1OR1dU4q6`
-       Otherwise, if the :t:`glob import` is expressed with a leading :t:`namespace qualifier` ``::``, then the sequence consists only of that :t:`namespace qualifier`.
-
-     * :dp:`fls_GO9rlHrbXAZn`
-       Otherwise the sequence is empty.
+   * :dp:`fls_zth1OR1dU4q6`
+     For a :t:`glob import` that has no :t:`common path prefix` and is expressed with a leading :t:`namespace qualifier` ``::``, the sequence consists only of that :t:`namespace qualifier`.
 
    * :dp:`fls_MOXId37fcNPY`
-     For a :t:`simple import`, the :t:`simple import`'s :t:`simple path` after removing the last :t:`path segment` and any :t:`namespace qualifier` ``::`` that separates the last :t:`path segment` from a preceding :t:`path segment`.
+     For a :t:`simple import` whose :t:`simple path` is a :t:`multi segment path`, the sequence is the :t:`simple path` after removing its last :t:`path segment` and the :t:`namespace qualifier` ``::`` preceding that :t:`path segment`.
+
+   * :dp:`fls_Z2B0tUmym1gV`
+     For a :t:`simple import` whose :t:`simple path` is a :t:`single segment path` expressed with a leading :t:`namespace qualifier` ``::``, the sequence consists only of that :t:`namespace qualifier`.
 
 :dp:`fls_2bkcn83smy2y`
 A :dt:`simple import` is a :t:`use import` that brings into :t:`scope` an :t:`entity` selected by its :t:`simple import path`, or by its :t:`import path prefix` when its :t:`simple path` ends in :t:`keyword` ``self``.
@@ -1069,10 +1060,10 @@ exported by the :t:`module` or :t:`enum` its :t:`import path prefix` resolves to
 into :t:`scope`.
 
 :dp:`fls_BMtRtjJ7gBKT`
-A :t:`glob import`, :t:`nesting import`, or :t:`simple import` expressed with a leading :t:`namespace qualifier` ``::`` shall not be nested within any :t:`nesting import` that has a :t:`common path prefix` or is expressed with a leading :t:`namespace qualifier` ``::``.
+A :t:`use import` expressed with a leading :t:`namespace qualifier` ``::`` shall not be nested within any :t:`nesting import` that has a :t:`common path prefix` or is expressed with a leading :t:`namespace qualifier` ``::``.
 
 :dp:`fls_UZHHtqJ0ekju`
-An empty :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` is expressed as :t:`keyword` ``self`` resolves to the current :t:`module`.
+If the :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` is expressed as :t:`keyword` ``self`` contains neither a :t:`path segment` nor :t:`namespace qualifier` ``::``, then the :t:`import path prefix` resolves to the current :t:`module`.
 
 :dp:`fls_JHU0ersYB6eL`
 An :t:`import path prefix` that contains a :t:`path segment` shall resolve to an :t:`enum` or :t:`module`.
@@ -1121,7 +1112,7 @@ A :t:`nesting import` is a :t:`use import` that provides a common
 :t:`common path prefix` for its nested :t:`[use import]s`.
 
 :dp:`fls_iNUBX5fJAI1N`
-It is a static error if the :t:`import path prefix` of a :t:`glob import` is empty or consists only of :t:`namespace qualifier` ``::``.
+The :t:`import path prefix` of a :t:`glob import` shall contain a :t:`path segment`.
 
 :dp:`fls_wB3fVglLOqbZ`
 It is a static error if two :t:`[glob import]s` import the same :t:`name` in the
