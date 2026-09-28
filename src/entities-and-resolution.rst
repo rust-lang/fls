@@ -1066,7 +1066,7 @@ A :t:`use import` expressed with a leading :t:`namespace qualifier` ``::`` shall
 If the :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` is expressed as :t:`keyword` ``self`` contains neither a :t:`path segment` nor :t:`namespace qualifier` ``::``, then the :t:`import path prefix` resolves to the current :t:`module`.
 
 :dp:`fls_JHU0ersYB6eL`
-An :t:`import path prefix` that contains a :t:`path segment` shall resolve to an :t:`enum` or :t:`module`.
+An :t:`import path prefix` that contains a :t:`path segment` shall resolve to an :t:`enum` or :t:`module`, unless it is the :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` ends in :t:`keyword` ``self``.
 
 :dp:`fls_jlNKxkuhsvX4`
 A :t:`glob import` brings :t:`[name]s` into :t:`scope` as follows:

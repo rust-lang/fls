@@ -105,6 +105,10 @@ FLS maintenance
 
   Removed paragraph: :p:`fls_irdKqoYzBM0M`
 
+- Allow the :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` ends in :t:`keyword` ``self`` to resolve to a :t:`trait`, as :p:`fls_oRdi3KXFbJcR` permits.
+
+  Changed paragraph: :p:`fls_JHU0ersYB6eL`
+
 - Remove the term "indirection", and associated derivatives
 
   Changed glossary entries:
