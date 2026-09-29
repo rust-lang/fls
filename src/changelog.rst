@@ -109,6 +109,8 @@ FLS maintenance
 
   Changed paragraph: :p:`fls_JHU0ersYB6eL`
 
+- Fix definition of "trait bound", changing paragraph  :p:`fls_knut10hoz6wc`.
+
 - Remove the term "indirection", and associated derivatives
 
   Changed glossary entries:
