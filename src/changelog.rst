@@ -98,6 +98,36 @@ Language changes in Rust 1.99.0
 FLS maintenance
 ---------------
 
+- Fix the construction of :t:`[import path prefix]es` to preserve leading :t:`[namespace qualifier]s`, and permit :t:`[global path]s` to refer to :t:`shadowed` :t:`[name]s` from the :t:`external prelude`.
+
+  Changed paragraphs:
+
+  - :p:`fls_WAA4WmohGu6T`
+  - :p:`fls_gAWsqibl4GLq`
+  - :p:`fls_IPYvldMqduf4`
+  - :p:`fls_MOXId37fcNPY`
+  - :p:`fls_2UyFcB6Our1v`
+  - :p:`fls_JHU0ersYB6eL`
+  - :p:`fls_iNUBX5fJAI1N`
+  - :p:`fls_aam34hsRmKU2`
+  - :p:`fls_ob0riinmitkl`
+  - :p:`fls_bATFGtxjKq0B`
+
+  New paragraphs:
+
+  - :p:`fls_BMtRtjJ7gBKT`
+  - :p:`fls_UZHHtqJ0ekju`
+  - :p:`fls_H1hL5ogQjruY`
+  - :p:`fls_ZTDNlERRToGG`
+  - :p:`fls_zth1OR1dU4q6`
+  - :p:`fls_Z2B0tUmym1gV`
+
+  Removed paragraph: :p:`fls_irdKqoYzBM0M`
+
+- Allow the :t:`import path prefix` of a :t:`simple import` whose :t:`simple path` ends in :t:`keyword` ``self`` to resolve to a :t:`trait`, as :p:`fls_oRdi3KXFbJcR` permits.
+
+  Changed paragraph: :p:`fls_JHU0ersYB6eL`
+
 - Fix definition of "trait bound", changing paragraph  :p:`fls_knut10hoz6wc`.
 
 - Remove the term "indirection", and associated derivatives
