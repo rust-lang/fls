@@ -140,13 +140,10 @@ A :t:`generic constraint` happens when a :t:`generic parameter` appears at least
   The :t:`implementing type`.
 
 :dp:`fls_ua3w16qo9o4`
-It is a static error if a :t:`constant parameter` or a :t:`type parameter` of
-an :t:`implementation` does not :t:`constrain` the :t:`implementation`.
+It is a static error if a :t:`constant parameter` or a :t:`type parameter` of an :t:`implementation` does not :t:`constrain` the :t:`implementation`.
 
 :dp:`fls_w9ol06mldwb`
-It is a static error if a :t:`lifetime parameter` of an :t:`implementation`
-is used in an :t:`associated type` without :t:`constraining` the
-:t:`implementation`.
+It is a static error if a :t:`lifetime parameter` of an :t:`implementation` is used in an :t:`associated type` without :t:`constraining` the :t:`implementation`.
 
 :dp:`fls_g2pfrqhmeys8`
 The :t:`type` of a :t:`constant parameter` shall be a :t:`scalar type`.
