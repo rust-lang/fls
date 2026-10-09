@@ -32,6 +32,26 @@ Language changes in Rust 1.99.0
 
 - `Stabilize C-variadic function definitions <https://github.com/rust-lang/rust/pull/155697>`_
 
+  - Removed paragraph: :p:`fls_juob30rst11r`
+
+  - Changed paragraph: :p:`fls_v24ino4hix3m`
+
+  - New paragraphs:
+
+    - :p:`fls_gHhCHlxtxCGU`
+    - :p:`fls_srbY4Ilm0u2E`
+    - :p:`fls_pquTAwmZENdh`
+    - :p:`fls_MoJFg4StLGwF`
+    - :p:`fls_cNcLhlgFbpcb`
+
+  - New section: :ref:`fls_mtPH3Q90xNwE`
+
+  - Moved paragraphs:
+
+    - :p:`fls_B0SMXRqQMS1E`
+    - :p:`fls_o4uSLPo00KUg`
+    - :p:`fls_icdzs1mjh0n4`
+
 - `Trait methods are now resolved on an adjusted never type (producing a FCW) <https://github.com/rust-lang/rust/pull/156047>`_
 
   - Bug fix in the compiler without a corresponding language change.
@@ -85,6 +105,11 @@ Language changes in Rust 1.99.0
 
 - `Stabilize the ability to use '#[unsafe(naked)' functions to define C-variadic functions '#![feature(c_variadic_naked_functions)]' <https://github.com/rust-lang/rust/pull/159746>`_
 
+  New paragraphs:
+
+  - :p:`fls_88A3TSNtfaZw`
+  - :p:`fls_HBKQqxo8QM2x`
+
 - `Warn if an invalid 'doc' attribute is used on a macro invocation <https://github.com/rust-lang/rust/pull/161003>`_
 
   - Diagnostics are outside the scope of the FLS
@@ -99,6 +124,10 @@ FLS maintenance
 ---------------
 
 - Fix definition of "trait bound", changing paragraph  :p:`fls_knut10hoz6wc`.
+
+- Further restrict what a variadic function is, changing paragraph :p:`fls_icdzs1mjh0n4`.
+
+- Clarify distinction between :t:`[external function]s` and :t:`[external block function]s`.
 
 - Remove the term "indirection", and associated derivatives
 
