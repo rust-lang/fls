@@ -123,10 +123,10 @@ A :t:`generic union` shall use all of its :t:`[type parameter]s` and
 :t:`[lifetime parameter]s` at least once in at least one of its :t:`[field]s`.
 
 :dp:`fls_hyi2jnp38v1n`
-A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if it makes the applicability of the :t:`implementation` more narrow.
+A :dt:`generic constraint` is a limitation imposed on an :t:`implementation` by a :t:`generic parameter`.
 
 :dp:`fls_cxNAtLSLjqbQ`
-A :t:`[constrain]t` happens when a :t:`generic parameter` appears at least once in one of the following:
+A :t:`generic constraint` happens when a :t:`generic parameter` appears at least once in one of the following:
 
 * :dp:`fls_sseo6u6pbcki`
   As a :t:`binding argument` in the :t:`[trait bound]s` of a :t:`type` that
@@ -141,11 +141,11 @@ A :t:`[constrain]t` happens when a :t:`generic parameter` appears at least once 
 
 :dp:`fls_ua3w16qo9o4`
 It is a static error if a :t:`constant parameter` or a :t:`type parameter` of
-an :t:`implementation` does not constrain the :t:`implementation`.
+an :t:`implementation` does not :t:`constrain` the :t:`implementation`.
 
 :dp:`fls_w9ol06mldwb`
 It is a static error if a :t:`lifetime parameter` of an :t:`implementation`
-is used in an :t:`associated type` without constraining the
+is used in an :t:`associated type` without :t:`constraining` the
 :t:`implementation`.
 
 :dp:`fls_g2pfrqhmeys8`

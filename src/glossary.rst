@@ -931,11 +931,6 @@ constant promotion
 :dt:`Constant promotion` is the process of converting a :t:`value expression`
 into a :t:`constant`.
 
-constrain
-^^^^^^^^^
-
-A :t:`generic parameter` is said to :dt:`constrain` an :t:`implementation` if it makes the applicability of the :t:`implementation` more narrow.
-
 construct
 ^^^^^^^^^
 
