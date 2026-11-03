@@ -21,10 +21,6 @@ An :dt:`allocated object` is a :t:`value` stored at some memory address.
 The :dt:`base address` of an :t:`allocated object` is the memory address where
 the object is stored.
 
-:dp:`fls_B5cmkWfD5GNt`
-An :t:`[allocated object]s` :dt:`memory size` is the number of bytes the object
-spans in memory from its :t:`base address`.
-
 :dp:`fls_rixdyyc525xp`
 Two :t:`[value]s` :t:`overlap` when
 
@@ -52,15 +48,8 @@ the :t:`type` of the :t:`value` is a :t:`union type`.
 It is undefined behavior to create an :t:`allocated object` at :t:`base address`
 :c:`null`.
 
-:dp:`fls_uhwpuv6cx4ip`
-It is undefined behavior to create an :t:`allocated object` with :t:`memory
-size` ``size`` at a :t:`base address` ``base`` where ``base + size`` is greater
-than the architectures maximum :c:`usize` value.
-
 :dp:`fls_xuuFKmm181bs`
-It is undefined behavior to create an :t:`allocated object` with :t:`memory
-size` ``size`` where ``size`` is greater than the architectures maximum
-:c:`isize` value.
+It is undefined behavior to create an :t:`allocated object` that is greater than the maximum :c:`isize` value of the architecure.
 
 .. _fls_ixjc5jaamx84:
 
