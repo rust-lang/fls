@@ -126,7 +126,7 @@ A :t:`generic union` shall use all of its :t:`[type parameter]s` and
 A :dt:`generic constraint` is a limitation imposed on an :t:`implementation` by a :t:`generic parameter`.
 
 :dp:`fls_cxNAtLSLjqbQ`
-A :t:`generic constraint` happens when a :t:`generic parameter` appears at least once in one of the following:
+A :t:`generic constraint` is in effect when a :t:`generic parameter` appears at least once in one of the following:
 
 * :dp:`fls_sseo6u6pbcki`
   As a :t:`binding argument` in the :t:`[trait bound]s` of a :t:`type` that
