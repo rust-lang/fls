@@ -32,9 +32,6 @@ wrapped inside a :t:`macro invocation` of
 * :dp:`fls_g8fuy1qnebxe`
   ARM
 
-* :dp:`fls_2n9el98anp8c`
-  RISC-V
-
 * :dp:`fls_pnoh31rvu9a6`
   x86 and x86-64
 
@@ -197,70 +194,6 @@ An :t:`explicit register name` may be aliased as follows:
      - ARM
      - ``r15``
      - ``pc``
-   * - :dp:`fls_maa7w0jwvat2`
-     - RISC-V
-     - ``f[0-7]``
-     - ``ft[0-7]``
-   * - :dp:`fls_az7kcaq70h4d`
-     - RISC-V
-     - ``f[8-9]``
-     - ``fs[0-1]``
-   * - :dp:`fls_xudmsflrhvo3`
-     - RISC-V
-     - ``f[10-17]``
-     - ``fa[0-7]``
-   * - :dp:`fls_px77cr1k8coy`
-     - RISC-V
-     - ``f[18-27]``
-     - ``fs[2-11]``
-   * - :dp:`fls_y1m7tlqk2dv7`
-     - RISC-V
-     - ``f[28-31]``
-     - ``ft[8-11]``
-   * - :dp:`fls_3dqq9319okv5`
-     - RISC-V
-     - ``x0``
-     - ``zero``
-   * - :dp:`fls_5l9qo5c0gek8`
-     - RISC-V
-     - ``x1``
-     - ``ra``
-   * - :dp:`fls_1m68zqsxjuyp`
-     - RISC-V
-     - ``x2``
-     - ``sp``
-   * - :dp:`fls_bck9slu4hsn1`
-     - RISC-V
-     - ``x3``
-     - ``gp``
-   * - :dp:`fls_3x72q39c8iwt`
-     - RISC-V
-     - ``x4``
-     - ``tp``
-   * - :dp:`fls_yfbrla8c801g`
-     - RISC-V
-     - ``x[5-7]``
-     - ``t[0-2]``
-   * - :dp:`fls_3nuf1gcldamv`
-     - RISC-V
-     - ``x8``
-     - ``fp``, ``s0``
-   * - :dp:`fls_nquf1uaoezx6`
-     - RISC-V
-     - ``x9``
-     - ``s1``
-   * - :dp:`fls_91oeyxc75vu5`
-     - RISC-V
-     - ``x[10-17]``
-     - ``a[0-7]``
-   * - :dp:`fls_r5btazdpwqtw`
-     - RISC-V
-     - ``x[18-27]``
-     - ``s[2-11]``
-   * - :dp:`fls_vpibsan8aful`
-     - RISC-V
-     - ``x[28-31]``
-     - ``t[3-6]``
    * - :dp:`fls_lj6xcaaecokk`
      - x86
      - ``ax``
@@ -359,23 +292,6 @@ architectures, as follows:
      - ARM
      - ``r9``
      - OS-reserved :t:`register` on some ARM targets.
-   * - :dp:`fls_2mgjkyngbmbr`
-     - RISC-V
-     - ``gp``, ``tp``
-     - Reserved :t:`[register]s`.
-   * - :dp:`fls_6tlnpguf23y3`
-     - RISC-V
-     - ``x0``
-     - The constant zero :t:`register` cannot be modified.
-   * - :dp:`fls_bz5xyv89i5m7`
-     - RISC-V
-     - ``x8``
-     - The frame pointer cannot be used as an input or output.
-   * - :dp:`fls_soitzjqze3rf`
-     - RISC-V
-     - ``x9``
-     - Internally used by LLVM as a base pointer for :t:`[function]s` with
-       complex stack frames.
    * - :dp:`fls_b2c02r5y6zm9`
      - x86
      - ``bp``
@@ -514,18 +430,6 @@ A :t:`register class name` is a target-specific string that identifies a
      - ARM
      - ``sreg_low16``
      - ``s[0-15]``
-   * - :dp:`fls_7b7c8xtm8fr7`
-     - RISC-V
-     - ``freg``
-     - ``f[0-31]``
-   * - :dp:`fls_ue0se3dcop6w`
-     - RISC-V
-     - ``reg``
-     - ``x1``, ``x[0-7]``, ``x[9-15]``, ``x[16-31]`` (on non-RV32E)
-   * - :dp:`fls_2m49cyfqffvo`
-     - RISC-V
-     - ``vreg``
-     - ``v[0-31]``
    * - :dp:`fls_mj1t0f9lp6v8`
      - x86
      - ``kreg``
@@ -579,13 +483,8 @@ A :t:`register class name` is a target-specific string that identifies a
 If a :t:`value` has a smaller size than the :t:`register` it is allocated in,
 then
 
-* :dp:`fls_drg7v8hxb5ca`
-  On RISC-V architectures, if the :t:`register` belongs to :t:`register class`
-  ``freg``, then :c:`f32` :t:`[value]s` are :t:`NaN-boxed <NaN-boxing>`. in a
-  :c:`f64` :t:`value`.
-
 * :dp:`fls_78gb8z1fyluc`
-  Otherwise, for an :t:`input register`, the upper bits of the :t:`register`
+  For an :t:`input register`, the upper bits of the :t:`register`
   have an undefined :t:`value`.
 
 * :dp:`fls_7dii7lee457t`
@@ -755,31 +654,6 @@ depend on the architecture and the target feature in effect, as follows:
      - ``sreg``
      - ``vfp2``
      - :c:`i32`, :c:`f32`
-   * - :dp:`fls_w6jhcv616l9o`
-     - RISC-V
-     - ``freg``
-     - ``f``
-     - :c:`f32`
-   * - :dp:`fls_xweobiwapog1`
-     - RISC-V
-     - ``freg``
-     - ``d``
-     - :c:`f64`
-   * - :dp:`fls_4matyejw6cls`
-     - RISC-V
-     - ``vreg``
-     - n/a
-     - Only clobbers
-   * - :dp:`fls_hklqabav1jju`
-     - RISC-V32
-     - ``reg``
-     - none
-     - :c:`i8`, :c:`i16`, :c:`i32`, :c:`f32`
-   * - :dp:`fls_nq22h8gragil`
-     - RISC-V64
-     - ``reg``
-     - none
-     - :c:`i8`, :c:`i16`, :c:`i32`, :c:`f32`, :c:`i64`, :c:`f64`
    * - :dp:`fls_uxgcrs57bznk`
      - x86
      - ``kreg``
@@ -1121,16 +995,6 @@ and :t:`register class`, as follows:
      - ``sreg``
      - none
      - ``s0``
-   * - :dp:`fls_a7bvkyh5otx5`
-     - RISC-V
-     - ``freg``
-     - none
-     - ``f0``
-   * - :dp:`fls_klthi4cczkem`
-     - RISC-V
-     - ``reg``
-     - none
-     - ``x1``
    * - :dp:`fls_pizgnxvcnj46`
      - x86
      - ``kreg``
@@ -1424,11 +1288,6 @@ The effects of an :t:`ABI clobber` depend on the :t:`ABI` in effect, as follows:
      - ARM
      - ``"aapcs"``, ``"C"``, ``"efiapi"``, ``"system"``
      - ``d[0-7]``, ``d[16-31]``, ``r[0-3]``, ``r12``, ``r14``, ``s[0-15]``
-   * - :dp:`fls_d1be48ik4a8`
-     - RISC-V
-     - ``"C"``, ``"efiapi"``, ``"system"``
-     - ``f[0-7]``, ``f[10-17]``, ``f[28-31]``, ``v[0-31]``, ``x1``, ``x[5-7]``,
-       ``x[10-17]``, ``x[28-31]``
    * - :dp:`fls_49pus6qqmf72`
      - x86-32
      - ``"C"``, ``"cdecl"``, ``"efiapi"``, ``"fastcall"``, ``"stdcall"``,
@@ -1552,11 +1411,6 @@ of the following flags :t:`[register]s` shall be restored on exit from an
        Saturation flag ``Q`` in :t:`register` ``CPRS``
 
        Saturation flag ``QC`` in :t:`register` ``FPSCR``
-   * - :dp:`fls_ia3cg424d601`
-     - RISC-V
-     - Floating-point exception flags ``fflags`` in :t:`register` ``fcsr``
-
-       Vector extension state ``vcsr``, ``vl``, ``vtype``
    * - :dp:`fls_j09bo53i5n69`
      - x86
      - Status flags ``AF``, ``CF``, ``OF``, ``PF``, ``SF``, ``ZF`` in

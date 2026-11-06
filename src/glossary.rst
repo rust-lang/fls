@@ -3069,12 +3069,6 @@ A :dt:`namespace` is a logical grouping of :t:`[name]s` such that the
 occurrence of a :t:`name` in one :t:`namespace` does not conflict with an
 occurrence of the same :t:`name` in another :t:`namespace`.
 
-NaN-boxing
-^^^^^^^^^^
-
-:dt:`NaN-boxing` is a technique for encoding :t:`[value]s` using the low order
-bits of the mantissa of a 64-bit IEEE floating-point ``NaN``.
-
 negation expression
 ^^^^^^^^^^^^^^^^^^^
 
