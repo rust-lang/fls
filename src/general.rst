@@ -47,9 +47,7 @@ Scope
 -----
 
 :dp:`fls_srdq4mota5pr`
-This document specifies the form and meaning of programs written in the 2021 Edition of the
-Rust programming language, as implemented by the Rust compiler (:t:`rustc`),
-version |spec_version|, on these architectures:
+This document specifies the form and meaning of programs written in the 2021 Edition of the Rust programming language, as implemented by the Rust compiler (:t:`rustc`), version |spec_version|, on these architectures:
 
 * x86_32
 * x86_64

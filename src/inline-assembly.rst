@@ -484,8 +484,7 @@ If a :t:`value` has a smaller size than the :t:`register` it is allocated in,
 then
 
 * :dp:`fls_78gb8z1fyluc`
-  For an :t:`input register`, the upper bits of the :t:`register`
-  have an undefined :t:`value`.
+  For an :t:`input register`, the upper bits of the :t:`register` have an undefined :t:`value`.
 
 * :dp:`fls_7dii7lee457t`
   Otherwise, for an :t:`output register`, the upper bits are ignored.
