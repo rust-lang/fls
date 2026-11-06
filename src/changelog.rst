@@ -34,6 +34,8 @@ Language changes in Rust 1.100.0
 
 - `Turn the error for repr(align) fields in a repr(packed) type into a (deny-by-default) lint, aligned_fields_in_packed <https://github.com/rust-lang/rust/pull/162160>`_
 
+- `volatile: allow accesses to non-AM memory to trap <https://github.com/rust-lang/rust/pull/160564>`_
+
 Language changes in Rust 1.99.0
 -------------------------------
 
