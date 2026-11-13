@@ -357,7 +357,7 @@ Language changes in Rust 1.97.0
 
 - `Stabilize the 'div32', 'lam-bh', 'lamcas', 'ld-seq-sa' and 'scq' target features <https://github.com/rust-lang/rust/pull/154510>`_
 
-  - The target is outside the scope of the FLS
+  - The target, LoongArch, is outside the scope of the FLS
 
 - `Stabilize 'cfg(target_has_atomic_primitive_alignment)' <https://github.com/rust-lang/rust/pull/155006>`_
 
