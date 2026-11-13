@@ -45,7 +45,13 @@ Specify supported CPU architectures:
 
 - New sections:
 
+  - :ref:`fls_2DUz5BTGjtnj`
+
+  - :ref:`fls_EysBVZQZxgso`
+
   - :ref:`fls_PefrSTA3llvz`
+
+- Removed paragraph: :p:`fls_91b7nd6qslsb`
 
 Language changes in Rust 1.99.0
 -------------------------------
