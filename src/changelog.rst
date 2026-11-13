@@ -637,7 +637,7 @@ Language changes in Rust 1.94.0
 
 - `Stabilize additional 29 RISC-V target features including large portions of the RVA22U64 / RVA23U64 profiles <https://github.com/rust-lang/rust/pull/145948>`_
 
-  - The target is outside the scope of the FLS.
+  - These are documented in section :ref:`fls_EysBVZQZxgso`
 
 - `Add warn-by-default unused_visibilities lint for visibility on const _ declarations <https://github.com/rust-lang/rust/pull/147136>`_
 
