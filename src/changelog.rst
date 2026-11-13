@@ -37,7 +37,13 @@ Language changes in Rust 1.100.0
 FLS maintenance
 ---------------
 
-Changed syntax: :s:`FeatureList`
+Specify supported CPU architectures:
+
+- Changed syntax: :s:`FeatureList`
+
+- New sections:
+
+  - :ref:`fls_PefrSTA3llvz`
 
 Language changes in Rust 1.99.0
 -------------------------------

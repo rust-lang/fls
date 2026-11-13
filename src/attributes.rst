@@ -490,6 +490,24 @@ that enables all the :c:`[target_feature]s` that the callee enables.
 :t:`Attribute` :dc:`target_feature` enables target architecture features for its
 related :t:`function`.
 
+.. rubric:: Undefined Behavior
+
+:dp:`fls_xx51fjkbgg5g`
+It is undefined behavior to execute a program compiled with target architecture
+features that are not supported.
+
+.. rubric:: Examples
+
+.. code-block:: rust
+
+   #[target_feature(enable="bmi1,sse4.1")]
+   fn requires_target_architecture_features () {}
+
+.. _fls_PefrSTA3llvz:
+
+Attribute ``target_feature``: x86
+.................................
+
 :dp:`fls_91b7nd6qslsb`
 The target architecture features are as follows:
 
@@ -711,19 +729,6 @@ The target architecture features are as follows:
      - xsaves
      -
      - Save processor extended states supervizor
-
-.. rubric:: Undefined Behavior
-
-:dp:`fls_xx51fjkbgg5g`
-It is undefined behavior to execute a program compiled with target architecture
-features that are not supported.
-
-.. rubric:: Examples
-
-.. code-block:: rust
-
-   #[target_feature(enable="bmi1,sse4.1")]
-   fn requires_target_architecture_features () {}
 
 .. _fls_6qj249hphj1s:
 
