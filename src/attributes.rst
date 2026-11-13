@@ -477,62 +477,7 @@ Attribute ``target_feature``
        $$target_feature$$ $$($$ $$enable$$ $$=$$ $$"$$ FeatureList $$"$$ $$)$$
 
    FeatureList ::=
-       Feature ($$,$$ Feature)*
-
-   Feature ::=
-       $$adx$$
-     | $$aes$$
-     | $$avx$$
-     | $$avx2$$
-     | $$avx512bf16$$
-     | $$avx512bitalg$$
-     | $$avx512bw$$
-     | $$avx512cd$$
-     | $$avx512dq$$
-     | $$avx512f$$
-     | $$avx512fp16$$
-     | $$avx512ifma$$
-     | $$avx512vbmi$$
-     | $$avx512vbmi2$$
-     | $$avx512vl$$
-     | $$avx512vnni$$
-     | $$avx512vp2intersect$$
-     | $$avx512vpopcntdq$$
-     | $$avxifma$$
-     | $$avxneconvert$$
-     | $$avxvnni$$
-     | $$avxvnniint16$$
-     | $$avxvnniint8$$
-     | $$bmi1$$
-     | $$bmi2$$
-     | $$fma$$
-     | $$fxsr$$
-     | $$gfni$$
-     | $$kl$$
-     | $$lzcnt$$
-     | $$pclmulqdq$$
-     | $$popcnt$$
-     | $$rdrand$$
-     | $$rdseed$$
-     | $$sha$$
-     | $$sha512$$
-     | $$sm3$$
-     | $$sm4$$
-     | $$sse$$
-     | $$sse2$$
-     | $$sse3$$
-     | $$sse4.1$$
-     | $$sse4.2$$
-     | $$sse4a$$
-     | $$ssse3$$
-     | $$tbm$$
-     | $$vaes$$
-     | $$vpclmulqdq$$
-     | $$widekl$$
-     | $$xsave$$
-     | $$xsavec$$
-     | $$xsaveopt$$
-     | $$xsaves$$
+       SimplePath ($$,$$ SimplePath)*
 
 .. rubric:: Legality Rules
 
