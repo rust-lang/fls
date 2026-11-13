@@ -477,62 +477,7 @@ Attribute ``target_feature``
        $$target_feature$$ $$($$ $$enable$$ $$=$$ $$"$$ FeatureList $$"$$ $$)$$
 
    FeatureList ::=
-       Feature ($$,$$ Feature)*
-
-   Feature ::=
-       $$adx$$
-     | $$aes$$
-     | $$avx$$
-     | $$avx2$$
-     | $$avx512bf16$$
-     | $$avx512bitalg$$
-     | $$avx512bw$$
-     | $$avx512cd$$
-     | $$avx512dq$$
-     | $$avx512f$$
-     | $$avx512fp16$$
-     | $$avx512ifma$$
-     | $$avx512vbmi$$
-     | $$avx512vbmi2$$
-     | $$avx512vl$$
-     | $$avx512vnni$$
-     | $$avx512vp2intersect$$
-     | $$avx512vpopcntdq$$
-     | $$avxifma$$
-     | $$avxneconvert$$
-     | $$avxvnni$$
-     | $$avxvnniint16$$
-     | $$avxvnniint8$$
-     | $$bmi1$$
-     | $$bmi2$$
-     | $$fma$$
-     | $$fxsr$$
-     | $$gfni$$
-     | $$kl$$
-     | $$lzcnt$$
-     | $$pclmulqdq$$
-     | $$popcnt$$
-     | $$rdrand$$
-     | $$rdseed$$
-     | $$sha$$
-     | $$sha512$$
-     | $$sm3$$
-     | $$sm4$$
-     | $$sse$$
-     | $$sse2$$
-     | $$sse3$$
-     | $$sse4.1$$
-     | $$sse4.2$$
-     | $$sse4a$$
-     | $$ssse3$$
-     | $$tbm$$
-     | $$vaes$$
-     | $$vpclmulqdq$$
-     | $$widekl$$
-     | $$xsave$$
-     | $$xsavec$$
-     | $$xsaveopt$$
-     | $$xsaves$$
+       SimplePath ($$,$$ SimplePath)*
 
 .. rubric:: Legality Rules
 
@@ -545,8 +490,427 @@ that enables all the :c:`[target_feature]s` that the callee enables.
 :t:`Attribute` :dc:`target_feature` enables target architecture features for its
 related :t:`function`.
 
-:dp:`fls_91b7nd6qslsb`
-The target architecture features are as follows:
+.. rubric:: Undefined Behavior
+
+:dp:`fls_xx51fjkbgg5g`
+It is undefined behavior to execute a program compiled with target architecture
+features that are not supported.
+
+.. rubric:: Examples
+
+.. code-block:: rust
+
+   #[target_feature(enable="bmi1,sse4.1")]
+   fn requires_target_architecture_features () {}
+
+.. _fls_2DUz5BTGjtnj:
+
+Attribute ``target_feature``: ARM
+.................................
+
+.. list-table::
+
+   * - :dp:`fls_ACxzEuvwnPwv`
+     - **Feature**
+     - **Implicitly enables**
+     - **Description**
+   * - :dp:`fls_zb4YMyAg5hhJ`
+     - aes
+     - neon
+     - FEAT_AES & FEAT_PMULL --- Advanced <abbr title="Single Instruction Multiple Data">SIMD</abbr> AES & PMULL instructions
+   * - :dp:`fls_EmvEQnexn1cg`
+     - bf16
+     -
+     - FEAT_BF16 --- BFloat16 instructions
+   * - :dp:`fls_B3rlOEonvk9Y`
+     - bti
+     -
+     - FEAT_BTI --- Branch Target Identification
+   * - :dp:`fls_6OKtEx3drdv8`
+     - crc
+     -
+     - FEAT_CRC --- CRC32 checksum instructions
+   * - :dp:`fls_jh9D9SNsa6hD`
+     - dit
+     -
+     - FEAT_DIT  --- Data Independent Timing instructions
+   * - :dp:`fls_QrL8orb8uAGY`
+     - dotprod
+     - neon
+     - FEAT_DotProd --- Advanced SIMD Int8 dot product instructions
+   * - :dp:`fls_TFtfHALhxfJv`
+     - dpb
+     -
+     - FEAT_DPB --- Data cache clean to point of persistence
+   * - :dp:`fls_8DIWv7d3DT8h`
+     - dpb2
+     - dpb
+     - FEAT_DPB2 --- Data cache clean to point of deep persistence
+   * - :dp:`fls_mWFhYQG0yfk0`
+     - f32mm
+     - sve
+     - FEAT_F32MM --- SVE single-precision FP matrix multiply instruction
+   * - :dp:`fls_6OnOmVVBsMRG`
+     - f64mm
+     - sve
+     - FEAT_F64MM --- SVE double-precision FP matrix multiply instruction
+   * - :dp:`fls_JZfrTQ39DSIG`
+     - fcma
+     - neon
+     - FEAT_FCMA --- Floating point complex number support
+   * - :dp:`fls_E0h2PNUyON5a`
+     - fhm
+     - fp16
+     - FEAT_FHM --- Half-precision FP FMLAL instructions
+   * - :dp:`fls_NTPx3s7kXKmI`
+     - flagm
+     -
+     - FEAT_FLAGM --- Conditional flag manipulation
+   * - :dp:`fls_HnYgLaZrpB08`
+     - fp16
+     - neon
+     - FEAT_FP16 --- Half-precision FP data processing
+   * - :dp:`fls_9wlvZoJ6YTcc`
+     - frintts
+     -
+     - FEAT_FRINTTS --- Floating-point to int helper instructions
+   * - :dp:`fls_MxHuZM2iVAgx`
+     - i8mm
+     -
+     - FEAT_I8MM --- Int8 Matrix Multiplication
+   * - :dp:`fls_6Z9ez6y5YoV5`
+     - jsconv
+     - neon
+     - FEAT_JSCVT --- JavaScript conversion instruction
+   * - :dp:`fls_Jd8wqnlCCfE9`
+     - lor
+     -
+     - FEAT_LOR --- Limited Ordering Regions extension
+   * - :dp:`fls_ANyIKQZZfv9T`
+     - lse
+     -
+     - FEAT_LSE --- Large System Extensions
+   * - :dp:`fls_S4ZcZ3MKRtZA`
+     - mte
+     -
+     - FEAT_MTE & FEAT_MTE2 --- Memory Tagging Extension
+   * - :dp:`fls_tsZmbMPk7ZZP`
+     - neon
+     -
+     - FEAT_AdvSimd & FEAT_FP --- Floating Point and Advanced SIMD extension
+   * - :dp:`fls_snW06ZJ4DIoI`
+     - paca
+     -
+     - FEAT_PAUTH --- Pointer Authentication (address authentication)
+   * - :dp:`fls_kayZsmgjUSyJ`
+     - pacg
+     -
+     - FEAT_PAUTH --- Pointer Authentication (generic authentication)
+   * - :dp:`fls_qBcgLoCtteFt`
+     - pan
+     -
+     - FEAT_PAN --- Privileged Access-Never extension
+   * - :dp:`fls_qU99Gmznvru1`
+     - pmuv3
+     -
+     - FEAT_PMUv3 --- Performance Monitors extension (v3)
+   * - :dp:`fls_a0ugAQgZxstf`
+     - rand
+     -
+     - FEAT_RNG --- Random Number Generator
+   * - :dp:`fls_2nULabRTw6oM`
+     - ras
+     -
+     - FEAT_RAS & FEAT_RASv1p1 --- Reliability, Availability and Serviceability extension
+   * - :dp:`fls_VDRUOQrmtajy`
+     - rcpc
+     -
+     - FEAT_LRCPC --- Release consistent Processor Consistent
+   * - :dp:`fls_PIP6PVuWgfYd`
+     - rcpc2
+     - rcpc
+     - FEAT_LRCPC2 --- RcPc with immediate offsets
+   * - :dp:`fls_GQdztyaSjFWZ`
+     - rdm
+     - neon
+     - FEAT_RDM --- Rounding Double Multiply accumulate
+   * - :dp:`fls_OnuH4Tijyskj`
+     - sb
+     -
+     - FEAT_SB --- Speculation Barrier
+   * - :dp:`fls_sxHcNbOS56Rl`
+     - sha2
+     - neon
+     - FEAT_SHA1 & FEAT_SHA256 --- Advanced SIMD SHA instructions
+   * - :dp:`fls_d9vetGUCFesC`
+     - sha3
+     - sha2
+     - FEAT_SHA512 & FEAT_SHA3 --- Advanced SIMD SHA instructions
+   * - :dp:`fls_rOXEo2Lj5KjS`
+     - sm4
+     - neon
+     - FEAT_SM3 & FEAT_SM4 --- Advanced SIMD SM3/4 instructions
+   * - :dp:`fls_s6uItZAZUv4k`
+     - spe
+     -
+     - FEAT_SPE --- Statistical Profiling Extension
+   * - :dp:`fls_Y3zJoXV7MJGY`
+     - ssbs
+     -
+     - FEAT_SSBS & FEAT_SSBS2 --- Speculative Store Bypass Safe
+   * - :dp:`fls_DXYYFC8tjTu7`
+     - sve
+     - neon
+     - FEAT_SVE --- Scalable Vector Extension
+   * - :dp:`fls_PU7IQ6089DVg`
+     - sve2
+     - sve
+     - FEAT_SVE2 --- Scalable Vector Extension 2
+   * - :dp:`fls_gYa7xuYqrLus`
+     - sve2-aes
+     - sve2, aes
+     - FEAT_SVE_AES & FEAT_SVE_PMULL128 --- SVE AES instructions
+   * - :dp:`fls_LsLoec9NJWeM`
+     - sve2-bitperm
+     - sve2
+     - FEAT_SVE2_BitPerm --- SVE Bit Permute
+   * - :dp:`fls_3p3apcn1gabX`
+     - sve2-sha3
+     - sve2, sha3
+     - FEAT_SVE2_SHA3 --- SVE SHA3 instructions
+   * - :dp:`fls_NQQ68yn03rof`
+     - sve2-sm4
+     - sve2, sm4
+     - FEAT_SVE2_SM4 --- SVE SM4 instructions
+   * - :dp:`fls_Xl8lNwd3j3jH`
+     - tme
+     -
+     - FEAT_TME --- Transactional Memory Extension
+   * - :dp:`fls_TbDYro5lOKH0`
+     - vh
+     -
+     - FEAT_VHE --- Virtualization Host Extensions
+
+.. _fls_EysBVZQZxgso:
+
+Attribute ``target_feature``: RISC-V
+....................................
+
+.. list-table::
+
+   * - :dp:`fls_RbW42IbkBxLr`
+     - **Feature**
+     - **implicitly enables**
+     - **Description**
+   * - :dp:`fls_wYvkIruh54Pp`
+     - a
+     - zaamo, zalrsc
+     - A --- Atomic instructions
+   * - :dp:`fls_jqKvkcIEsZPA`
+     - b
+     - zba, zbc, zbs
+     - B --- Bit Manipulation instructions
+   * - :dp:`fls_gVOG80iyDl5E`
+     - c
+     - zca
+     - C --- Compressed instructions
+   * - :dp:`fls_x0Mb5m1VIgFy`
+     - d
+     - f
+     - D --- Double-Precision Floating-Point
+   * - :dp:`fls_GlbjJHxYgGMc`
+     - f
+     - zicsr
+     - F --- Single-Precision Floating-Point
+   * - :dp:`fls_mzarqphAbK1Q`
+     - m
+     -
+     - M --- Integer Multiplication and Division instructions
+   * - :dp:`fls_JPM9JAUPe0jK`
+     - za64rs
+     - za128rs
+     - Za64rs --- Platform Behavior: Naturally aligned Reservation sets with ≦ 64 Bytes
+   * - :dp:`fls_N7C9n5rt0i94`
+     - za128rs
+     -
+     - Za128rs --- Platform Behavior: Naturally aligned Reservation sets with ≦ 128 Bytes
+   * - :dp:`fls_hvtpjRxbWzjp`
+     - zaamo
+     -
+     - Zaamo --- Atomic Memory Operation instructions
+   * - :dp:`fls_fbx2SjO2EMN8`
+     - zabha
+     - zaamo
+     - Zabha --- Byte and Halfword Atomic Memory Operation instructions
+   * - :dp:`fls_O8etf0xkfy6T`
+     - zacas
+     - zaamo
+     - Zacas --- Atomic Compare-and-Swap (CAS) instructions
+   * - :dp:`fls_lzT1DjtqTPOP`
+     - zalrsc
+     -
+     - Zalrsc --- Load-Reserved/Store-Conditional instructions
+   * - :dp:`fls_FVlJyKZcHOyl`
+     - zama16b
+     -
+     - Zama16b --- Platform Behavior: Misaligned loads, stores, and AMOs to main memory regions that do not cross a naturally aligned 16-byte boundary are atomic
+   * - :dp:`fls_xnywn0q3Vxoq`
+     - zawrs
+     -
+     - Zawrs --- Wait-on-Reservation-Set instructions
+   * - :dp:`fls_fsi41AfIJHVI`
+     - zba
+     -
+     - Zba --- Address Generation instructions
+   * - :dp:`fls_rEcOG3puU2p9`
+     - zbb
+     -
+     - Zbb --- Basic bit-manipulation
+   * - :dp:`fls_kT9mqMdm9ARJ`
+     - zbc
+     - zbkc
+     - Zbc --- Carry-less multiplication
+   * - :dp:`fls_uNsNu8ufoTKs`
+     - zbkb
+     -
+     - Zbkb --- Bit Manipulation Instructions for Cryptography
+   * - :dp:`fls_IjHOBli7M334`
+     - zbkc
+     -
+     - Zbkc --- Carry-less multiplication for Cryptography
+   * - :dp:`fls_xYOmGe169C7H`
+     - zbkx
+     -
+     - Zbkx --- Crossbar permutations
+   * - :dp:`fls_LiRLQJPwbIUa`
+     - zbs
+     -
+     - Zbs --- Single-bit instructions
+   * - :dp:`fls_TwCcvefAN73h`
+     - zca
+     -
+     - Zca --- Compressed instructions: integer part subset
+   * - :dp:`fls_Vcma73iJJIqq`
+     - zcb
+     - zca
+     - Zcb --- Simple Code-size Saving Compressed instructions
+   * - :dp:`fls_7aiMlxYUT2GX`
+     - zcmop
+     - zca
+     - Zcmop --- Compressed May-Be-Operations
+   * - :dp:`fls_YCnhlwRBS6Un`
+     - zic64b
+     -
+     - Zic64b --- Platform Behavior: Naturally aligned 64 byte Cache blocks
+   * - :dp:`fls_LC6960aoVlPi`
+     - zicbom
+     -
+     - Zicbom --- Cache-Block Management instructions
+   * - :dp:`fls_d1MFjSTULJYa`
+     - zicbop
+     -
+     - Zicbop --- Cache-Block Prefetch Hint instructions
+   * - :dp:`fls_QeCBhu85zSlM`
+     - zicboz
+     -
+     - Zicboz --- Cache-Block Zero instruction
+   * - :dp:`fls_EoDFT22fxEWl`
+     - ziccamoa
+     -
+     - Ziccamoa --- Platform Behavior: Cacheable and Coherent Main memory supports all basic atomic operations
+   * - :dp:`fls_UkFjmTWNo66j`
+     - ziccif
+     -
+     - Ziccif --- Platform Behavior: Cacheable and Coherent Main memory supports instruction fetch and fetches of naturally aligned power-of-2 sizes up to `min(ILEN,XLEN)` are atomic
+   * - :dp:`fls_RFFbVqX3frCv`
+     - zicclsm
+     -
+     - Zicclsm --- Platform Behavior: Cacheable and Coherent Main memory supports misaligned load/store accesses
+   * - :dp:`fls_yWQCtsVEmmFV`
+     - ziccrse
+     -
+     - Ziccrse --- Platform Behavior: Cacheable and Coherent Main memory guarantees eventual success on LR/SC sequences
+   * - :dp:`fls_ewHccKaVKUQZ`
+     - zicntr
+     - zicsr
+     - Zicntr --- Base Counters and Timers
+   * - :dp:`fls_tSiHjhF5DdKZ`
+     - zicond
+     -
+     - Zicond --- Integer Conditional Operation instructions
+   * - :dp:`fls_4eNVMoL9doQT`
+     - zicsr
+     -
+     - Zicsr --- Control and Status Register (CSR) instructions
+   * - :dp:`fls_Skptnco2ziJH`
+     - zifencei
+     -
+     - Zifencei --- Instruction-Fetch Fence instruction
+   * - :dp:`fls_ILyIDji10cEc`
+     - zihintntl
+     -
+     - Zihintntl --- Non-Temporal Locality Hint instructions
+   * - :dp:`fls_K3S9BkrhFd5s`
+     - zihintpause
+     -
+     - Zihintpause --- Pause Hint instruction
+   * - :dp:`fls_6zFomKfZKraB`
+     - zihpm
+     - zicsr
+     - Zihpm --- Hardware Performance Counters
+   * - :dp:`fls_WzkLGDqLnwJt`
+     - zimop
+     -
+     - Zimop --- May-Be-Operations
+   * - :dp:`fls_1EO9XST3BP9b`
+     - zk
+     - zkn, zkr, zks, zkt, zbkb, zbkc, zkbx
+     - Zk --- Scalar Cryptography
+   * - :dp:`fls_EYkl7DyqnwuU`
+     - zkn
+     - zknd, zknh, zbkb, zbkc, zkbx
+     - Zkn --- NIST Algorithm suite extension
+   * - :dp:`fls_VH1ftprn9qCI`
+     - zknd
+     -
+     - Zknd --- NIST Suite: AES Decryption
+   * - :dp:`fls_XA9WolcghmKU`
+     - zkne
+     -
+     - Zkne --- NIST Suite: AES Encryption
+   * - :dp:`fls_gJoqQiWpmN2O`
+     - zknh
+     -
+     - Zknh --- NIST Suite: Hash Function Instructions
+   * - :dp:`fls_tyKuVNj9bRh2`
+     - zkr
+     -
+     - Zkr --- Entropy Source Extension
+   * - :dp:`fls_wiuTJicvO5kG`
+     - zks
+     - zksed, zksh, zbkb, zbkc, zkbx
+     - Zks --- ShangMi Algorithm Suite
+   * - :dp:`fls_rsHhO2Df6JZY`
+     - zksed
+     -
+     - Zksed --- ShangMi Suite: SM4 Block Cipher Instructions
+   * - :dp:`fls_SPtzysthOJMD`
+     - zksh
+     -
+     - Zksh --- ShangMi Suite: SM3 Hash Function Instructions
+   * - :dp:`fls_yHsInFCjTGvi`
+     - zkt
+     -
+     - Zkt --- Data Independent Execution Latency Subset
+   * - :dp:`fls_EIm0mMpmRws1`
+     - ztso
+     -
+     - Ztso --- Total Store Ordering
+
+.. _fls_PefrSTA3llvz:
+
+Attribute ``target_feature``: x86
+.................................
 
 .. list-table::
 
@@ -766,19 +1130,6 @@ The target architecture features are as follows:
      - xsaves
      -
      - Save processor extended states supervizor
-
-.. rubric:: Undefined Behavior
-
-:dp:`fls_xx51fjkbgg5g`
-It is undefined behavior to execute a program compiled with target architecture
-features that are not supported.
-
-.. rubric:: Examples
-
-.. code-block:: rust
-
-   #[target_feature(enable="bmi1,sse4.1")]
-   fn requires_target_architecture_features () {}
 
 .. _fls_6qj249hphj1s:
 

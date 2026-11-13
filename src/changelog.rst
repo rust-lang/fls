@@ -32,9 +32,32 @@ Language changes in Rust 1.100.0
 
 - `Unfulfilled_lint_expectations no longer fires on #[expect(dead_code)] inside code that is covered by a dead parents' diagnostic <https://github.com/rust-lang/rust/pull/161005>`_
 
+- `riscv: stabilize 'd' and 'f' target features <https://github.com/rust-lang/rust/pull/161385>`_
+
+  - New paragraphs:
+
+    - :p:`fls_x0Mb5m1VIgFy`
+
+    - :p:`fls_GlbjJHxYgGMc`
+
 - `Turn the error for repr(align) fields in a repr(packed) type into a (deny-by-default) lint, aligned_fields_in_packed <https://github.com/rust-lang/rust/pull/162160>`_
 
-- `volatile: allow accesses to non-AM memory to trap <https://github.com/rust-lang/rust/pull/160564>`_
+FLS maintenance
+---------------
+
+Specify supported CPU architectures:
+
+- Changed syntax: :s:`FeatureList`
+
+- New sections:
+
+  - :ref:`fls_2DUz5BTGjtnj`
+
+  - :ref:`fls_EysBVZQZxgso`
+
+  - :ref:`fls_PefrSTA3llvz`
+
+- Removed paragraph: :p:`fls_91b7nd6qslsb`
 
 Language changes in Rust 1.99.0
 -------------------------------
@@ -334,7 +357,7 @@ Language changes in Rust 1.97.0
 
 - `Stabilize the 'div32', 'lam-bh', 'lamcas', 'ld-seq-sa' and 'scq' target features <https://github.com/rust-lang/rust/pull/154510>`_
 
-  - The target is outside the scope of the FLS
+  - The target, LoongArch, is outside the scope of the FLS
 
 - `Stabilize 'cfg(target_has_atomic_primitive_alignment)' <https://github.com/rust-lang/rust/pull/155006>`_
 
@@ -614,7 +637,7 @@ Language changes in Rust 1.94.0
 
 - `Stabilize additional 29 RISC-V target features including large portions of the RVA22U64 / RVA23U64 profiles <https://github.com/rust-lang/rust/pull/145948>`_
 
-  - The target is outside the scope of the FLS.
+  - These are documented in section :ref:`fls_EysBVZQZxgso`
 
 - `Add warn-by-default unused_visibilities lint for visibility on const _ declarations <https://github.com/rust-lang/rust/pull/147136>`_
 
