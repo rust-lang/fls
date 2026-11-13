@@ -36,6 +36,11 @@ Language changes in Rust 1.100.0
 
 - `volatile: allow accesses to non-AM memory to trap <https://github.com/rust-lang/rust/pull/160564>`_
 
+FLS maintenance
+---------------
+
+Changed syntax: :s:`FeatureList`
+
 Language changes in Rust 1.99.0
 -------------------------------
 
