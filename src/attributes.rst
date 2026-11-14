@@ -477,7 +477,10 @@ Attribute ``target_feature``
        $$target_feature$$ $$($$ $$enable$$ $$=$$ $$"$$ FeatureList $$"$$ $$)$$
 
    FeatureList ::=
-       SimplePath ($$,$$ SimplePath)*
+       Feature ($$,$$ Feature)*
+
+:dp:`fls_Vj39b83o4Q5L`
+A :ds:`Feature` is any of the strings listed in *Feature* column in any of the tables in the sub-sections below.
 
 .. rubric:: Legality Rules
 
