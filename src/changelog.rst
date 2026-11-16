@@ -51,7 +51,14 @@ Specify supported CPU architectures:
 
   - :ref:`fls_PefrSTA3llvz`
 
-- Removed paragraph: :p:`fls_91b7nd6qslsb`
+- Removed paragraphs:
+
+  - :p:`fls_91b7nd6qslsb`
+  - :p:`fls_helnk2iz8qhp`
+  - :p:`fls_vanmt2dv7hzd`
+  - :p:`fls_g8fuy1qnebxe`
+  - :p:`fls_2n9el98anp8c`
+  - :p:`fls_pnoh31rvu9a6`
 
 Language changes in Rust 1.99.0
 -------------------------------
