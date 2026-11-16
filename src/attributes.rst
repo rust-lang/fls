@@ -663,7 +663,7 @@ Attribute ``target_feature``: AArch64
      - FEAT_SSBS & FEAT_SSBS2 --- Speculative Store Bypass Safe
    * - :dp:`fls_DXYYFC8tjTu7`
      - sve
-     - neon
+     - neon, fp16
      - FEAT_SVE --- Scalable Vector Extension
    * - :dp:`fls_PU7IQ6089DVg`
      - sve2
