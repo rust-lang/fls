@@ -711,7 +711,7 @@ Attribute ``target_feature``: RISC-V
      - A --- Atomic instructions
    * - :dp:`fls_jqKvkcIEsZPA`
      - b
-     - zba, zbc, zbs
+     - zba, zbb, zbs
      - B --- Bit Manipulation instructions
    * - :dp:`fls_gVOG80iyDl5E`
      - c
