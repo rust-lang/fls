@@ -644,8 +644,7 @@ See :s:`BoundPattern`.
 break expression
 ^^^^^^^^^^^^^^^^
 
-A :dt:`break expression` is an :t:`expression` that terminates a
-:t:`loop expression` or a :t:`named block expression`.
+A :dt:`break expression` is an :t:`expression` that terminates a :t:`loop expression`.
 
 See :s:`BreakExpression`.
 
@@ -2433,6 +2432,18 @@ label scope
 
 A :dt:`label scope` is a :t:`scope` for :t:`[label]s`.
 
+labeled block expression
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`labeled block expression` is a :t:`labeled loop expression` that executes its :t:`loop body` exactly once.
+
+See :s:`LabeledBlockExpression`.
+
+labeled loop expression
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`labeled loop expression` is a :t:`loop expression` with a :t:`label`.
+
 layout
 ^^^^^^
 
@@ -3022,11 +3033,6 @@ A :dt:`name` is an :t:`identifier` that refers to an :t:`entity`.
 
 See :s:`Name`.
 
-named block expression
-^^^^^^^^^^^^^^^^^^^^^^
-
-A :dt:`named block expression` is a :t:`block expression` with a :t:`label`.
-
 named deconstructor
 ^^^^^^^^^^^^^^^^^^^
 
@@ -3050,11 +3056,6 @@ A :dt:`named initializer` is a :t:`construct` that specifies the name and
 initial :t:`value` of a :t:`field` in a :t:`struct expression`.
 
 See :s:`NamedInitializer`.
-
-named loop expression
-^^^^^^^^^^^^^^^^^^^^^
-
-A :dt:`named loop expression` is a :t:`loop expression` with a :t:`label`.
 
 named register argument
 ^^^^^^^^^^^^^^^^^^^^^^^
