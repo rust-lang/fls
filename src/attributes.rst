@@ -867,7 +867,7 @@ Attribute ``target_feature``: RISC-V
      - Zimop --- May-Be-Operations
    * - :dp:`fls_1EO9XST3BP9b`
      - zk
-     - zkn, zkr, zks, zkt, zbkb, zbkc, zkbx
+     - zkn, zkr, zkt
      - Zk --- Scalar Cryptography
    * - :dp:`fls_EYkl7DyqnwuU`
      - zkn
