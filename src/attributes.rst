@@ -508,8 +508,8 @@ features that are not supported.
 
 .. _fls_2DUz5BTGjtnj:
 
-Attribute ``target_feature``: ARM
-.................................
+Attribute ``target_feature``: AArch64
+.....................................
 
 .. list-table::
 
