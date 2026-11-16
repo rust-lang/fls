@@ -871,7 +871,7 @@ Attribute ``target_feature``: RISC-V
      - Zk --- Scalar Cryptography
    * - :dp:`fls_EYkl7DyqnwuU`
      - zkn
-     - zknd, zknh, zbkb, zbkc, zkbx
+     - zknd, zkne, zknh, zbkb, zbkc, zbkx
      - Zkn --- NIST Algorithm suite extension
    * - :dp:`fls_VH1ftprn9qCI`
      - zknd
