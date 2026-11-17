@@ -1007,8 +1007,7 @@ See :s:`ContainerOperand`.
 continue expression
 ^^^^^^^^^^^^^^^^^^^
 
-A :dt:`continue expression` is an :t:`expression` that first terminates and
-then restarts a :t:`loop expression`.
+A :dt:`continue expression` is an :t:`diverging expression` that first terminates and then restarts a :t:`loop expression`.
 
 See :s:`ContinueExpression`.
 
@@ -3094,8 +3093,7 @@ See :s:`NestingImport`.
 never type
 ^^^^^^^^^^
 
-The :dt:`never type` is a :t:`type` that represents the result of a computation
-that never completes.
+The :dt:`never type` is a :t:`type` that represents the result of a computation that never completes, also referred to as a :t:`diverging <diverging expression>` computation.
 
 See :s:`NeverType`.
 
@@ -3956,7 +3954,7 @@ See :s:`RestPattern`.
 return expression
 ^^^^^^^^^^^^^^^^^
 
-A :dt:`return expression` is an :t:`expression` that optionally yields a
+A :dt:`return expression` is an :t:`diverging expression` that optionally yields a
 :t:`value` and causes control flow to return to the caller.
 
 See :s:`ReturnExpression`.
