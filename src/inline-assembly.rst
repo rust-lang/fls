@@ -23,21 +23,6 @@ wrapped inside a :t:`macro invocation` of
 :t:`macro` :std:`core::arch::global_asm`, or
 :t:`macro` :std:`core::arch::naked_asm`.
 
-:dp:`fls_helnk2iz8qhp`
-:t:`Inline assembly` is available on the following architectures:
-
-* :dp:`fls_vanmt2dv7hzd`
-  AArch64
-
-* :dp:`fls_g8fuy1qnebxe`
-  ARM
-
-* :dp:`fls_2n9el98anp8c`
-  RISC-V
-
-* :dp:`fls_pnoh31rvu9a6`
-  x86 and x86-64
-
 .. _fls_j9l8wn6wgm06:
 
 Registers
