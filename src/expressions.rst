@@ -381,6 +381,9 @@ program flow to diverge from the normal :t:`evaluation` order.
   Any :t:`expression` whose :t:`evaluation` requires the :t:`evaluation` of a
   diverging :t:`subexpression` on all reachable control flow paths.
 
+* :dp:`fls_7V4E0QW5Au3b`
+  Any :t:`expression` whose :t:`type` is the :t:`never type`.
+
 .. _fls_6ydylimiv553:
 
 Place Expressions
@@ -673,6 +676,9 @@ expression`.
 When the remaining :t:`[lexical element]s` of a :s:`StatementList` match either
 an :s:`Expression` or :s:`Statement` they are interpreted as an :s:`Expression`.
 
+:dp:`fls_wHJ77EQ6rm0l`
+A :t:`block expression` :t:`diverges <diverging expression>` when all reachable control flow paths contain a :t:`diverging expression`, unless that :t:`expression` is a :t:`place expression` that is not read from.
+
 :dp:`fls_u4gj2lnkq9ub`
 The :t:`type` of a :t:`block expression` is determined as follows:
 
@@ -691,6 +697,9 @@ The :t:`type` of a :t:`block expression` is determined as follows:
   Otherwise, if the :t:`block expression` has a :t:`tail expression`, then the
   :t:`type` is the :t:`type` of the :t:`tail expression`.
 
+* :dp:`fls_jGVzDuOVW7jB`
+  Otherwise, if the :t:`block expression` :t:`diverges <diverging expression>`, then the :t:`type` is the :t:`never type`.
+
 * :dp:`fls_u0avbm147nyh`
   Otherwise the :t:`type` is the :t:`unit type`.
 
@@ -706,6 +715,9 @@ The :t:`value` of a :t:`block expression` is determined as follows:
 * :dp:`fls_9nmssjseq3jt`
   Otherwise, if the :t:`block expression` has a :t:`tail expression`, then the
   :t:`value` is the :t:`value` of the :t:`tail expression`.
+
+* :dp:`fls_8j1GrSKOfIHo`
+  Otherwise, if the :t:`block expression` :t:`diverges <diverging expression>`, then there is no :t:`value`.
 
 * :dp:`fls_a3ulnvyc1ut`
   Otherwise the :t:`value` is the :t:`unit value`.
@@ -3800,6 +3812,9 @@ An :t:`anonymous loop expression` is a :t:`loop expression` without a
 :dp:`fls_phpoq9ho8f1v`
 A :t:`labeled loop expression` is a :t:`loop expression` with a :t:`label`.
 
+:dp:`fls_6UKnZYOHFFqF`
+A :t:`loop body` with at least one :t:`break expression` :t:`diverges <diverging expression>` when the :t:`operands` of all :t:`[break expression]s` :t:`diverge <diverging expression>`.
+
 :dp:`fls_8zVcHXXkNWol`
 The :t:`type` of the :t:`loop body` is the :t:`type` of its :t:`block expression`.
 
@@ -3906,6 +3921,9 @@ Infinite Loops
 :dp:`fls_p11qw6mtxlda`
 An :t:`infinite loop expression` is a :t:`loop expression` that continues to
 evaluate its :t:`loop body` indefinitely.
+
+:dp:`fls_vZHch9mMJSEy`
+An :t:`infinite loop expression` :t:`diverges <diverging expression>` when its :t:`loop body` lacks a :t:`break expression`.
 
 :dp:`fls_b314wjbv0zwe`
 The :t:`type` of an :t:`infinite loop expression` is determined as follows:
@@ -4148,7 +4166,7 @@ Break Expressions
 .. rubric:: Legality Rules
 
 :dp:`fls_i5ko1t2wbgxe`
-A :t:`break expression` is an :t:`expression` that terminates a :t:`loop expression`.
+A :t:`break expression` is a :t:`diverging expression` that terminates a :t:`loop expression`.
 
 :dp:`fls_jiykbp51909f`
 A :t:`break expression` shall appear within a :t:`loop body`.
@@ -4252,8 +4270,11 @@ Continue Expressions
 
 .. rubric:: Legality Rules
 
+:dp:`fls_SL22XsX3g3Fm`
+A :t:`continue expression` is a :t:`diverging expression` that first terminates and then restarts a :t:`loop expression`.
+
 :dp:`fls_wzs6kz9ffqzt`
-A :t:`continue expression` shall appear within a :t:`loop expression`.
+A :t:`continue expression` shall appear within a :t:`loop expression` except a :t:`labeled block expression`.
 
 :dp:`fls_r5ke7b9n7k3s`
 A :t:`continue expression` without a :t:`label indication` is associated with
@@ -4465,6 +4486,9 @@ its :t:`subject expression`.
 :dp:`fls_5azwlk7hav1k`
 An :t:`else expression` is an :t:`expression` that represents either a
 :t:`block expression`, an :t:`if expression`, or an :t:`if let expression`.
+
+:dp:`fls_Xlt1QeZCpI0q`
+An :t:`if expression` :t:`diverges <diverging expression>` when either its :t:`subject expression` :t:`diverges <diverging expression>`, or when both its :t:`block expression` and its :t:`else expression` :t:`diverge <diverging expression>`.
 
 :dp:`fls_r7gzxo16esri`
 The :t:`type` of the :t:`subject expression` of an :t:`if expression` shall be
@@ -4755,9 +4779,17 @@ The :t:`expected type` of the :t:`pattern` of a
 The :t:`[type]s` of all :t:`match arm bodies <match arm body>` shall be
 :t:`unifiable`.
 
+:dp:`fls_mA5mvtuim3WZ`
+A :t:`match expression` :t:`diverges <diverging expression>` when either its :t:`subject expression` :t:`diverges <diverging expression>`, the :t:`[operand]s` of all :t:`[match arm]s` :t:`diverge <diverging expression>`, or the :t:`match expression` lacks :t:`[match arm]s`.
+
 :dp:`fls_5w964phrru82`
-The :t:`type` of a :t:`match expression` is the :t:`unified type` of the
-:t:`[type]s` of the :t:`[operand]s` of all :t:`[match arm]s`.
+The :t:`type` of a :t:`match expression` is determined as follows:
+
+* :dp:`fls_dFnjLIUxMlRH`
+  If the :t:`match expression` has at least one :t:`match arm`, then the :t:`type` is the :t:`unified type` of the :t:`[type]s` of the :t:`[operand]s` of all :t:`[match arm]s`.
+
+* :dp:`fls_5yr1g1IDbvjT`
+  Otherwise the :t:`type` is the :t:`never type`.
 
 :dp:`fls_g6xyz0beps3o`
 A :t:`match arm` is selected when its :t:`pattern` matches the
@@ -4959,9 +4991,7 @@ Return Expressions
 .. rubric:: Legality Rules
 
 :dp:`fls_u7jk4j8gkho`
-A :t:`return expression` is an :t:`expression` that optionally yields a
-:t:`value` and causes control flow to return to the end of the enclosing
-:t:`control flow boundary`.
+A :t:`return expression` is a :t:`diverging expression` that optionally yields a :t:`value` and causes control flow to return to the end of the enclosing :t:`control flow boundary`.
 
 :dp:`fls_5v3j5ghhw8j8`
 A :t:`return expression` shall appear within a :t:`control flow boundary`.
