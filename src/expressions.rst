@@ -26,7 +26,6 @@ Expressions
          | LoopExpression
          | MatchExpression
          | UnsafeBlockExpression
-         | NamedBlockExpression
        )
 
    ExpressionWithoutBlock ::=
@@ -382,6 +381,9 @@ program flow to diverge from the normal :t:`evaluation` order.
   Any :t:`expression` whose :t:`evaluation` requires the :t:`evaluation` of a
   diverging :t:`subexpression` on all reachable control flow paths.
 
+* :dp:`fls_7V4E0QW5Au3b`
+  Any :t:`expression` whose :t:`type` is the :t:`never type`.
+
 .. _fls_6ydylimiv553:
 
 Place Expressions
@@ -674,6 +676,9 @@ expression`.
 When the remaining :t:`[lexical element]s` of a :s:`StatementList` match either
 an :s:`Expression` or :s:`Statement` they are interpreted as an :s:`Expression`.
 
+:dp:`fls_wHJ77EQ6rm0l`
+A :t:`block expression` :t:`diverges <diverging expression>` when all reachable control flow paths contain a :t:`diverging expression`, unless that :t:`expression` is a :t:`place expression` that is not read from.
+
 :dp:`fls_u4gj2lnkq9ub`
 The :t:`type` of a :t:`block expression` is determined as follows:
 
@@ -692,6 +697,9 @@ The :t:`type` of a :t:`block expression` is determined as follows:
   Otherwise, if the :t:`block expression` has a :t:`tail expression`, then the
   :t:`type` is the :t:`type` of the :t:`tail expression`.
 
+* :dp:`fls_jGVzDuOVW7jB`
+  Otherwise, if the :t:`block expression` :t:`diverges <diverging expression>`, then the :t:`type` is the :t:`never type`.
+
 * :dp:`fls_u0avbm147nyh`
   Otherwise the :t:`type` is the :t:`unit type`.
 
@@ -707,6 +715,9 @@ The :t:`value` of a :t:`block expression` is determined as follows:
 * :dp:`fls_9nmssjseq3jt`
   Otherwise, if the :t:`block expression` has a :t:`tail expression`, then the
   :t:`value` is the :t:`value` of the :t:`tail expression`.
+
+* :dp:`fls_8j1GrSKOfIHo`
+  Otherwise, if the :t:`block expression` :t:`diverges <diverging expression>`, then there is no :t:`value`.
 
 * :dp:`fls_a3ulnvyc1ut`
   Otherwise the :t:`value` is the :t:`unit value`.
@@ -819,40 +830,6 @@ contained :t:`block expression`.
 
    const {
        42
-   }
-
-.. _fls_0ybsR1hEo7wV:
-
-Named Blocks
-~~~~~~~~~~~~
-
-.. rubric:: Syntax
-
-.. syntax::
-
-   NamedBlockExpression ::=
-       Label BlockExpression
-
-.. rubric:: Legality Rules
-
-:dp:`fls_J8wJNfcSAYrS`
-A :t:`named block expression` is a :t:`block expression` with a :t:`label`.
-
-:dp:`fls_B4NBv2jfZLuy`
-The :t:`type` of the :t:`named block expression` is the :t:`type` of its
-:t:`block expression`.
-
-:dp:`fls_YxvAUUYAPkaq`
-The :t:`value` of the :t:`named block expression` is the :t:`value` of its
-:t:`block expression`.
-
-.. rubric:: Examples
-
-.. code-block:: rust
-
-   'block: {
-       break 'block 1;
-       3
    }
 
 .. _fls_8wnyln2nmg4y:
@@ -3812,6 +3789,7 @@ Loop Expressions
    LoopContent ::=
        ForLoopExpression
      | InfiniteLoopExpression
+     | LabeledBlockExpression
      | WhileLetLoopExpression
      | WhileLoopExpression
 
@@ -3827,21 +3805,29 @@ expression` continuously as long as some criterion holds true.
 :dp:`fls_BjZjuiFnPtFd`
 A :t:`loop body` is the :t:`block expression` of a :t:`loop expression`.
 
-:dp:`fls_XEc0cIkpkyzJ`
-The :t:`type` of the :t:`loop body` shall be the :t:`unit type`.
-
 :dp:`fls_eg93m93gvwal`
 An :t:`anonymous loop expression` is a :t:`loop expression` without a
 :t:`label`.
 
 :dp:`fls_phpoq9ho8f1v`
-A :t:`named loop expression` is a :t:`loop expression` with a :t:`label`.
+A :t:`labeled loop expression` is a :t:`loop expression` with a :t:`label`.
+
+:dp:`fls_6UKnZYOHFFqF`
+A :t:`loop body` :t:`diverges <diverging expression>` when its :t:`block expression` :t:`diverges <diverging expression>`.
+
+:dp:`fls_8zVcHXXkNWol`
+The :t:`type` of the :t:`loop body` is the :t:`type` of its :t:`block expression`.
+
+:dp:`fls_cGqKDVdvulgG`
+The :t:`value` of the :t:`loop body` is the :t:`value` of its :t:`block expression`.
 
 .. rubric:: Dynamic Semantics
 
+:dp:`fls_PfsQhVgqdvYF`
+The :t:`evaluation` of a :t:`loop body` :t:`evaluates <evaluation>` its :t:`block expression`.
+
 :dp:`fls_aw6qczl4zpko`
-A :t:`loop expression` is :t:`terminated` when its :t:`block expression` is no
-longer evaluated.
+A :t:`loop expression` is :t:`terminated` when its :t:`loop body` is no longer evaluated.
 
 .. _fls_onfyolkcbeh3:
 
@@ -3867,6 +3853,9 @@ The :t:`type` of a :t:`subject expression` shall implement the
 
 :dp:`fls_fo6Aa6Td6rMA`
 The :t:`expected type` of the :t:`pattern` is the :t:`associated type` :std:`core::iter::IntoIterator::Item` of the :t:`subject expression`'s :std:`core::iter::IntoIterator` implementation.
+
+:dp:`fls_M2a901TUcsIc`
+A :t:`for loop expression` :t:`diverges <diverging expression>` when its :t:`loop body` :t:`diverges <diverging expression>`.
 
 :dp:`fls_bmTjhKdpfgCB`
 The :t:`type` of a :t:`for loop expression` is the :t:`unit type`.
@@ -3936,6 +3925,9 @@ Infinite Loops
 An :t:`infinite loop expression` is a :t:`loop expression` that continues to
 evaluate its :t:`loop body` indefinitely.
 
+:dp:`fls_vZHch9mMJSEy`
+An :t:`infinite loop expression` :t:`diverges <diverging expression>` when its :t:`loop body` lacks a :t:`break expression`.
+
 :dp:`fls_b314wjbv0zwe`
 The :t:`type` of an :t:`infinite loop expression` is determined as follows:
 
@@ -3979,6 +3971,48 @@ The :t:`evaluation` of an :t:`infinite loop expression` proceeds as follows:
        println!("I am alive!");
    }
 
+.. _fls_zJtrEyE1dDso:
+
+Labeled Block Expressions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rubric:: Syntax
+
+.. syntax::
+
+   LabeledBlockExpression ::=
+       LoopBody
+
+.. rubric:: Legality Rules
+
+:dp:`fls_EFrj2OkobOYL`
+A :t:`labeled block expression` is a :t:`labeled loop expression` that executes its :t:`loop body` exactly once.
+
+:dp:`fls_Eg5R1XYxXyPp`
+A :t:`labeled block expression` shall appear with a :t:`label`.
+
+:dp:`fls_IH8x7jqUtEiC`
+A :t:`labeled block expression` :t:`diverges <diverging expression>` when its :t:`loop body` :t:`diverges <diverging expression>`.
+
+:dp:`fls_kCxwOcYfRdIb`
+The :t:`type` of a :t:`labeled block expression` is the :t:`type` of its :t:`loop body`.
+
+:dp:`fls_uydW7KsRVxCs`
+The :t:`value` of a :t:`labeled block expression` is the :t:`value` of its :t:`loop body`.
+
+.. rubric:: Dynamic Semantics
+
+:dp:`fls_itcR1I0hEny3`
+The :t:`evaluation` of a :t:`labeled block expression` :t:`evaluates <evaluation>` its :t:`loop body`.
+
+.. rubric:: Examples
+
+.. code-block:: rust
+
+   'block: {
+       break 'block 1;
+   }
+
 .. _fls_5jjm1kt43axd:
 
 While Loops
@@ -4007,6 +4041,9 @@ of a :t:`while loop expression`.
 
 :dp:`fls_d7ofrq3777kq`
 The :t:`type` of an :t:`iteration expression` shall be :t:`type` :c:`bool`.
+
+:dp:`fls_fJQVJ46Qifx6`
+A :t:`while loop expression` :t:`diverges <diverging expression>` when its :t:`loop body` :t:`diverges <diverging expression>`.
 
 :dp:`fls_P8iyTN6KZCVA`
 The :t:`type` of a :t:`while loop expression` is the :t:`unit type`.
@@ -4063,6 +4100,9 @@ a :t:`value` that can be matched against its :t:`pattern`.
 
 :dp:`fls_bC60ZSC9yUOI`
 The :t:`expected type` of the :t:`pattern` is the :t:`type` of the :t:`subject let expression`.
+
+:dp:`fls_jQI1ebh65c7w`
+A :t:`while let loop expression` :t:`diverges <diverging expression>` when its :t:`loop body` :t:`diverges <diverging expression>`.
 
 :dp:`fls_gTfSLePwHTES`
 The :t:`type` of a :t:`while let loop expression` is the :t:`unit type`.
@@ -4121,10 +4161,7 @@ Loop Labels
 A :t:`label indication` is a :t:`construct` that indicates a :t:`label`.
 
 :dp:`fls_7hc8yboeaho0`
-A :t:`label indication` shall indicate a :t:`label` of an enclosing
-:t:`named block expression` or :t:`named loop expression` that does not pass a
-:t:`control flow boundary` in order to reach the enclosing
-:t:`named block expression` or :t:`named loop expression`.
+A :t:`label indication` shall indicate a :t:`label` of an enclosing :t:`labeled loop expression` that does not pass a :t:`control flow boundary` in order to reach the enclosing :t:`labeled loop expression`.
 
 .. _fls_jr4tpuyksr75:
 
@@ -4141,26 +4178,19 @@ Break Expressions
 .. rubric:: Legality Rules
 
 :dp:`fls_i5ko1t2wbgxe`
-A :t:`break expression` is an :t:`expression` that terminates a
-:t:`loop expression` or a :t:`named block expression`.
+A :t:`break expression` is an :t:`expression` that terminates a :t:`loop expression`.
 
 :dp:`fls_jiykbp51909f`
-A :t:`break expression` shall appear within a :t:`loop body` or a
-:t:`named block expression`.
+A :t:`break expression` shall appear within a :t:`loop body`.
 
 :dp:`fls_gnupTkuafKNi`
-If a :t:`break expression` appears within a :t:`named block expression`, then
-the :t:`break expression` shall have a :t:`label indication`.
+If a :t:`break expression` appears within a :t:`labeled block expression`, then the :t:`break expression` shall have a :t:`label indication`.
 
 :dp:`fls_7frvr2nm2mcj`
-The :t:`label indication` of a :t:`break expression` shall resolve to the
-:t:`label` of an enclosing :t:`named block expression` or
-:t:`named loop expression`.
+The :t:`label indication` of a :t:`break expression` shall resolve to the :t:`label` of an enclosing :t:`labeled loop expression`.
 
 :dp:`fls_54d5uydc87td`
-A :t:`break expression` with a :t:`label indication` is associated with the
-:t:`named block expression` or :t:`named loop expression` whose :t:`label` is
-indicated by the :t:`label indication`.
+A :t:`break expression` with a :t:`label indication` is associated with the :t:`labeled loop expression` whose :t:`label` is indicated by the :t:`label indication`.
 
 :dp:`fls_ghxns2nggffj`
 A :t:`break expression` without a :t:`label indication` is associated with the
@@ -4170,6 +4200,9 @@ innermost enclosing :t:`loop expression`.
 If a :t:`break expression` appears within a :t:`loop expression`, then the
 :t:`break expression` shall have an :t:`operand` only when it is associated
 with an :t:`infinite loop`.
+
+:dp:`fls_E7GXaQK0aEM3`
+A :t:`break expression` :t:`diverges <diverging expression>` when it either appears without an :t:`operand`, or the :t:`operand` is a :t:`diverging expression`.
 
 :dp:`fls_dnnq1zym8ii0`
 The :t:`type` of a :t:`break expression` is the :t:`never type`.
@@ -4217,15 +4250,13 @@ If a :t:`break expression` appears within a :t:`loop expression`, then the
    :t:`loop expression` are :t:`terminated`.
 
 :dp:`fls_XpFLrL78QMe1`
-If a :t:`break expression` appears within a :t:`named block expression`, then
-the :t:`evaluation` of the :t:`break expression` proceeds as follows:
+If a :t:`break expression` appears within a :t:`labeled loop expression`, then the :t:`evaluation` of the :t:`break expression` proceeds as follows:
 
 #. :dp:`fls_WFAW1PG1YXdM`
    The :t:`operand` is evaluated.
 
 #. :dp:`fls_AurifMM8RpDp`
-   All enclosing :t:`[named block expression]s` upto and including the
-   associated :t:`named block expression` are terminated.
+   All enclosing :t:`[labeled loop expression]s` upto and including the associated :t:`labeled loop expression` are terminated.
 
 .. rubric:: Examples
 
@@ -4254,17 +4285,18 @@ Continue Expressions
 
 .. rubric:: Legality Rules
 
+:dp:`fls_SL22XsX3g3Fm`
+A :t:`continue expression` is an :t:`diverging expression` that first terminates and then restarts a :t:`loop expression`.
+
 :dp:`fls_wzs6kz9ffqzt`
-A :t:`continue expression` shall appear within a :t:`loop expression`.
+A :t:`continue expression` shall appear within a :t:`loop expression` except a :t:`labeled block expression`.
 
 :dp:`fls_r5ke7b9n7k3s`
 A :t:`continue expression` without a :t:`label indication` is associated with
 the innermost enclosing :t:`loop expression`.
 
 :dp:`fls_ckm6i9c3s6j8`
-A :t:`continue expression` with a :t:`label indication` is associated with a
-:t:`named loop expression` whose :t:`label` is indicated by the
-:t:`label indication`.
+A :t:`continue expression` with a :t:`label indication` is associated with a :t:`labeled loop expression` whose :t:`label` is indicated by the :t:`label indication`.
 
 :dp:`fls_d0bmw8xiw5nk`
 The :t:`type` of a :t:`continue expression` is the :t:`never type`.
@@ -4469,6 +4501,9 @@ its :t:`subject expression`.
 :dp:`fls_5azwlk7hav1k`
 An :t:`else expression` is an :t:`expression` that represents either a
 :t:`block expression`, an :t:`if expression`, or an :t:`if let expression`.
+
+:dp:`fls_Xlt1QeZCpI0q`
+An :t:`if expression` :t:`diverges <diverging expression>` when either its :t:`subject expression` :t:`diverges <diverging expression>`, or when both its :t:`block expression` and its :t:`else expression` :t:`diverge <diverging expression>`.
 
 :dp:`fls_r7gzxo16esri`
 The :t:`type` of the :t:`subject expression` of an :t:`if expression` shall be
@@ -4759,9 +4794,17 @@ The :t:`expected type` of the :t:`pattern` of a
 The :t:`[type]s` of all :t:`match arm bodies <match arm body>` shall be
 :t:`unifiable`.
 
+:dp:`fls_mA5mvtuim3WZ`
+A :t:`match expression` :t:`diverges <diverging expression>` when either its :t:`subject expression` :t:`diverges <diverging expression>`, the :t:`[operand]s` of all :t:`[match arm]s` :t:`diverge <diverging expression>`, or the :t:`match expression` lacks :t:`[match arm]s`.
+
 :dp:`fls_5w964phrru82`
-The :t:`type` of a :t:`match expression` is the :t:`unified type` of the
-:t:`[type]s` of the :t:`[operand]s` of all :t:`[match arm]s`.
+The :t:`type` of a :t:`match expression` is determined as follows:
+
+* :dp:`fls_dFnjLIUxMlRH`
+  If the :t:`match expression` has at least one :t:`match arm`, then the :t:`type` is the :t:`unified type` of the :t:`[type]s` of the :t:`[operand]s` of all :t:`[match arm]s`.
+
+* :dp:`fls_5yr1g1IDbvjT`
+  Otherwise the :t:`type` is the :t:`never type`.
 
 :dp:`fls_g6xyz0beps3o`
 A :t:`match arm` is selected when its :t:`pattern` matches the
@@ -4963,7 +5006,7 @@ Return Expressions
 .. rubric:: Legality Rules
 
 :dp:`fls_u7jk4j8gkho`
-A :t:`return expression` is an :t:`expression` that optionally yields a
+A :t:`return expression` is an :t:`diverging expression` that optionally yields a
 :t:`value` and causes control flow to return to the end of the enclosing
 :t:`control flow boundary`.
 
