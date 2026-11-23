@@ -24,6 +24,8 @@ Language changes in Rust 1.100.0
 
 - `Stabilize never type <https://github.com/rust-lang/rust/pull/155499>`_
 
+  - TODO: Fill in when the wording stabilizes.
+
 - `Lint against repeated #[repr(..)] attributes <https://github.com/rust-lang/rust/pull/157036>`_
 
 - `Stabilize extern "custom" <https://github.com/rust-lang/rust/pull/158504>`_

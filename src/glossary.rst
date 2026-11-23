@@ -580,8 +580,8 @@ See :s:`BlockComment`.
 block expression
 ^^^^^^^^^^^^^^^^
 
-A :dt:`block expression` is an :t:`expression` that sequences expressions and
-:t:`[statement]s`.
+A :dt:`block expression` is an :t:`expression` that sequences :t:`[expression]s`
+and :t:`[statement]s`.
 
 See :s:`BlockExpression`.
 
@@ -644,8 +644,7 @@ See :s:`BoundPattern`.
 break expression
 ^^^^^^^^^^^^^^^^
 
-A :dt:`break expression` is an :t:`expression` that terminates a
-:t:`loop expression` or a :t:`named block expression`.
+A :dt:`break expression` is a :t:`diverging expression` that terminates a :t:`loop expression`.
 
 See :s:`BreakExpression`.
 
@@ -1008,8 +1007,7 @@ See :s:`ContainerOperand`.
 continue expression
 ^^^^^^^^^^^^^^^^^^^
 
-A :dt:`continue expression` is an :t:`expression` that first terminates and
-then restarts a :t:`loop expression`.
+A :dt:`continue expression` is a :t:`diverging expression` that first terminates and then restarts a :t:`loop expression`.
 
 See :s:`ContinueExpression`.
 
@@ -2433,6 +2431,18 @@ label scope
 
 A :dt:`label scope` is a :t:`scope` for :t:`[label]s`.
 
+labeled block expression
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`labeled block expression` is a :t:`labeled loop expression` that executes its :t:`loop body` exactly once.
+
+See :s:`LabeledBlockExpression`.
+
+labeled loop expression
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A :dt:`labeled loop expression` is a :t:`loop expression` with a :t:`label`.
+
 layout
 ^^^^^^
 
@@ -3022,11 +3032,6 @@ A :dt:`name` is an :t:`identifier` that refers to an :t:`entity`.
 
 See :s:`Name`.
 
-named block expression
-^^^^^^^^^^^^^^^^^^^^^^
-
-A :dt:`named block expression` is a :t:`block expression` with a :t:`label`.
-
 named deconstructor
 ^^^^^^^^^^^^^^^^^^^
 
@@ -3050,11 +3055,6 @@ A :dt:`named initializer` is a :t:`construct` that specifies the name and
 initial :t:`value` of a :t:`field` in a :t:`struct expression`.
 
 See :s:`NamedInitializer`.
-
-named loop expression
-^^^^^^^^^^^^^^^^^^^^^
-
-A :dt:`named loop expression` is a :t:`loop expression` with a :t:`label`.
 
 named register argument
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -3093,8 +3093,7 @@ See :s:`NestingImport`.
 never type
 ^^^^^^^^^^
 
-The :dt:`never type` is a :t:`type` that represents the result of a computation
-that never completes.
+The :dt:`never type` is a :t:`type` that represents the result of a computation that never completes, also referred to as a :t:`diverging <diverging expression>` computation.
 
 See :s:`NeverType`.
 
@@ -3955,8 +3954,7 @@ See :s:`RestPattern`.
 return expression
 ^^^^^^^^^^^^^^^^^
 
-A :dt:`return expression` is an :t:`expression` that optionally yields a
-:t:`value` and causes control flow to return to the caller.
+A :dt:`return expression` is a :t:`diverging expression` that optionally yields a :t:`value` and causes control flow to return to the caller.
 
 See :s:`ReturnExpression`.
 

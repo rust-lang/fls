@@ -1277,8 +1277,7 @@ Never Type
 .. rubric:: Legality Rules
 
 :dp:`fls_4u0v5uy95pyf`
-The :t:`never type` is a :t:`type` that represents the result of a computation
-that never completes.
+The :t:`never type` is a :t:`type` that represents the result of a computation that never completes, also referred to as a :t:`diverging <diverging expression>` computation.
 
 :dp:`fls_xmtc10qzw0ui`
 The :t:`never type` has no :t:`[value]s`.
@@ -2086,6 +2085,9 @@ the following scenarios:
 
 * :dp:`fls_tnbga5dl4gz8`
   To find the common :t:`type` of :t:`array expression` :t:`[operand]s`.
+
+* :dp:`fls_lm0dR3xRvlbx`
+  To find the common :t:`type` for multiple :t:`[break operand]s`.
 
 * :dp:`fls_yoreux8tn65x`
   To find the :t:`return type` of a :t:`closure expression` with multiple
