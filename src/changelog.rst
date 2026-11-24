@@ -28,6 +28,16 @@ Language changes in Rust 1.100.0
 
 - `Stabilize extern "custom" <https://github.com/rust-lang/rust/pull/158504>`_
 
+  - New paragraphs:
+
+    - :p:`fls_moY0EDQ8ol4P`
+    - :p:`fls_7YhbREaqCrSL`
+    - :p:`fls_AofkrceimFIA`
+
+  - Changed paragraph: :p:`fls_qwchgvvnp0qe`
+
+  - New section: :ref:`fls_ggxAixZc7NB4`
+
 - `Extend dropping_references, dropping_copy_types and undropped_manually_drops lints to drop_in_place <https://github.com/rust-lang/rust/pull/160229>`_
 
 - `Unfulfilled_lint_expectations no longer fires on #[expect(dead_code)] inside code that is covered by a dead parents' diagnostic <https://github.com/rust-lang/rust/pull/161005>`_

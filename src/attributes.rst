@@ -376,6 +376,9 @@ Attribute ``cold``
 :t:`Attribute` :dc:`cold` indicates that its related :t:`function` is unlikely
 to be called.
 
+:dp:`fls_7YhbREaqCrSL`
+:t:`Attribute` :c:`cold` shall not be applied to an :t:`external custom function`.
+
 .. rubric:: Examples
 
 .. code-block:: rust

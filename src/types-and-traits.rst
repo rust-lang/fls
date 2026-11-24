@@ -1060,6 +1060,9 @@ The :t:`return type` of a :t:`function pointer type` is determined as follows:
 * :dp:`fls_KcI6yK0P8Onn`
   Otherwise the :t:`return type` is the :t:`unit type`.
 
+:dp:`fls_AofkrceimFIA`
+An :t:`external custom <external custom function>` :t:`function pointer type` shall follow the restrictions specified in :p:`fls_US3VNR9VTsJB`.
+
 .. rubric:: Undefined Behavior
 
 :dp:`fls_52thmi9hnoks`

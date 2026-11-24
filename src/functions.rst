@@ -276,3 +276,21 @@ An :t:`external function` can only be a :t:`variadic function` if it is a :t:`C-
    }
 
    unsafe extern "C" fn f(mut ap: ...) { }
+
+
+.. _fls_ggxAixZc7NB4:
+
+External custom Function
+------------------------
+
+:dp:`fls_rbOwmkfYpFx0`
+An :dt:`external custom function` is an :t:`external function` with an :t:`ABI` that is not known by the compiler.
+
+:dp:`fls_1aymyEbzrj0t`
+An :t:`external custom function` can only be called via :t:`inline assembly`.
+
+:dp:`fls_pSTJm8QhaYDB`
+An :t:`external custom function` must be a :t:`naked function`.
+
+:dp:`fls_US3VNR9VTsJB`
+An :t:`external custom function` is subject to :t:`keyword` `unsafe`, shall not specify :t:`[function parameter]s`, and shall return a :t:`unit type`, either implicitly or specified.

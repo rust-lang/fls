@@ -78,6 +78,9 @@ The following :t:`[ABI]s` are supported:
   ``extern "system-unwind"`` - The same as ``extern "system"`` with the
   addition that unwinding across FFI is permitted.
 
+* :dp:`fls_moY0EDQ8ol4P`
+  ``extern "custom"`` - An :t:`ABI` that is not known to the compiler.
+
 :dp:`fls_r2drzo3dixe4`
 A :t:`function` without an explicit :t:`ABI` has implicit :t:`Rust ABI`, unless
 it appears within an :t:`external block`.
@@ -215,7 +218,7 @@ External Block Functions
 An :t:`external block function` is a :t:`function` declared within an :t:`external block`.
 
 :dp:`fls_qwchgvvnp0qe`
-An :t:`external block function` shall not be subject to :t:`[function qualifier]s` ``async``, ``const``, and ``extern``.
+The only :t:`function qualifier` allowed on an :t:`external block function` is either ``safe`` or ``unsafe``, except on an :t:`external custom function`, where only :t:`function qualifier` ``unsafe`` is allowed.
 
 :dp:`fls_w00qi1gx204e`
 An :t:`external block function` inherits the :t:`ABI` of its enclosing :t:`external block`.
